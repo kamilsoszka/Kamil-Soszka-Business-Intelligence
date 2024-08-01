@@ -1,0 +1,7 @@
+{
+  "name": "Net Price",
+  "dataType": "double",
+  "sourceColumn": "Net Price",
+  "sourceProviderType": "float",
+  "lineageTag": "e6bc2484-d70c-4f35-82a6-a0d34166e1e5"
+}

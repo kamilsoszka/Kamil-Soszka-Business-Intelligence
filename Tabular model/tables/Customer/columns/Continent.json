@@ -1,0 +1,7 @@
+{
+  "name": "Continent",
+  "dataType": "string",
+  "sourceColumn": "Continent",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "52cb08c1-1ca2-4275-bf28-383d9318610d"
+}

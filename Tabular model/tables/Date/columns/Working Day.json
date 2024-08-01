@@ -1,0 +1,7 @@
+{
+  "name": "Working Day",
+  "dataType": "boolean",
+  "sourceColumn": "Working Day",
+  "sourceProviderType": "bit",
+  "lineageTag": "dec8da0b-694e-4039-9abd-d409df52d930"
+}

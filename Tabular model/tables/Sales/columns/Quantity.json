@@ -1,0 +1,7 @@
+{
+  "name": "Quantity",
+  "dataType": "double",
+  "sourceColumn": "Quantity",
+  "sourceProviderType": "float",
+  "lineageTag": "1237fe6f-91ab-4682-ad07-ecb069d3450e"
+}

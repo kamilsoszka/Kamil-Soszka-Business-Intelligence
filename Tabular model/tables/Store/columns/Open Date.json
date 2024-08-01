@@ -1,0 +1,7 @@
+{
+  "name": "Open Date",
+  "dataType": "dateTime",
+  "sourceColumn": "Open Date",
+  "sourceProviderType": "date",
+  "lineageTag": "4dbc2627-c11a-4805-b4d3-6fbf507e43c6"
+}

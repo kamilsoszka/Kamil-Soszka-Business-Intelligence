@@ -1,0 +1,7 @@
+{
+  "name": "Unit Cost",
+  "dataType": "double",
+  "sourceColumn": "Unit Cost",
+  "sourceProviderType": "float",
+  "lineageTag": "7ebd2aea-6371-4a30-8252-3a0db7a3e521"
+}

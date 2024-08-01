@@ -1,0 +1,7 @@
+{
+  "name": "Subcategory",
+  "dataType": "string",
+  "sourceColumn": "Subcategory",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "69f303bd-462e-4e66-a128-5951fb9bef95"
+}

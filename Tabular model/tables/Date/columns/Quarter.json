@@ -1,0 +1,7 @@
+{
+  "name": "Quarter",
+  "dataType": "string",
+  "sourceColumn": "Quarter",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "cf309a3d-cac3-4db8-9ff8-3a2de6d51b65"
+}

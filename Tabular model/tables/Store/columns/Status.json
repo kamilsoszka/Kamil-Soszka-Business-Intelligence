@@ -1,0 +1,7 @@
+{
+  "name": "Status",
+  "dataType": "string",
+  "sourceColumn": "Status",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "86c6bf41-ef0f-4937-8b74-2f4a9a605f72"
+}
