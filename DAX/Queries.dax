@@ -1,0 +1,15 @@
+﻿﻿DEFINE
+    VAR __year = 2022
+    VAR __brand = { "Contoso", "Litware" }
+
+EVALUATE
+CALCULATETABLE (
+    SUMMARIZECOLUMNS (
+        'Date'[Year],
+        'Product'[Brand],
+        "Margin", FORMAT ( [Margin], "#,,#,, M" ),
+        "Total", FORMAT ( CALCULATE ( [Margin], ALLSELECTED ( 'Product'[Brand] ) ), "#,,#,, M" )
+    ),
+    'Date'[Year] = __year,
+    'Product'[Brand] IN __brand
+)
