@@ -1,0 +1,9 @@
+{
+  "name": "Sales Amount",
+  "expression": [
+    "",
+    "SUMX ( Sales, Sales[Quantity] * Sales[Net Price] )"
+  ],
+  "formatString": "$ #,##0.00",
+  "lineageTag": "19f5c1a6-3195-426f-8bb9-be0f96be0b62"
+}

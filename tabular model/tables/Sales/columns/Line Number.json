@@ -1,0 +1,7 @@
+{
+  "name": "Line Number",
+  "dataType": "int64",
+  "sourceColumn": "Line Number",
+  "sourceProviderType": "int",
+  "lineageTag": "24b031d8-6546-4b21-9af7-2c5f7fc51082"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Category Code",
+  "dataType": "int64",
+  "sourceColumn": "Category Code",
+  "sourceProviderType": "int",
+  "lineageTag": "aaa0fb49-038b-4a52-a72b-52dfb8813039"
+}

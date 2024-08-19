@@ -1,0 +1,8 @@
+{
+  "name": "Month Number",
+  "dataType": "int64",
+  "isHidden": true,
+  "sourceColumn": "Month Number",
+  "sourceProviderType": "int",
+  "lineageTag": "e5033957-ac39-4c85-83f2-9a58561d0d5d"
+}

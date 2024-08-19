@@ -1,0 +1,7 @@
+{
+  "name": "Color",
+  "dataType": "string",
+  "sourceColumn": "Color",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "3a14df07-b78b-4adf-bb2a-138a6d1ba189"
+}

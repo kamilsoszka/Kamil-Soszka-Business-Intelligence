@@ -1,0 +1,8 @@
+{
+  "name": "Year Quarter Number",
+  "dataType": "int64",
+  "isHidden": true,
+  "sourceColumn": "Year Quarter Number",
+  "sourceProviderType": "int",
+  "lineageTag": "36bff646-e1af-45d5-bd22-ca700024b22a"
+}

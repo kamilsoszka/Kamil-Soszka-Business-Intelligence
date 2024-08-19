@@ -1,0 +1,7 @@
+{
+  "name": "Zip Code",
+  "dataType": "string",
+  "sourceColumn": "Zip Code",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "3f075a9f-bd40-47aa-bced-16cf61803f50"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Delivery Date",
+  "dataType": "dateTime",
+  "sourceColumn": "Delivery Date",
+  "sourceProviderType": "date",
+  "lineageTag": "b59cf1ce-e135-4d87-b491-ec88a25739cf"
+}
