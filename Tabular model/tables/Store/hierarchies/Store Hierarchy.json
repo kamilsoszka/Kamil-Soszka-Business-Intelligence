@@ -1,0 +1,30 @@
+{
+  "name": "Store Hierarchy",
+  "lineageTag": "750336cc-1e74-4eac-acac-bbd016d2a995",
+  "levels": [
+    {
+      "name": "Country",
+      "ordinal": 0,
+      "column": "Country",
+      "lineageTag": "292dcab0-5ca3-45bb-a31f-5aecc29ea971"
+    },
+    {
+      "name": "State",
+      "ordinal": 1,
+      "column": "State",
+      "lineageTag": "8dd3cb4e-d221-4501-a753-2138fee466a4"
+    },
+    {
+      "name": "Name",
+      "ordinal": 2,
+      "column": "Name",
+      "lineageTag": "5c9155b8-929e-499e-b7d8-73964029a7a5"
+    },
+    {
+      "name": "Square Meters",
+      "ordinal": 3,
+      "column": "Square Meters",
+      "lineageTag": "160bab52-7c39-4cd1-b944-3e094190995a"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Square Meters",
+  "dataType": "int64",
+  "sourceColumn": "Square Meters",
+  "sourceProviderType": "int",
+  "lineageTag": "cab7602a-bac8-47be-84e4-661044fef362"
+}

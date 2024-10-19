@@ -1,0 +1,7 @@
+{
+  "name": "Weight",
+  "dataType": "double",
+  "sourceColumn": "Weight",
+  "sourceProviderType": "float",
+  "lineageTag": "9a6e3c00-4094-4360-8133-7cf6f00510e7"
+}

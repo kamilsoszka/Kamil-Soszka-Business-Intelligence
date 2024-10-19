@@ -1,0 +1,7 @@
+{
+  "name": "9697d084-4089-4bb6-92a6-24a272282a65",
+  "fromTable": "Sales",
+  "fromColumn": "StoreKey",
+  "toTable": "Store",
+  "toColumn": "StoreKey"
+}

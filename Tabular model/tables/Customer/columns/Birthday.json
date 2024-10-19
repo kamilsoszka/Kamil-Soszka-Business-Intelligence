@@ -1,0 +1,7 @@
+{
+  "name": "Birthday",
+  "dataType": "dateTime",
+  "sourceColumn": "Birthday",
+  "sourceProviderType": "date",
+  "lineageTag": "a26e8ee0-1bcc-4558-a2fe-ebe9419afa4e"
+}

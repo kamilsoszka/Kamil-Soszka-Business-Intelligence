@@ -1,0 +1,7 @@
+{
+  "name": "Product Code",
+  "dataType": "string",
+  "sourceColumn": "Product Code",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "fd79e23f-1298-4eab-b528-18382eaa4ee0"
+}

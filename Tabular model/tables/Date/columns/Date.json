@@ -1,0 +1,14 @@
+{
+  "name": "Date",
+  "dataType": "dateTime",
+  "isKey": true,
+  "sourceColumn": "Date",
+  "sourceProviderType": "date",
+  "lineageTag": "dccc22ad-2dc9-4df6-b514-7d766e9bd0c5",
+  "annotations": [
+    {
+      "name": "TabularEditor_MarkAsDateKey",
+      "value": "1"
+    }
+  ]
+}
