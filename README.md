@@ -1,12 +1,6 @@
 Power BI Architecture diagram
 
-![image](https://github.com/user-attachments/assets/76eb9470-0cae-4dc5-b932-39fa3be52040)
-
 ![image](https://github.com/user-attachments/assets/fffd5e7b-a572-4862-8d9a-bbb24db5f593)
-
-![image](https://github.com/user-attachments/assets/af2c506e-b01f-4451-a62a-01b5224913b6)
-
-![image](https://github.com/user-attachments/assets/e9a89e01-bfcb-4a05-9331-c77a2cde1756)
 
 Simple raport based on small multiples with tooltip
 
