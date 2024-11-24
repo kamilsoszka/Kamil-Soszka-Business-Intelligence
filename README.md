@@ -8,15 +8,15 @@ Simple raport based on small multiples with tooltip
 
 Visual calculation
 
-![image](https://github.com/user-attachments/assets/8d9e4194-e299-4af9-ad15-010f84b777c7)
+![image](https://github.com/user-attachments/assets/264b4d67-a230-4212-b63a-7581d7d8acfc)
 
 Time Intelligence
 
-![image](https://github.com/user-attachments/assets/2147ced4-1717-437f-8dd2-4b287ffa1727)
+![image](https://github.com/user-attachments/assets/67ba53a7-8401-43c8-ae39-f36e8d5545fb)
 
 Calculation groups
 
-![image](https://github.com/user-attachments/assets/b0a77f80-c80b-4a01-be6b-98e6ed9be81a)
+![image](https://github.com/user-attachments/assets/c373be88-7224-4c00-a57b-661931d273fd)
 
 Sparkline
 
@@ -25,6 +25,10 @@ Sparkline
 Moving average and Dynamic title
 
 ![image](https://github.com/user-attachments/assets/69ec3f0e-36f4-42f6-af4d-d6072ab81c53)
+
+Artificial intelligence in Power BI
+
+![image](https://github.com/user-attachments/assets/09a325cd-9b73-4581-8110-0c6d7f53a652)
 
 Experience in Power BI
 
