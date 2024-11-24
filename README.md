@@ -4,7 +4,7 @@ Power BI Architecture diagram
 
 Simple raport based on small multiples with tooltip
 
-![image](https://github.com/user-attachments/assets/5dccc30d-996c-410b-9232-498f080930f1)
+![image](https://github.com/user-attachments/assets/ba5a2efe-0ed2-4f4e-b9f2-d846011f46b7)
 
 Visual calculation
 
@@ -20,11 +20,11 @@ Calculation groups
 
 Sparkline
 
-![image](https://github.com/user-attachments/assets/eb4267d6-3a61-413b-9562-afca729805d6)
+![image](https://github.com/user-attachments/assets/028651dc-8b01-48ef-82ac-257d887be1cf)
 
 Moving average and Dynamic title
 
-![image](https://github.com/user-attachments/assets/69ec3f0e-36f4-42f6-af4d-d6072ab81c53)
+![image](https://github.com/user-attachments/assets/af99702e-eb96-40e6-b32b-79bfcb5b0d9e)
 
 Artificial intelligence in Power BI
 
@@ -32,6 +32,6 @@ Artificial intelligence in Power BI
 
 Experience in Power BI
 
-![image](https://github.com/user-attachments/assets/1601dee3-aad8-43a1-b6e9-9003232c2f9c)
+![image](https://github.com/user-attachments/assets/1e348145-b3b7-4114-abf1-819ad3b2b7cb)
 
 Link: https://shorturl.at/QqtGa
