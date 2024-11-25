@@ -4,7 +4,7 @@ Power BI Architecture diagram
 source: https://shorturl.at/x6RPw
 
 Small multiples
-![image](https://github.com/user-attachments/assets/42c32c28-87e1-48f9-a5b5-9146d2d42dbb)
+![image](https://github.com/user-attachments/assets/ac9c0695-b90f-4ba3-97de-ae53526ef331)
 
 Visual calculations
 ![image](https://github.com/user-attachments/assets/d0ad2581-9710-4011-87d5-a5369a5941de)
