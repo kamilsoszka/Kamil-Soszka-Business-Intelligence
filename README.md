@@ -1,7 +1,7 @@
 Power BI Architecture diagram
 
 ![image](https://github.com/user-attachments/assets/bc0febc0-bb8b-48cd-aabf-21a9f287ff21)
-source: https://shorturl.at/x6RPw
+ source: https://shorturl.at/x6RPw
 
 Small multiples
 ![image](https://github.com/user-attachments/assets/ac9c0695-b90f-4ba3-97de-ae53526ef331)
