@@ -30,7 +30,8 @@ A moving average is an average of the data in your series, calculated over a def
 Artificial intelligence in Power BI
 The smart narrative visualization helps you provide a quick text summary of visuals and reports. It provides relevant innovative insights that you can customize. Source: https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-smart-narrative
 The key influencers visual helps you understand the factors that drive a metric that interests you. It analyzes your data, ranks the factors that matter, and displays them as key influencers. Source: https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers?tabs=powerbi-desktop
-The decomposition tree visual in Power BI lets you visualize data across multiple dimensions. It automatically aggregates data and enables drilling down into your dimensions in any order. It's also an artificial intelligence (AI) visualization, so you can ask it to find the next dimension to drill down into based on certain criteria. Source: https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-decomposition-tree
+The decomposition tree visual in Power BI lets you visualize data across multiple dimensions. It automatically aggregates data and enables drilling down into your dimensions in any order. It's also an artificial intelligence (AI) visualization, so you can ask it to find the next dimension to drill down into based on certain criteria. Source:
+https://shorturl.at/1XVMU
 
 ![image](https://github.com/user-attachments/assets/09a325cd-9b73-4581-8110-0c6d7f53a652)
 
@@ -39,3 +40,4 @@ Experience in Power BI
 ![image](https://github.com/user-attachments/assets/1e348145-b3b7-4114-abf1-819ad3b2b7cb)
 
 Link: https://shorturl.at/Kq6ko
+Link: https://shorturl.at/dWVV7
