@@ -38,4 +38,4 @@ Experience in Power BI
 
 ![image](https://github.com/user-attachments/assets/1e348145-b3b7-4114-abf1-819ad3b2b7cb)
 
-Link: https://shorturl.at/QqtGa
+Link: https://shorturl.at/Kq6ko
