@@ -1,0 +1,1828 @@
+﻿CATALOG_NAME,SCHEMA_NAME,CUBE_NAME,MEASURE_NAME,MEASURE_UNIQUE_NAME,MEASURE_CAPTION,MEASURE_GUID,MEASURE_AGGREGATOR,DATA_TYPE,NUMERIC_PRECISION,NUMERIC_SCALE,MEASURE_UNITS,DESCRIPTION,EXPRESSION,MEASURE_IS_VISIBLE,LEVELS_LIST,MEASURE_NAME_SQL_COLUMN_NAME,MEASURE_UNQUALIFIED_CAPTION,MEASUREGROUP_NAME,MEASURE_DISPLAY_FOLDER,DEFAULT_FORMAT_STRING
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__cogs,[Measures].[__cogs],__cogs,,0,12,65535,-1,,,SUM ( 'financials (web)'[COGS] ),True,,__cogs,__cogs,Model_Measures,Model_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__profit,[Measures].[__profit],__profit,,0,12,65535,-1,,,SUM ( 'financials (web)'[Profit] ),True,,__profit,__profit,Model_Measures,Model_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__sales,[Measures].[__sales],__sales,,0,12,65535,-1,,,SUM ( 'financials (web)'[Sales] ),True,,__sales,__sales,Model_Measures,Model_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__units_sold,[Measures].[__units_sold],__units_sold,,0,12,65535,-1,,,SUM ( 'financials (web)'[Units Sold] ),True,,__units_sold,__units_sold,Model_Measures,Model_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__gross_sales,[Measures].[__gross_sales],__gross_sales,,0,12,65535,-1,,,SUM ( 'financials (web)'[Gross Sales] ),True,,__gross_sales,__gross_sales,Model_Measures,Model_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,Last_modified_date,[Measures].[Last_modified_date],Last_modified_date,,0,12,65535,-1,,,"VAR _date = UTCNOW () RETURN ""Last modified date: "" & _date",True,,Last_modified_date,Last_modified_date,Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__highlight_bar_chart,[Measures].[__highlight_bar_chart],__highlight_bar_chart,,0,12,65535,-1,,,"VAR __highest =
+    MAXX ( ALLSELECTED ( 'Date'[Date] ), [__sales] )
+VAR __lowest =
+    MINX ( ALLSELECTED ( 'Date'[Date] ), [__sales] )
+VAR Result =
+    SWITCH (
+        TRUE (),
+        __highest = [__sales], ""#108372"",
+        __lowest = [__sales], ""#F15628"",
+        BLANK ()
+    )
+RETURN
+    Result",True,,__highlight_bar_chart,__highlight_bar_chart,Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTD __cogs,[Measures].[YTD __cogs],YTD __cogs,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__cogs], DATESYTD ( 'Date'[Date] ) ) )",True,,YTD __cogs,YTD __cogs,Model_Measures,Time intelligence\To-date total\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTD __cogs,[Measures].[QTD __cogs],QTD __cogs,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__cogs], DATESQTD ( 'Date'[Date] ) ) )",True,,QTD __cogs,QTD __cogs,Model_Measures,Time intelligence\To-date total\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTD __cogs,[Measures].[MTD __cogs],MTD __cogs,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__cogs], DATESMTD ( 'Date'[Date] ) ) )",True,,MTD __cogs,MTD __cogs,Model_Measures,Time intelligence\To-date total\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PY __cogs,[Measures].[PY __cogs],PY __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__cogs],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PY __cogs,PY __cogs,Model_Measures,Time intelligence\Growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY __cogs,[Measures].[YOY __cogs],YOY __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__cogs]
+VAR __ValuePreviousPeriod = [PY __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOY __cogs,YOY __cogs,Model_Measures,Time intelligence\Growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY % __cogs,[Measures].[YOY % __cogs],YOY % __cogs,,0,12,65535,-1,,,"DIVIDE ( [YOY __cogs], [PY __cogs] )",True,,YOY % __cogs,YOY % __cogs,Model_Measures,Time intelligence\Growth\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQ __cogs,[Measures].[PQ __cogs],PQ __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__cogs],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQ __cogs,PQ __cogs,Model_Measures,Time intelligence\Growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ __cogs,[Measures].[QOQ __cogs],QOQ __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__cogs]
+VAR __ValuePreviousPeriod = [PQ __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQ __cogs,QOQ __cogs,Model_Measures,Time intelligence\Growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ % __cogs,[Measures].[QOQ % __cogs],QOQ % __cogs,,0,12,65535,-1,,,"DIVIDE ( [QOQ __cogs], [PQ __cogs] )",True,,QOQ % __cogs,QOQ % __cogs,Model_Measures,Time intelligence\Growth\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PM __cogs,[Measures].[PM __cogs],PM __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__cogs],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PM __cogs,PM __cogs,Model_Measures,Time intelligence\Growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM __cogs,[Measures].[MOM __cogs],MOM __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__cogs]
+VAR __ValuePreviousPeriod = [PM __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOM __cogs,MOM __cogs,Model_Measures,Time intelligence\Growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM % __cogs,[Measures].[MOM % __cogs],MOM % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MOM __cogs], [PM __cogs] )",True,,MOM % __cogs,MOM % __cogs,Model_Measures,Time intelligence\Growth\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYTD __cogs,[Measures].[PYTD __cogs],PYTD __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [YTD __cogs],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PYTD __cogs,PYTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD __cogs,[Measures].[YOYTD __cogs],YOYTD __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __cogs]
+VAR __ValuePreviousPeriod = [PYTD __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOYTD __cogs,YOYTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD % __cogs,[Measures].[YOYTD % __cogs],YOYTD % __cogs,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __cogs], [PYTD __cogs] )",True,,YOYTD % __cogs,YOYTD % __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQTD __cogs,[Measures].[PQTD __cogs],PQTD __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [QTD __cogs],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQTD __cogs,PQTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD __cogs,[Measures].[QOQTD __cogs],QOQTD __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __cogs]
+VAR __ValuePreviousPeriod = [PQTD __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQTD __cogs,QOQTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD % __cogs,[Measures].[QOQTD % __cogs],QOQTD % __cogs,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __cogs], [PQTD __cogs] )",True,,QOQTD % __cogs,QOQTD % __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMTD __cogs,[Measures].[PMTD __cogs],PMTD __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [MTD __cogs],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PMTD __cogs,PMTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD __cogs,[Measures].[MOMTD __cogs],MOMTD __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __cogs]
+VAR __ValuePreviousPeriod = [PMTD __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOMTD __cogs,MOMTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD % __cogs,[Measures].[MOMTD % __cogs],MOMTD % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __cogs], [PMTD __cogs] )",True,,MOMTD % __cogs,MOMTD % __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYC __cogs,[Measures].[PYC __cogs],PYC __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__cogs], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYC __cogs,PYC __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTDOPY __cogs,[Measures].[YTDOPY __cogs],YTDOPY __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __cogs]
+VAR __ValuePreviousPeriod = [PYC __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YTDOPY __cogs,YTDOPY __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YDTOPY % __cogs,[Measures].[YDTOPY % __cogs],YDTOPY % __cogs,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __cogs], [PYC __cogs] )",True,,YDTOPY % __cogs,YDTOPY % __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQC __cogs,[Measures].[PQC __cogs],PQC __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__cogs], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
+)",True,,PQC __cogs,PQC __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTDOPQ __cogs,[Measures].[QTDOPQ __cogs],QTDOPQ __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __cogs]
+VAR __ValuePreviousPeriod = [PQC __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QTDOPQ __cogs,QTDOPQ __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QDTOPQ % __cogs,[Measures].[QDTOPQ % __cogs],QDTOPQ % __cogs,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __cogs], [PQC __cogs] )",True,,QDTOPQ % __cogs,QDTOPQ % __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMC __cogs,[Measures].[PMC __cogs],PMC __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__cogs], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
+)",True,,PMC __cogs,PMC __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM __cogs,[Measures].[MTDOPM __cogs],MTDOPM __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __cogs]
+VAR __ValuePreviousPeriod = [PMC __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MTDOPM __cogs,MTDOPM __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM % __cogs,[Measures].[MTDOPM % __cogs],MTDOPM % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __cogs], [PMC __cogs] )",True,,MTDOPM % __cogs,MTDOPM % __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MAT __cogs,[Measures].[MAT __cogs],MAT __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__cogs],
+        DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
+    )
+)",True,,MAT __cogs,MAT __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYMAT __cogs,[Measures].[PYMAT __cogs],PYMAT __cogs,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [MAT __cogs], DATEADD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYMAT __cogs,PYMAT __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG __cogs,[Measures].[MATG __cogs],MATG __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __cogs]
+VAR __ValuePreviousPeriod = [PYMAT __cogs]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MATG __cogs,MATG __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG % __cogs,[Measures].[MATG % __cogs],MATG % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MATG __cogs], [PYMAT __cogs] )",True,,MATG % __cogs,MATG % __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTD __gross_sales,[Measures].[YTD __gross_sales],YTD __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__gross_sales], DATESYTD ( 'Date'[Date] ) )
+)",True,,YTD __gross_sales,YTD __gross_sales,Model_Measures,Time intelligence\To-date total\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTD __gross_sales,[Measures].[QTD __gross_sales],QTD __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__gross_sales], DATESQTD ( 'Date'[Date] ) )
+)",True,,QTD __gross_sales,QTD __gross_sales,Model_Measures,Time intelligence\To-date total\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTD __gross_sales,[Measures].[MTD __gross_sales],MTD __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__gross_sales], DATESMTD ( 'Date'[Date] ) )
+)",True,,MTD __gross_sales,MTD __gross_sales,Model_Measures,Time intelligence\To-date total\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PY __gross_sales,[Measures].[PY __gross_sales],PY __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__gross_sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PY __gross_sales,PY __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY __gross_sales,[Measures].[YOY __gross_sales],YOY __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__gross_sales]
+VAR __ValuePreviousPeriod = [PY __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOY __gross_sales,YOY __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY % __gross_sales,[Measures].[YOY % __gross_sales],YOY % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [YOY __gross_sales], [PY __gross_sales] )",True,,YOY % __gross_sales,YOY % __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQ __gross_sales,[Measures].[PQ __gross_sales],PQ __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__gross_sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQ __gross_sales,PQ __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ __gross_sales,[Measures].[QOQ __gross_sales],QOQ __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__gross_sales]
+VAR __ValuePreviousPeriod = [PQ __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQ __gross_sales,QOQ __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ % __gross_sales,[Measures].[QOQ % __gross_sales],QOQ % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [QOQ __gross_sales], [PQ __gross_sales] )",True,,QOQ % __gross_sales,QOQ % __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PM __gross_sales,[Measures].[PM __gross_sales],PM __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__gross_sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PM __gross_sales,PM __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM __gross_sales,[Measures].[MOM __gross_sales],MOM __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__gross_sales]
+VAR __ValuePreviousPeriod = [PM __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOM __gross_sales,MOM __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM % __gross_sales,[Measures].[MOM % __gross_sales],MOM % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MOM __gross_sales], [PM __gross_sales] )",True,,MOM % __gross_sales,MOM % __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYTD __gross_sales,[Measures].[PYTD __gross_sales],PYTD __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [YTD __gross_sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PYTD __gross_sales,PYTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD __gross_sales,[Measures].[YOYTD __gross_sales],YOYTD __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __gross_sales]
+VAR __ValuePreviousPeriod = [PYTD __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOYTD __gross_sales,YOYTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD % __gross_sales,[Measures].[YOYTD % __gross_sales],YOYTD % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __gross_sales], [PYTD __gross_sales] )",True,,YOYTD % __gross_sales,YOYTD % __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQTD __gross_sales,[Measures].[PQTD __gross_sales],PQTD __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [QTD __gross_sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQTD __gross_sales,PQTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD __gross_sales,[Measures].[QOQTD __gross_sales],QOQTD __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __gross_sales]
+VAR __ValuePreviousPeriod = [PQTD __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQTD __gross_sales,QOQTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD % __gross_sales,[Measures].[QOQTD % __gross_sales],QOQTD % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __gross_sales], [PQTD __gross_sales] )",True,,QOQTD % __gross_sales,QOQTD % __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMTD __gross_sales,[Measures].[PMTD __gross_sales],PMTD __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [MTD __gross_sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PMTD __gross_sales,PMTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD __gross_sales,[Measures].[MOMTD __gross_sales],MOMTD __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __gross_sales]
+VAR __ValuePreviousPeriod = [PMTD __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOMTD __gross_sales,MOMTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD % __gross_sales,[Measures].[MOMTD % __gross_sales],MOMTD % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __gross_sales], [PMTD __gross_sales] )",True,,MOMTD % __gross_sales,MOMTD % __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYC __gross_sales,[Measures].[PYC __gross_sales],PYC __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__gross_sales], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYC __gross_sales,PYC __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTDOPY __gross_sales,[Measures].[YTDOPY __gross_sales],YTDOPY __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __gross_sales]
+VAR __ValuePreviousPeriod = [PYC __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YTDOPY __gross_sales,YTDOPY __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YDTOPY % __gross_sales,[Measures].[YDTOPY % __gross_sales],YDTOPY % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __gross_sales], [PYC __gross_sales] )",True,,YDTOPY % __gross_sales,YDTOPY % __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQC __gross_sales,[Measures].[PQC __gross_sales],PQC __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__gross_sales], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
+)",True,,PQC __gross_sales,PQC __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTDOPQ __gross_sales,[Measures].[QTDOPQ __gross_sales],QTDOPQ __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __gross_sales]
+VAR __ValuePreviousPeriod = [PQC __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QTDOPQ __gross_sales,QTDOPQ __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QDTOPQ % __gross_sales,[Measures].[QDTOPQ % __gross_sales],QDTOPQ % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __gross_sales], [PQC __gross_sales] )",True,,QDTOPQ % __gross_sales,QDTOPQ % __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMC __gross_sales,[Measures].[PMC __gross_sales],PMC __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__gross_sales], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
+)",True,,PMC __gross_sales,PMC __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM __gross_sales,[Measures].[MTDOPM __gross_sales],MTDOPM __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __gross_sales]
+VAR __ValuePreviousPeriod = [PMC __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MTDOPM __gross_sales,MTDOPM __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM % __gross_sales,[Measures].[MTDOPM % __gross_sales],MTDOPM % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __gross_sales], [PMC __gross_sales] )",True,,MTDOPM % __gross_sales,MTDOPM % __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MAT __gross_sales,[Measures].[MAT __gross_sales],MAT __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__gross_sales],
+        DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
+    )
+)",True,,MAT __gross_sales,MAT __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYMAT __gross_sales,[Measures].[PYMAT __gross_sales],PYMAT __gross_sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [MAT __gross_sales], DATEADD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYMAT __gross_sales,PYMAT __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG __gross_sales,[Measures].[MATG __gross_sales],MATG __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __gross_sales]
+VAR __ValuePreviousPeriod = [PYMAT __gross_sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MATG __gross_sales,MATG __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG % __gross_sales,[Measures].[MATG % __gross_sales],MATG % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MATG __gross_sales], [PYMAT __gross_sales] )",True,,MATG % __gross_sales,MATG % __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTD __profit,[Measures].[YTD __profit],YTD __profit,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__profit], DATESYTD ( 'Date'[Date] ) ) )",True,,YTD __profit,YTD __profit,Model_Measures,Time intelligence\To-date total\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTD __profit,[Measures].[QTD __profit],QTD __profit,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__profit], DATESQTD ( 'Date'[Date] ) ) )",True,,QTD __profit,QTD __profit,Model_Measures,Time intelligence\To-date total\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTD __profit,[Measures].[MTD __profit],MTD __profit,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__profit], DATESMTD ( 'Date'[Date] ) ) )",True,,MTD __profit,MTD __profit,Model_Measures,Time intelligence\To-date total\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PY __profit,[Measures].[PY __profit],PY __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__profit],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PY __profit,PY __profit,Model_Measures,Time intelligence\Growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY __profit,[Measures].[YOY __profit],YOY __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__profit]
+VAR __ValuePreviousPeriod = [PY __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOY __profit,YOY __profit,Model_Measures,Time intelligence\Growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY % __profit,[Measures].[YOY % __profit],YOY % __profit,,0,12,65535,-1,,,"DIVIDE ( [YOY __profit], [PY __profit] )",True,,YOY % __profit,YOY % __profit,Model_Measures,Time intelligence\Growth\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQ __profit,[Measures].[PQ __profit],PQ __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__profit],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQ __profit,PQ __profit,Model_Measures,Time intelligence\Growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ __profit,[Measures].[QOQ __profit],QOQ __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__profit]
+VAR __ValuePreviousPeriod = [PQ __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQ __profit,QOQ __profit,Model_Measures,Time intelligence\Growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ % __profit,[Measures].[QOQ % __profit],QOQ % __profit,,0,12,65535,-1,,,"DIVIDE ( [QOQ __profit], [PQ __profit] )",True,,QOQ % __profit,QOQ % __profit,Model_Measures,Time intelligence\Growth\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PM __profit,[Measures].[PM __profit],PM __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__profit],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PM __profit,PM __profit,Model_Measures,Time intelligence\Growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM __profit,[Measures].[MOM __profit],MOM __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__profit]
+VAR __ValuePreviousPeriod = [PM __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOM __profit,MOM __profit,Model_Measures,Time intelligence\Growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM % __profit,[Measures].[MOM % __profit],MOM % __profit,,0,12,65535,-1,,,"DIVIDE ( [MOM __profit], [PM __profit] )",True,,MOM % __profit,MOM % __profit,Model_Measures,Time intelligence\Growth\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYTD __profit,[Measures].[PYTD __profit],PYTD __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [YTD __profit],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PYTD __profit,PYTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD __profit,[Measures].[YOYTD __profit],YOYTD __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __profit]
+VAR __ValuePreviousPeriod = [PYTD __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOYTD __profit,YOYTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD % __profit,[Measures].[YOYTD % __profit],YOYTD % __profit,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __profit], [PYTD __profit] )",True,,YOYTD % __profit,YOYTD % __profit,Model_Measures,Time intelligence\To-date growth\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQTD __profit,[Measures].[PQTD __profit],PQTD __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [QTD __profit],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQTD __profit,PQTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD __profit,[Measures].[QOQTD __profit],QOQTD __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __profit]
+VAR __ValuePreviousPeriod = [PQTD __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQTD __profit,QOQTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD % __profit,[Measures].[QOQTD % __profit],QOQTD % __profit,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __profit], [PQTD __profit] )",True,,QOQTD % __profit,QOQTD % __profit,Model_Measures,Time intelligence\To-date growth\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMTD __profit,[Measures].[PMTD __profit],PMTD __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [MTD __profit],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PMTD __profit,PMTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD __profit,[Measures].[MOMTD __profit],MOMTD __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __profit]
+VAR __ValuePreviousPeriod = [PMTD __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOMTD __profit,MOMTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD % __profit,[Measures].[MOMTD % __profit],MOMTD % __profit,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __profit], [PMTD __profit] )",True,,MOMTD % __profit,MOMTD % __profit,Model_Measures,Time intelligence\To-date growth\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYC __profit,[Measures].[PYC __profit],PYC __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__profit], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYC __profit,PYC __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTDOPY __profit,[Measures].[YTDOPY __profit],YTDOPY __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __profit]
+VAR __ValuePreviousPeriod = [PYC __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YTDOPY __profit,YTDOPY __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YDTOPY % __profit,[Measures].[YDTOPY % __profit],YDTOPY % __profit,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __profit], [PYC __profit] )",True,,YDTOPY % __profit,YDTOPY % __profit,Model_Measures,Time intelligence\Growth over full period\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQC __profit,[Measures].[PQC __profit],PQC __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__profit], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
+)",True,,PQC __profit,PQC __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTDOPQ __profit,[Measures].[QTDOPQ __profit],QTDOPQ __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __profit]
+VAR __ValuePreviousPeriod = [PQC __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QTDOPQ __profit,QTDOPQ __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QDTOPQ % __profit,[Measures].[QDTOPQ % __profit],QDTOPQ % __profit,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __profit], [PQC __profit] )",True,,QDTOPQ % __profit,QDTOPQ % __profit,Model_Measures,Time intelligence\Growth over full period\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMC __profit,[Measures].[PMC __profit],PMC __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__profit], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
+)",True,,PMC __profit,PMC __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM __profit,[Measures].[MTDOPM __profit],MTDOPM __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __profit]
+VAR __ValuePreviousPeriod = [PMC __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MTDOPM __profit,MTDOPM __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM % __profit,[Measures].[MTDOPM % __profit],MTDOPM % __profit,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __profit], [PMC __profit] )",True,,MTDOPM % __profit,MTDOPM % __profit,Model_Measures,Time intelligence\Growth over full period\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MAT __profit,[Measures].[MAT __profit],MAT __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__profit],
+        DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
+    )
+)",True,,MAT __profit,MAT __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYMAT __profit,[Measures].[PYMAT __profit],PYMAT __profit,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [MAT __profit], DATEADD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYMAT __profit,PYMAT __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG __profit,[Measures].[MATG __profit],MATG __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __profit]
+VAR __ValuePreviousPeriod = [PYMAT __profit]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MATG __profit,MATG __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG % __profit,[Measures].[MATG % __profit],MATG % __profit,,0,12,65535,-1,,,"DIVIDE ( [MATG __profit], [PYMAT __profit] )",True,,MATG % __profit,MATG % __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTD __sales,[Measures].[YTD __sales],YTD __sales,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__sales], DATESYTD ( 'Date'[Date] ) ) )",True,,YTD __sales,YTD __sales,Model_Measures,Time intelligence\To-date total\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTD __sales,[Measures].[QTD __sales],QTD __sales,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__sales], DATESQTD ( 'Date'[Date] ) ) )",True,,QTD __sales,QTD __sales,Model_Measures,Time intelligence\To-date total\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTD __sales,[Measures].[MTD __sales],MTD __sales,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__sales], DATESMTD ( 'Date'[Date] ) ) )",True,,MTD __sales,MTD __sales,Model_Measures,Time intelligence\To-date total\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PY __sales,[Measures].[PY __sales],PY __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PY __sales,PY __sales,Model_Measures,Time intelligence\Growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY __sales,[Measures].[YOY __sales],YOY __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__sales]
+VAR __ValuePreviousPeriod = [PY __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOY __sales,YOY __sales,Model_Measures,Time intelligence\Growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY % __sales,[Measures].[YOY % __sales],YOY % __sales,,0,12,65535,-1,,,"DIVIDE ( [YOY __sales], [PY __sales] )",True,,YOY % __sales,YOY % __sales,Model_Measures,Time intelligence\Growth\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQ __sales,[Measures].[PQ __sales],PQ __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQ __sales,PQ __sales,Model_Measures,Time intelligence\Growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ __sales,[Measures].[QOQ __sales],QOQ __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__sales]
+VAR __ValuePreviousPeriod = [PQ __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQ __sales,QOQ __sales,Model_Measures,Time intelligence\Growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ % __sales,[Measures].[QOQ % __sales],QOQ % __sales,,0,12,65535,-1,,,"DIVIDE ( [QOQ __sales], [PQ __sales] )",True,,QOQ % __sales,QOQ % __sales,Model_Measures,Time intelligence\Growth\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PM __sales,[Measures].[PM __sales],PM __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PM __sales,PM __sales,Model_Measures,Time intelligence\Growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM __sales,[Measures].[MOM __sales],MOM __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__sales]
+VAR __ValuePreviousPeriod = [PM __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOM __sales,MOM __sales,Model_Measures,Time intelligence\Growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM % __sales,[Measures].[MOM % __sales],MOM % __sales,,0,12,65535,-1,,,"DIVIDE ( [MOM __sales], [PM __sales] )",True,,MOM % __sales,MOM % __sales,Model_Measures,Time intelligence\Growth\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYTD __sales,[Measures].[PYTD __sales],PYTD __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [YTD __sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PYTD __sales,PYTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD __sales,[Measures].[YOYTD __sales],YOYTD __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __sales]
+VAR __ValuePreviousPeriod = [PYTD __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOYTD __sales,YOYTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD % __sales,[Measures].[YOYTD % __sales],YOYTD % __sales,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __sales], [PYTD __sales] )",True,,YOYTD % __sales,YOYTD % __sales,Model_Measures,Time intelligence\To-date growth\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQTD __sales,[Measures].[PQTD __sales],PQTD __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [QTD __sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQTD __sales,PQTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD __sales,[Measures].[QOQTD __sales],QOQTD __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __sales]
+VAR __ValuePreviousPeriod = [PQTD __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQTD __sales,QOQTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD % __sales,[Measures].[QOQTD % __sales],QOQTD % __sales,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __sales], [PQTD __sales] )",True,,QOQTD % __sales,QOQTD % __sales,Model_Measures,Time intelligence\To-date growth\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMTD __sales,[Measures].[PMTD __sales],PMTD __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [MTD __sales],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PMTD __sales,PMTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD __sales,[Measures].[MOMTD __sales],MOMTD __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __sales]
+VAR __ValuePreviousPeriod = [PMTD __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOMTD __sales,MOMTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD % __sales,[Measures].[MOMTD % __sales],MOMTD % __sales,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __sales], [PMTD __sales] )",True,,MOMTD % __sales,MOMTD % __sales,Model_Measures,Time intelligence\To-date growth\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYC __sales,[Measures].[PYC __sales],PYC __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__sales], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYC __sales,PYC __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTDOPY __sales,[Measures].[YTDOPY __sales],YTDOPY __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __sales]
+VAR __ValuePreviousPeriod = [PYC __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YTDOPY __sales,YTDOPY __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YDTOPY % __sales,[Measures].[YDTOPY % __sales],YDTOPY % __sales,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __sales], [PYC __sales] )",True,,YDTOPY % __sales,YDTOPY % __sales,Model_Measures,Time intelligence\Growth over full period\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQC __sales,[Measures].[PQC __sales],PQC __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__sales], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
+)",True,,PQC __sales,PQC __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTDOPQ __sales,[Measures].[QTDOPQ __sales],QTDOPQ __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __sales]
+VAR __ValuePreviousPeriod = [PQC __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QTDOPQ __sales,QTDOPQ __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QDTOPQ % __sales,[Measures].[QDTOPQ % __sales],QDTOPQ % __sales,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __sales], [PQC __sales] )",True,,QDTOPQ % __sales,QDTOPQ % __sales,Model_Measures,Time intelligence\Growth over full period\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMC __sales,[Measures].[PMC __sales],PMC __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__sales], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
+)",True,,PMC __sales,PMC __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM __sales,[Measures].[MTDOPM __sales],MTDOPM __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __sales]
+VAR __ValuePreviousPeriod = [PMC __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MTDOPM __sales,MTDOPM __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM % __sales,[Measures].[MTDOPM % __sales],MTDOPM % __sales,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __sales], [PMC __sales] )",True,,MTDOPM % __sales,MTDOPM % __sales,Model_Measures,Time intelligence\Growth over full period\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MAT __sales,[Measures].[MAT __sales],MAT __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__sales],
+        DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
+    )
+)",True,,MAT __sales,MAT __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYMAT __sales,[Measures].[PYMAT __sales],PYMAT __sales,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [MAT __sales], DATEADD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYMAT __sales,PYMAT __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG __sales,[Measures].[MATG __sales],MATG __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __sales]
+VAR __ValuePreviousPeriod = [PYMAT __sales]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MATG __sales,MATG __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG % __sales,[Measures].[MATG % __sales],MATG % __sales,,0,12,65535,-1,,,"DIVIDE ( [MATG __sales], [PYMAT __sales] )",True,,MATG % __sales,MATG % __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTD __units_sold,[Measures].[YTD __units_sold],YTD __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__units_sold], DATESYTD ( 'Date'[Date] ) )
+)",True,,YTD __units_sold,YTD __units_sold,Model_Measures,Time intelligence\To-date total\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTD __units_sold,[Measures].[QTD __units_sold],QTD __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__units_sold], DATESQTD ( 'Date'[Date] ) )
+)",True,,QTD __units_sold,QTD __units_sold,Model_Measures,Time intelligence\To-date total\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTD __units_sold,[Measures].[MTD __units_sold],MTD __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__units_sold], DATESMTD ( 'Date'[Date] ) )
+)",True,,MTD __units_sold,MTD __units_sold,Model_Measures,Time intelligence\To-date total\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PY __units_sold,[Measures].[PY __units_sold],PY __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__units_sold],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PY __units_sold,PY __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY __units_sold,[Measures].[YOY __units_sold],YOY __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__units_sold]
+VAR __ValuePreviousPeriod = [PY __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOY __units_sold,YOY __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOY % __units_sold,[Measures].[YOY % __units_sold],YOY % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [YOY __units_sold], [PY __units_sold] )",True,,YOY % __units_sold,YOY % __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQ __units_sold,[Measures].[PQ __units_sold],PQ __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__units_sold],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQ __units_sold,PQ __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ __units_sold,[Measures].[QOQ __units_sold],QOQ __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__units_sold]
+VAR __ValuePreviousPeriod = [PQ __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQ __units_sold,QOQ __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQ % __units_sold,[Measures].[QOQ % __units_sold],QOQ % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [QOQ __units_sold], [PQ __units_sold] )",True,,QOQ % __units_sold,QOQ % __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PM __units_sold,[Measures].[PM __units_sold],PM __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__units_sold],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PM __units_sold,PM __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM __units_sold,[Measures].[MOM __units_sold],MOM __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__units_sold]
+VAR __ValuePreviousPeriod = [PM __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOM __units_sold,MOM __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOM % __units_sold,[Measures].[MOM % __units_sold],MOM % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MOM __units_sold], [PM __units_sold] )",True,,MOM % __units_sold,MOM % __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYTD __units_sold,[Measures].[PYTD __units_sold],PYTD __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [YTD __units_sold],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, YEAR ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PYTD __units_sold,PYTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD __units_sold,[Measures].[YOYTD __units_sold],YOYTD __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __units_sold]
+VAR __ValuePreviousPeriod = [PYTD __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YOYTD __units_sold,YOYTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YOYTD % __units_sold,[Measures].[YOYTD % __units_sold],YOYTD % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __units_sold], [PYTD __units_sold] )",True,,YOYTD % __units_sold,YOYTD % __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQTD __units_sold,[Measures].[PQTD __units_sold],PQTD __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [QTD __units_sold],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, QUARTER ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PQTD __units_sold,PQTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD __units_sold,[Measures].[QOQTD __units_sold],QOQTD __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __units_sold]
+VAR __ValuePreviousPeriod = [PQTD __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QOQTD __units_sold,QOQTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QOQTD % __units_sold,[Measures].[QOQTD % __units_sold],QOQTD % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __units_sold], [PQTD __units_sold] )",True,,QOQTD % __units_sold,QOQTD % __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMTD __units_sold,[Measures].[PMTD __units_sold],PMTD __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [MTD __units_sold],
+        CALCULATETABLE (
+            DATEADD ( 'Date'[Date], -1, MONTH ),
+            'Date'[DateWithTransactions] = TRUE
+        )
+    )
+)",True,,PMTD __units_sold,PMTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD __units_sold,[Measures].[MOMTD __units_sold],MOMTD __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __units_sold]
+VAR __ValuePreviousPeriod = [PMTD __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MOMTD __units_sold,MOMTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MOMTD % __units_sold,[Measures].[MOMTD % __units_sold],MOMTD % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __units_sold], [PMTD __units_sold] )",True,,MOMTD % __units_sold,MOMTD % __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYC __units_sold,[Measures].[PYC __units_sold],PYC __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__units_sold], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYC __units_sold,PYC __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YTDOPY __units_sold,[Measures].[YTDOPY __units_sold],YTDOPY __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __units_sold]
+VAR __ValuePreviousPeriod = [PYC __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,YTDOPY __units_sold,YTDOPY __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,YDTOPY % __units_sold,[Measures].[YDTOPY % __units_sold],YDTOPY % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __units_sold], [PYC __units_sold] )",True,,YDTOPY % __units_sold,YDTOPY % __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PQC __units_sold,[Measures].[PQC __units_sold],PQC __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__units_sold], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
+)",True,,PQC __units_sold,PQC __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QTDOPQ __units_sold,[Measures].[QTDOPQ __units_sold],QTDOPQ __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __units_sold]
+VAR __ValuePreviousPeriod = [PQC __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,QTDOPQ __units_sold,QTDOPQ __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,QDTOPQ % __units_sold,[Measures].[QDTOPQ % __units_sold],QDTOPQ % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __units_sold], [PQC __units_sold] )",True,,QDTOPQ % __units_sold,QDTOPQ % __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PMC __units_sold,[Measures].[PMC __units_sold],PMC __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [__units_sold], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
+)",True,,PMC __units_sold,PMC __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM __units_sold,[Measures].[MTDOPM __units_sold],MTDOPM __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __units_sold]
+VAR __ValuePreviousPeriod = [PMC __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MTDOPM __units_sold,MTDOPM __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MTDOPM % __units_sold,[Measures].[MTDOPM % __units_sold],MTDOPM % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __units_sold], [PMC __units_sold] )",True,,MTDOPM % __units_sold,MTDOPM % __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MAT __units_sold,[Measures].[MAT __units_sold],MAT __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE (
+        [__units_sold],
+        DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
+    )
+)",True,,MAT __units_sold,MAT __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,PYMAT __units_sold,[Measures].[PYMAT __units_sold],PYMAT __units_sold,,0,12,65535,-1,,,"IF (
+    [_ShowValueForDates],
+    CALCULATE ( [MAT __units_sold], DATEADD ( 'Date'[Date], -1, YEAR ) )
+)",True,,PYMAT __units_sold,PYMAT __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG __units_sold,[Measures].[MATG __units_sold],MATG __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __units_sold]
+VAR __ValuePreviousPeriod = [PYMAT __units_sold]
+VAR __Result =
+    IF (
+        NOT ISBLANK ( __ValueCurrentPeriod ) && NOT ISBLANK ( __ValuePreviousPeriod ),
+        __ValueCurrentPeriod - __ValuePreviousPeriod
+    )
+RETURN
+    __Result",True,,MATG __units_sold,MATG __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,MATG % __units_sold,[Measures].[MATG % __units_sold],MATG % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MATG __units_sold], [PYMAT __units_sold] )",True,,MATG % __units_sold,MATG % __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__moving_average,[Measures].[__moving_average],__moving_average,,0,12,65535,-1,,,"VAR Period =
+    DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), - [Selected_Months], MONTH )
+VAR TotalProfit =
+    CALCULATE ( [Selected Measure], Period )
+VAR Mon =
+    CALCULATE ( DISTINCTCOUNT ( 'Date'[Month] ), Period )
+RETURN
+    DIVIDE ( TotalProfit, Mon, BLANK () )",True,,__moving_average,__moving_average,Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,Selected_Months,[Measures].[Selected_Months],Selected_Months,,0,12,65535,-1,,,"SELECTEDVALUE ( Selected_Months[Value], 3 )",True,,Selected_Months,Selected_Months,Model_Measures,Auxiliary_Measures,0
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__date1,[Measures].[__date1],__date1,,0,12,65535,-1,,,"DATE ( 2013, 12, 1 )",True,,__date1,__date1,Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__date2,[Measures].[__date2],__date2,,0,12,65535,-1,,,"DATE ( 2014, 9, 1 )",True,,__date2,__date2,Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__moving_average_title,[Measures].[__moving_average_title],__moving_average_title,,0,12,65535,-1,,,"VAR __selected =
+    SWITCH (
+        TRUE (),
+        SELECTEDVALUE ( Slicer_Table[__measure] ) = ""__cogs"", ""COGS"",
+        SELECTEDVALUE ( Slicer_Table[__measure] ) = ""__gross_sales"", ""Gross sales"",
+        SELECTEDVALUE ( Slicer_Table[__measure] ) = ""__profit"", ""Profit"",
+        SELECTEDVALUE ( Slicer_Table[__measure] ) = ""__sales"", ""Sales"",
+        SELECTEDVALUE ( Slicer_Table[__measure] ) = ""__units_sold"", ""Units sold""
+    )
+RETURN
+    SELECTEDVALUE ( Selected_Months[Value] ) & "" Month Moving average for "" & __selected",True,,__moving_average_title,__moving_average_title,Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__experience_in_pbi,[Measures].[__experience_in_pbi],__experience_in_pbi,,0,12,65535,-1,,,"VAR Months =
+    DATEDIFF ( DATE ( 2018, 9, 1 ), TODAY (), MONTH ) - 1
+VAR Years =
+    ROUNDDOWN ( Months / 12, 0 )
+VAR Result =
+    CONCATENATE (
+        CONCATENATE ( CONCATENATE ( Years, "" Years, "" ), Months - ( Years * 12 ) ),
+        "" Months""
+    )
+RETURN
+    Result",True,,__experience_in_pbi,__experience_in_pbi,Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__rt%-(product),[Measures].[__rt%-(product)],__rt%-(product),,0,12,65535,-1,,,"DIVIDE ( [__running_total-(product)], CALCULATE ( [__sales], ALLSELECTED () ) )",True,,__rt%-(product),__rt%-(product),Model_Measures,Auxiliary_Measures,0.00%;-0.00%;0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__running_total-(product),[Measures].[__running_total-(product)],__running_total-(product),,0,12,65535,-1,,,"CALCULATE (
+    [__sales],
+    FILTER (
+        ALLSELECTED ( 'financials (web)'[Product] ),
+        ISONORAFTER (
+            'financials (web)'[Product], MAX ( 'financials (web)'[Product] ), DESC
+        )
+    )
+)",True,,__running_total-(product),__running_total-(product),Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__running_total,[Measures].[__running_total],__running_total,,0,12,65535,-1,,,"VAR MaxDate =
+    MAX ( 'Date'[Date] ) -- Saves the last visible date
+RETURN
+    CALCULATE (
+        [__sales],
+        -- Computes sales amount
+        'Date'[Date] <= MaxDate,
+        -- Where date is before the last visible date
+        ALL ( 'Date' ) -- Removes any other filters from Date
+    )",True,,__running_total,__running_total,Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__rt%,[Measures].[__rt%],__rt%,,0,12,65535,-1,,,"DIVIDE ( [__running_total], CALCULATE ( [__sales], ALLSELECTED () ) )",True,,__rt%,__rt%,Model_Measures,Auxiliary_Measures,0.00%;-0.00%;0.00%
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,DumpFilters,[Measures].[DumpFilters],DumpFilters,,0,12,65535,-1,,,"VAR MaxFilters = 3
+VAR __dumpfilters =
+    IF (
+        ISFILTERED ( 'Calculation group'[Ordinal] ),
+        VAR ___f =
+            FILTERS ( 'Calculation group'[Ordinal] )
+        VAR ___r =
+            COUNTROWS ( ___f )
+        VAR ___t =
+            TOPN ( MaxFilters, ___f, 'Calculation group'[Ordinal] )
+        VAR ___d =
+            CONCATENATEX ( ___t, 'Calculation group'[Ordinal], "", "" )
+        VAR ___x =
+            ""'Calculation group'[Ordinal] = "" & ___d
+                & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+        RETURN
+            ___x & UNICHAR ( 13 )
+                & UNICHAR ( 10 )
+    )
+        & IF (
+            ISFILTERED ( 'Calculation group'[Time Intelligence] ),
+            VAR ___f =
+                FILTERS ( 'Calculation group'[Time Intelligence] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Calculation group'[Time Intelligence] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Calculation group'[Time Intelligence], "", "" )
+            VAR ___x =
+                ""'Calculation group'[Time Intelligence] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Date] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Date] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Date] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Date], "", "" )
+            VAR ___x =
+                ""'Date'[Date] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[DateWithTransactions] ),
+            VAR ___f =
+                FILTERS ( 'Date'[DateWithTransactions] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[DateWithTransactions] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[DateWithTransactions], "", "" )
+            VAR ___x =
+                ""'Date'[DateWithTransactions] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Day of Week] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Day of Week] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Day of Week] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Day of Week], "", "" )
+            VAR ___x =
+                ""'Date'[Day of Week] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Day of Week Number] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Day of Week Number] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Day of Week Number] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Day of Week Number], "", "" )
+            VAR ___x =
+                ""'Date'[Day of Week Number] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Month] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Month] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Month] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Month], "", "" )
+            VAR ___x =
+                ""'Date'[Month] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Month Number] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Month Number] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Month Number] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Month Number], "", "" )
+            VAR ___x =
+                ""'Date'[Month Number] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Quarter] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Quarter] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Quarter] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Quarter], "", "" )
+            VAR ___x =
+                ""'Date'[Quarter] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Year] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Year] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Year] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Year], "", "" )
+            VAR ___x =
+                ""'Date'[Year] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Year Month] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Year Month] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Year Month] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Year Month], "", "" )
+            VAR ___x =
+                ""'Date'[Year Month] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Year Month Number] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Year Month Number] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Year Month Number] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Year Month Number], "", "" )
+            VAR ___x =
+                ""'Date'[Year Month Number] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Year Quarter] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Year Quarter] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Year Quarter] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Year Quarter], "", "" )
+            VAR ___x =
+                ""'Date'[Year Quarter] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'Date'[Year Quarter Number] ),
+            VAR ___f =
+                FILTERS ( 'Date'[Year Quarter Number] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'Date'[Year Quarter Number] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'Date'[Year Quarter Number], "", "" )
+            VAR ___x =
+                ""'Date'[Year Quarter Number] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Date] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Date] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Date] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Date], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Date] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[DateWithTransactions] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[DateWithTransactions] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[DateWithTransactions] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[DateWithTransactions], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[DateWithTransactions] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Day of Week] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Day of Week] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Day of Week] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Day of Week], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Day of Week] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Day of Week Number] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Day of Week Number] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Day of Week Number] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Day of Week Number], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Day of Week Number] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Month] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Month] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Month] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Month], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Month] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Month Number] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Month Number] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Month Number] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Month Number], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Month Number] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Quarter] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Quarter] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Quarter] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Quarter], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Quarter] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Year] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Year] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Year] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Year], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Year] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Year Month] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Year Month] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Year Month] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Year Month], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Year Month] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Year Month Number] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Year Month Number] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Year Month Number] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Year Month Number], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Year Month Number] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Year Quarter] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Year Quarter] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Year Quarter] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Year Quarter], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Year Quarter] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( DateAutoTemplate[Year Quarter Number] ),
+            VAR ___f =
+                FILTERS ( DateAutoTemplate[Year Quarter Number] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, DateAutoTemplate[Year Quarter Number] )
+            VAR ___d =
+                CONCATENATEX ( ___t, DateAutoTemplate[Year Quarter Number], "", "" )
+            VAR ___x =
+                ""DateAutoTemplate[Year Quarter Number] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[COGS] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[COGS] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[COGS] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[COGS], "", "" )
+            VAR ___x =
+                ""'financials (web)'[COGS] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Country] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Country] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Country] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Country], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Country] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Date] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Date] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Date] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Date], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Date] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Discount Band] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Discount Band] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Discount Band] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Discount Band], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Discount Band] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Discounts] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Discounts] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Discounts] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Discounts], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Discounts] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Gross Sales] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Gross Sales] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Gross Sales] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Gross Sales], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Gross Sales] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Manufacturing Price] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Manufacturing Price] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Manufacturing Price] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Manufacturing Price], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Manufacturing Price] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Month Name] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Month Name] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Month Name] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Month Name], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Month Name] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Month Number] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Month Number] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Month Number] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Month Number], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Month Number] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Product] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Product] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Product] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Product], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Product] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Profit] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Profit] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Profit] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Profit], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Profit] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Sale Price] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Sale Price] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Sale Price] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Sale Price], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Sale Price] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Sales] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Sales] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Sales] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Sales], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Sales] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Segment] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Segment] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Segment] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Segment], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Segment] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Units Sold] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Units Sold] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Units Sold] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Units Sold], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Units Sold] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( 'financials (web)'[Year] ),
+            VAR ___f =
+                FILTERS ( 'financials (web)'[Year] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, 'financials (web)'[Year] )
+            VAR ___d =
+                CONCATENATEX ( ___t, 'financials (web)'[Year], "", "" )
+            VAR ___x =
+                ""'financials (web)'[Year] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( Model_Measures[Value] ),
+            VAR ___f =
+                FILTERS ( Model_Measures[Value] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, Model_Measures[Value] )
+            VAR ___d =
+                CONCATENATEX ( ___t, Model_Measures[Value], "", "" )
+            VAR ___x =
+                ""Model_Measures[Value] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( Selected_Months[Value] ),
+            VAR ___f =
+                FILTERS ( Selected_Months[Value] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, Selected_Months[Value] )
+            VAR ___d =
+                CONCATENATEX ( ___t, Selected_Months[Value], "", "" )
+            VAR ___x =
+                ""Selected_Months[Value] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( Slicer_Table[__id_measure] ),
+            VAR ___f =
+                FILTERS ( Slicer_Table[__id_measure] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, Slicer_Table[__id_measure] )
+            VAR ___d =
+                CONCATENATEX ( ___t, Slicer_Table[__id_measure], "", "" )
+            VAR ___x =
+                ""Slicer_Table[__id_measure] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        )
+        & IF (
+            ISFILTERED ( Slicer_Table[__measure] ),
+            VAR ___f =
+                FILTERS ( Slicer_Table[__measure] )
+            VAR ___r =
+                COUNTROWS ( ___f )
+            VAR ___t =
+                TOPN ( MaxFilters, ___f, Slicer_Table[__measure] )
+            VAR ___d =
+                CONCATENATEX ( ___t, Slicer_Table[__measure], "", "" )
+            VAR ___x =
+                ""Slicer_Table[__measure] = "" & ___d
+                    & IF ( ___r > MaxFilters, "", ... ["" & ___r & "" items selected]"" ) & "" ""
+            RETURN
+                ___x & UNICHAR ( 13 )
+                    & UNICHAR ( 10 )
+        ) ---- MODEL MEASURES END ----
+RETURN
+    IF ( NOT ISBLANK ( __dumpfilters ), __dumpfilters, ""No filter selected "" )",True,,DumpFilters,DumpFilters,Model_Measures,Auxiliary_Measures,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,_ShowValueForDates,[Measures].[_ShowValueForDates],_ShowValueForDates,,0,12,65535,-1,,,"VAR __LastDateWithData =
+    CALCULATE (
+        MAXX ( { MAX ( 'financials (web)'[Date] ) }, ''[Value] ),
+        REMOVEFILTERS ()
+    )
+VAR __FirstDateVisible =
+    MIN ( 'Date'[Date] )
+VAR __Result = __FirstDateVisible <= __LastDateWithData
+RETURN
+    __Result",False,,_ShowValueForDates,_ShowValueForDates,Date,Hidden Time Intelligence,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,Selected Measure,[Measures].[Selected Measure],Selected Measure,,0,12,65535,-1,,,"SWITCH (
+    TRUE (),
+    SELECTEDVALUE ( 'Slicer_Table'[__measure] ) = ""__cogs"", [__cogs],
+    SELECTEDVALUE ( 'Slicer_Table'[__measure] ) = ""__gross_sales"", [__gross_sales],
+    SELECTEDVALUE ( 'Slicer_Table'[__measure] ) = ""__profit"", [__profit],
+    SELECTEDVALUE ( 'Slicer_Table'[__measure] ) = ""__sales"", [__sales],
+    SELECTEDVALUE ( 'Slicer_Table'[__measure] ) = ""__units_sold"", [__units_sold],
+    ""Select Measure""
+)",True,,Selected Measure,Selected Measure,Slicer_Table,,
+8de6c40d-5f50-4c8f-b534-577974c93108,,Model,__Default measure,[Measures].[__Default measure],__Default measure,,127,12,65535,-1,,,1,False,,__Default measure,__Default measure,,,
