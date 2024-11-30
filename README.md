@@ -5,25 +5,28 @@ Power BI Architecture diagram
 source: https://shorturl.at/x6RPw
 
 Small multiples
-![image](https://github.com/user-attachments/assets/ac9c0695-b90f-4ba3-97de-ae53526ef331)
+![image](https://github.com/user-attachments/assets/707af8eb-9531-4fc6-99fb-251985376878)
 
 Visual calculations
-![image](https://github.com/user-attachments/assets/d0ad2581-9710-4011-87d5-a5369a5941de)
+![image](https://github.com/user-attachments/assets/bccf040e-11a9-449f-bd70-9c68d9aa420b)
 
 Time intelligence
-![image](https://github.com/user-attachments/assets/1b2a734b-00fd-4e45-92f7-e831d8aac8fc)
+![image](https://github.com/user-attachments/assets/5cf6a2b5-1faa-43c0-834d-61408e6f16e9)
 
 Calculation groups
-![image](https://github.com/user-attachments/assets/f3838f20-0f62-4755-b652-9d33aa1a907a)
+![image](https://github.com/user-attachments/assets/50aa761a-397f-48a4-9898-85a9da7411dc)
 
 Sparklines
-![image](https://github.com/user-attachments/assets/80107049-eb2b-4030-a84f-a49e94759465)
+![image](https://github.com/user-attachments/assets/be707125-a277-4816-88c3-7ba1de952449)
 
 Moving average
-![image](https://github.com/user-attachments/assets/6aebeb2b-c07a-4dd2-9bf2-d2a6faf2f0c1)
+![image](https://github.com/user-attachments/assets/06ce5348-c713-479a-ac1c-8f63e1f40af0)
 
 Artificial intelligence in Power BI
-![image](https://github.com/user-attachments/assets/5ee84a8c-9c56-4976-a8d4-9a3b61337a4b)
+![image](https://github.com/user-attachments/assets/51e36ae6-7abf-4188-9a6a-49846695d8d7)
+
+KPI Cards
+![image](https://github.com/user-attachments/assets/5f6d9417-3a42-470b-b597-fb4c3b9187bc)
 
 Experience in Power BI
 ![image](https://github.com/user-attachments/assets/1e348145-b3b7-4114-abf1-819ad3b2b7cb)
