@@ -29,7 +29,7 @@ KPI Cards
 ![image](https://github.com/user-attachments/assets/7410b84a-7418-4c62-aaf8-e6b3e679b1ff)
 
 Filled map
-![image](https://github.com/user-attachments/assets/38907ee2-947c-481b-af99-da1999ee84c0)
+![image](https://github.com/user-attachments/assets/e2e39496-c49e-4f3d-adde-f4ec78c05dea)
 
 Experience in Power BI
 ![image](https://github.com/user-attachments/assets/31c41610-4c6b-48cd-b0c9-ce5054329c07)
