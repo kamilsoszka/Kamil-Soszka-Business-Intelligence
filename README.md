@@ -5,30 +5,33 @@ Power BI Architecture diagram
 source: https://shorturl.at/x6RPw
 
 Small multiples
-![image](https://github.com/user-attachments/assets/707af8eb-9531-4fc6-99fb-251985376878)
+![image](https://github.com/user-attachments/assets/db53a2b2-8e64-403d-aeb7-211523b15ae9)
 
 Visual calculations
-![image](https://github.com/user-attachments/assets/a78764fa-3860-4f65-937e-c0a87bbc0445)
+![image](https://github.com/user-attachments/assets/c518ccc6-02b6-4f1e-8087-56c724da5da1)
 
 Time intelligence
-![image](https://github.com/user-attachments/assets/f112ceb4-c233-4766-82c6-1b8242bb181a)
+![image](https://github.com/user-attachments/assets/71d74c68-0c8a-475f-b788-27734e27fadd)
 
 Calculation groups
-![image](https://github.com/user-attachments/assets/c349bdae-d305-4a1f-928d-4799205e04c9)
+![image](https://github.com/user-attachments/assets/910e5cad-0691-4956-9ffb-e42234079512)
 
 Sparklines
-![image](https://github.com/user-attachments/assets/2d538641-3082-4b63-9d07-79d299cd7aab)
+![image](https://github.com/user-attachments/assets/0f0b1215-c751-4b69-bfd7-f724d21ac632)
 
 Moving average
-![image](https://github.com/user-attachments/assets/06ce5348-c713-479a-ac1c-8f63e1f40af0)
+![image](https://github.com/user-attachments/assets/a4f6e226-2f44-4552-a5e5-4e5ebcbca57e)
 
 Artificial intelligence in Power BI
-![image](https://github.com/user-attachments/assets/51e36ae6-7abf-4188-9a6a-49846695d8d7)
+![image](https://github.com/user-attachments/assets/1ee81278-aa58-4cea-a1df-814b85d20689)
 
 KPI Cards
-![image](https://github.com/user-attachments/assets/d3de504b-1e4a-4825-b314-0ecc7f858ce8)
+![image](https://github.com/user-attachments/assets/7410b84a-7418-4c62-aaf8-e6b3e679b1ff)
+
+Filled map
+![image](https://github.com/user-attachments/assets/898a494f-6e66-4ded-aef4-a33d83dfe9ff)
 
 Experience in Power BI
-![image](https://github.com/user-attachments/assets/1e348145-b3b7-4114-abf1-819ad3b2b7cb)
+![image](https://github.com/user-attachments/assets/c225d5ef-629b-497f-962a-3364cff4522e)
 
 Link: https://shorturl.at/jAOQj
