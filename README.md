@@ -20,7 +20,7 @@ Sparklines
 ![image](https://github.com/user-attachments/assets/0f0b1215-c751-4b69-bfd7-f724d21ac632)
 
 Moving average
-![image](https://github.com/user-attachments/assets/a4f6e226-2f44-4552-a5e5-4e5ebcbca57e)
+![image](https://github.com/user-attachments/assets/1ebfa4c2-3d66-43ad-946f-f9baa5460af3)
 
 Artificial intelligence in Power BI
 ![image](https://github.com/user-attachments/assets/1ee81278-aa58-4cea-a1df-814b85d20689)
@@ -29,9 +29,9 @@ KPI Cards
 ![image](https://github.com/user-attachments/assets/7410b84a-7418-4c62-aaf8-e6b3e679b1ff)
 
 Filled map
-![image](https://github.com/user-attachments/assets/898a494f-6e66-4ded-aef4-a33d83dfe9ff)
+![image](https://github.com/user-attachments/assets/38907ee2-947c-481b-af99-da1999ee84c0)
 
 Experience in Power BI
-![image](https://github.com/user-attachments/assets/c225d5ef-629b-497f-962a-3364cff4522e)
+![image](https://github.com/user-attachments/assets/31c41610-4c6b-48cd-b0c9-ce5054329c07)
 
 Link: https://shorturl.at/jAOQj
