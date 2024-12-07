@@ -5,19 +5,16 @@ Power BI Architecture diagram
 source: https://shorturl.at/x6RPw
 
 Small multiples
-![image](https://github.com/user-attachments/assets/db53a2b2-8e64-403d-aeb7-211523b15ae9)
+![image](https://github.com/user-attachments/assets/95f35ea9-2298-4e68-bad6-98ad91eadb42)
 
 Visual calculations
-![image](https://github.com/user-attachments/assets/c518ccc6-02b6-4f1e-8087-56c724da5da1)
+![image](https://github.com/user-attachments/assets/3ceb5eee-d511-4e58-9b19-d38467c16b83)
 
 Time intelligence
-![image](https://github.com/user-attachments/assets/71d74c68-0c8a-475f-b788-27734e27fadd)
+![image](https://github.com/user-attachments/assets/c30de8ff-293c-4af3-8dc5-040fa21e87af)
 
 Calculation groups
-![image](https://github.com/user-attachments/assets/910e5cad-0691-4956-9ffb-e42234079512)
-
-Sparklines
-![image](https://github.com/user-attachments/assets/0f0b1215-c751-4b69-bfd7-f724d21ac632)
+![image](https://github.com/user-attachments/assets/a53c2f90-34aa-462f-9ed2-897356fd3f20)
 
 Moving average
 ![image](https://github.com/user-attachments/assets/1ebfa4c2-3d66-43ad-946f-f9baa5460af3)
@@ -26,7 +23,7 @@ Artificial intelligence in Power BI
 ![image](https://github.com/user-attachments/assets/1ee81278-aa58-4cea-a1df-814b85d20689)
 
 KPI Cards
-![image](https://github.com/user-attachments/assets/7410b84a-7418-4c62-aaf8-e6b3e679b1ff)
+![image](https://github.com/user-attachments/assets/73651f2f-632c-4b54-a6f5-a62d6f5b2c9c)
 
 Filled map
 ![image](https://github.com/user-attachments/assets/e2e39496-c49e-4f3d-adde-f4ec78c05dea)
