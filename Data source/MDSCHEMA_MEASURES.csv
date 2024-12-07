@@ -1,11 +1,11 @@
 ﻿CATALOG_NAME,SCHEMA_NAME,CUBE_NAME,MEASURE_NAME,MEASURE_UNIQUE_NAME,MEASURE_CAPTION,MEASURE_GUID,MEASURE_AGGREGATOR,DATA_TYPE,NUMERIC_PRECISION,NUMERIC_SCALE,MEASURE_UNITS,DESCRIPTION,EXPRESSION,MEASURE_IS_VISIBLE,LEVELS_LIST,MEASURE_NAME_SQL_COLUMN_NAME,MEASURE_UNQUALIFIED_CAPTION,MEASUREGROUP_NAME,MEASURE_DISPLAY_FOLDER,DEFAULT_FORMAT_STRING
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__cogs,[Measures].[__cogs],__cogs,,0,12,65535,-1,,,SUM ( 'financials (web)'[COGS] ),True,,__cogs,__cogs,Model_Measures,Model_Measures,"#,0.00"
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__profit,[Measures].[__profit],__profit,,0,12,65535,-1,,,SUM ( 'financials (web)'[Profit] ),True,,__profit,__profit,Model_Measures,Model_Measures,"#,0.00"
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__sales,[Measures].[__sales],__sales,,0,12,65535,-1,,,SUM ( 'financials (web)'[Sales] ),True,,__sales,__sales,Model_Measures,Model_Measures,"#,0.00"
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__units_sold,[Measures].[__units_sold],__units_sold,,0,12,65535,-1,,,SUM ( 'financials (web)'[Units Sold] ),True,,__units_sold,__units_sold,Model_Measures,Model_Measures,"#,0.00"
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__gross_sales,[Measures].[__gross_sales],__gross_sales,,0,12,65535,-1,,,SUM ( 'financials (web)'[Gross Sales] ),True,,__gross_sales,__gross_sales,Model_Measures,Model_Measures,"#,0.00"
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,Last_modified_date,[Measures].[Last_modified_date],Last_modified_date,,0,12,65535,-1,,,"VAR _date = UTCNOW () RETURN ""Last modified date: "" & _date",True,,Last_modified_date,Last_modified_date,Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__highlight_bar_chart,[Measures].[__highlight_bar_chart],__highlight_bar_chart,,0,12,65535,-1,,,"VAR __highest =
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__cogs,[Measures].[__cogs],__cogs,,0,12,65535,-1,,,SUM ( 'financials (web)'[COGS] ),True,,__cogs,__cogs,Model_Measures,Model_Measures,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__profit,[Measures].[__profit],__profit,,0,12,65535,-1,,,SUM ( 'financials (web)'[Profit] ),True,,__profit,__profit,Model_Measures,Model_Measures,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__sales,[Measures].[__sales],__sales,,0,12,65535,-1,,,SUM ( 'financials (web)'[Sales] ),True,,__sales,__sales,Model_Measures,Model_Measures,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__units_sold,[Measures].[__units_sold],__units_sold,,0,12,65535,-1,,,SUM ( 'financials (web)'[Units Sold] ),True,,__units_sold,__units_sold,Model_Measures,Model_Measures,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__gross_sales,[Measures].[__gross_sales],__gross_sales,,0,12,65535,-1,,,SUM ( 'financials (web)'[Gross Sales] ),True,,__gross_sales,__gross_sales,Model_Measures,Model_Measures,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,Last_modified_date,[Measures].[Last_modified_date],Last_modified_date,,0,12,65535,-1,,,"VAR _date = UTCNOW () RETURN ""Last modified date: "" & _date",True,,Last_modified_date,Last_modified_date,Model_Measures,Auxiliary_Measures,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__highlight_bar_chart,[Measures].[__highlight_bar_chart],__highlight_bar_chart,,0,12,65535,-1,,,"VAR __highest =
     MAXX ( ALLSELECTED ( 'Date'[Date] ), [__profit] )
 VAR __lowest =
     MINX ( ALLSELECTED ( 'Date'[Date] ), [__profit] )
@@ -18,10 +18,10 @@ VAR Result =
     )
 RETURN
     Result",True,,__highlight_bar_chart,__highlight_bar_chart,Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTD __cogs,[Measures].[YTD __cogs],YTD __cogs,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__cogs], DATESYTD ( 'Date'[Date] ) ) )",True,,YTD __cogs,YTD __cogs,Model_Measures,Time intelligence\To-date total\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTD __cogs,[Measures].[QTD __cogs],QTD __cogs,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__cogs], DATESQTD ( 'Date'[Date] ) ) )",True,,QTD __cogs,QTD __cogs,Model_Measures,Time intelligence\To-date total\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTD __cogs,[Measures].[MTD __cogs],MTD __cogs,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__cogs], DATESMTD ( 'Date'[Date] ) ) )",True,,MTD __cogs,MTD __cogs,Model_Measures,Time intelligence\To-date total\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PY __cogs,[Measures].[PY __cogs],PY __cogs,,0,12,65535,-1,,,"IF (
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTD __cogs,[Measures].[YTD __cogs],YTD __cogs,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__cogs], DATESYTD ( 'Date'[Date] ) ) )",True,,YTD __cogs,YTD __cogs,Model_Measures,Time intelligence\To-date total\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTD __cogs,[Measures].[QTD __cogs],QTD __cogs,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__cogs], DATESQTD ( 'Date'[Date] ) ) )",True,,QTD __cogs,QTD __cogs,Model_Measures,Time intelligence\To-date total\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTD __cogs,[Measures].[MTD __cogs],MTD __cogs,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__cogs], DATESMTD ( 'Date'[Date] ) ) )",True,,MTD __cogs,MTD __cogs,Model_Measures,Time intelligence\To-date total\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PY __cogs,[Measures].[PY __cogs],PY __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__cogs],
@@ -30,8 +30,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PY __cogs,PY __cogs,Model_Measures,Time intelligence\Growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY __cogs,[Measures].[YOY __cogs],YOY __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__cogs]
+)",True,,PY __cogs,PY __cogs,Model_Measures,Time intelligence\Growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY __cogs,[Measures].[YOY __cogs],YOY __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__cogs]
 VAR __ValuePreviousPeriod = [PY __cogs]
 VAR __Result =
     IF (
@@ -39,9 +39,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOY __cogs,YOY __cogs,Model_Measures,Time intelligence\Growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY % __cogs,[Measures].[YOY % __cogs],YOY % __cogs,,0,12,65535,-1,,,"DIVIDE ( [YOY __cogs], ABS ( [PY __cogs] ) )",True,,YOY % __cogs,YOY % __cogs,Model_Measures,Time intelligence\Growth\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQ __cogs,[Measures].[PQ __cogs],PQ __cogs,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOY __cogs,YOY __cogs,Model_Measures,Time intelligence\Growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY % __cogs,[Measures].[YOY % __cogs],YOY % __cogs,,0,12,65535,-1,,,"DIVIDE ( [YOY __cogs], ABS ( [PY __cogs] ) )",True,,YOY % __cogs,YOY % __cogs,Model_Measures,Time intelligence\Growth\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQ __cogs,[Measures].[PQ __cogs],PQ __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__cogs],
@@ -50,8 +50,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQ __cogs,PQ __cogs,Model_Measures,Time intelligence\Growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ __cogs,[Measures].[QOQ __cogs],QOQ __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__cogs]
+)",True,,PQ __cogs,PQ __cogs,Model_Measures,Time intelligence\Growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ __cogs,[Measures].[QOQ __cogs],QOQ __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__cogs]
 VAR __ValuePreviousPeriod = [PQ __cogs]
 VAR __Result =
     IF (
@@ -59,9 +59,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQ __cogs,QOQ __cogs,Model_Measures,Time intelligence\Growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ % __cogs,[Measures].[QOQ % __cogs],QOQ % __cogs,,0,12,65535,-1,,,"DIVIDE ( [QOQ __cogs], ABS ( [PQ __cogs] ) )",True,,QOQ % __cogs,QOQ % __cogs,Model_Measures,Time intelligence\Growth\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PM __cogs,[Measures].[PM __cogs],PM __cogs,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQ __cogs,QOQ __cogs,Model_Measures,Time intelligence\Growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ % __cogs,[Measures].[QOQ % __cogs],QOQ % __cogs,,0,12,65535,-1,,,"DIVIDE ( [QOQ __cogs], ABS ( [PQ __cogs] ) )",True,,QOQ % __cogs,QOQ % __cogs,Model_Measures,Time intelligence\Growth\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PM __cogs,[Measures].[PM __cogs],PM __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__cogs],
@@ -70,8 +70,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PM __cogs,PM __cogs,Model_Measures,Time intelligence\Growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM __cogs,[Measures].[MOM __cogs],MOM __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__cogs]
+)",True,,PM __cogs,PM __cogs,Model_Measures,Time intelligence\Growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM __cogs,[Measures].[MOM __cogs],MOM __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__cogs]
 VAR __ValuePreviousPeriod = [PM __cogs]
 VAR __Result =
     IF (
@@ -79,9 +79,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOM __cogs,MOM __cogs,Model_Measures,Time intelligence\Growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM % __cogs,[Measures].[MOM % __cogs],MOM % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MOM __cogs], ABS ( [PM __cogs] ) )",True,,MOM % __cogs,MOM % __cogs,Model_Measures,Time intelligence\Growth\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYTD __cogs,[Measures].[PYTD __cogs],PYTD __cogs,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOM __cogs,MOM __cogs,Model_Measures,Time intelligence\Growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM % __cogs,[Measures].[MOM % __cogs],MOM % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MOM __cogs], ABS ( [PM __cogs] ) )",True,,MOM % __cogs,MOM % __cogs,Model_Measures,Time intelligence\Growth\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYTD __cogs,[Measures].[PYTD __cogs],PYTD __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [YTD __cogs],
@@ -90,8 +90,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PYTD __cogs,PYTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD __cogs,[Measures].[YOYTD __cogs],YOYTD __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __cogs]
+)",True,,PYTD __cogs,PYTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD __cogs,[Measures].[YOYTD __cogs],YOYTD __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __cogs]
 VAR __ValuePreviousPeriod = [PYTD __cogs]
 VAR __Result =
     IF (
@@ -99,9 +99,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOYTD __cogs,YOYTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD % __cogs,[Measures].[YOYTD % __cogs],YOYTD % __cogs,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __cogs], ABS ( [PYTD __cogs] ) )",True,,YOYTD % __cogs,YOYTD % __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQTD __cogs,[Measures].[PQTD __cogs],PQTD __cogs,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOYTD __cogs,YOYTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD % __cogs,[Measures].[YOYTD % __cogs],YOYTD % __cogs,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __cogs], ABS ( [PYTD __cogs] ) )",True,,YOYTD % __cogs,YOYTD % __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQTD __cogs,[Measures].[PQTD __cogs],PQTD __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [QTD __cogs],
@@ -110,8 +110,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQTD __cogs,PQTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD __cogs,[Measures].[QOQTD __cogs],QOQTD __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __cogs]
+)",True,,PQTD __cogs,PQTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD __cogs,[Measures].[QOQTD __cogs],QOQTD __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __cogs]
 VAR __ValuePreviousPeriod = [PQTD __cogs]
 VAR __Result =
     IF (
@@ -119,9 +119,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQTD __cogs,QOQTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD % __cogs,[Measures].[QOQTD % __cogs],QOQTD % __cogs,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __cogs], ABS ( [PQTD __cogs] ) )",True,,QOQTD % __cogs,QOQTD % __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMTD __cogs,[Measures].[PMTD __cogs],PMTD __cogs,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQTD __cogs,QOQTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD % __cogs,[Measures].[QOQTD % __cogs],QOQTD % __cogs,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __cogs], ABS ( [PQTD __cogs] ) )",True,,QOQTD % __cogs,QOQTD % __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMTD __cogs,[Measures].[PMTD __cogs],PMTD __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [MTD __cogs],
@@ -130,8 +130,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PMTD __cogs,PMTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD __cogs,[Measures].[MOMTD __cogs],MOMTD __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __cogs]
+)",True,,PMTD __cogs,PMTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD __cogs,[Measures].[MOMTD __cogs],MOMTD __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __cogs]
 VAR __ValuePreviousPeriod = [PMTD __cogs]
 VAR __Result =
     IF (
@@ -139,13 +139,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOMTD __cogs,MOMTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD % __cogs,[Measures].[MOMTD % __cogs],MOMTD % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __cogs], ABS ( [PMTD __cogs] ) )",True,,MOMTD % __cogs,MOMTD % __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYC __cogs,[Measures].[PYC __cogs],PYC __cogs,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOMTD __cogs,MOMTD __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD % __cogs,[Measures].[MOMTD % __cogs],MOMTD % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __cogs], ABS ( [PMTD __cogs] ) )",True,,MOMTD % __cogs,MOMTD % __cogs,Model_Measures,Time intelligence\To-date growth\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYC __cogs,[Measures].[PYC __cogs],PYC __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__cogs], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYC __cogs,PYC __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTDOPY __cogs,[Measures].[YTDOPY __cogs],YTDOPY __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __cogs]
+)",True,,PYC __cogs,PYC __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTDOPY __cogs,[Measures].[YTDOPY __cogs],YTDOPY __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __cogs]
 VAR __ValuePreviousPeriod = [PYC __cogs]
 VAR __Result =
     IF (
@@ -153,13 +153,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YTDOPY __cogs,YTDOPY __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YDTOPY % __cogs,[Measures].[YDTOPY % __cogs],YDTOPY % __cogs,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __cogs], ABS ( [PYC __cogs] ) )",True,,YDTOPY % __cogs,YDTOPY % __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQC __cogs,[Measures].[PQC __cogs],PQC __cogs,,0,12,65535,-1,,,"IF (
+    __Result",True,,YTDOPY __cogs,YTDOPY __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YDTOPY % __cogs,[Measures].[YDTOPY % __cogs],YDTOPY % __cogs,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __cogs], ABS ( [PYC __cogs] ) )",True,,YDTOPY % __cogs,YDTOPY % __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQC __cogs,[Measures].[PQC __cogs],PQC __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__cogs], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
-)",True,,PQC __cogs,PQC __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTDOPQ __cogs,[Measures].[QTDOPQ __cogs],QTDOPQ __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __cogs]
+)",True,,PQC __cogs,PQC __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTDOPQ __cogs,[Measures].[QTDOPQ __cogs],QTDOPQ __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __cogs]
 VAR __ValuePreviousPeriod = [PQC __cogs]
 VAR __Result =
     IF (
@@ -167,13 +167,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QTDOPQ __cogs,QTDOPQ __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QDTOPQ % __cogs,[Measures].[QDTOPQ % __cogs],QDTOPQ % __cogs,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __cogs], ABS ( [PQC __cogs] ) )",True,,QDTOPQ % __cogs,QDTOPQ % __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMC __cogs,[Measures].[PMC __cogs],PMC __cogs,,0,12,65535,-1,,,"IF (
+    __Result",True,,QTDOPQ __cogs,QTDOPQ __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QDTOPQ % __cogs,[Measures].[QDTOPQ % __cogs],QDTOPQ % __cogs,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __cogs], ABS ( [PQC __cogs] ) )",True,,QDTOPQ % __cogs,QDTOPQ % __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMC __cogs,[Measures].[PMC __cogs],PMC __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__cogs], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
-)",True,,PMC __cogs,PMC __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM __cogs,[Measures].[MTDOPM __cogs],MTDOPM __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __cogs]
+)",True,,PMC __cogs,PMC __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM __cogs,[Measures].[MTDOPM __cogs],MTDOPM __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __cogs]
 VAR __ValuePreviousPeriod = [PMC __cogs]
 VAR __Result =
     IF (
@@ -181,20 +181,20 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MTDOPM __cogs,MTDOPM __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM % __cogs,[Measures].[MTDOPM % __cogs],MTDOPM % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __cogs], ABS ( [PMC __cogs] ) )",True,,MTDOPM % __cogs,MTDOPM % __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MAT __cogs,[Measures].[MAT __cogs],MAT __cogs,,0,12,65535,-1,,,"IF (
+    __Result",True,,MTDOPM __cogs,MTDOPM __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM % __cogs,[Measures].[MTDOPM % __cogs],MTDOPM % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __cogs], ABS ( [PMC __cogs] ) )",True,,MTDOPM % __cogs,MTDOPM % __cogs,Model_Measures,Time intelligence\Growth over full period\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MAT __cogs,[Measures].[MAT __cogs],MAT __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__cogs],
         DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
     )
-)",True,,MAT __cogs,MAT __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYMAT __cogs,[Measures].[PYMAT __cogs],PYMAT __cogs,,0,12,65535,-1,,,"IF (
+)",True,,MAT __cogs,MAT __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYMAT __cogs,[Measures].[PYMAT __cogs],PYMAT __cogs,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [MAT __cogs], DATEADD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYMAT __cogs,PYMAT __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG __cogs,[Measures].[MATG __cogs],MATG __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __cogs]
+)",True,,PYMAT __cogs,PYMAT __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG __cogs,[Measures].[MATG __cogs],MATG __cogs,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __cogs]
 VAR __ValuePreviousPeriod = [PYMAT __cogs]
 VAR __Result =
     IF (
@@ -202,21 +202,21 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MATG __cogs,MATG __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG % __cogs,[Measures].[MATG % __cogs],MATG % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MATG __cogs], ABS ( [PYMAT __cogs] ) )",True,,MATG % __cogs,MATG % __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTD __gross_sales,[Measures].[YTD __gross_sales],YTD __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,MATG __cogs,MATG __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG % __cogs,[Measures].[MATG % __cogs],MATG % __cogs,,0,12,65535,-1,,,"DIVIDE ( [MATG __cogs], ABS ( [PYMAT __cogs] ) )",True,,MATG % __cogs,MATG % __cogs,Model_Measures,Time intelligence\Moving annual growth\__cogs,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTD __gross_sales,[Measures].[YTD __gross_sales],YTD __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__gross_sales], DATESYTD ( 'Date'[Date] ) )
-)",True,,YTD __gross_sales,YTD __gross_sales,Model_Measures,Time intelligence\To-date total\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTD __gross_sales,[Measures].[QTD __gross_sales],QTD __gross_sales,,0,12,65535,-1,,,"IF (
+)",True,,YTD __gross_sales,YTD __gross_sales,Model_Measures,Time intelligence\To-date total\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTD __gross_sales,[Measures].[QTD __gross_sales],QTD __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__gross_sales], DATESQTD ( 'Date'[Date] ) )
-)",True,,QTD __gross_sales,QTD __gross_sales,Model_Measures,Time intelligence\To-date total\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTD __gross_sales,[Measures].[MTD __gross_sales],MTD __gross_sales,,0,12,65535,-1,,,"IF (
+)",True,,QTD __gross_sales,QTD __gross_sales,Model_Measures,Time intelligence\To-date total\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTD __gross_sales,[Measures].[MTD __gross_sales],MTD __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__gross_sales], DATESMTD ( 'Date'[Date] ) )
-)",True,,MTD __gross_sales,MTD __gross_sales,Model_Measures,Time intelligence\To-date total\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PY __gross_sales,[Measures].[PY __gross_sales],PY __gross_sales,,0,12,65535,-1,,,"IF (
+)",True,,MTD __gross_sales,MTD __gross_sales,Model_Measures,Time intelligence\To-date total\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PY __gross_sales,[Measures].[PY __gross_sales],PY __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__gross_sales],
@@ -225,8 +225,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PY __gross_sales,PY __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY __gross_sales,[Measures].[YOY __gross_sales],YOY __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__gross_sales]
+)",True,,PY __gross_sales,PY __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY __gross_sales,[Measures].[YOY __gross_sales],YOY __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__gross_sales]
 VAR __ValuePreviousPeriod = [PY __gross_sales]
 VAR __Result =
     IF (
@@ -234,9 +234,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOY __gross_sales,YOY __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY % __gross_sales,[Measures].[YOY % __gross_sales],YOY % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [YOY __gross_sales], ABS ( [PY __gross_sales] ) )",True,,YOY % __gross_sales,YOY % __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQ __gross_sales,[Measures].[PQ __gross_sales],PQ __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOY __gross_sales,YOY __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY % __gross_sales,[Measures].[YOY % __gross_sales],YOY % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [YOY __gross_sales], ABS ( [PY __gross_sales] ) )",True,,YOY % __gross_sales,YOY % __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQ __gross_sales,[Measures].[PQ __gross_sales],PQ __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__gross_sales],
@@ -245,8 +245,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQ __gross_sales,PQ __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ __gross_sales,[Measures].[QOQ __gross_sales],QOQ __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__gross_sales]
+)",True,,PQ __gross_sales,PQ __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ __gross_sales,[Measures].[QOQ __gross_sales],QOQ __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__gross_sales]
 VAR __ValuePreviousPeriod = [PQ __gross_sales]
 VAR __Result =
     IF (
@@ -254,9 +254,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQ __gross_sales,QOQ __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ % __gross_sales,[Measures].[QOQ % __gross_sales],QOQ % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [QOQ __gross_sales], ABS ( [PQ __gross_sales] ) )",True,,QOQ % __gross_sales,QOQ % __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PM __gross_sales,[Measures].[PM __gross_sales],PM __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQ __gross_sales,QOQ __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ % __gross_sales,[Measures].[QOQ % __gross_sales],QOQ % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [QOQ __gross_sales], ABS ( [PQ __gross_sales] ) )",True,,QOQ % __gross_sales,QOQ % __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PM __gross_sales,[Measures].[PM __gross_sales],PM __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__gross_sales],
@@ -265,8 +265,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PM __gross_sales,PM __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM __gross_sales,[Measures].[MOM __gross_sales],MOM __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__gross_sales]
+)",True,,PM __gross_sales,PM __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM __gross_sales,[Measures].[MOM __gross_sales],MOM __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__gross_sales]
 VAR __ValuePreviousPeriod = [PM __gross_sales]
 VAR __Result =
     IF (
@@ -274,9 +274,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOM __gross_sales,MOM __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM % __gross_sales,[Measures].[MOM % __gross_sales],MOM % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MOM __gross_sales], ABS ( [PM __gross_sales] ) )",True,,MOM % __gross_sales,MOM % __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYTD __gross_sales,[Measures].[PYTD __gross_sales],PYTD __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOM __gross_sales,MOM __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM % __gross_sales,[Measures].[MOM % __gross_sales],MOM % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MOM __gross_sales], ABS ( [PM __gross_sales] ) )",True,,MOM % __gross_sales,MOM % __gross_sales,Model_Measures,Time intelligence\Growth\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYTD __gross_sales,[Measures].[PYTD __gross_sales],PYTD __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [YTD __gross_sales],
@@ -285,8 +285,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PYTD __gross_sales,PYTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD __gross_sales,[Measures].[YOYTD __gross_sales],YOYTD __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __gross_sales]
+)",True,,PYTD __gross_sales,PYTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD __gross_sales,[Measures].[YOYTD __gross_sales],YOYTD __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __gross_sales]
 VAR __ValuePreviousPeriod = [PYTD __gross_sales]
 VAR __Result =
     IF (
@@ -294,9 +294,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOYTD __gross_sales,YOYTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD % __gross_sales,[Measures].[YOYTD % __gross_sales],YOYTD % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __gross_sales], ABS ( [PYTD __gross_sales] ) )",True,,YOYTD % __gross_sales,YOYTD % __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQTD __gross_sales,[Measures].[PQTD __gross_sales],PQTD __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOYTD __gross_sales,YOYTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD % __gross_sales,[Measures].[YOYTD % __gross_sales],YOYTD % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __gross_sales], ABS ( [PYTD __gross_sales] ) )",True,,YOYTD % __gross_sales,YOYTD % __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQTD __gross_sales,[Measures].[PQTD __gross_sales],PQTD __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [QTD __gross_sales],
@@ -305,8 +305,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQTD __gross_sales,PQTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD __gross_sales,[Measures].[QOQTD __gross_sales],QOQTD __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __gross_sales]
+)",True,,PQTD __gross_sales,PQTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD __gross_sales,[Measures].[QOQTD __gross_sales],QOQTD __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __gross_sales]
 VAR __ValuePreviousPeriod = [PQTD __gross_sales]
 VAR __Result =
     IF (
@@ -314,9 +314,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQTD __gross_sales,QOQTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD % __gross_sales,[Measures].[QOQTD % __gross_sales],QOQTD % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __gross_sales], ABS ( [PQTD __gross_sales] ) )",True,,QOQTD % __gross_sales,QOQTD % __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMTD __gross_sales,[Measures].[PMTD __gross_sales],PMTD __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQTD __gross_sales,QOQTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD % __gross_sales,[Measures].[QOQTD % __gross_sales],QOQTD % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __gross_sales], ABS ( [PQTD __gross_sales] ) )",True,,QOQTD % __gross_sales,QOQTD % __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMTD __gross_sales,[Measures].[PMTD __gross_sales],PMTD __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [MTD __gross_sales],
@@ -325,8 +325,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PMTD __gross_sales,PMTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD __gross_sales,[Measures].[MOMTD __gross_sales],MOMTD __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __gross_sales]
+)",True,,PMTD __gross_sales,PMTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD __gross_sales,[Measures].[MOMTD __gross_sales],MOMTD __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __gross_sales]
 VAR __ValuePreviousPeriod = [PMTD __gross_sales]
 VAR __Result =
     IF (
@@ -334,13 +334,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOMTD __gross_sales,MOMTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD % __gross_sales,[Measures].[MOMTD % __gross_sales],MOMTD % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __gross_sales], ABS ( [PMTD __gross_sales] ) )",True,,MOMTD % __gross_sales,MOMTD % __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYC __gross_sales,[Measures].[PYC __gross_sales],PYC __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOMTD __gross_sales,MOMTD __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD % __gross_sales,[Measures].[MOMTD % __gross_sales],MOMTD % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __gross_sales], ABS ( [PMTD __gross_sales] ) )",True,,MOMTD % __gross_sales,MOMTD % __gross_sales,Model_Measures,Time intelligence\To-date growth\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYC __gross_sales,[Measures].[PYC __gross_sales],PYC __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__gross_sales], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYC __gross_sales,PYC __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTDOPY __gross_sales,[Measures].[YTDOPY __gross_sales],YTDOPY __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __gross_sales]
+)",True,,PYC __gross_sales,PYC __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTDOPY __gross_sales,[Measures].[YTDOPY __gross_sales],YTDOPY __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __gross_sales]
 VAR __ValuePreviousPeriod = [PYC __gross_sales]
 VAR __Result =
     IF (
@@ -348,13 +348,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YTDOPY __gross_sales,YTDOPY __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YDTOPY % __gross_sales,[Measures].[YDTOPY % __gross_sales],YDTOPY % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __gross_sales], ABS ( [PYC __gross_sales] ) )",True,,YDTOPY % __gross_sales,YDTOPY % __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQC __gross_sales,[Measures].[PQC __gross_sales],PQC __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,YTDOPY __gross_sales,YTDOPY __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YDTOPY % __gross_sales,[Measures].[YDTOPY % __gross_sales],YDTOPY % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __gross_sales], ABS ( [PYC __gross_sales] ) )",True,,YDTOPY % __gross_sales,YDTOPY % __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQC __gross_sales,[Measures].[PQC __gross_sales],PQC __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__gross_sales], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
-)",True,,PQC __gross_sales,PQC __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTDOPQ __gross_sales,[Measures].[QTDOPQ __gross_sales],QTDOPQ __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __gross_sales]
+)",True,,PQC __gross_sales,PQC __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTDOPQ __gross_sales,[Measures].[QTDOPQ __gross_sales],QTDOPQ __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __gross_sales]
 VAR __ValuePreviousPeriod = [PQC __gross_sales]
 VAR __Result =
     IF (
@@ -362,13 +362,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QTDOPQ __gross_sales,QTDOPQ __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QDTOPQ % __gross_sales,[Measures].[QDTOPQ % __gross_sales],QDTOPQ % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __gross_sales], ABS ( [PQC __gross_sales] ) )",True,,QDTOPQ % __gross_sales,QDTOPQ % __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMC __gross_sales,[Measures].[PMC __gross_sales],PMC __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,QTDOPQ __gross_sales,QTDOPQ __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QDTOPQ % __gross_sales,[Measures].[QDTOPQ % __gross_sales],QDTOPQ % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __gross_sales], ABS ( [PQC __gross_sales] ) )",True,,QDTOPQ % __gross_sales,QDTOPQ % __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMC __gross_sales,[Measures].[PMC __gross_sales],PMC __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__gross_sales], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
-)",True,,PMC __gross_sales,PMC __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM __gross_sales,[Measures].[MTDOPM __gross_sales],MTDOPM __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __gross_sales]
+)",True,,PMC __gross_sales,PMC __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM __gross_sales,[Measures].[MTDOPM __gross_sales],MTDOPM __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __gross_sales]
 VAR __ValuePreviousPeriod = [PMC __gross_sales]
 VAR __Result =
     IF (
@@ -376,20 +376,20 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MTDOPM __gross_sales,MTDOPM __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM % __gross_sales,[Measures].[MTDOPM % __gross_sales],MTDOPM % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __gross_sales], ABS ( [PMC __gross_sales] ) )",True,,MTDOPM % __gross_sales,MTDOPM % __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MAT __gross_sales,[Measures].[MAT __gross_sales],MAT __gross_sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,MTDOPM __gross_sales,MTDOPM __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM % __gross_sales,[Measures].[MTDOPM % __gross_sales],MTDOPM % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __gross_sales], ABS ( [PMC __gross_sales] ) )",True,,MTDOPM % __gross_sales,MTDOPM % __gross_sales,Model_Measures,Time intelligence\Growth over full period\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MAT __gross_sales,[Measures].[MAT __gross_sales],MAT __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__gross_sales],
         DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
     )
-)",True,,MAT __gross_sales,MAT __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYMAT __gross_sales,[Measures].[PYMAT __gross_sales],PYMAT __gross_sales,,0,12,65535,-1,,,"IF (
+)",True,,MAT __gross_sales,MAT __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYMAT __gross_sales,[Measures].[PYMAT __gross_sales],PYMAT __gross_sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [MAT __gross_sales], DATEADD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYMAT __gross_sales,PYMAT __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG __gross_sales,[Measures].[MATG __gross_sales],MATG __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __gross_sales]
+)",True,,PYMAT __gross_sales,PYMAT __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG __gross_sales,[Measures].[MATG __gross_sales],MATG __gross_sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __gross_sales]
 VAR __ValuePreviousPeriod = [PYMAT __gross_sales]
 VAR __Result =
     IF (
@@ -397,12 +397,12 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MATG __gross_sales,MATG __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG % __gross_sales,[Measures].[MATG % __gross_sales],MATG % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MATG __gross_sales], ABS ( [PYMAT __gross_sales] ) )",True,,MATG % __gross_sales,MATG % __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTD __profit,[Measures].[YTD __profit],YTD __profit,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__profit], DATESYTD ( 'Date'[Date] ) ) )",True,,YTD __profit,YTD __profit,Model_Measures,Time intelligence\To-date total\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTD __profit,[Measures].[QTD __profit],QTD __profit,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__profit], DATESQTD ( 'Date'[Date] ) ) )",True,,QTD __profit,QTD __profit,Model_Measures,Time intelligence\To-date total\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTD __profit,[Measures].[MTD __profit],MTD __profit,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__profit], DATESMTD ( 'Date'[Date] ) ) )",True,,MTD __profit,MTD __profit,Model_Measures,Time intelligence\To-date total\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PY __profit,[Measures].[PY __profit],PY __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,MATG __gross_sales,MATG __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG % __gross_sales,[Measures].[MATG % __gross_sales],MATG % __gross_sales,,0,12,65535,-1,,,"DIVIDE ( [MATG __gross_sales], ABS ( [PYMAT __gross_sales] ) )",True,,MATG % __gross_sales,MATG % __gross_sales,Model_Measures,Time intelligence\Moving annual growth\__gross_sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTD __profit,[Measures].[YTD __profit],YTD __profit,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__profit], DATESYTD ( 'Date'[Date] ) ) )",True,,YTD __profit,YTD __profit,Model_Measures,Time intelligence\To-date total\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTD __profit,[Measures].[QTD __profit],QTD __profit,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__profit], DATESQTD ( 'Date'[Date] ) ) )",True,,QTD __profit,QTD __profit,Model_Measures,Time intelligence\To-date total\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTD __profit,[Measures].[MTD __profit],MTD __profit,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__profit], DATESMTD ( 'Date'[Date] ) ) )",True,,MTD __profit,MTD __profit,Model_Measures,Time intelligence\To-date total\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PY __profit,[Measures].[PY __profit],PY __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__profit],
@@ -411,8 +411,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PY __profit,PY __profit,Model_Measures,Time intelligence\Growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY __profit,[Measures].[YOY __profit],YOY __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__profit]
+)",True,,PY __profit,PY __profit,Model_Measures,Time intelligence\Growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY __profit,[Measures].[YOY __profit],YOY __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__profit]
 VAR __ValuePreviousPeriod = [PY __profit]
 VAR __Result =
     IF (
@@ -420,9 +420,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOY __profit,YOY __profit,Model_Measures,Time intelligence\Growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY % __profit,[Measures].[YOY % __profit],YOY % __profit,,0,12,65535,-1,,,"DIVIDE ( [YOY __profit], ABS ( [PY __profit] ) )",True,,YOY % __profit,YOY % __profit,Model_Measures,Time intelligence\Growth\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQ __profit,[Measures].[PQ __profit],PQ __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOY __profit,YOY __profit,Model_Measures,Time intelligence\Growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY % __profit,[Measures].[YOY % __profit],YOY % __profit,,0,12,65535,-1,,,"DIVIDE ( [YOY __profit], ABS ( [PY __profit] ) )",True,,YOY % __profit,YOY % __profit,Model_Measures,Time intelligence\Growth\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQ __profit,[Measures].[PQ __profit],PQ __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__profit],
@@ -431,8 +431,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQ __profit,PQ __profit,Model_Measures,Time intelligence\Growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ __profit,[Measures].[QOQ __profit],QOQ __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__profit]
+)",True,,PQ __profit,PQ __profit,Model_Measures,Time intelligence\Growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ __profit,[Measures].[QOQ __profit],QOQ __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__profit]
 VAR __ValuePreviousPeriod = [PQ __profit]
 VAR __Result =
     IF (
@@ -440,9 +440,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQ __profit,QOQ __profit,Model_Measures,Time intelligence\Growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ % __profit,[Measures].[QOQ % __profit],QOQ % __profit,,0,12,65535,-1,,,"DIVIDE ( [QOQ __profit], ABS ( [PQ __profit] ) )",True,,QOQ % __profit,QOQ % __profit,Model_Measures,Time intelligence\Growth\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PM __profit,[Measures].[PM __profit],PM __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQ __profit,QOQ __profit,Model_Measures,Time intelligence\Growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ % __profit,[Measures].[QOQ % __profit],QOQ % __profit,,0,12,65535,-1,,,"DIVIDE ( [QOQ __profit], ABS ( [PQ __profit] ) )",True,,QOQ % __profit,QOQ % __profit,Model_Measures,Time intelligence\Growth\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PM __profit,[Measures].[PM __profit],PM __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__profit],
@@ -451,8 +451,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PM __profit,PM __profit,Model_Measures,Time intelligence\Growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM __profit,[Measures].[MOM __profit],MOM __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__profit]
+)",True,,PM __profit,PM __profit,Model_Measures,Time intelligence\Growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM __profit,[Measures].[MOM __profit],MOM __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__profit]
 VAR __ValuePreviousPeriod = [PM __profit]
 VAR __Result =
     IF (
@@ -460,9 +460,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOM __profit,MOM __profit,Model_Measures,Time intelligence\Growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM % __profit,[Measures].[MOM % __profit],MOM % __profit,,0,12,65535,-1,,,"DIVIDE ( [MOM __profit], ABS ( [PM __profit] ) )",True,,MOM % __profit,MOM % __profit,Model_Measures,Time intelligence\Growth\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYTD __profit,[Measures].[PYTD __profit],PYTD __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOM __profit,MOM __profit,Model_Measures,Time intelligence\Growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM % __profit,[Measures].[MOM % __profit],MOM % __profit,,0,12,65535,-1,,,"DIVIDE ( [MOM __profit], ABS ( [PM __profit] ) )",True,,MOM % __profit,MOM % __profit,Model_Measures,Time intelligence\Growth\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYTD __profit,[Measures].[PYTD __profit],PYTD __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [YTD __profit],
@@ -471,8 +471,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PYTD __profit,PYTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD __profit,[Measures].[YOYTD __profit],YOYTD __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __profit]
+)",True,,PYTD __profit,PYTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD __profit,[Measures].[YOYTD __profit],YOYTD __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __profit]
 VAR __ValuePreviousPeriod = [PYTD __profit]
 VAR __Result =
     IF (
@@ -480,9 +480,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOYTD __profit,YOYTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD % __profit,[Measures].[YOYTD % __profit],YOYTD % __profit,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __profit], ABS ( [PYTD __profit] ) )",True,,YOYTD % __profit,YOYTD % __profit,Model_Measures,Time intelligence\To-date growth\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQTD __profit,[Measures].[PQTD __profit],PQTD __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOYTD __profit,YOYTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD % __profit,[Measures].[YOYTD % __profit],YOYTD % __profit,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __profit], ABS ( [PYTD __profit] ) )",True,,YOYTD % __profit,YOYTD % __profit,Model_Measures,Time intelligence\To-date growth\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQTD __profit,[Measures].[PQTD __profit],PQTD __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [QTD __profit],
@@ -491,8 +491,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQTD __profit,PQTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD __profit,[Measures].[QOQTD __profit],QOQTD __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __profit]
+)",True,,PQTD __profit,PQTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD __profit,[Measures].[QOQTD __profit],QOQTD __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __profit]
 VAR __ValuePreviousPeriod = [PQTD __profit]
 VAR __Result =
     IF (
@@ -500,9 +500,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQTD __profit,QOQTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD % __profit,[Measures].[QOQTD % __profit],QOQTD % __profit,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __profit], ABS ( [PQTD __profit] ) )",True,,QOQTD % __profit,QOQTD % __profit,Model_Measures,Time intelligence\To-date growth\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMTD __profit,[Measures].[PMTD __profit],PMTD __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQTD __profit,QOQTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD % __profit,[Measures].[QOQTD % __profit],QOQTD % __profit,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __profit], ABS ( [PQTD __profit] ) )",True,,QOQTD % __profit,QOQTD % __profit,Model_Measures,Time intelligence\To-date growth\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMTD __profit,[Measures].[PMTD __profit],PMTD __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [MTD __profit],
@@ -511,8 +511,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PMTD __profit,PMTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD __profit,[Measures].[MOMTD __profit],MOMTD __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __profit]
+)",True,,PMTD __profit,PMTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD __profit,[Measures].[MOMTD __profit],MOMTD __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __profit]
 VAR __ValuePreviousPeriod = [PMTD __profit]
 VAR __Result =
     IF (
@@ -520,13 +520,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOMTD __profit,MOMTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD % __profit,[Measures].[MOMTD % __profit],MOMTD % __profit,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __profit], ABS ( [PMTD __profit] ) )",True,,MOMTD % __profit,MOMTD % __profit,Model_Measures,Time intelligence\To-date growth\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYC __profit,[Measures].[PYC __profit],PYC __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOMTD __profit,MOMTD __profit,Model_Measures,Time intelligence\To-date growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD % __profit,[Measures].[MOMTD % __profit],MOMTD % __profit,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __profit], ABS ( [PMTD __profit] ) )",True,,MOMTD % __profit,MOMTD % __profit,Model_Measures,Time intelligence\To-date growth\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYC __profit,[Measures].[PYC __profit],PYC __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__profit], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYC __profit,PYC __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTDOPY __profit,[Measures].[YTDOPY __profit],YTDOPY __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __profit]
+)",True,,PYC __profit,PYC __profit,Model_Measures,Time intelligence\Growth over full period\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTDOPY __profit,[Measures].[YTDOPY __profit],YTDOPY __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __profit]
 VAR __ValuePreviousPeriod = [PYC __profit]
 VAR __Result =
     IF (
@@ -534,13 +534,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YTDOPY __profit,YTDOPY __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YDTOPY % __profit,[Measures].[YDTOPY % __profit],YDTOPY % __profit,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __profit], ABS ( [PYC __profit] ) )",True,,YDTOPY % __profit,YDTOPY % __profit,Model_Measures,Time intelligence\Growth over full period\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQC __profit,[Measures].[PQC __profit],PQC __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,YTDOPY __profit,YTDOPY __profit,Model_Measures,Time intelligence\Growth over full period\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YDTOPY % __profit,[Measures].[YDTOPY % __profit],YDTOPY % __profit,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __profit], ABS ( [PYC __profit] ) )",True,,YDTOPY % __profit,YDTOPY % __profit,Model_Measures,Time intelligence\Growth over full period\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQC __profit,[Measures].[PQC __profit],PQC __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__profit], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
-)",True,,PQC __profit,PQC __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTDOPQ __profit,[Measures].[QTDOPQ __profit],QTDOPQ __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __profit]
+)",True,,PQC __profit,PQC __profit,Model_Measures,Time intelligence\Growth over full period\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTDOPQ __profit,[Measures].[QTDOPQ __profit],QTDOPQ __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __profit]
 VAR __ValuePreviousPeriod = [PQC __profit]
 VAR __Result =
     IF (
@@ -548,13 +548,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QTDOPQ __profit,QTDOPQ __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QDTOPQ % __profit,[Measures].[QDTOPQ % __profit],QDTOPQ % __profit,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __profit], ABS ( [PQC __profit] ) )",True,,QDTOPQ % __profit,QDTOPQ % __profit,Model_Measures,Time intelligence\Growth over full period\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMC __profit,[Measures].[PMC __profit],PMC __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,QTDOPQ __profit,QTDOPQ __profit,Model_Measures,Time intelligence\Growth over full period\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QDTOPQ % __profit,[Measures].[QDTOPQ % __profit],QDTOPQ % __profit,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __profit], ABS ( [PQC __profit] ) )",True,,QDTOPQ % __profit,QDTOPQ % __profit,Model_Measures,Time intelligence\Growth over full period\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMC __profit,[Measures].[PMC __profit],PMC __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__profit], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
-)",True,,PMC __profit,PMC __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM __profit,[Measures].[MTDOPM __profit],MTDOPM __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __profit]
+)",True,,PMC __profit,PMC __profit,Model_Measures,Time intelligence\Growth over full period\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM __profit,[Measures].[MTDOPM __profit],MTDOPM __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __profit]
 VAR __ValuePreviousPeriod = [PMC __profit]
 VAR __Result =
     IF (
@@ -562,20 +562,20 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MTDOPM __profit,MTDOPM __profit,Model_Measures,Time intelligence\Growth over full period\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM % __profit,[Measures].[MTDOPM % __profit],MTDOPM % __profit,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __profit], ABS ( [PMC __profit] ) )",True,,MTDOPM % __profit,MTDOPM % __profit,Model_Measures,Time intelligence\Growth over full period\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MAT __profit,[Measures].[MAT __profit],MAT __profit,,0,12,65535,-1,,,"IF (
+    __Result",True,,MTDOPM __profit,MTDOPM __profit,Model_Measures,Time intelligence\Growth over full period\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM % __profit,[Measures].[MTDOPM % __profit],MTDOPM % __profit,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __profit], ABS ( [PMC __profit] ) )",True,,MTDOPM % __profit,MTDOPM % __profit,Model_Measures,Time intelligence\Growth over full period\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MAT __profit,[Measures].[MAT __profit],MAT __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__profit],
         DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
     )
-)",True,,MAT __profit,MAT __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYMAT __profit,[Measures].[PYMAT __profit],PYMAT __profit,,0,12,65535,-1,,,"IF (
+)",True,,MAT __profit,MAT __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYMAT __profit,[Measures].[PYMAT __profit],PYMAT __profit,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [MAT __profit], DATEADD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYMAT __profit,PYMAT __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG __profit,[Measures].[MATG __profit],MATG __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __profit]
+)",True,,PYMAT __profit,PYMAT __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG __profit,[Measures].[MATG __profit],MATG __profit,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __profit]
 VAR __ValuePreviousPeriod = [PYMAT __profit]
 VAR __Result =
     IF (
@@ -583,12 +583,12 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MATG __profit,MATG __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG % __profit,[Measures].[MATG % __profit],MATG % __profit,,0,12,65535,-1,,,"DIVIDE ( [MATG __profit], ABS ( [PYMAT __profit] ) )",True,,MATG % __profit,MATG % __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTD __sales,[Measures].[YTD __sales],YTD __sales,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__sales], DATESYTD ( 'Date'[Date] ) ) )",True,,YTD __sales,YTD __sales,Model_Measures,Time intelligence\To-date total\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTD __sales,[Measures].[QTD __sales],QTD __sales,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__sales], DATESQTD ( 'Date'[Date] ) ) )",True,,QTD __sales,QTD __sales,Model_Measures,Time intelligence\To-date total\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTD __sales,[Measures].[MTD __sales],MTD __sales,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__sales], DATESMTD ( 'Date'[Date] ) ) )",True,,MTD __sales,MTD __sales,Model_Measures,Time intelligence\To-date total\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PY __sales,[Measures].[PY __sales],PY __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,MATG __profit,MATG __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG % __profit,[Measures].[MATG % __profit],MATG % __profit,,0,12,65535,-1,,,"DIVIDE ( [MATG __profit], ABS ( [PYMAT __profit] ) )",True,,MATG % __profit,MATG % __profit,Model_Measures,Time intelligence\Moving annual growth\__profit,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTD __sales,[Measures].[YTD __sales],YTD __sales,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__sales], DATESYTD ( 'Date'[Date] ) ) )",True,,YTD __sales,YTD __sales,Model_Measures,Time intelligence\To-date total\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTD __sales,[Measures].[QTD __sales],QTD __sales,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__sales], DATESQTD ( 'Date'[Date] ) ) )",True,,QTD __sales,QTD __sales,Model_Measures,Time intelligence\To-date total\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTD __sales,[Measures].[MTD __sales],MTD __sales,,0,12,65535,-1,,,"IF ( [_ShowValueForDates], CALCULATE ( [__sales], DATESMTD ( 'Date'[Date] ) ) )",True,,MTD __sales,MTD __sales,Model_Measures,Time intelligence\To-date total\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PY __sales,[Measures].[PY __sales],PY __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__sales],
@@ -597,8 +597,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PY __sales,PY __sales,Model_Measures,Time intelligence\Growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY __sales,[Measures].[YOY __sales],YOY __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__sales]
+)",True,,PY __sales,PY __sales,Model_Measures,Time intelligence\Growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY __sales,[Measures].[YOY __sales],YOY __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__sales]
 VAR __ValuePreviousPeriod = [PY __sales]
 VAR __Result =
     IF (
@@ -606,9 +606,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOY __sales,YOY __sales,Model_Measures,Time intelligence\Growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY % __sales,[Measures].[YOY % __sales],YOY % __sales,,0,12,65535,-1,,,"DIVIDE ( [YOY __sales], ABS ( [PY __sales] ) )",True,,YOY % __sales,YOY % __sales,Model_Measures,Time intelligence\Growth\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQ __sales,[Measures].[PQ __sales],PQ __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOY __sales,YOY __sales,Model_Measures,Time intelligence\Growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY % __sales,[Measures].[YOY % __sales],YOY % __sales,,0,12,65535,-1,,,"DIVIDE ( [YOY __sales], ABS ( [PY __sales] ) )",True,,YOY % __sales,YOY % __sales,Model_Measures,Time intelligence\Growth\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQ __sales,[Measures].[PQ __sales],PQ __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__sales],
@@ -617,8 +617,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQ __sales,PQ __sales,Model_Measures,Time intelligence\Growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ __sales,[Measures].[QOQ __sales],QOQ __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__sales]
+)",True,,PQ __sales,PQ __sales,Model_Measures,Time intelligence\Growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ __sales,[Measures].[QOQ __sales],QOQ __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__sales]
 VAR __ValuePreviousPeriod = [PQ __sales]
 VAR __Result =
     IF (
@@ -626,9 +626,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQ __sales,QOQ __sales,Model_Measures,Time intelligence\Growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ % __sales,[Measures].[QOQ % __sales],QOQ % __sales,,0,12,65535,-1,,,"DIVIDE ( [QOQ __sales], ABS ( [PQ __sales] ) )",True,,QOQ % __sales,QOQ % __sales,Model_Measures,Time intelligence\Growth\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PM __sales,[Measures].[PM __sales],PM __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQ __sales,QOQ __sales,Model_Measures,Time intelligence\Growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ % __sales,[Measures].[QOQ % __sales],QOQ % __sales,,0,12,65535,-1,,,"DIVIDE ( [QOQ __sales], ABS ( [PQ __sales] ) )",True,,QOQ % __sales,QOQ % __sales,Model_Measures,Time intelligence\Growth\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PM __sales,[Measures].[PM __sales],PM __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__sales],
@@ -637,8 +637,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PM __sales,PM __sales,Model_Measures,Time intelligence\Growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM __sales,[Measures].[MOM __sales],MOM __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__sales]
+)",True,,PM __sales,PM __sales,Model_Measures,Time intelligence\Growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM __sales,[Measures].[MOM __sales],MOM __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__sales]
 VAR __ValuePreviousPeriod = [PM __sales]
 VAR __Result =
     IF (
@@ -646,9 +646,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOM __sales,MOM __sales,Model_Measures,Time intelligence\Growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM % __sales,[Measures].[MOM % __sales],MOM % __sales,,0,12,65535,-1,,,"DIVIDE ( [MOM __sales], ABS ( [PM __sales] ) )",True,,MOM % __sales,MOM % __sales,Model_Measures,Time intelligence\Growth\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYTD __sales,[Measures].[PYTD __sales],PYTD __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOM __sales,MOM __sales,Model_Measures,Time intelligence\Growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM % __sales,[Measures].[MOM % __sales],MOM % __sales,,0,12,65535,-1,,,"DIVIDE ( [MOM __sales], ABS ( [PM __sales] ) )",True,,MOM % __sales,MOM % __sales,Model_Measures,Time intelligence\Growth\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYTD __sales,[Measures].[PYTD __sales],PYTD __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [YTD __sales],
@@ -657,8 +657,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PYTD __sales,PYTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD __sales,[Measures].[YOYTD __sales],YOYTD __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __sales]
+)",True,,PYTD __sales,PYTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD __sales,[Measures].[YOYTD __sales],YOYTD __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __sales]
 VAR __ValuePreviousPeriod = [PYTD __sales]
 VAR __Result =
     IF (
@@ -666,9 +666,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOYTD __sales,YOYTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD % __sales,[Measures].[YOYTD % __sales],YOYTD % __sales,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __sales], ABS ( [PYTD __sales] ) )",True,,YOYTD % __sales,YOYTD % __sales,Model_Measures,Time intelligence\To-date growth\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQTD __sales,[Measures].[PQTD __sales],PQTD __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOYTD __sales,YOYTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD % __sales,[Measures].[YOYTD % __sales],YOYTD % __sales,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __sales], ABS ( [PYTD __sales] ) )",True,,YOYTD % __sales,YOYTD % __sales,Model_Measures,Time intelligence\To-date growth\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQTD __sales,[Measures].[PQTD __sales],PQTD __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [QTD __sales],
@@ -677,8 +677,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQTD __sales,PQTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD __sales,[Measures].[QOQTD __sales],QOQTD __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __sales]
+)",True,,PQTD __sales,PQTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD __sales,[Measures].[QOQTD __sales],QOQTD __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __sales]
 VAR __ValuePreviousPeriod = [PQTD __sales]
 VAR __Result =
     IF (
@@ -686,9 +686,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQTD __sales,QOQTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD % __sales,[Measures].[QOQTD % __sales],QOQTD % __sales,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __sales], ABS ( [PQTD __sales] ) )",True,,QOQTD % __sales,QOQTD % __sales,Model_Measures,Time intelligence\To-date growth\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMTD __sales,[Measures].[PMTD __sales],PMTD __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQTD __sales,QOQTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD % __sales,[Measures].[QOQTD % __sales],QOQTD % __sales,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __sales], ABS ( [PQTD __sales] ) )",True,,QOQTD % __sales,QOQTD % __sales,Model_Measures,Time intelligence\To-date growth\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMTD __sales,[Measures].[PMTD __sales],PMTD __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [MTD __sales],
@@ -697,8 +697,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PMTD __sales,PMTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD __sales,[Measures].[MOMTD __sales],MOMTD __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __sales]
+)",True,,PMTD __sales,PMTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD __sales,[Measures].[MOMTD __sales],MOMTD __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __sales]
 VAR __ValuePreviousPeriod = [PMTD __sales]
 VAR __Result =
     IF (
@@ -706,13 +706,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOMTD __sales,MOMTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD % __sales,[Measures].[MOMTD % __sales],MOMTD % __sales,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __sales], ABS ( [PMTD __sales] ) )",True,,MOMTD % __sales,MOMTD % __sales,Model_Measures,Time intelligence\To-date growth\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYC __sales,[Measures].[PYC __sales],PYC __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOMTD __sales,MOMTD __sales,Model_Measures,Time intelligence\To-date growth\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD % __sales,[Measures].[MOMTD % __sales],MOMTD % __sales,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __sales], ABS ( [PMTD __sales] ) )",True,,MOMTD % __sales,MOMTD % __sales,Model_Measures,Time intelligence\To-date growth\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYC __sales,[Measures].[PYC __sales],PYC __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__sales], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYC __sales,PYC __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTDOPY __sales,[Measures].[YTDOPY __sales],YTDOPY __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __sales]
+)",True,,PYC __sales,PYC __sales,Model_Measures,Time intelligence\Growth over full period\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTDOPY __sales,[Measures].[YTDOPY __sales],YTDOPY __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __sales]
 VAR __ValuePreviousPeriod = [PYC __sales]
 VAR __Result =
     IF (
@@ -720,13 +720,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YTDOPY __sales,YTDOPY __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YDTOPY % __sales,[Measures].[YDTOPY % __sales],YDTOPY % __sales,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __sales], ABS ( [PYC __sales] ) )",True,,YDTOPY % __sales,YDTOPY % __sales,Model_Measures,Time intelligence\Growth over full period\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQC __sales,[Measures].[PQC __sales],PQC __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,YTDOPY __sales,YTDOPY __sales,Model_Measures,Time intelligence\Growth over full period\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YDTOPY % __sales,[Measures].[YDTOPY % __sales],YDTOPY % __sales,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __sales], ABS ( [PYC __sales] ) )",True,,YDTOPY % __sales,YDTOPY % __sales,Model_Measures,Time intelligence\Growth over full period\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQC __sales,[Measures].[PQC __sales],PQC __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__sales], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
-)",True,,PQC __sales,PQC __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTDOPQ __sales,[Measures].[QTDOPQ __sales],QTDOPQ __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __sales]
+)",True,,PQC __sales,PQC __sales,Model_Measures,Time intelligence\Growth over full period\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTDOPQ __sales,[Measures].[QTDOPQ __sales],QTDOPQ __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __sales]
 VAR __ValuePreviousPeriod = [PQC __sales]
 VAR __Result =
     IF (
@@ -734,13 +734,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QTDOPQ __sales,QTDOPQ __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QDTOPQ % __sales,[Measures].[QDTOPQ % __sales],QDTOPQ % __sales,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __sales], ABS ( [PQC __sales] ) )",True,,QDTOPQ % __sales,QDTOPQ % __sales,Model_Measures,Time intelligence\Growth over full period\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMC __sales,[Measures].[PMC __sales],PMC __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,QTDOPQ __sales,QTDOPQ __sales,Model_Measures,Time intelligence\Growth over full period\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QDTOPQ % __sales,[Measures].[QDTOPQ % __sales],QDTOPQ % __sales,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __sales], ABS ( [PQC __sales] ) )",True,,QDTOPQ % __sales,QDTOPQ % __sales,Model_Measures,Time intelligence\Growth over full period\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMC __sales,[Measures].[PMC __sales],PMC __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__sales], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
-)",True,,PMC __sales,PMC __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM __sales,[Measures].[MTDOPM __sales],MTDOPM __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __sales]
+)",True,,PMC __sales,PMC __sales,Model_Measures,Time intelligence\Growth over full period\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM __sales,[Measures].[MTDOPM __sales],MTDOPM __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __sales]
 VAR __ValuePreviousPeriod = [PMC __sales]
 VAR __Result =
     IF (
@@ -748,20 +748,20 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MTDOPM __sales,MTDOPM __sales,Model_Measures,Time intelligence\Growth over full period\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM % __sales,[Measures].[MTDOPM % __sales],MTDOPM % __sales,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __sales], ABS ( [PMC __sales] ) )",True,,MTDOPM % __sales,MTDOPM % __sales,Model_Measures,Time intelligence\Growth over full period\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MAT __sales,[Measures].[MAT __sales],MAT __sales,,0,12,65535,-1,,,"IF (
+    __Result",True,,MTDOPM __sales,MTDOPM __sales,Model_Measures,Time intelligence\Growth over full period\__sales,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM % __sales,[Measures].[MTDOPM % __sales],MTDOPM % __sales,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __sales], ABS ( [PMC __sales] ) )",True,,MTDOPM % __sales,MTDOPM % __sales,Model_Measures,Time intelligence\Growth over full period\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MAT __sales,[Measures].[MAT __sales],MAT __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__sales],
         DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
     )
-)",True,,MAT __sales,MAT __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYMAT __sales,[Measures].[PYMAT __sales],PYMAT __sales,,0,12,65535,-1,,,"IF (
+)",True,,MAT __sales,MAT __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,"$ #,##0"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYMAT __sales,[Measures].[PYMAT __sales],PYMAT __sales,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [MAT __sales], DATEADD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYMAT __sales,PYMAT __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG __sales,[Measures].[MATG __sales],MATG __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __sales]
+)",True,,PYMAT __sales,PYMAT __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,"$ #,##0"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG __sales,[Measures].[MATG __sales],MATG __sales,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __sales]
 VAR __ValuePreviousPeriod = [PYMAT __sales]
 VAR __Result =
     IF (
@@ -769,21 +769,21 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MATG __sales,MATG __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG % __sales,[Measures].[MATG % __sales],MATG % __sales,,0,12,65535,-1,,,"DIVIDE ( [MATG __sales], ABS ( [PYMAT __sales] ) )",True,,MATG % __sales,MATG % __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTD __units_sold,[Measures].[YTD __units_sold],YTD __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,MATG __sales,MATG __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,"$ #,##0"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG % __sales,[Measures].[MATG % __sales],MATG % __sales,,0,12,65535,-1,,,"DIVIDE ( [MATG __sales], ABS ( [PYMAT __sales] ) )",True,,MATG % __sales,MATG % __sales,Model_Measures,Time intelligence\Moving annual growth\__sales,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTD __units_sold,[Measures].[YTD __units_sold],YTD __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__units_sold], DATESYTD ( 'Date'[Date] ) )
-)",True,,YTD __units_sold,YTD __units_sold,Model_Measures,Time intelligence\To-date total\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTD __units_sold,[Measures].[QTD __units_sold],QTD __units_sold,,0,12,65535,-1,,,"IF (
+)",True,,YTD __units_sold,YTD __units_sold,Model_Measures,Time intelligence\To-date total\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTD __units_sold,[Measures].[QTD __units_sold],QTD __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__units_sold], DATESQTD ( 'Date'[Date] ) )
-)",True,,QTD __units_sold,QTD __units_sold,Model_Measures,Time intelligence\To-date total\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTD __units_sold,[Measures].[MTD __units_sold],MTD __units_sold,,0,12,65535,-1,,,"IF (
+)",True,,QTD __units_sold,QTD __units_sold,Model_Measures,Time intelligence\To-date total\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTD __units_sold,[Measures].[MTD __units_sold],MTD __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__units_sold], DATESMTD ( 'Date'[Date] ) )
-)",True,,MTD __units_sold,MTD __units_sold,Model_Measures,Time intelligence\To-date total\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PY __units_sold,[Measures].[PY __units_sold],PY __units_sold,,0,12,65535,-1,,,"IF (
+)",True,,MTD __units_sold,MTD __units_sold,Model_Measures,Time intelligence\To-date total\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PY __units_sold,[Measures].[PY __units_sold],PY __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__units_sold],
@@ -792,8 +792,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PY __units_sold,PY __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY __units_sold,[Measures].[YOY __units_sold],YOY __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__units_sold]
+)",True,,PY __units_sold,PY __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY __units_sold,[Measures].[YOY __units_sold],YOY __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__units_sold]
 VAR __ValuePreviousPeriod = [PY __units_sold]
 VAR __Result =
     IF (
@@ -801,9 +801,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOY __units_sold,YOY __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOY % __units_sold,[Measures].[YOY % __units_sold],YOY % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [YOY __units_sold], ABS ( [PY __units_sold] ) )",True,,YOY % __units_sold,YOY % __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQ __units_sold,[Measures].[PQ __units_sold],PQ __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOY __units_sold,YOY __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOY % __units_sold,[Measures].[YOY % __units_sold],YOY % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [YOY __units_sold], ABS ( [PY __units_sold] ) )",True,,YOY % __units_sold,YOY % __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQ __units_sold,[Measures].[PQ __units_sold],PQ __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__units_sold],
@@ -812,8 +812,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQ __units_sold,PQ __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ __units_sold,[Measures].[QOQ __units_sold],QOQ __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__units_sold]
+)",True,,PQ __units_sold,PQ __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ __units_sold,[Measures].[QOQ __units_sold],QOQ __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__units_sold]
 VAR __ValuePreviousPeriod = [PQ __units_sold]
 VAR __Result =
     IF (
@@ -821,9 +821,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQ __units_sold,QOQ __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQ % __units_sold,[Measures].[QOQ % __units_sold],QOQ % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [QOQ __units_sold], ABS ( [PQ __units_sold] ) )",True,,QOQ % __units_sold,QOQ % __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PM __units_sold,[Measures].[PM __units_sold],PM __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQ __units_sold,QOQ __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQ % __units_sold,[Measures].[QOQ % __units_sold],QOQ % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [QOQ __units_sold], ABS ( [PQ __units_sold] ) )",True,,QOQ % __units_sold,QOQ % __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PM __units_sold,[Measures].[PM __units_sold],PM __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__units_sold],
@@ -832,8 +832,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PM __units_sold,PM __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM __units_sold,[Measures].[MOM __units_sold],MOM __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__units_sold]
+)",True,,PM __units_sold,PM __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM __units_sold,[Measures].[MOM __units_sold],MOM __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [__units_sold]
 VAR __ValuePreviousPeriod = [PM __units_sold]
 VAR __Result =
     IF (
@@ -841,9 +841,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOM __units_sold,MOM __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOM % __units_sold,[Measures].[MOM % __units_sold],MOM % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MOM __units_sold], ABS ( [PM __units_sold] ) )",True,,MOM % __units_sold,MOM % __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYTD __units_sold,[Measures].[PYTD __units_sold],PYTD __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOM __units_sold,MOM __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOM % __units_sold,[Measures].[MOM % __units_sold],MOM % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MOM __units_sold], ABS ( [PM __units_sold] ) )",True,,MOM % __units_sold,MOM % __units_sold,Model_Measures,Time intelligence\Growth\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYTD __units_sold,[Measures].[PYTD __units_sold],PYTD __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [YTD __units_sold],
@@ -852,8 +852,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PYTD __units_sold,PYTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD __units_sold,[Measures].[YOYTD __units_sold],YOYTD __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __units_sold]
+)",True,,PYTD __units_sold,PYTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD __units_sold,[Measures].[YOYTD __units_sold],YOYTD __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __units_sold]
 VAR __ValuePreviousPeriod = [PYTD __units_sold]
 VAR __Result =
     IF (
@@ -861,9 +861,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YOYTD __units_sold,YOYTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YOYTD % __units_sold,[Measures].[YOYTD % __units_sold],YOYTD % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __units_sold], ABS ( [PYTD __units_sold] ) )",True,,YOYTD % __units_sold,YOYTD % __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQTD __units_sold,[Measures].[PQTD __units_sold],PQTD __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,YOYTD __units_sold,YOYTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YOYTD % __units_sold,[Measures].[YOYTD % __units_sold],YOYTD % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [YOYTD __units_sold], ABS ( [PYTD __units_sold] ) )",True,,YOYTD % __units_sold,YOYTD % __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQTD __units_sold,[Measures].[PQTD __units_sold],PQTD __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [QTD __units_sold],
@@ -872,8 +872,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PQTD __units_sold,PQTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD __units_sold,[Measures].[QOQTD __units_sold],QOQTD __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __units_sold]
+)",True,,PQTD __units_sold,PQTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD __units_sold,[Measures].[QOQTD __units_sold],QOQTD __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __units_sold]
 VAR __ValuePreviousPeriod = [PQTD __units_sold]
 VAR __Result =
     IF (
@@ -881,9 +881,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QOQTD __units_sold,QOQTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QOQTD % __units_sold,[Measures].[QOQTD % __units_sold],QOQTD % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __units_sold], ABS ( [PQTD __units_sold] ) )",True,,QOQTD % __units_sold,QOQTD % __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMTD __units_sold,[Measures].[PMTD __units_sold],PMTD __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,QOQTD __units_sold,QOQTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QOQTD % __units_sold,[Measures].[QOQTD % __units_sold],QOQTD % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [QOQTD __units_sold], ABS ( [PQTD __units_sold] ) )",True,,QOQTD % __units_sold,QOQTD % __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMTD __units_sold,[Measures].[PMTD __units_sold],PMTD __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [MTD __units_sold],
@@ -892,8 +892,8 @@ RETURN
             'Date'[DateWithTransactions] = TRUE
         )
     )
-)",True,,PMTD __units_sold,PMTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD __units_sold,[Measures].[MOMTD __units_sold],MOMTD __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __units_sold]
+)",True,,PMTD __units_sold,PMTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD __units_sold,[Measures].[MOMTD __units_sold],MOMTD __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __units_sold]
 VAR __ValuePreviousPeriod = [PMTD __units_sold]
 VAR __Result =
     IF (
@@ -901,13 +901,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MOMTD __units_sold,MOMTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MOMTD % __units_sold,[Measures].[MOMTD % __units_sold],MOMTD % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __units_sold], ABS ( [PMTD __units_sold] ) )",True,,MOMTD % __units_sold,MOMTD % __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYC __units_sold,[Measures].[PYC __units_sold],PYC __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,MOMTD __units_sold,MOMTD __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MOMTD % __units_sold,[Measures].[MOMTD % __units_sold],MOMTD % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MOMTD __units_sold], ABS ( [PMTD __units_sold] ) )",True,,MOMTD % __units_sold,MOMTD % __units_sold,Model_Measures,Time intelligence\To-date growth\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYC __units_sold,[Measures].[PYC __units_sold],PYC __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__units_sold], PARALLELPERIOD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYC __units_sold,PYC __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YTDOPY __units_sold,[Measures].[YTDOPY __units_sold],YTDOPY __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __units_sold]
+)",True,,PYC __units_sold,PYC __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YTDOPY __units_sold,[Measures].[YTDOPY __units_sold],YTDOPY __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [YTD __units_sold]
 VAR __ValuePreviousPeriod = [PYC __units_sold]
 VAR __Result =
     IF (
@@ -915,13 +915,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,YTDOPY __units_sold,YTDOPY __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,YDTOPY % __units_sold,[Measures].[YDTOPY % __units_sold],YDTOPY % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __units_sold], ABS ( [PYC __units_sold] ) )",True,,YDTOPY % __units_sold,YDTOPY % __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PQC __units_sold,[Measures].[PQC __units_sold],PQC __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,YTDOPY __units_sold,YTDOPY __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,YDTOPY % __units_sold,[Measures].[YDTOPY % __units_sold],YDTOPY % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [YTDOPY __units_sold], ABS ( [PYC __units_sold] ) )",True,,YDTOPY % __units_sold,YDTOPY % __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PQC __units_sold,[Measures].[PQC __units_sold],PQC __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__units_sold], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )
-)",True,,PQC __units_sold,PQC __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QTDOPQ __units_sold,[Measures].[QTDOPQ __units_sold],QTDOPQ __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __units_sold]
+)",True,,PQC __units_sold,PQC __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QTDOPQ __units_sold,[Measures].[QTDOPQ __units_sold],QTDOPQ __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [QTD __units_sold]
 VAR __ValuePreviousPeriod = [PQC __units_sold]
 VAR __Result =
     IF (
@@ -929,13 +929,13 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,QTDOPQ __units_sold,QTDOPQ __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,QDTOPQ % __units_sold,[Measures].[QDTOPQ % __units_sold],QDTOPQ % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __units_sold], ABS ( [PQC __units_sold] ) )",True,,QDTOPQ % __units_sold,QDTOPQ % __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PMC __units_sold,[Measures].[PMC __units_sold],PMC __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,QTDOPQ __units_sold,QTDOPQ __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,QDTOPQ % __units_sold,[Measures].[QDTOPQ % __units_sold],QDTOPQ % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [QTDOPQ __units_sold], ABS ( [PQC __units_sold] ) )",True,,QDTOPQ % __units_sold,QDTOPQ % __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PMC __units_sold,[Measures].[PMC __units_sold],PMC __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [__units_sold], PARALLELPERIOD ( 'Date'[Date], -1, MONTH ) )
-)",True,,PMC __units_sold,PMC __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM __units_sold,[Measures].[MTDOPM __units_sold],MTDOPM __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __units_sold]
+)",True,,PMC __units_sold,PMC __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM __units_sold,[Measures].[MTDOPM __units_sold],MTDOPM __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MTD __units_sold]
 VAR __ValuePreviousPeriod = [PMC __units_sold]
 VAR __Result =
     IF (
@@ -943,20 +943,20 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MTDOPM __units_sold,MTDOPM __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MTDOPM % __units_sold,[Measures].[MTDOPM % __units_sold],MTDOPM % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __units_sold], ABS ( [PMC __units_sold] ) )",True,,MTDOPM % __units_sold,MTDOPM % __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MAT __units_sold,[Measures].[MAT __units_sold],MAT __units_sold,,0,12,65535,-1,,,"IF (
+    __Result",True,,MTDOPM __units_sold,MTDOPM __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MTDOPM % __units_sold,[Measures].[MTDOPM % __units_sold],MTDOPM % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MTDOPM __units_sold], ABS ( [PMC __units_sold] ) )",True,,MTDOPM % __units_sold,MTDOPM % __units_sold,Model_Measures,Time intelligence\Growth over full period\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MAT __units_sold,[Measures].[MAT __units_sold],MAT __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE (
         [__units_sold],
         DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), -1, YEAR )
     )
-)",True,,MAT __units_sold,MAT __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,PYMAT __units_sold,[Measures].[PYMAT __units_sold],PYMAT __units_sold,,0,12,65535,-1,,,"IF (
+)",True,,MAT __units_sold,MAT __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,PYMAT __units_sold,[Measures].[PYMAT __units_sold],PYMAT __units_sold,,0,12,65535,-1,,,"IF (
     [_ShowValueForDates],
     CALCULATE ( [MAT __units_sold], DATEADD ( 'Date'[Date], -1, YEAR ) )
-)",True,,PYMAT __units_sold,PYMAT __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG __units_sold,[Measures].[MATG __units_sold],MATG __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __units_sold]
+)",True,,PYMAT __units_sold,PYMAT __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG __units_sold,[Measures].[MATG __units_sold],MATG __units_sold,,0,12,65535,-1,,,"VAR __ValueCurrentPeriod = [MAT __units_sold]
 VAR __ValuePreviousPeriod = [PYMAT __units_sold]
 VAR __Result =
     IF (
@@ -964,9 +964,9 @@ VAR __Result =
         __ValueCurrentPeriod - __ValuePreviousPeriod
     )
 RETURN
-    __Result",True,,MATG __units_sold,MATG __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,MATG % __units_sold,[Measures].[MATG % __units_sold],MATG % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MATG __units_sold], ABS ( [PYMAT __units_sold] ) )",True,,MATG % __units_sold,MATG % __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__moving_average,[Measures].[__moving_average],__moving_average,,0,12,65535,-1,,,"VAR Period =
+    __Result",True,,MATG __units_sold,MATG __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,MATG % __units_sold,[Measures].[MATG % __units_sold],MATG % __units_sold,,0,12,65535,-1,,,"DIVIDE ( [MATG __units_sold], ABS ( [PYMAT __units_sold] ) )",True,,MATG % __units_sold,MATG % __units_sold,Model_Measures,Time intelligence\Moving annual growth\__units_sold,0.00%
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__moving_average,[Measures].[__moving_average],__moving_average,,0,12,65535,-1,,,"VAR Period =
     DATESINPERIOD ( 'Date'[Date], MAX ( 'Date'[Date] ), - [Selected_Months], MONTH )
 VAR TotalProfit =
     CALCULATE ( [Selected Measure], Period )
@@ -974,10 +974,10 @@ VAR Mon =
     CALCULATE ( DISTINCTCOUNT ( 'Date'[Month] ), Period )
 RETURN
     DIVIDE ( TotalProfit, Mon, BLANK () )",True,,__moving_average,__moving_average,Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,Selected_Months,[Measures].[Selected_Months],Selected_Months,,0,12,65535,-1,,,"SELECTEDVALUE ( Selected_Months[Value], 3 )",True,,Selected_Months,Selected_Months,Model_Measures,Auxiliary_Measures,0
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__date1,[Measures].[__date1],__date1,,0,12,65535,-1,,,"DATE ( 2013, 12, 1 )",True,,__date1,__date1,Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__date2,[Measures].[__date2],__date2,,0,12,65535,-1,,,"DATE ( 2014, 9, 1 )",True,,__date2,__date2,Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__moving_average_title,[Measures].[__moving_average_title],__moving_average_title,,0,12,65535,-1,,,"VAR __selected =
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,Selected_Months,[Measures].[Selected_Months],Selected_Months,,0,12,65535,-1,,,"SELECTEDVALUE ( Selected_Months[Value], 3 )",True,,Selected_Months,Selected_Months,Model_Measures,Auxiliary_Measures,0
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__date1,[Measures].[__date1],__date1,,0,12,65535,-1,,,"DATE ( 2013, 12, 1 )",True,,__date1,__date1,Model_Measures,Auxiliary_Measures,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__date2,[Measures].[__date2],__date2,,0,12,65535,-1,,,"DATE ( 2014, 9, 1 )",True,,__date2,__date2,Model_Measures,Auxiliary_Measures,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__moving_average_title,[Measures].[__moving_average_title],__moving_average_title,,0,12,65535,-1,,,"VAR __selected =
     SWITCH (
         TRUE (),
         SELECTEDVALUE ( Slicer_Table[__measure] ) = ""__cogs"", ""COGS"",
@@ -988,7 +988,7 @@ RETURN
     )
 RETURN
     SELECTEDVALUE ( Selected_Months[Value] ) & "" Month Moving average for "" & __selected",True,,__moving_average_title,__moving_average_title,Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__experience_in_pbi,[Measures].[__experience_in_pbi],__experience_in_pbi,,0,12,65535,-1,,,"VAR Months =
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__experience_in_pbi,[Measures].[__experience_in_pbi],__experience_in_pbi,,0,12,65535,-1,,,"VAR Months =
     DATEDIFF ( DATE ( 2018, 9, 1 ), TODAY (), MONTH ) - 1
 VAR Years =
     ROUNDDOWN ( Months / 12, 0 )
@@ -999,28 +999,7 @@ VAR Result =
     )
 RETURN
     Result",True,,__experience_in_pbi,__experience_in_pbi,Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__rt%-(product),[Measures].[__rt%-(product)],__rt%-(product),,0,12,65535,-1,,,"DIVIDE ( [__running_total-(product)], CALCULATE ( [__profit], ALLSELECTED () ) )",True,,__rt%-(product),__rt%-(product),Model_Measures,Auxiliary_Measures,0.00%;-0.00%;0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__running_total-(product),[Measures].[__running_total-(product)],__running_total-(product),,0,12,65535,-1,,,"CALCULATE (
-    [__profit],
-    FILTER (
-        ALLSELECTED ( 'financials (web)'[Product] ),
-        ISONORAFTER (
-            'financials (web)'[Product], MAX ( 'financials (web)'[Product] ), DESC
-        )
-    )
-)",True,,__running_total-(product),__running_total-(product),Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__running_total,[Measures].[__running_total],__running_total,,0,12,65535,-1,,,"VAR MaxDate =
-    MAX ( 'Date'[Date] ) -- Saves the last visible date
-RETURN
-    CALCULATE (
-        [__profit],
-        -- Computes sales amount
-        'Date'[Date] <= MaxDate,
-        -- Where date is before the last visible date
-        ALL ( 'Date' ) -- Removes any other filters from Date
-    )",True,,__running_total,__running_total,Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__rt%,[Measures].[__rt%],__rt%,,0,12,65535,-1,,,"DIVIDE ( [__running_total], CALCULATE ( [__profit], ALLSELECTED () ) )",True,,__rt%,__rt%,Model_Measures,Auxiliary_Measures,0.00%;-0.00%;0.00%
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,DumpFilters,[Measures].[DumpFilters],DumpFilters,,0,12,65535,-1,,,"VAR MaxFilters = 3
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,DumpFilters,[Measures].[DumpFilters],DumpFilters,,0,12,65535,-1,,,"VAR MaxFilters = 3
 VAR __dumpfilters =
     IF (
         ISFILTERED ( 'Calculation group'[Ordinal] ),
@@ -1806,17 +1785,17 @@ VAR __dumpfilters =
         ) ---- MODEL MEASURES END ----
 RETURN
     IF ( NOT ISBLANK ( __dumpfilters ), __dumpfilters, ""No filter selected "" )",True,,DumpFilters,DumpFilters,Model_Measures,Auxiliary_Measures,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__discounts,[Measures].[__discounts],__discounts,,0,12,65535,-1,,,SUM ( 'financials (web)'[Discounts] ),True,,__discounts,__discounts,Model_Measures,Model_Measures,"#,0.00"
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,formatted cogs,[Measures].[formatted cogs],formatted cogs,,0,12,65535,-1,,,"FORMAT ( [__cogs], ""$ #,,#, K"" )",True,,formatted cogs,formatted cogs,Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,formatted discounts,[Measures].[formatted discounts],formatted discounts,,0,12,65535,-1,,,"FORMAT ( [__discounts], ""$ #,,#, K"" )",True,,formatted discounts,formatted discounts,Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,formatted gross_sales,[Measures].[formatted gross_sales],formatted gross_sales,,0,12,65535,-1,,,"FORMAT ( [__gross_sales], ""$ #,,#, K"" )",True,,formatted gross_sales,formatted gross_sales,Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,formatted profit,[Measures].[formatted profit],formatted profit,,0,12,65535,-1,,,"FORMAT ( [__profit], ""$ #,,#, K"" )",True,,formatted profit,formatted profit,Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,formatted sales,[Measures].[formatted sales],formatted sales,,0,12,65535,-1,,,"FORMAT ( [__sales], ""$ #,,#, K"" )",True,,formatted sales,formatted sales,Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% | mom (sales),[Measures].[mom% | mom (sales)],mom% | mom (sales),,0,12,65535,-1,,,"FORMAT ( [MOMTD % __sales], ""0.0%"" ) & "" | ""
-    & FORMAT ( [MOM __sales], ""$ #,,#, K"" )",True,,mom% | mom (sales),mom% | mom (sales),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% | mom (cogs),[Measures].[mom% | mom (cogs)],mom% | mom (cogs),,0,12,65535,-1,,,"FORMAT ( [MOMTD % __cogs], ""0.0%"" ) & "" | ""
-    & FORMAT ( [MOM __cogs], ""$ #,,#, K"" )",True,,mom% | mom (cogs),mom% | mom (cogs),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% | mom (discounts),[Measures].[mom% | mom (discounts)],mom% | mom (discounts),,0,12,65535,-1,,,"FORMAT (
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__discounts,[Measures].[__discounts],__discounts,,0,12,65535,-1,,,SUM ( 'financials (web)'[Discounts] ),True,,__discounts,__discounts,Model_Measures,Model_Measures,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,formatted cogs,[Measures].[formatted cogs],formatted cogs,,0,12,65535,-1,,,"FORMAT ( [__cogs], ""#,,#"" )",True,,formatted cogs,formatted cogs,Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,formatted discounts,[Measures].[formatted discounts],formatted discounts,,0,12,65535,-1,,,"FORMAT ( [__discounts], ""#,,#"" )",True,,formatted discounts,formatted discounts,Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,formatted gross_sales,[Measures].[formatted gross_sales],formatted gross_sales,,0,12,65535,-1,,,"FORMAT ( [__gross_sales], ""#,,#"" )",True,,formatted gross_sales,formatted gross_sales,Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,formatted profit,[Measures].[formatted profit],formatted profit,,0,12,65535,-1,,,"FORMAT ( [__profit], ""#,,#"" )",True,,formatted profit,formatted profit,Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,formatted sales,[Measures].[formatted sales],formatted sales,,0,12,65535,-1,,,"FORMAT ( [__sales], ""#,,#"" )",True,,formatted sales,formatted sales,Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% | mom (sales),[Measures].[mom% | mom (sales)],mom% | mom (sales),,0,12,65535,-1,,,"FORMAT ( [MOMTD % __sales], ""0.0%"" ) & "" | ""
+    & FORMAT ( [MOM __sales], ""#,,#"" )",True,,mom% | mom (sales),mom% | mom (sales),Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% | mom (cogs),[Measures].[mom% | mom (cogs)],mom% | mom (cogs),,0,12,65535,-1,,,"FORMAT ( [MOMTD % __cogs], ""0.0%"" ) & "" | ""
+    & FORMAT ( [MOM __cogs], ""#,,#"" )",True,,mom% | mom (cogs),mom% | mom (cogs),Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% | mom (discounts),[Measures].[mom% | mom (discounts)],mom% | mom (discounts),,0,12,65535,-1,,,"FORMAT (
     DIVIDE (
         [__discounts],
         CALCULATE ( [__discounts], DATEADD ( 'Date'[Date], -1, MONTH ) )
@@ -1825,25 +1804,38 @@ RETURN
 ) & "" | ""
     & FORMAT (
         [__discounts] - CALCULATE ( [__discounts], DATEADD ( 'Date'[Date], -1, MONTH ) ),
-        ""$ #,,#, K""
+        ""#,,#K""
     )",True,,mom% | mom (discounts),mom% | mom (discounts),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% | mom (gross sales),[Measures].[mom% | mom (gross sales)],mom% | mom (gross sales),,0,12,65535,-1,,,"FORMAT ( [MOMTD % __gross_sales], ""0.0%"" ) & "" | ""
-    & FORMAT ( [MOM __gross_sales], ""$ #,,#, K"" )",True,,mom% | mom (gross sales),mom% | mom (gross sales),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% | mom (profit),[Measures].[mom% | mom (profit)],mom% | mom (profit),,0,12,65535,-1,,,"FORMAT ( [MOMTD % __profit], ""0.0%"" ) & "" | ""
-    & FORMAT ( [MOM __profit], ""$ #,,#, K"" )",True,,mom% | mom (profit),mom% | mom (profit),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% color (sales),[Measures].[mom% color (sales)],mom% color (sales),,0,12,65535,-1,,,"SWITCH ( TRUE (), [MOM % __sales] > 0, ""Green"", ""Red"" )",True,,mom% color (sales),mom% color (sales),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% color (cogs),[Measures].[mom% color (cogs)],mom% color (cogs),,0,12,65535,-1,,,"SWITCH ( TRUE (), [MOM % __cogs] < 0, ""Green"", ""Red"" )",True,,mom% color (cogs),mom% color (cogs),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% color (discounts),[Measures].[mom% color (discounts)],mom% color (discounts),,0,12,65535,-1,,,"SWITCH (
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% | mom (gross sales),[Measures].[mom% | mom (gross sales)],mom% | mom (gross sales),,0,12,65535,-1,,,"FORMAT ( [MOMTD % __gross_sales], ""0.0%"" ) & "" | ""
+    & FORMAT ( [MOM __gross_sales], ""#,,#"" )",True,,mom% | mom (gross sales),mom% | mom (gross sales),Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% | mom (profit),[Measures].[mom% | mom (profit)],mom% | mom (profit),,0,12,65535,-1,,,"FORMAT ( [MOMTD % __profit], ""0.0%"" ) & "" | ""
+    & FORMAT ( [MOM __profit], ""#,,#"" )",True,,mom% | mom (profit),mom% | mom (profit),Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% color (sales),[Measures].[mom% color (sales)],mom% color (sales),,0,12,65535,-1,,,"SWITCH ( TRUE (), [MOM % __sales] > 0, ""Green"", ""Red"" )",True,,mom% color (sales),mom% color (sales),Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% color (cogs),[Measures].[mom% color (cogs)],mom% color (cogs),,0,12,65535,-1,,,"SWITCH ( TRUE (), [MOM % __cogs] < 0, ""Green"", ""Red"" )",True,,mom% color (cogs),mom% color (cogs),Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% color (discounts),[Measures].[mom% color (discounts)],mom% color (discounts),,0,12,65535,-1,,,"SWITCH (
     TRUE (),
     DIVIDE (
         [__discounts],
         CALCULATE ( [__discounts], DATEADD ( 'Date'[Date], -1, MONTH ) )
-    ) - 1 > 0, ""Green"",
+    ) - 1 < 0, ""Green"",
     ""Red""
 )",True,,mom% color (discounts),mom% color (discounts),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% color (gross sales),[Measures].[mom% color (gross sales)],mom% color (gross sales),,0,12,65535,-1,,,"SWITCH ( TRUE (), [MOM % __gross_sales] > 0, ""Green"", ""Red"" )",True,,mom% color (gross sales),mom% color (gross sales),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,mom% color (profit),[Measures].[mom% color (profit)],mom% color (profit),,0,12,65535,-1,,,"SWITCH ( TRUE (), [MOM % __profit] > 0, ""Green"", ""Red"" )",True,,mom% color (profit),mom% color (profit),Model_Measures,KPI Cards,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,_ShowValueForDates,[Measures].[_ShowValueForDates],_ShowValueForDates,,0,12,65535,-1,,,"VAR __LastDateWithData =
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% color (gross sales),[Measures].[mom% color (gross sales)],mom% color (gross sales),,0,12,65535,-1,,,"SWITCH ( TRUE (), [MOM % __gross_sales] > 0, ""Green"", ""Red"" )",True,,mom% color (gross sales),mom% color (gross sales),Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,mom% color (profit),[Measures].[mom% color (profit)],mom% color (profit),,0,12,65535,-1,,,"SWITCH ( TRUE (), [MOM % __profit] > 0, ""Green"", ""Red"" )",True,,mom% color (profit),mom% color (profit),Model_Measures,KPI Cards,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__line_chart,[Measures].[__line_chart],__line_chart,,0,12,65535,-1,,,"VAR __highest =
+    MAXX ( ALLSELECTED ( 'Date'[Date] ), [__profit] )
+VAR __lowest =
+    MINX ( ALLSELECTED ( 'Date'[Date] ), [__profit] )
+VAR Result =
+    SWITCH (
+        TRUE (),
+        [__profit] = __highest, [__profit],
+        [__profit] = __lowest, [__profit],
+        BLANK ()
+    )
+RETURN
+    Result",True,,__line_chart,__line_chart,Model_Measures,Auxiliary_Measures,"#,##0;(#,##0)"
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,_ShowValueForDates,[Measures].[_ShowValueForDates],_ShowValueForDates,,0,12,65535,-1,,,"VAR __LastDateWithData =
     CALCULATE (
         MAXX ( { MAX ( 'financials (web)'[Date] ) }, ''[Value] ),
         REMOVEFILTERS ()
@@ -1853,7 +1845,7 @@ VAR __FirstDateVisible =
 VAR __Result = __FirstDateVisible <= __LastDateWithData
 RETURN
     __Result",False,,_ShowValueForDates,_ShowValueForDates,Date,Hidden Time Intelligence,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,Selected Measure,[Measures].[Selected Measure],Selected Measure,,0,12,65535,-1,,,"SWITCH (
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,Selected Measure,[Measures].[Selected Measure],Selected Measure,,0,12,65535,-1,,,"SWITCH (
     TRUE (),
     SELECTEDVALUE ( 'Slicer_Table'[__measure] ) = ""__cogs"", [__cogs],
     SELECTEDVALUE ( 'Slicer_Table'[__measure] ) = ""__gross_sales"", [__gross_sales],
@@ -1862,4 +1854,36 @@ RETURN
     SELECTEDVALUE ( 'Slicer_Table'[__measure] ) = ""__units_sold"", [__units_sold],
     ""Select Measure""
 )",True,,Selected Measure,Selected Measure,Slicer_Table,,
-561ff6f3-d6fc-42e4-b633-128313d80b92,,Model,__Default measure,[Measures].[__Default measure],__Default measure,,127,12,65535,-1,,,1,False,,__Default measure,__Default measure,,,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,Group 1,[Measures].[Group 1],Group 1,,0,12,65535,-1,,,"VAR Result =
+    SWITCH (
+        TRUE (),
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__cogs"", [__cogs],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__gross_sales"", [__gross_sales],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__profit"", [__profit],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__sales"", [__sales],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__units_sold"", [__units_sold],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__discounts"", SUM ( 'financials (web)'[Discounts] )
+    )
+RETURN
+    IF (
+        MAX ( 'Multi Measure Table'[Measure group] ) = ""Measure group 1"",
+        Result,
+        BLANK ()
+    )",True,,Group 1,Group 1,Multi Measure Table,,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,Group 2,[Measures].[Group 2],Group 2,,0,12,65535,-1,,,"VAR Result =
+    SWITCH (
+        TRUE (),
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__cogs"", [__cogs],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__gross_sales"", [__gross_sales],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__profit"", [__profit],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__sales"", [__sales],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__units_sold"", [__units_sold],
+        SELECTEDVALUE ( 'Multi Measure Table'[Value2] ) = ""__discounts"", SUM ( 'financials (web)'[Discounts] )
+    )
+RETURN
+    IF (
+        MAX ( 'Multi Measure Table'[Measure group] ) = ""Measure group 2"",
+        Result,
+        BLANK ()
+    )",True,,Group 2,Group 2,Multi Measure Table,,
+b8ff92da-95d5-43b5-ab54-707ffae4b929,,Model,__Default measure,[Measures].[__Default measure],__Default measure,,127,12,65535,-1,,,1,False,,__Default measure,__Default measure,,,
