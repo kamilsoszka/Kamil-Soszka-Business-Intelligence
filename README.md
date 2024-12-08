@@ -5,30 +5,33 @@ Power BI Architecture diagram
 source: https://shorturl.at/x6RPw
 
 Small multiples
-![image](https://github.com/user-attachments/assets/95f35ea9-2298-4e68-bad6-98ad91eadb42)
+![image](https://github.com/user-attachments/assets/8a701f58-926e-4a3b-9e49-1221868b169d)
 
 Visual calculations
-![image](https://github.com/user-attachments/assets/3ceb5eee-d511-4e58-9b19-d38467c16b83)
+![image](https://github.com/user-attachments/assets/2669f122-fda2-4855-998c-bfaa084d3e16)
 
 Time intelligence
-![image](https://github.com/user-attachments/assets/c30de8ff-293c-4af3-8dc5-040fa21e87af)
+![image](https://github.com/user-attachments/assets/4e8f5ee1-7551-4fcf-9edd-c27216e8bf4f)
 
 Calculation groups
-![image](https://github.com/user-attachments/assets/a53c2f90-34aa-462f-9ed2-897356fd3f20)
+![image](https://github.com/user-attachments/assets/6bd4a762-a07a-4f79-a54b-e095b65319b9)
 
 Moving average
-![image](https://github.com/user-attachments/assets/1ebfa4c2-3d66-43ad-946f-f9baa5460af3)
+![image](https://github.com/user-attachments/assets/4c55e3e3-e13b-4e91-a421-3219c9488ee9)
 
 Artificial intelligence in Power BI
-![image](https://github.com/user-attachments/assets/1ee81278-aa58-4cea-a1df-814b85d20689)
+![image](https://github.com/user-attachments/assets/7eedcd24-e261-4327-a850-2f7943f0beee)
 
 KPI Cards
-![image](https://github.com/user-attachments/assets/73651f2f-632c-4b54-a6f5-a62d6f5b2c9c)
+![image](https://github.com/user-attachments/assets/085614c5-332a-41a3-b16b-bfd0d04a707d)
 
 Filled map
-![image](https://github.com/user-attachments/assets/211b5ce3-362e-4cc4-b06b-c65deffdbb9e)
+![image](https://github.com/user-attachments/assets/934df4ce-842d-4ffd-8ebe-7b16eed1fb44)
+
+Multi Measures Table
+![image](https://github.com/user-attachments/assets/ba76e885-d586-4a7b-845d-25d16bec373d)
 
 Experience in Power BI
-![image](https://github.com/user-attachments/assets/31c41610-4c6b-48cd-b0c9-ce5054329c07)
+![image](https://github.com/user-attachments/assets/5e1cda9e-0e50-4b57-862b-a0416d972f1d)
 
 Link: https://shorturl.at/jAOQj
