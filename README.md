@@ -26,7 +26,7 @@ KPI Cards
 ![image](https://github.com/user-attachments/assets/085614c5-332a-41a3-b16b-bfd0d04a707d)
 
 Filled map
-![image](https://github.com/user-attachments/assets/934df4ce-842d-4ffd-8ebe-7b16eed1fb44)
+![image](https://github.com/user-attachments/assets/6359f40d-421f-4e71-8f44-cbe9af12d01a)
 
 Multi Measures Table
 ![image](https://github.com/user-attachments/assets/ba76e885-d586-4a7b-845d-25d16bec373d)
