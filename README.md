@@ -16,6 +16,9 @@ Time intelligence
 Calculation groups
 ![image](https://github.com/user-attachments/assets/6bd4a762-a07a-4f79-a54b-e095b65319b9)
 
+New DAX Functions
+![image](https://github.com/user-attachments/assets/175b50e5-185c-4529-a5ba-1e798a3077af)
+
 Moving average
 ![image](https://github.com/user-attachments/assets/4c55e3e3-e13b-4e91-a421-3219c9488ee9)
 
@@ -30,6 +33,12 @@ Filled map
 
 Multi Measures Table
 ![image](https://github.com/user-attachments/assets/ba76e885-d586-4a7b-845d-25d16bec373d)
+
+Parameter
+![image](https://github.com/user-attachments/assets/9f01ccfb-c7dc-4ea4-8963-ca90e638478c)
+
+IBCS
+![image](https://github.com/user-attachments/assets/959e31f0-74ff-4865-9cd3-8d0dab86f391)
 
 Experience in Power BI
 ![image](https://github.com/user-attachments/assets/5e1cda9e-0e50-4b57-862b-a0416d972f1d)
