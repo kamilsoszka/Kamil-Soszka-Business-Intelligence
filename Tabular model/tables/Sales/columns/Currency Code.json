@@ -1,0 +1,7 @@
+{
+  "name": "Currency Code",
+  "dataType": "string",
+  "sourceColumn": "Currency Code",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "68607c97-e7f0-4d07-b35b-de09533bbfd3"
+}

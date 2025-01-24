@@ -1,0 +1,7 @@
+{
+  "name": "89cb26a3-64ee-49c3-852b-6529057d7c82",
+  "fromTable": "Sales",
+  "fromColumn": "Order Date",
+  "toTable": "Date",
+  "toColumn": "Date"
+}

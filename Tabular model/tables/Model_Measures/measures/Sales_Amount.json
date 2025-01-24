@@ -1,0 +1,10 @@
+{
+  "name": "Sales_Amount",
+  "expression": [
+    "",
+    "SUMX ( Sales, Sales[Quantity] * Sales[Net Price] )"
+  ],
+  "formatString": "$ #,##0.00",
+  "displayFolder": "Model_Measures",
+  "lineageTag": "0ed0cbd0-d4bf-4851-821c-9688ca48e0fc"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Close Date",
+  "dataType": "dateTime",
+  "sourceColumn": "Close Date",
+  "sourceProviderType": "date",
+  "lineageTag": "a791277c-536b-4ab7-a7eb-baccc08e0b58"
+}

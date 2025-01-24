@@ -1,0 +1,7 @@
+{
+  "name": "StoreKey",
+  "dataType": "int64",
+  "sourceColumn": "StoreKey",
+  "sourceProviderType": "int",
+  "lineageTag": "8dbd1572-6e0b-4f92-9244-63329dbc9c8d"
+}

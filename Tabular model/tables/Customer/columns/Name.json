@@ -1,0 +1,7 @@
+{
+  "name": "Name",
+  "dataType": "string",
+  "sourceColumn": "Name",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "febc9ecc-11ac-4369-9616-5ce463886aa0"
+}

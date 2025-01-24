@@ -1,0 +1,7 @@
+{
+  "name": "Order Number",
+  "dataType": "int64",
+  "sourceColumn": "Order Number",
+  "sourceProviderType": "bigint",
+  "lineageTag": "dfe71c10-33e1-4bc3-be52-59753eb2eb78"
+}

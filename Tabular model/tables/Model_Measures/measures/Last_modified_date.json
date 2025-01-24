@@ -1,0 +1,9 @@
+{
+  "name": "Last_modified_date",
+  "expression": [
+    " ",
+    "VAR _date = UTCNOW() RETURN \"Last modified date: \" & _date"
+  ],
+  "displayFolder": "Auxiliary_Measures",
+  "lineageTag": "67464e49-5a6d-495c-8528-f6e16a37b226"
+}

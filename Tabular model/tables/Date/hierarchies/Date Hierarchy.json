@@ -1,0 +1,30 @@
+{
+  "name": "Date Hierarchy",
+  "lineageTag": "c00e5cdb-48e2-4c85-813b-ff678b863d37",
+  "levels": [
+    {
+      "name": "Year",
+      "ordinal": 0,
+      "column": "Year",
+      "lineageTag": "fede3bef-6bfc-4f43-9643-a304d1a7cb6e"
+    },
+    {
+      "name": "Quarter",
+      "ordinal": 1,
+      "column": "Quarter",
+      "lineageTag": "edc5a20a-19c6-44b3-9d8f-ba803ba82a41"
+    },
+    {
+      "name": "Month Short",
+      "ordinal": 2,
+      "column": "Month Short",
+      "lineageTag": "404abf0f-c540-4520-8844-ec7ca2b2887d"
+    },
+    {
+      "name": "Date",
+      "ordinal": 3,
+      "column": "Date",
+      "lineageTag": "a7e8be58-d43b-4ae6-bd45-3ec2febfce77"
+    }
+  ]
+}
