@@ -1,0 +1,29 @@
+table 'Today''s Date'
+	lineageTag: 5e1b462d-6c97-4ce6-936d-7cc6b891c4ca
+
+	measure 'MIN Today''s Date' =
+			
+			MIN ( 'Today''s Date'[Today's Date] )
+		formatString: General Date
+		lineageTag: 2305cfdc-9c9f-4610-8bb4-6d33573202d5
+
+	column 'Today''s Date'
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 776302fe-6094-41fd-b573-17ce354e831e
+		summarizeBy: none
+		sourceColumn: Today's Date
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Today''s Date' = m
+		mode: import
+		source = DateTime.LocalNow() + #duration(0, 1, 0, 0)
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = DateTime
+

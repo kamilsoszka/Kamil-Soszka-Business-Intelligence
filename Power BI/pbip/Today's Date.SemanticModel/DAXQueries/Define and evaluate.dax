@@ -1,0 +1,7 @@
+DEFINE
+    MEASURE 'Today''s Date'[MIN Today's Date] = MIN('Today''s Date'[Today's Date])
+
+EVALUATE
+    SUMMARIZECOLUMNS(
+        "MIN Today's Date", 'Today''s Date'[MIN Today's Date]
+    )

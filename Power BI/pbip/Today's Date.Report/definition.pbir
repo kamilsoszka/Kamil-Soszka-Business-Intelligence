@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Today's Date.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

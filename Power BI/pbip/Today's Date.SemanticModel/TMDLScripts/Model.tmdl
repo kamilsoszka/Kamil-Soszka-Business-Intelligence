@@ -1,0 +1,52 @@
+createOrReplace
+
+	model Model
+		culture: en-US
+		defaultPowerBIDataSourceVersion: powerBI_V3
+		sourceQueryCulture: en-US
+		dataAccessOptions
+			legacyRedirects
+			returnErrorValuesAsNull
+
+		table 'Today''s Date'
+			lineageTag: 5e1b462d-6c97-4ce6-936d-7cc6b891c4ca
+
+			measure 'MIN Today''s Date' =
+					
+					MIN ( 'Today''s Date'[Today's Date] )
+				formatString: General Date
+				lineageTag: 2305cfdc-9c9f-4610-8bb4-6d33573202d5
+
+			column 'Today''s Date'
+				dataType: dateTime
+				isHidden
+				formatString: General Date
+				lineageTag: 776302fe-6094-41fd-b573-17ce354e831e
+				summarizeBy: none
+				sourceColumn: Today's Date
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			partition 'Today''s Date' = m
+				mode: import
+				source = DateTime.LocalNow() + #duration(0, 1, 0, 0)
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = DateTime
+
+		cultureInfo en-US
+
+			linguisticMetadata = {"Version":"3.5.0","Language":"en-US","Entities":{"todays_date":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date"}},"State":"Generated","Terms":[{"today's date":{"State":"Generated"}},{"today's moment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.609}},{"today's period":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.591}}]},"todays_date.todays_date":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"Today's Date"}},"State":"Generated","Visibility":{"Value":"Hidden"},"Terms":[{"today's date":{"State":"Generated"}},{"date":{"State":"Generated","Weight":0.7}},{"today's moment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.609}},{"today's period":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.591}}],"SemanticType":"Time"},"todays_date.MIN_todays_date":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"MIN Today's Date"}},"State":"Generated","Terms":[{"MIN today's date":{"State":"Generated"}},{"date":{"State":"Generated","Weight":0.7}},{"min today's moment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.617}},{"minimum today's date":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.599}},{"min today's period":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.599}},{"Today's Date":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}],"SemanticType":"Time"}},"Relationships":{"todays_date_has_MIN_todays_date":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.MIN_todays_date":{"Target":{"Entity":"todays_date.MIN_todays_date"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.MIN_todays_date"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_MIN_todays_date"}]}}}
+				contentType: json
+
+		annotation __PBI_TimeIntelligenceEnabled = 0
+
+		annotation PBIDesktopVersion = 2.139.1576.0 (24.12)+cf7e324bca3ba1dbdfd6f0ddf9a53321538e996d
+
+		annotation PBI_QueryOrder = ["Today's Date"]
+
+		annotation PBI_ProTooling = ["DaxQueryView_Desktop","TMDLView_Desktop"]
+
