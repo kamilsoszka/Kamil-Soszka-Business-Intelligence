@@ -9,6 +9,40 @@ createOrReplace
 			formatString: General Date
 			lineageTag: 2305cfdc-9c9f-4610-8bb4-6d33573202d5
 
+		measure 'Day number' =
+				
+				VAR __today =
+				    TODAY ()
+				VAR Result =
+				    DATEDIFF ( DATE ( YEAR ( __today ), 1, 1 ), __today, DAY ) + 1
+				RETURN
+				    Result
+			formatString: 0
+			lineageTag: a01fc755-f75e-4192-9e37-1fa99f7c808a
+
+		measure 'Number of days' =
+				
+				VAR __today =
+				    TODAY ()
+				VAR __startdate =
+				    DATE ( YEAR ( TODAY () ), 1, 1 )
+				VAR __enddate =
+				    DATE ( YEAR ( TODAY () ), 12, 31 )
+				VAR __calendar =
+				    CALENDAR ( __startdate, __enddate )
+				VAR Result =
+				    COUNTROWS ( __calendar )
+				RETURN
+				    Result
+			formatString: 0
+			lineageTag: d3533cf0-544b-47ea-a575-147d6cba4f86
+
+		measure Progress =
+				
+				DIVIDE ( [Day number], [Number of days] )
+			formatString: 0.00%;-0.00%;0.00%
+			lineageTag: b36e69ae-0282-4512-ba5d-13baf78009af
+
 		column 'Today''s Date'
 			dataType: dateTime
 			isHidden
