@@ -2,6 +2,6 @@ This report is a personal summary of a person's achievements tracking their own 
 
 The use of percentages suggests a focus on growth and positive change. The clear layout and modern design make it suitable for presentations or self-assessments.
 
-![image](https://github.com/user-attachments/assets/067dc3fb-558e-4a29-a64f-da6910ccfca7)
+![Report](https://github.com/user-attachments/assets/8814517c-333a-4324-8b3c-7e97d289f0cb)
 
 LINK: https://shorturl.at/qd7JN
