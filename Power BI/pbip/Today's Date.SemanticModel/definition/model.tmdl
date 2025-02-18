@@ -14,7 +14,10 @@ annotation PBI_QueryOrder = ["Today's Date"]
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","TMDLView_Desktop","DevMode"]
 
+annotation __TEdtr = 1
+
 ref table 'Today''s Date'
+ref table GEMINI
 
 ref cultureInfo en-US
 

@@ -1,0 +1,13 @@
+DEFINE
+    MEASURE 'Today''s Date'[Last refresh date] = // Calculates and formats the last refresh date.
+VAR lastrefreshdate =
+    TODAY () // Get the current date.
+VAR Result =
+    "Last refresh date: " & FORMAT ( lastrefreshdate, "mm/dd/yyyy" ) // Format the date as mm/dd/yyyy and concatenate it with the text.
+RETURN
+    Result // Return the formatted string.
+
+EVALUATE
+    SUMMARIZECOLUMNS(
+        "Last refresh date", 'Today''s Date'[Last refresh date]
+    )

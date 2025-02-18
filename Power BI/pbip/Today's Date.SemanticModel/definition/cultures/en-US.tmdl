@@ -101,12 +101,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
 			          "min today's moment": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -135,9 +129,417 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.599
 			          }
+			        }
+			      ]
+			    },
+			    "todays_date.day_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "Day number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day number": {
+			            "State": "Generated"
+			          }
 			        },
 			        {
-			          "Today's Date": {
+			          "day no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.number_of_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "Number of days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "number of days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quantity of day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.769
+			          }
+			        },
+			        {
+			          "amount of day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.746
+			          }
+			        },
+			        {
+			          "count of day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.746
+			          }
+			        },
+			        {
+			          "number of day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.746
+			          }
+			        },
+			        {
+			          "no of day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.progress": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "Progress"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "progress": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "development": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "growth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "advancement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "improvement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "evolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "headway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "evolvement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.firma_period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "@FIRMA (PERIOD)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@firma (period)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@firma": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.wiek_period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "@WIEK (PERIOD)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@wiek (period)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@wiek": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.doktorat_period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "@DOKTORAT (PERIOD)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@doktorat (period)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@doktorat": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.doktorat_start": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "@DOKTORAT (START)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@doktorat (start)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@doktorat": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.wiek_start": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "@WIEK (START)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@wiek (start)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@wiek": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.firma_start": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "@FIRMA (START)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@firma (start)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@firma": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.number_of_days_WIEK": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "Number of days (WIEK)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "number of days (WIEK)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "number of days": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.number_of_days_FIRMA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "Number of days (FIRMA)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "number of days (FIRMA)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "number of days": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.number_of_days_DOKTORAT": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "Number of days (DOKTORAT)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "number of days (DOKTORAT)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "number of days": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.firma_passed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "@FIRMA (PASSED)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@firma (passed)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@firma": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Days | Pct": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -146,11 +548,569 @@ cultureInfo en-US
 			            "Weight": 0.9
 			          }
 			        }
-			      ],
-			      "SemanticType": "Time"
+			      ]
+			    },
+			    "todays_date.wiek_passed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "@WIEK (PASSED)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@wiek (passed)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@wiek": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Days | Pct": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "todays_date.doktorat_passed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Today's Date",
+			          "ConceptualProperty": "@DOKTORAT (PASSED)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@doktorat (passed)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@doktorat": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Days | Pct": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "todays_date_has_doktorat_passed": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.doktorat_passed": {
+			          "Target": {
+			            "Entity": "todays_date.doktorat_passed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.doktorat_passed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_doktorat_passed"
+			        }
+			      ]
+			    },
+			    "todays_date_has_wiek_passed": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.wiek_passed": {
+			          "Target": {
+			            "Entity": "todays_date.wiek_passed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.wiek_passed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_wiek_passed"
+			        }
+			      ]
+			    },
+			    "todays_date_has_firma_passed": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.firma_passed": {
+			          "Target": {
+			            "Entity": "todays_date.firma_passed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.firma_passed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_firma_passed"
+			        }
+			      ]
+			    },
+			    "todays_date_has_number_of_days_DOKTORAT": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.number_of_days_DOKTORAT": {
+			          "Target": {
+			            "Entity": "todays_date.number_of_days_DOKTORAT"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.number_of_days_DOKTORAT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_number_of_days_DOKTORAT"
+			        }
+			      ]
+			    },
+			    "todays_date_has_number_of_days_FIRMA": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.number_of_days_FIRMA": {
+			          "Target": {
+			            "Entity": "todays_date.number_of_days_FIRMA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.number_of_days_FIRMA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_number_of_days_FIRMA"
+			        }
+			      ]
+			    },
+			    "todays_date_has_number_of_days_WIEK": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.number_of_days_WIEK": {
+			          "Target": {
+			            "Entity": "todays_date.number_of_days_WIEK"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.number_of_days_WIEK"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_number_of_days_WIEK"
+			        }
+			      ]
+			    },
+			    "todays_date_has_firma_start": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.firma_start": {
+			          "Target": {
+			            "Entity": "todays_date.firma_start"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.firma_start"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_firma_start"
+			        }
+			      ]
+			    },
+			    "todays_date_has_wiek_start": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.wiek_start": {
+			          "Target": {
+			            "Entity": "todays_date.wiek_start"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.wiek_start"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_wiek_start"
+			        }
+			      ]
+			    },
+			    "todays_date_has_doktorat_start": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.doktorat_start": {
+			          "Target": {
+			            "Entity": "todays_date.doktorat_start"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.doktorat_start"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_doktorat_start"
+			        }
+			      ]
+			    },
+			    "todays_date_has_doktorat_period": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.doktorat_period": {
+			          "Target": {
+			            "Entity": "todays_date.doktorat_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.doktorat_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_doktorat_period"
+			        }
+			      ]
+			    },
+			    "todays_date_has_wiek_period": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.wiek_period": {
+			          "Target": {
+			            "Entity": "todays_date.wiek_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.wiek_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_wiek_period"
+			        }
+			      ]
+			    },
+			    "todays_date_has_firma_period": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.firma_period": {
+			          "Target": {
+			            "Entity": "todays_date.firma_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.firma_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_firma_period"
+			        }
+			      ]
+			    },
+			    "todays_date_has_progress": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.progress": {
+			          "Target": {
+			            "Entity": "todays_date.progress"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.progress"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_progress"
+			        }
+			      ]
+			    },
+			    "todays_date_has_number_of_days": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.number_of_days": {
+			          "Target": {
+			            "Entity": "todays_date.number_of_days"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.number_of_days"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_number_of_days"
+			        }
+			      ]
+			    },
+			    "todays_date_has_day_number": {
+			      "Binding": {
+			        "ConceptualEntity": "Today's Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "todays_date": {
+			          "Target": {
+			            "Entity": "todays_date"
+			          }
+			        },
+			        "todays_date.day_number": {
+			          "Target": {
+			            "Entity": "todays_date.day_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "todays_date"
+			            },
+			            "Object": {
+			              "Role": "todays_date.day_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "todays_date_have_day_number"
+			        }
+			      ]
+			    },
 			    "todays_date_has_MIN_todays_date": {
 			      "Binding": {
 			        "ConceptualEntity": "Today's Date"

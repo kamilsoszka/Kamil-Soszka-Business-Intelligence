@@ -3,43 +3,69 @@ table 'Today''s Date'
 
 	measure 'MIN Today''s Date' =
 			
-			MIN ( 'Today''s Date'[Today's Date] )
-		formatString: General Date
+			// Define the measure named "MIN Today's Date"
+			FORMAT (
+			    MIN ( 'Today''s Date'[Today's Date] ),
+			    // Find the minimum date in the 'Today's Date' column of the 'Today's Date' table
+			    "YYYY/MM/DD" // Format the minimum date as YYYY/MM/DD
+			)
 		lineageTag: 2305cfdc-9c9f-4610-8bb4-6d33573202d5
 
 	measure 'Day number' =
 			
+			// Define the measure named "Day number"
 			VAR __today =
-			    TODAY ()
+			    TODAY () // Get the current date
 			VAR Result =
-			    DATEDIFF ( DATE ( YEAR ( __today ), 1, 1 ), __today, DAY ) + 1
+			    DATEDIFF ( DATE ( YEAR ( __today ), 1, 1 ), __today, DAY ) + 1 // Calculate the day number of the year
 			RETURN
 			    Result
+			// Return the calculated day number
 		formatString: 0
 		lineageTag: a01fc755-f75e-4192-9e37-1fa99f7c808a
 
 	measure 'Number of days' =
 			
+			// Define the measure named "Number of days"
 			VAR __today =
-			    TODAY ()
+			    TODAY () // Get today's date
 			VAR __startdate =
-			    DATE ( YEAR ( TODAY () ), 1, 1 )
+			    DATE ( YEAR ( TODAY () ), 1, 1 ) // Construct the date January 1st of the current year
 			VAR __enddate =
-			    DATE ( YEAR ( TODAY () ), 12, 31 )
+			    DATE ( YEAR ( TODAY () ), 12, 31 ) // Construct the date December 31st of the current year
 			VAR __calendar =
-			    CALENDAR ( __startdate, __enddate )
+			    CALENDAR ( __startdate, __enddate ) // Create a calendar table containing all dates between __startdate and __enddate (inclusive)
 			VAR Result =
-			    COUNTROWS ( __calendar )
+			    COUNTROWS ( __calendar ) // Count the number of rows in the calendar table.  Each row represents a day.
 			RETURN
 			    Result
+			// Return the total number of days in the current year
 		formatString: 0
 		lineageTag: d3533cf0-544b-47ea-a575-147d6cba4f86
 
 	measure Progress =
 			
-			DIVIDE ( [Day number], [Number of days] )
+			// Define the measure named "Progress"
+			DIVIDE (
+			    [Day number],
+			    // Numerator: The current day number of the year (calculated by another measure)
+			    [Number of days] // Denominator: The total number of days in the current year (calculated by another measure)
+			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: b36e69ae-0282-4512-ba5d-13baf78009af
+
+	measure 'Last refresh date' = ```
+			
+			// Calculates and formats the last refresh date.
+			VAR lastrefreshdate =
+			    TODAY () // Get the current date.
+			VAR Result =
+			    "Last refresh date: " & FORMAT ( lastrefreshdate, "mm/dd/yyyy" ) // Format the date as mm/dd/yyyy and concatenate it with the text.
+			RETURN
+			    Result // Return the formatted string.
+			
+			```
+		lineageTag: 52d0f0b0-777e-49e3-8667-191fb3b7377c
 
 	column 'Today''s Date'
 		dataType: dateTime

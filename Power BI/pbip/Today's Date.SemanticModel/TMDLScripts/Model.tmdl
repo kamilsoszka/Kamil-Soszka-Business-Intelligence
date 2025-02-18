@@ -13,43 +13,69 @@ createOrReplace
 
 			measure 'MIN Today''s Date' =
 					
-					MIN ( 'Today''s Date'[Today's Date] )
-				formatString: General Date
+					// Define the measure named "MIN Today's Date"
+					FORMAT (
+					    MIN ( 'Today''s Date'[Today's Date] ),
+					    // Find the minimum date in the 'Today's Date' column of the 'Today's Date' table
+					    "YYYY/MM/DD" // Format the minimum date as YYYY/MM/DD
+					)
 				lineageTag: 2305cfdc-9c9f-4610-8bb4-6d33573202d5
 
 			measure 'Day number' =
 					
+					// Define the measure named "Day number"
 					VAR __today =
-					    TODAY ()
+					    TODAY () // Get the current date
 					VAR Result =
-					    DATEDIFF ( DATE ( YEAR ( __today ), 1, 1 ), __today, DAY ) + 1
+					    DATEDIFF ( DATE ( YEAR ( __today ), 1, 1 ), __today, DAY ) + 1 // Calculate the day number of the year
 					RETURN
 					    Result
+					// Return the calculated day number
 				formatString: 0
 				lineageTag: a01fc755-f75e-4192-9e37-1fa99f7c808a
 
 			measure 'Number of days' =
 					
+					// Define the measure named "Number of days"
 					VAR __today =
-					    TODAY ()
+					    TODAY () // Get today's date
 					VAR __startdate =
-					    DATE ( YEAR ( TODAY () ), 1, 1 )
+					    DATE ( YEAR ( TODAY () ), 1, 1 ) // Construct the date January 1st of the current year
 					VAR __enddate =
-					    DATE ( YEAR ( TODAY () ), 12, 31 )
+					    DATE ( YEAR ( TODAY () ), 12, 31 ) // Construct the date December 31st of the current year
 					VAR __calendar =
-					    CALENDAR ( __startdate, __enddate )
+					    CALENDAR ( __startdate, __enddate ) // Create a calendar table containing all dates between __startdate and __enddate (inclusive)
 					VAR Result =
-					    COUNTROWS ( __calendar )
+					    COUNTROWS ( __calendar ) // Count the number of rows in the calendar table.  Each row represents a day.
 					RETURN
 					    Result
+					// Return the total number of days in the current year
 				formatString: 0
 				lineageTag: d3533cf0-544b-47ea-a575-147d6cba4f86
 
 			measure Progress =
 					
-					DIVIDE ( [Day number], [Number of days] )
+					// Define the measure named "Progress"
+					DIVIDE (
+					    [Day number],
+					    // Numerator: The current day number of the year (calculated by another measure)
+					    [Number of days] // Denominator: The total number of days in the current year (calculated by another measure)
+					)
 				formatString: 0.00%;-0.00%;0.00%
 				lineageTag: b36e69ae-0282-4512-ba5d-13baf78009af
+
+			measure 'Last refresh date' = ```
+					
+					// Calculates and formats the last refresh date.
+					VAR lastrefreshdate =
+					    TODAY () // Get the current date.
+					VAR Result =
+					    "Last refresh date: " & FORMAT ( lastrefreshdate, "mm/dd/yyyy" ) // Format the date as mm/dd/yyyy and concatenate it with the text.
+					RETURN
+					    Result // Return the formatted string.
+					
+					```
+				lineageTag: 52d0f0b0-777e-49e3-8667-191fb3b7377c
 
 			column 'Today''s Date'
 				dataType: dateTime
@@ -71,9 +97,875 @@ createOrReplace
 
 			annotation PBI_ResultType = DateTime
 
+		table GEMINI
+			lineageTag: 919a7176-8815-4e74-a291-a1df4c528721
+
+			measure @AGE =
+					
+					
+					// Define the birth date.  This could be made dynamic by referencing a date column.
+					VAR BirthDate =
+					    DATE ( 1987, 01, 28 )
+					
+					// Get the current date.
+					VAR CurrentDate =
+					    TODAY ()
+					
+					// Check if the birth date is valid (i.e., in the past).
+					VAR IsValidDate = BirthDate <= CurrentDate
+					
+					// Calculate the difference in years between the current date and the birth date.
+					VAR YearDiff =
+					    YEAR ( CurrentDate ) - YEAR ( BirthDate )
+					
+					// Calculate the difference in months.
+					VAR MonthDiff =
+					    MONTH ( CurrentDate ) - MONTH ( BirthDate )
+					
+					// Calculate the difference in days.
+					VAR DayDiff =
+					    DAY ( CurrentDate ) - DAY ( BirthDate )
+					
+					// Calculate the total number of months, adjusting if the birth day hasn't occurred yet this month.
+					VAR TotalMonths =
+					    YearDiff * 12 + MonthDiff
+					    - SWITCH ( TRUE (), DayDiff < 0, 1, 0 ) // Subtract 1 if the birthday hasn't happened yet this month.
+					
+					// Calculate the number of complete years.
+					VAR CompleteYears =
+					    QUOTIENT ( TotalMonths, 12 )
+					
+					// Calculate the number of remaining months after the complete years.
+					VAR RemainingMonths =
+					    MOD ( TotalMonths, 12 )
+					
+					// Calculate the number of days since the person's "monthly birthday" (the 28th of the month).
+					VAR DaysInPeriod =
+					    VAR MonthlyBirthday =
+					        DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ), 28 ) // Anchor date for day calculation.
+					    RETURN
+					        SWITCH (
+					            TRUE (),
+					            DAY ( CurrentDate ) >= 28, // If current day is on or after the 28th...
+					                DATEDIFF (
+					                    MonthlyBirthday, // ...calculate days since the 28th of the current month.
+					                    CurrentDate,
+					                    DAY
+					                ),
+					            DATEDIFF ( // Otherwise (current day is before the 28th)...
+					                DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ) - 1, 28 ), // ...calculate days since the 28th of the previous month.
+					                CurrentDate,
+					                DAY
+					            )
+					        )
+					
+					// Format the age string.
+					VAR FormattedResult =
+					    CompleteYears
+					    & SWITCH ( TRUE (), CompleteYears = 1, " Year, ", " Years, " ) & RemainingMonths // Add "Year" or "Years".
+					    & SWITCH ( TRUE (), RemainingMonths = 1, " Month, ", " Months, " ) // Add "Month" or "Months".
+					    & ABS ( DaysInPeriod ) // Get the absolute value of days (can be negative if before the 28th).
+					    & SWITCH ( TRUE (), ABS ( DaysInPeriod ) = 1, " Day", " Days" ) // Add "Day" or "Days".
+					
+					// Return the formatted age string if the birth date is valid, otherwise return "Invalid birth date".
+					RETURN
+					    SWITCH ( TRUE (), IsValidDate, FormattedResult, "Invalid birth date" )
+				lineageTag: a998b78e-5578-4330-838a-73770e6c75a0
+
+			measure @BUSINESS =
+					
+					
+					// Define the founding date.
+					VAR FoundingDate =
+					    DATE ( 2020, 11, 01 )
+					
+					// Get the current date.
+					VAR CurrentDate =
+					    TODAY ()
+					
+					// Check if the founding date is valid (i.e., in the past).
+					VAR IsValidDate = FoundingDate <= CurrentDate
+					
+					// Calculate the difference in years.
+					VAR YearDiff =
+					    YEAR ( CurrentDate ) - YEAR ( FoundingDate )
+					
+					// Calculate the difference in months.
+					VAR MonthDiff =
+					    MONTH ( CurrentDate ) - MONTH ( FoundingDate )
+					
+					// Calculate the difference in days.
+					VAR DayDiff =
+					    DAY ( CurrentDate ) - DAY ( FoundingDate )
+					
+					// Calculate the total number of months, adjusting if the founding day hasn't occurred yet this month.
+					VAR TotalMonths =
+					    YearDiff * 12 + MonthDiff
+					    - SWITCH ( TRUE (), DayDiff < 0, 1, 0 )
+					
+					// Calculate the number of complete years.
+					VAR CompleteYears =
+					    QUOTIENT ( TotalMonths, 12 )
+					
+					// Calculate the number of remaining months.
+					VAR RemainingMonths =
+					    MOD ( TotalMonths, 12 )
+					
+					// Calculate the number of days elapsed in the current month.
+					VAR DaysInPeriod =
+					    DATEDIFF (
+					        DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ), 1 ), // Start of the current month
+					        CurrentDate, // Current Date
+					        DAY
+					    ) + 1 // Add 1 because DATEDIFF is exclusive of the end date.
+					
+					// Format the year part of the result string, handling singular/plural.
+					VAR YearText =
+					    CompleteYears
+					    & SWITCH ( TRUE (), CompleteYears = 1, " Year", " Years" )
+					
+					// Format the month part, handling singular/plural.
+					VAR MonthText =
+					    RemainingMonths
+					    & SWITCH ( TRUE (), RemainingMonths = 1, " Month", " Months" )
+					
+					// Format the day part, handling singular/plural.
+					VAR DayText =
+					    DaysInPeriod
+					    & SWITCH ( TRUE (), DaysInPeriod = 1, " Day", " Days" )
+					
+					// Combine the formatted parts into the final result string.
+					VAR FormattedResult = YearText & ", " & MonthText & ", " & DayText
+					
+					// Return the formatted string if the founding date is valid, otherwise return "Invalid founding date".
+					RETURN
+					    SWITCH ( TRUE (), IsValidDate, FormattedResult, "Invalid founding date" )
+				lineageTag: c68aaedf-16e5-4c44-9f4f-1f7d36773089
+
+			measure @PHD =
+					
+					
+					// Define the defense date.
+					VAR DefenseDate =
+					    DATE ( 2021, 02, 25 )
+					
+					// Get the current date.
+					VAR CurrentDate =
+					    TODAY ()
+					
+					// Check if the defense date is valid (i.e., in the past).
+					VAR IsValidDate = DefenseDate <= CurrentDate
+					
+					// Calculate the difference in years.
+					VAR YearDiff =
+					    YEAR ( CurrentDate ) - YEAR ( DefenseDate )
+					
+					// Calculate the difference in months.
+					VAR MonthDiff =
+					    MONTH ( CurrentDate ) - MONTH ( DefenseDate )
+					
+					// Calculate the difference in days.
+					VAR DayDiff =
+					    DAY ( CurrentDate ) - DAY ( DefenseDate )
+					
+					// Calculate total months, adjusting if the defense day hasn't occurred yet this month.
+					VAR TotalMonths =
+					    YearDiff * 12 + MonthDiff
+					    - SWITCH ( TRUE (), DayDiff < 0, 1, 0 )
+					
+					// Calculate the number of complete years.
+					VAR CompleteYears =
+					    QUOTIENT ( TotalMonths, 12 )
+					
+					// Calculate the number of remaining months.
+					VAR RemainingMonths =
+					    MOD ( TotalMonths, 12 )
+					
+					// Calculate the number of days since the 25th of the current or previous month.
+					VAR DaysInPeriod =
+					    VAR MonthlyAnniversary =
+					        DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ), 25 ) // 25th of the current month
+					    RETURN
+					        SWITCH (
+					            TRUE (),
+					            CurrentDate > MonthlyAnniversary, // If current date is after the 25th of the current month...
+					                DATEDIFF (
+					                    CurrentDate,
+					                    MonthlyAnniversary,
+					                    DAY
+					                ),  // ...calculate the days since the 25th of the current month.
+					            DATEDIFF ( // Otherwise (current day is before or on the 25th)...
+					                DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ) - 1, 25 ), // ...calculate the days since the 25th of the *previous* month.
+					                CurrentDate,
+					                DAY
+					            )
+					        )
+					
+					// Format the result string: Years, Months, and Days.
+					VAR FormattedResult =
+					    CompleteYears & " Years, " & RemainingMonths & " Months, "
+					    & ABS ( DaysInPeriod ) & " Days" // ABS to handle cases where the current date is before the 25th.
+					
+					// Return the formatted result if the defense date is valid, otherwise return "Invalid date range".
+					RETURN
+					    SWITCH (
+					        TRUE (),
+					        IsValidDate, FormattedResult,
+					        "Invalid date range"
+					    )
+				lineageTag: cdbf812b-b4b3-431a-bbab-910555919339
+
+			measure @AGE_COLUMN_CHART =
+					
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the birthday date for the current year (January 28th).
+					VAR BirthdayThisYear =
+					    DATE ( CurrentYear, 01, 28 )
+					
+					// Calculate the number of days until or since the birthday.
+					VAR Result =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate >= BirthdayThisYear, // If today's date is on or after the birthday this year...
+					            DATEDIFF (
+					                BirthdayThisYear, // ...calculate the number of days *since* the birthday. This will be a positive number.
+					                TodayDate,
+					                DAY
+					            ),
+					        DATEDIFF ( // Otherwise (today's date is before the birthday this year)...
+					            DATE ( CurrentYear - 1, 01, 28 ), // ...construct the birthday date for the *previous* year.
+					            TodayDate, // ...calculate the number of days *since* the birthday last year. This will be a negative number, representing days *until* the next birthday.
+					            DAY
+					        )
+					    )
+					
+					// Return the calculated number of days.
+					RETURN
+					    Result
+				formatString: 0
+				lineageTag: 0ddc9902-3c58-4754-8681-071541b38780
+
+			measure @AGE_DATEDIFF =
+					
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the birthday date for the current year (January 28th).
+					VAR BirthdayThisYear =
+					    DATE ( CurrentYear, 01, 28 )
+					
+					// Calculate the number of days until or since the birthday.
+					VAR Result =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate >= BirthdayThisYear, // If today's date is on or after the birthday this year...
+					            DATEDIFF (
+					                BirthdayThisYear, // ...calculate the number of days *since* the birthday. This will be a positive number.
+					                TodayDate,
+					                DAY
+					            ),
+					        DATEDIFF ( // Otherwise (today's date is before the birthday this year)...
+					            DATE ( CurrentYear - 1, 01, 28 ), // ...construct the birthday date for the *previous* year.
+					            TodayDate, // ...calculate the number of days *since* the birthday last year. This will be a negative number, representing days *until* the next birthday.
+					            DAY
+					        )
+					    )
+					
+					// Return the formatted string containing:
+					// 1. Days since last birthday (or until next birthday - negative value)
+					// 2. Remaining days until the *next* birthday.  Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+					// 3. Percentage of the year passed (or remaining if Result is negative)
+					// 4. Percentage of the year remaining (or passed if Result is negative)
+					RETURN
+					    "+" & Result & " | " &
+					    "-" & [Number of days] - Result & " | " &
+					    "+" & FORMAT ( DIVIDE ( Result, [Number of days] ), "0.00%" ) & " | " &
+					    "-" & FORMAT ( 1 - DIVIDE ( Result, [Number of days] ), "0.00%" )
+				lineageTag: 61e6e2fe-ae26-41d7-9f4f-8e120214d17d
+
+			measure @BUSINESS_COLUMN_CHART =
+					
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the date November 1st of the *previous* year.
+					VAR NovemberFirstLastYear =
+					    DATE ( CurrentYear - 1, 11, 01 )
+					
+					// Construct the date November 1st of the *current* year.
+					VAR NovemberFirstThisYear =
+					    DATE ( CurrentYear, 11, 01 )
+					
+					// Calculate the number of days between November 1st of the *previous* year and today's date.
+					VAR Result =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate >= NovemberFirstThisYear, // If today's date is on or after November 1st of this year...
+					            DATEDIFF (
+					                NovemberFirstLastYear, // ...calculate the number of days between November 1st of *last* year and today.
+					                TodayDate,
+					                DAY
+					            ),
+					        TodayDate < NovemberFirstThisYear, // If today's date is before November 1st of this year...
+					            DATEDIFF (
+					                NovemberFirstLastYear, // ...calculate the number of days between November 1st of *last* year and today.
+					                TodayDate,
+					                DAY
+					            )
+					    )
+					
+					// Return the calculated number of days.
+					RETURN
+					    Result
+				formatString: 0
+				lineageTag: 39d38b56-f826-44ba-aa1e-614810f3951c
+
+			measure @BUSINESS_DATEDIFF =
+					
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the date November 1st of the *previous* year.
+					VAR NovemberFirstLastYear =
+					    DATE ( CurrentYear - 1, 11, 01 )
+					
+					// Construct the date November 1st of the *current* year.
+					VAR NovemberFirstThisYear =
+					    DATE ( CurrentYear, 11, 01 )
+					
+					// Calculate the number of days between November 1st of the *previous* year and today's date.
+					// Note: The SWITCH statement is redundant here.  Both conditions result in the same calculation.
+					VAR Result =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate >= NovemberFirstThisYear, // If today's date is on or after November 1st of this year...
+					            DATEDIFF (
+					                NovemberFirstLastYear, // ...calculate the number of days between November 1st of *last* year and today.
+					                TodayDate,
+					                DAY
+					            ),
+					        TodayDate < NovemberFirstThisYear, // If today's date is before November 1st of this year...
+					            DATEDIFF (
+					                NovemberFirstLastYear, // ...calculate the number of days between November 1st of *last* year and today.
+					                TodayDate,
+					                DAY
+					            )
+					    )
+					
+					// Return a formatted string containing:
+					// 1. The number of days since November 1st of the previous year.
+					// 2. The number of days remaining until the *next* November 1st.  This relies on a measure "[Number of days]", which is assumed to be the total number of days in the current year.
+					// 3. The percentage of time elapsed since the last November 1st.
+					// 4. The percentage of time remaining until the next November 1st.
+					RETURN
+					    "+" & Result & " | " &
+					    "-" & [Number of days] - Result & " | " &
+					    "+" & FORMAT ( DIVIDE ( Result, [Number of days] ), "0.00%" ) & " | " &
+					    "-" & FORMAT ( 1 - DIVIDE ( Result, [Number of days] ), "0.00%" )
+				lineageTag: 6c0af55e-c5c6-4d27-bbc4-192a10491be9
+
+			measure @PHD_COLUMN_CHART = ```
+					
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the date February 25th of the current year.
+					VAR FebruaryTwentyFifthThisYear =
+					    DATE ( CurrentYear, 02, 25 )
+					
+					// Calculate the number of days between February 25th of the previous year and today's date, 
+					// OR the number of days between February 25th of the current year and today's date.
+					VAR Result =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate < FebruaryTwentyFifthThisYear, // If today's date is *before* February 25th of this year...
+					            DATEDIFF (
+					                DATE ( CurrentYear - 1, 02, 25 ), // ...calculate the number of days between February 25th of the *previous* year...
+					                TodayDate, // ...and today. This will be a *positive* number.
+					                DAY
+					            ),
+					        DATEDIFF ( // Otherwise (today's date is *on or after* February 25th of this year)...
+					            FebruaryTwentyFifthThisYear, // ...calculate the number of days between February 25th of *this* year...
+					            TodayDate, // ...and today's date.
+					            DAY
+					        ) // This will be a *negative* number (or zero if today is Feb 25th).
+					    )
+					
+					// Return the calculated number of days.
+					RETURN
+					    Result
+					```
+				formatString: 0
+				lineageTag: 211fa761-7909-4a38-b605-60a25e182e94
+
+			measure @PHD_DATEDIFF = ```
+					
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the date February 25th of the current year.
+					VAR FebruaryTwentyFifthThisYear =
+					    DATE ( CurrentYear, 02, 25 )
+					
+					// Calculate the number of days between February 25th of the previous year and today's date, 
+					// OR the number of days between February 25th of the current year and today's date.
+					VAR Result =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate < FebruaryTwentyFifthThisYear, // If today's date is *before* February 25th of this year...
+					            DATEDIFF (
+					                DATE ( CurrentYear - 1, 02, 25 ), // ...calculate the number of days between February 25th of the *previous* year...
+					                TodayDate, // ...and today. This will be a *positive* number.
+					                DAY
+					            ),
+					        DATEDIFF ( // Otherwise (today's date is *on or after* February 25th of this year)...
+					            FebruaryTwentyFifthThisYear, // ...calculate the number of days between February 25th of *this* year...
+					            TodayDate, // ...and today's date.
+					            DAY
+					        ) // This will be a *negative* number (or zero if today is Feb 25th).
+					    )
+					
+					// Return a formatted string containing:
+					// 1. The number of days since the last February 25th (or until the next - negative value).
+					// 2. The number of days until the next February 25th. Relies on a measure "[Number of days]", which is assumed to be the total number of days in the current year.
+					// 3. The percentage of the year passed (or remaining if Result is negative).
+					// 4. The percentage of the year remaining (or passed if Result is negative).
+					RETURN
+					    "+" & Result & " | " &
+					    "-" & [Number of days] - Result & " | " &
+					    "+" & FORMAT ( DIVIDE ( Result, [Number of days] ), "0.00%" ) & " | " &
+					    "-" & FORMAT ( 1 - DIVIDE ( Result, [Number of days] ), "0.00%" )
+					```
+				lineageTag: aa333598-c497-4768-929c-b65cf9977b7f
+
+			measure @EXPERIENCE =
+					
+					
+					// Define the start date.
+					VAR StartDate =
+					    DATE ( 2018, 09, 01 )
+					
+					// Get the current date.
+					VAR CurrentDate =
+					    TODAY ()
+					
+					// Check if the start date is valid (i.e., in the past).
+					VAR IsValidDate = StartDate <= CurrentDate
+					
+					// Calculate the difference in years.
+					VAR YearDiff =
+					    YEAR ( CurrentDate ) - YEAR ( StartDate )
+					
+					// Calculate the difference in months.
+					VAR MonthDiff =
+					    MONTH ( CurrentDate ) - MONTH ( StartDate )
+					
+					// Calculate the difference in days.
+					VAR DayDiff =
+					    DAY ( CurrentDate ) - DAY ( StartDate )
+					
+					// Calculate total months, adjusting if the start day hasn't occurred yet this month.
+					VAR TotalMonths =
+					    YearDiff * 12 + MonthDiff
+					    - SWITCH ( TRUE (), DayDiff < 0, 1, 0 )
+					
+					// Calculate the number of complete years.
+					VAR CompleteYears =
+					    QUOTIENT ( TotalMonths, 12 )
+					
+					// Calculate the number of remaining months.
+					VAR RemainingMonths =
+					    MOD ( TotalMonths, 12 )
+					
+					// Calculate the number of days since the 1st of the current or previous month.
+					VAR DaysInPeriod =
+					    VAR MonthlyAnniversary =
+					        DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ), 01 ) // 1st of the current month
+					    RETURN
+					        SWITCH (
+					            TRUE (),
+					            CurrentDate > MonthlyAnniversary, // If current date is after the 1st of the current month...
+					                DATEDIFF (
+					                    CurrentDate,
+					                    MonthlyAnniversary,
+					                    DAY
+					                ),  // ...calculate the days since the 1st of the current month.
+					            DATEDIFF ( // Otherwise (current day is before or on the 1st)...
+					                DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ) - 1, 01 ), // ...calculate the days since the 1st of the *previous* month.
+					                CurrentDate,
+					                DAY
+					            )
+					        )
+					
+					// Format the result string: Years, Months, and Days.
+					VAR FormattedResult =
+					    CompleteYears & " Years, " & RemainingMonths & " Months, "
+					    & ABS ( DaysInPeriod ) + 1 & " Days" // +1 to correct the day count, as DATEDIFF is exclusive.
+					
+					// Return the formatted result if the start date is valid, otherwise return "Invalid date range".
+					RETURN
+					    SWITCH (
+					        TRUE (),
+					        IsValidDate, FormattedResult,
+					        "Invalid date range"
+					    )
+				lineageTag: d3910b16-fc1f-4c1c-a289-1504130d3a4d
+
+			measure @EXPERIENCE_DATEDIFF =
+					
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the date September 1st of the *previous* year.
+					VAR SeptemberFirstLastYear =
+					    DATE ( CurrentYear - 1, 09, 01 )
+					
+					// Construct the date September 1st of the *current* year.
+					VAR SeptemberFirstThisYear =
+					    DATE ( CurrentYear, 09, 01 )
+					
+					// Calculate the number of days between September 1st of the *previous* year and today's date.
+					// Note: The SWITCH statement is redundant here.  Both conditions result in the same calculation.
+					VAR Result =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate >= SeptemberFirstThisYear, // If today's date is on or after September 1st of this year...
+					            DATEDIFF (
+					                SeptemberFirstLastYear, // ...calculate the number of days between September 1st of *last* year and today.
+					                TodayDate,
+					                DAY
+					            ),
+					        TodayDate < SeptemberFirstThisYear, // If today's date is before September 1st of this year...
+					            DATEDIFF (
+					                SeptemberFirstLastYear, // ...calculate the number of days between September 1st of *last* year and today.
+					                TodayDate,
+					                DAY
+					            )
+					    )
+					
+					// Return a formatted string containing:
+					// 1. The number of days since September 1st of the previous year.
+					// 2. The number of days remaining until the *next* September 1st.  This relies on a measure "[Number of days]", which is assumed to be the total number of days in the current year.
+					// 3. The percentage of time elapsed since the last September 1st.
+					// 4. The percentage of time remaining until the next September 1st.
+					RETURN
+					    "+" & Result & " | " &
+					    "-" & [Number of days] - Result & " | " &
+					    "+" & FORMAT ( DIVIDE ( Result, [Number of days] ), "0.00%" ) & " | " &
+					    "-" & FORMAT ( 1 - DIVIDE ( Result, [Number of days] ), "0.00%" )
+				lineageTag: 93dcc826-2772-4a88-9694-9985f9c55ad7
+
+			measure @EXPERIENCE_COLUMN_CHART =
+					
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the date September 1st of the *previous* year.
+					VAR SeptemberFirstLastYear =
+					    DATE ( CurrentYear - 1, 09, 01 )
+					
+					// Construct the date September 1st of the *current* year.
+					VAR SeptemberFirstThisYear =
+					    DATE ( CurrentYear, 09, 01 )
+					
+					// Calculate the number of days between September 1st of the previous year and today's date.
+					// Note: The SWITCH statement is redundant here. Both conditions result in the same calculation.
+					VAR Result =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate >= SeptemberFirstThisYear, // If today's date is on or after September 1st of this year...
+					            DATEDIFF (
+					                SeptemberFirstLastYear, // ...calculate the number of days between September 1st of the previous year and today.
+					                TodayDate,
+					                DAY
+					            ),
+					        TodayDate < SeptemberFirstThisYear, // If today's date is before September 1st of this year...
+					            DATEDIFF (
+					                SeptemberFirstLastYear, // ...calculate the number of days between September 1st of the previous year and today.
+					                TodayDate,
+					                DAY
+					            )
+					    )
+					
+					// Return the calculated number of days.
+					RETURN
+					    Result
+				formatString: 0
+				lineageTag: a69bc369-2bb8-4ba7-baae-60a864af5007
+
+			measure @AGE_START =
+					
+					
+					// Define the birth date.
+					VAR BirthDate =
+					    DATE ( 1987, 01, 28 )
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the birthday date for the current year (January 28th).
+					VAR BirthdayThisYear =
+					    DATE ( CurrentYear, 01, 28 )
+					
+					// Calculate the number of days until or since the birthday.  This value will be positive if the birthday has passed, and negative if it is in the future.
+					VAR Pct =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate >= BirthdayThisYear, // If today's date is on or after the birthday this year...
+					            DATEDIFF (
+					                BirthdayThisYear, // ...calculate the number of days *since* the birthday.
+					                TodayDate,
+					                DAY
+					            ),
+					        DATEDIFF ( // Otherwise (today's date is before the birthday this year)...
+					            DATE ( CurrentYear - 1, 01, 28 ), // ...construct the birthday date for the *previous* year.
+					            TodayDate, // ...calculate the number of days *since* the birthday last year.
+					            DAY
+					        )
+					    )
+					
+					// Construct the result string, including the birth date and the percentage of the year passed (or remaining).
+					// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+					VAR Result =
+					    "Date of birth: " & FORMAT ( BirthDate, "mm/dd/yyyy" ) & " | " & "+"
+					    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" )
+					
+					// Return the result string.
+					RETURN
+					    Result
+				lineageTag: 31b30cad-4f7d-464f-b693-c9d691ab74d3
+
+			measure @BUSINESS_START =
+					
+					
+					// Define the founding date.
+					VAR FoundingDate =
+					    DATE ( 2020, 11, 01 )
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the date November 1st of the *previous* year.
+					VAR NovemberFirstLastYear =
+					    DATE ( CurrentYear - 1, 11, 01 )
+					
+					// Construct the date November 1st of the *current* year.
+					VAR NovemberFirstThisYear =
+					    DATE ( CurrentYear, 11, 01 )
+					
+					// Calculate the number of days between November 1st of the previous year and today.
+					// Note: The SWITCH statement is redundant, as both conditions perform the same calculation.
+					VAR Pct =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate >= NovemberFirstThisYear,  // If today is on or after Nov 1st this year
+					            DATEDIFF (
+					                NovemberFirstLastYear,
+					                TodayDate,
+					                DAY
+					            ),
+					        TodayDate < NovemberFirstThisYear,   // If today is before Nov 1st this year
+					            DATEDIFF (
+					                NovemberFirstLastYear,
+					                TodayDate,
+					                DAY
+					            )
+					    )
+					
+					// Construct the result string, including the founding date and the percentage of the year passed (or remaining).
+					// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+					VAR Result =
+					    "Business: "&FORMAT ( FoundingDate, "mm/dd/yyyy" ) & " | " & "+"
+					    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" )
+					
+					// Return the result string.
+					RETURN
+					    Result
+				lineageTag: 2960d088-4e13-451c-8634-d783be2fff11
+
+			measure @EXPERIENCE_START =
+					
+					
+					// Define the start date.
+					VAR StartDate =
+					    DATE ( 2018, 09, 01 )
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the date September 1st of the *previous* year.
+					VAR SeptemberFirstLastYear =
+					    DATE ( CurrentYear - 1, 09, 01 )
+					
+					// Construct the date September 1st of the *current* year.
+					VAR SeptemberFirstThisYear =
+					    DATE ( CurrentYear, 09, 01 )
+					
+					// Calculate the number of days between September 1st of the previous year and today.
+					// Note: The SWITCH statement is redundant, as both conditions perform the same calculation.
+					VAR Pct =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate >= SeptemberFirstThisYear,  // If today is on or after Sep 1st this year
+					            DATEDIFF (
+					                SeptemberFirstLastYear,
+					                TodayDate,
+					                DAY
+					            ),
+					        TodayDate < SeptemberFirstThisYear,   // If today is before Sep 1st this year
+					            DATEDIFF (
+					                SeptemberFirstLastYear,
+					                TodayDate,
+					                DAY
+					            )
+					    )
+					
+					// Construct the result string, including the start date and the percentage of the year passed (or remaining).
+					// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+					VAR Result =
+					    "Experience: "&FORMAT ( StartDate, "mm/dd/yyyy" ) & " | " & "+"
+					    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" )
+					
+					// Return the result string.
+					RETURN
+					    Result
+				lineageTag: eb22b101-5f1c-47c2-9b8c-4fe3d3b317d1
+
+			measure @PHD_START = ```
+					
+					
+					// Define the defense date.
+					VAR DefenseDate =
+					    DATE ( 2021, 02, 25 )
+					
+					// Get today's date.
+					VAR TodayDate =
+					    TODAY ()
+					
+					// Extract the current year.
+					VAR CurrentYear =
+					    YEAR ( TodayDate )
+					
+					// Construct the date February 25th of the current year.
+					VAR FebruaryTwentyFifthThisYear =
+					    DATE ( CurrentYear, 02, 25 )
+					
+					// Calculate the number of days between February 25th of the previous year and today's date, 
+					// OR the number of days between February 25th of the current year and today's date.
+					VAR Pct =
+					    SWITCH (
+					        TRUE (),
+					        TodayDate < FebruaryTwentyFifthThisYear, // If today's date is *before* February 25th of this year...
+					            DATEDIFF (
+					                DATE ( CurrentYear - 1, 02, 25 ), // ...calculate the number of days between February 25th of the *previous* year...
+					                TodayDate, // ...and today. This will be a *positive* number.
+					                DAY
+					            ),
+					        DATEDIFF ( // Otherwise (today's date is *on or after* February 25th of this year)...
+					            FebruaryTwentyFifthThisYear, // ...calculate the number of days between February 25th of *this* year...
+					            TodayDate, // ...and today's date.
+					            DAY
+					        ) // This will be a *negative* number (or zero if today is Feb 25th).
+					    )
+					
+					// Construct the result string, including the defense date and the percentage of the year passed (or remaining).
+					// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+					VAR Result =
+					    "PhD: "&FORMAT ( DefenseDate, "mm/dd/yyyy" ) & " | " & "+"
+					    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" )
+					
+					// Return the result string.
+					RETURN
+					    Result
+					```
+				lineageTag: 828175bf-175b-4024-844d-261fdf8b6c51
+
+			column Value
+				isHidden
+				lineageTag: 803fa290-df30-4908-af05-1b984ae3f234
+				summarizeBy: none
+				isNameInferred
+				sourceColumn: [Value]
+
+				annotation SummarizationSetBy = Automatic
+
+			partition GEMINI = calculated
+				mode: import
+				source = ```
+						
+						    { "" }
+						```
+
+			annotation PBI_Id = 0a492865bb264a4e9ce551944b64f42a
+
 		cultureInfo en-US
 
-			linguisticMetadata = {"Version":"3.5.0","Language":"en-US","Entities":{"todays_date":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date"}},"State":"Generated","Terms":[{"today's date":{"State":"Generated"}},{"today's moment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.609}},{"today's period":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.591}}]},"todays_date.todays_date":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"Today's Date"}},"State":"Generated","Visibility":{"Value":"Hidden"},"Terms":[{"today's date":{"State":"Generated"}},{"date":{"State":"Generated","Weight":0.7}},{"today's moment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.609}},{"today's period":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.591}}],"SemanticType":"Time"},"todays_date.MIN_todays_date":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"MIN Today's Date"}},"State":"Generated","Terms":[{"MIN today's date":{"State":"Generated"}},{"date":{"State":"Generated","Weight":0.7}},{"min today's moment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.617}},{"minimum today's date":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.599}},{"min today's period":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.599}},{"Today's Date":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}],"SemanticType":"Time"}},"Relationships":{"todays_date_has_MIN_todays_date":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.MIN_todays_date":{"Target":{"Entity":"todays_date.MIN_todays_date"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.MIN_todays_date"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_MIN_todays_date"}]}}}
+			linguisticMetadata = {"Version":"3.5.0","Language":"en-US","Entities":{"todays_date":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date"}},"State":"Generated","Terms":[{"today's date":{"State":"Generated"}},{"today's moment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.609}},{"today's period":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.591}}]},"todays_date.todays_date":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"Today's Date"}},"State":"Generated","Visibility":{"Value":"Hidden"},"Terms":[{"today's date":{"State":"Generated"}},{"date":{"State":"Generated","Weight":0.7}},{"today's moment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.609}},{"today's period":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.591}}],"SemanticType":"Time"},"todays_date.MIN_todays_date":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"MIN Today's Date"}},"State":"Generated","Terms":[{"MIN today's date":{"State":"Generated"}},{"min today's moment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.617}},{"minimum today's date":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.599}},{"min today's period":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.599}}]},"todays_date.day_number":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"Day number"}},"State":"Generated","Terms":[{"day number":{"State":"Generated"}},{"day no":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.727}}]},"todays_date.number_of_days":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"Number of days"}},"State":"Generated","Terms":[{"number of days":{"State":"Generated"}},{"quantity of day":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.769}},{"amount of day":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.746}},{"count of day":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.746}},{"number of day":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.746}},{"no of day":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.739}}]},"todays_date.progress":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"Progress"}},"State":"Generated","Terms":[{"progress":{"State":"Generated"}},{"development":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.491}},{"growth":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.491}},{"advancement":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.491}},{"improvement":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.491}},{"evolution":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.491}},{"headway":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.491}},{"movement":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.491}},{"evolvement":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.491}}]},"todays_date.firma_period":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"@FIRMA (PERIOD)"}},"State":"Generated","Terms":[{"@firma (period)":{"State":"Generated"}},{"@firma":{"State":"Generated","Weight":0.75}}]},"todays_date.wiek_period":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"@WIEK (PERIOD)"}},"State":"Generated","Terms":[{"@wiek (period)":{"State":"Generated"}},{"@wiek":{"State":"Generated","Weight":0.75}}]},"todays_date.doktorat_period":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"@DOKTORAT (PERIOD)"}},"State":"Generated","Terms":[{"@doktorat (period)":{"State":"Generated"}},{"@doktorat":{"State":"Generated","Weight":0.75}}]},"todays_date.doktorat_start":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"@DOKTORAT (START)"}},"State":"Generated","Terms":[{"@doktorat (start)":{"State":"Generated"}},{"@doktorat":{"State":"Generated","Weight":0.75}}]},"todays_date.wiek_start":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"@WIEK (START)"}},"State":"Generated","Terms":[{"@wiek (start)":{"State":"Generated"}},{"@wiek":{"State":"Generated","Weight":0.75}}]},"todays_date.firma_start":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"@FIRMA (START)"}},"State":"Generated","Terms":[{"@firma (start)":{"State":"Generated"}},{"@firma":{"State":"Generated","Weight":0.75}}]},"todays_date.number_of_days_WIEK":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"Number of days (WIEK)"}},"State":"Generated","Terms":[{"number of days (WIEK)":{"State":"Generated"}},{"number of days":{"State":"Generated","Weight":0.75}}]},"todays_date.number_of_days_FIRMA":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"Number of days (FIRMA)"}},"State":"Generated","Terms":[{"number of days (FIRMA)":{"State":"Generated"}},{"number of days":{"State":"Generated","Weight":0.75}}]},"todays_date.number_of_days_DOKTORAT":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"Number of days (DOKTORAT)"}},"State":"Generated","Terms":[{"number of days (DOKTORAT)":{"State":"Generated"}},{"number of days":{"State":"Generated","Weight":0.75}}]},"todays_date.firma_passed":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"@FIRMA (PASSED)"}},"State":"Generated","Terms":[{"@firma (passed)":{"State":"Generated"}},{"@firma":{"State":"Generated","Weight":0.75}},{"Days | Pct":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}]},"todays_date.wiek_passed":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"@WIEK (PASSED)"}},"State":"Generated","Terms":[{"@wiek (passed)":{"State":"Generated"}},{"@wiek":{"State":"Generated","Weight":0.75}},{"Days | Pct":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}]},"todays_date.doktorat_passed":{"Definition":{"Binding":{"ConceptualEntity":"Today's Date","ConceptualProperty":"@DOKTORAT (PASSED)"}},"State":"Generated","Terms":[{"@doktorat (passed)":{"State":"Generated"}},{"@doktorat":{"State":"Generated","Weight":0.75}},{"Days | Pct":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}]}},"Relationships":{"todays_date_has_doktorat_passed":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.doktorat_passed":{"Target":{"Entity":"todays_date.doktorat_passed"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.doktorat_passed"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_doktorat_passed"}]},"todays_date_has_wiek_passed":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.wiek_passed":{"Target":{"Entity":"todays_date.wiek_passed"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.wiek_passed"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_wiek_passed"}]},"todays_date_has_firma_passed":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.firma_passed":{"Target":{"Entity":"todays_date.firma_passed"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.firma_passed"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_firma_passed"}]},"todays_date_has_number_of_days_DOKTORAT":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.number_of_days_DOKTORAT":{"Target":{"Entity":"todays_date.number_of_days_DOKTORAT"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.number_of_days_DOKTORAT"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_number_of_days_DOKTORAT"}]},"todays_date_has_number_of_days_FIRMA":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.number_of_days_FIRMA":{"Target":{"Entity":"todays_date.number_of_days_FIRMA"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.number_of_days_FIRMA"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_number_of_days_FIRMA"}]},"todays_date_has_number_of_days_WIEK":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.number_of_days_WIEK":{"Target":{"Entity":"todays_date.number_of_days_WIEK"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.number_of_days_WIEK"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_number_of_days_WIEK"}]},"todays_date_has_firma_start":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.firma_start":{"Target":{"Entity":"todays_date.firma_start"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.firma_start"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_firma_start"}]},"todays_date_has_wiek_start":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.wiek_start":{"Target":{"Entity":"todays_date.wiek_start"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.wiek_start"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_wiek_start"}]},"todays_date_has_doktorat_start":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.doktorat_start":{"Target":{"Entity":"todays_date.doktorat_start"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.doktorat_start"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_doktorat_start"}]},"todays_date_has_doktorat_period":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.doktorat_period":{"Target":{"Entity":"todays_date.doktorat_period"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.doktorat_period"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_doktorat_period"}]},"todays_date_has_wiek_period":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.wiek_period":{"Target":{"Entity":"todays_date.wiek_period"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.wiek_period"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_wiek_period"}]},"todays_date_has_firma_period":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.firma_period":{"Target":{"Entity":"todays_date.firma_period"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.firma_period"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_firma_period"}]},"todays_date_has_progress":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.progress":{"Target":{"Entity":"todays_date.progress"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.progress"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_progress"}]},"todays_date_has_number_of_days":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.number_of_days":{"Target":{"Entity":"todays_date.number_of_days"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.number_of_days"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_number_of_days"}]},"todays_date_has_day_number":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.day_number":{"Target":{"Entity":"todays_date.day_number"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.day_number"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_day_number"}]},"todays_date_has_MIN_todays_date":{"Binding":{"ConceptualEntity":"Today's Date"},"State":"Generated","Roles":{"todays_date":{"Target":{"Entity":"todays_date"}},"todays_date.MIN_todays_date":{"Target":{"Entity":"todays_date.MIN_todays_date"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"todays_date"},"Object":{"Role":"todays_date.MIN_todays_date"}},"State":"Generated","Weight":0.99,"ID":"todays_date_have_MIN_todays_date"}]}}}
 				contentType: json
 
 		annotation __PBI_TimeIntelligenceEnabled = 0
@@ -83,4 +975,6 @@ createOrReplace
 		annotation PBI_QueryOrder = ["Today's Date"]
 
 		annotation PBI_ProTooling = ["DaxQueryView_Desktop","TMDLView_Desktop"]
+
+		annotation __TEdtr = 1
 

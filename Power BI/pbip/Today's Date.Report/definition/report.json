@@ -57,6 +57,17 @@
           "type": "CustomTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Today's_Date09411865109244255.jpg",
+          "path": "Today's_Date09411865109244255.jpg",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {
@@ -64,6 +75,7 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true
   },
   "slowDataSourceSettings": {
