@@ -1,0 +1,49 @@
+DEFINE
+    MEASURE 'GEMINI'[@AGE_START] = // Define the starting age calculation.
+// Define the birth date.
+VAR BirthDate =
+    DATE ( 1987, 01, 28 )
+
+// Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the birthday date for the current year (January 28th).
+VAR BirthdayThisYear =
+    DATE ( CurrentYear, 01, 28 )
+
+// Calculate the number of days until or since the birthday. This value will be positive if the birthday has passed, and negative if it is in the future.
+VAR Pct =
+    SWITCH (
+        TRUE (),
+        TodayDate >= BirthdayThisYear, // If today's date is on or after the birthday this year...
+        DATEDIFF (
+            BirthdayThisYear, // ...calculate the number of days *since* the birthday.
+            TodayDate,
+            DAY
+        ),
+        DATEDIFF ( // Otherwise (today's date is before the birthday this year)...
+            DATE ( CurrentYear - 1, 01, 28 ), // ...construct the birthday date for the *previous* year.
+            TodayDate, // ...calculate the number of days *since* the birthday last year.
+            DAY
+        )
+    )
+
+// Construct the result string, including the birth date and the percentage of the year passed (or remaining).
+// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+VAR Result =
+    "Date of birth: " & FORMAT ( BirthDate, "mm/dd/yyyy" ) & " | " & "+"
+    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" ) & " (" & "-" & [Number of days] - Pct & "D)"
+
+// Return the result string.
+RETURN
+    Result
+
+EVALUATE
+    SUMMARIZECOLUMNS(
+        "@AGE_START", 'GEMINI'[@AGE_START]
+    )

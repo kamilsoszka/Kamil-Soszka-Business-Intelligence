@@ -1,0 +1,829 @@
+DEFINE
+    MEASURE 'Today''s Date'[MIN Today's Date] = // Define the measure named "MIN Today's Date"
+FORMAT (
+    MIN ( 'Today''s Date'[Today's Date] ),
+    // Find the minimum date in the 'Today's Date' column of the 'Today's Date' table
+    "YYYY/MM/DD" // Format the minimum date as YYYY/MM/DD
+)
+    MEASURE 'Today''s Date'[Day number] = // Define the measure named "Day number"
+VAR __today =
+    TODAY () // Get the current date
+VAR Result =
+    DATEDIFF ( DATE ( YEAR ( __today ), 1, 1 ), __today, DAY ) + 1 // Calculate the day number of the year
+RETURN
+    Result
+// Return the calculated day number
+    MEASURE 'Today''s Date'[Number of days] = // Define the measure named "Number of days"
+VAR __today =
+    TODAY () // Get today's date
+VAR __startdate =
+    DATE ( YEAR ( TODAY () ), 1, 1 ) // Construct the date January 1st of the current year
+VAR __enddate =
+    DATE ( YEAR ( TODAY () ), 12, 31 ) // Construct the date December 31st of the current year
+VAR __calendar =
+    CALENDAR ( __startdate, __enddate ) // Create a calendar table containing all dates between __startdate and __enddate (inclusive)
+VAR Result =
+    COUNTROWS ( __calendar ) // Count the number of rows in the calendar table.  Each row represents a day.
+RETURN
+    Result
+// Return the total number of days in the current year
+    MEASURE 'Today''s Date'[Progress] = // Define the measure named "Progress"
+DIVIDE (
+    [Day number],
+    // Numerator: The current day number of the year (calculated by another measure)
+    [Number of days] // Denominator: The total number of days in the current year (calculated by another measure)
+)
+    MEASURE 'Today''s Date'[Last refresh date] = // Calculates and formats the last refresh date.
+VAR lastrefreshdate =
+    TODAY () // Get the current date.
+VAR Result =
+    "Last refresh date: " & FORMAT ( lastrefreshdate, "mm/dd/yyyy" ) // Format the date as mm/dd/yyyy and concatenate it with the text.
+RETURN
+    Result // Return the formatted string.
+    MEASURE 'GEMINI'[@AGE] = // Define the birth date.  This could be made dynamic by referencing a date column.
+VAR BirthDate =
+    DATE ( 1987, 01, 28 )
+
+// Get the current date.
+VAR CurrentDate =
+    TODAY ()
+
+// Check if the birth date is valid (i.e., in the past).
+VAR IsValidDate = BirthDate <= CurrentDate
+
+// Calculate the difference in years between the current date and the birth date.
+VAR YearDiff =
+    YEAR ( CurrentDate ) - YEAR ( BirthDate )
+
+// Calculate the difference in months.
+VAR MonthDiff =
+    MONTH ( CurrentDate ) - MONTH ( BirthDate )
+
+// Calculate the difference in days.
+VAR DayDiff =
+    DAY ( CurrentDate ) - DAY ( BirthDate )
+
+// Calculate the total number of months, adjusting if the birth day hasn't occurred yet this month.
+VAR TotalMonths =
+    YearDiff * 12 + MonthDiff
+    - SWITCH ( TRUE (), DayDiff < 0, 1, 0 ) // Subtract 1 if the birthday hasn't happened yet this month.
+
+// Calculate the number of complete years.
+VAR CompleteYears =
+    QUOTIENT ( TotalMonths, 12 )
+
+// Calculate the number of remaining months after the complete years.
+VAR RemainingMonths =
+    MOD ( TotalMonths, 12 )
+
+// Calculate the number of days since the person's "monthly birthday" (the 28th of the month).
+VAR DaysInPeriod =
+    VAR MonthlyBirthday =
+        DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ), 28 ) // Anchor date for day calculation.
+    RETURN
+        SWITCH (
+            TRUE (),
+            DAY ( CurrentDate ) >= 28, // If current day is on or after the 28th...
+                DATEDIFF (
+                    MonthlyBirthday, // ...calculate days since the 28th of the current month.
+                    CurrentDate,
+                    DAY
+                ),
+            DATEDIFF ( // Otherwise (current day is before the 28th)...
+                DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ) - 1, 28 ), // ...calculate days since the 28th of the previous month.
+                CurrentDate,
+                DAY
+            )
+        )
+
+// Format the age string.
+VAR FormattedResult =
+    CompleteYears
+    & SWITCH ( TRUE (), CompleteYears = 1, " Year, ", " Years, " ) & RemainingMonths // Add "Year" or "Years".
+    & SWITCH ( TRUE (), RemainingMonths = 1, " Month, ", " Months, " ) // Add "Month" or "Months".
+    & ABS ( DaysInPeriod ) // Get the absolute value of days (can be negative if before the 28th).
+    & SWITCH ( TRUE (), ABS ( DaysInPeriod ) = 1, " Day", " Days" ) // Add "Day" or "Days".
+
+// Return the formatted age string if the birth date is valid, otherwise return "Invalid birth date".
+RETURN
+    SWITCH ( TRUE (), IsValidDate, FormattedResult, "Invalid birth date" )
+    MEASURE 'GEMINI'[@BUSINESS] = // Define the founding date.
+VAR FoundingDate =
+    DATE ( 2020, 11, 01 )
+
+// Get the current date.
+VAR CurrentDate =
+    TODAY ()
+
+// Check if the founding date is valid (i.e., in the past).
+VAR IsValidDate = FoundingDate <= CurrentDate
+
+// Calculate the difference in years.
+VAR YearDiff =
+    YEAR ( CurrentDate ) - YEAR ( FoundingDate )
+
+// Calculate the difference in months.
+VAR MonthDiff =
+    MONTH ( CurrentDate ) - MONTH ( FoundingDate )
+
+// Calculate the difference in days.
+VAR DayDiff =
+    DAY ( CurrentDate ) - DAY ( FoundingDate )
+
+// Calculate the total number of months, adjusting if the founding day hasn't occurred yet this month.
+VAR TotalMonths =
+    YearDiff * 12 + MonthDiff
+    - SWITCH ( TRUE (), DayDiff < 0, 1, 0 )
+
+// Calculate the number of complete years.
+VAR CompleteYears =
+    QUOTIENT ( TotalMonths, 12 )
+
+// Calculate the number of remaining months.
+VAR RemainingMonths =
+    MOD ( TotalMonths, 12 )
+
+// Calculate the number of days elapsed in the current month.
+VAR DaysInPeriod =
+    DATEDIFF (
+        DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ), 1 ), // Start of the current month
+        CurrentDate, // Current Date
+        DAY
+    ) + 1 // Add 1 because DATEDIFF is exclusive of the end date.
+
+// Format the year part of the result string, handling singular/plural.
+VAR YearText =
+    CompleteYears
+    & SWITCH ( TRUE (), CompleteYears = 1, " Year", " Years" )
+
+// Format the month part, handling singular/plural.
+VAR MonthText =
+    RemainingMonths
+    & SWITCH ( TRUE (), RemainingMonths = 1, " Month", " Months" )
+
+// Format the day part, handling singular/plural.
+VAR DayText =
+    DaysInPeriod
+    & SWITCH ( TRUE (), DaysInPeriod = 1, " Day", " Days" )
+
+// Combine the formatted parts into the final result string.
+VAR FormattedResult = YearText & ", " & MonthText & ", " & DayText
+
+// Return the formatted string if the founding date is valid, otherwise return "Invalid founding date".
+RETURN
+    SWITCH ( TRUE (), IsValidDate, FormattedResult, "Invalid founding date" )
+    MEASURE 'GEMINI'[@PHD] = // Define the defense date.
+VAR DefenseDate =
+    DATE ( 2021, 02, 25 )
+
+// Get the current date.
+VAR CurrentDate =
+    TODAY ()
+
+// Check if the defense date is valid (i.e., in the past).
+VAR IsValidDate = DefenseDate <= CurrentDate
+
+// Calculate the difference in years.
+VAR YearDiff =
+    YEAR ( CurrentDate ) - YEAR ( DefenseDate )
+
+// Calculate the difference in months.
+VAR MonthDiff =
+    MONTH ( CurrentDate ) - MONTH ( DefenseDate )
+
+// Calculate the difference in days.
+VAR DayDiff =
+    DAY ( CurrentDate ) - DAY ( DefenseDate )
+
+// Calculate total months, adjusting if the defense day hasn't occurred yet this month.
+VAR TotalMonths =
+    YearDiff * 12 + MonthDiff
+    - SWITCH ( TRUE (), DayDiff < 0, 1, 0 )
+
+// Calculate the number of complete years.
+VAR CompleteYears =
+    QUOTIENT ( TotalMonths, 12 )
+
+// Calculate the number of remaining months.
+VAR RemainingMonths =
+    MOD ( TotalMonths, 12 )
+
+// Calculate the number of days since the 25th of the current or previous month.
+VAR DaysInPeriod =
+    VAR MonthlyAnniversary =
+        DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ), 25 ) // 25th of the current month
+    RETURN
+        SWITCH (
+            TRUE (),
+            CurrentDate > MonthlyAnniversary, // If current date is after the 25th of the current month...
+                DATEDIFF (
+                    CurrentDate,
+                    MonthlyAnniversary,
+                    DAY
+                ),  // ...calculate the days since the 25th of the current month.
+            DATEDIFF ( // Otherwise (current day is before or on the 25th)...
+                DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ) - 1, 25 ), // ...calculate the days since the 25th of the *previous* month.
+                CurrentDate,
+                DAY
+            )
+        )
+
+// Format the result string: Years, Months, and Days.
+VAR FormattedResult =
+    CompleteYears & " Years, " & RemainingMonths & " Months, "
+    & ABS ( DaysInPeriod ) & " Days" // ABS to handle cases where the current date is before the 25th.
+
+// Return the formatted result if the defense date is valid, otherwise return "Invalid date range".
+RETURN
+    SWITCH (
+        TRUE (),
+        IsValidDate, FormattedResult,
+        "Invalid date range"
+    )
+    MEASURE 'GEMINI'[@AGE_COLUMN_CHART] = // Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the birthday date for the current year (January 28th).
+VAR BirthdayThisYear =
+    DATE ( CurrentYear, 01, 28 )
+
+// Calculate the number of days until or since the birthday.
+VAR Result =
+    SWITCH (
+        TRUE (),
+        TodayDate >= BirthdayThisYear, // If today's date is on or after the birthday this year...
+            DATEDIFF (
+                BirthdayThisYear, // ...calculate the number of days *since* the birthday. This will be a positive number.
+                TodayDate,
+                DAY
+            ),
+        DATEDIFF ( // Otherwise (today's date is before the birthday this year)...
+            DATE ( CurrentYear - 1, 01, 28 ), // ...construct the birthday date for the *previous* year.
+            TodayDate, // ...calculate the number of days *since* the birthday last year. This will be a negative number, representing days *until* the next birthday.
+            DAY
+        )
+    )
+
+// Return the calculated number of days.
+RETURN
+    Result
+    MEASURE 'GEMINI'[@AGE_DATEDIFF] = // Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the birthday date for the current year (January 28th).
+VAR BirthdayThisYear =
+    DATE ( CurrentYear, 01, 28 )
+
+// Calculate the number of days until or since the birthday.
+VAR Result =
+    SWITCH (
+        TRUE (),
+        TodayDate >= BirthdayThisYear, // If today's date is on or after the birthday this year...
+            DATEDIFF (
+                BirthdayThisYear, // ...calculate the number of days *since* the birthday. This will be a positive number.
+                TodayDate,
+                DAY
+            ),
+        DATEDIFF ( // Otherwise (today's date is before the birthday this year)...
+            DATE ( CurrentYear - 1, 01, 28 ), // ...construct the birthday date for the *previous* year.
+            TodayDate, // ...calculate the number of days *since* the birthday last year. This will be a negative number, representing days *until* the next birthday.
+            DAY
+        )
+    )
+
+// Return the formatted string containing:
+// 1. Days since last birthday (or until next birthday - negative value)
+// 2. Remaining days until the *next* birthday.  Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+// 3. Percentage of the year passed (or remaining if Result is negative)
+// 4. Percentage of the year remaining (or passed if Result is negative)
+RETURN
+    "+" & Result & " | " &
+    "-" & [Number of days] - Result & " | " &
+    "+" & FORMAT ( DIVIDE ( Result, [Number of days] ), "0.00%" ) & " | " &
+    "-" & FORMAT ( 1 - DIVIDE ( Result, [Number of days] ), "0.00%" )
+    MEASURE 'GEMINI'[@BUSINESS_COLUMN_CHART] = // Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the date November 1st of the *previous* year.
+VAR NovemberFirstLastYear =
+    DATE ( CurrentYear - 1, 11, 01 )
+
+// Construct the date November 1st of the *current* year.
+VAR NovemberFirstThisYear =
+    DATE ( CurrentYear, 11, 01 )
+
+// Calculate the number of days between November 1st of the *previous* year and today's date.
+VAR Result =
+    SWITCH (
+        TRUE (),
+        TodayDate >= NovemberFirstThisYear, // If today's date is on or after November 1st of this year...
+            DATEDIFF (
+                NovemberFirstLastYear, // ...calculate the number of days between November 1st of *last* year and today.
+                TodayDate,
+                DAY
+            ),
+        TodayDate < NovemberFirstThisYear, // If today's date is before November 1st of this year...
+            DATEDIFF (
+                NovemberFirstLastYear, // ...calculate the number of days between November 1st of *last* year and today.
+                TodayDate,
+                DAY
+            )
+    )
+
+// Return the calculated number of days.
+RETURN
+    Result
+    MEASURE 'GEMINI'[@BUSINESS_DATEDIFF] = // Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the date November 1st of the *previous* year.
+VAR NovemberFirstLastYear =
+    DATE ( CurrentYear - 1, 11, 01 )
+
+// Construct the date November 1st of the *current* year.
+VAR NovemberFirstThisYear =
+    DATE ( CurrentYear, 11, 01 )
+
+// Calculate the number of days between November 1st of the *previous* year and today's date.
+// Note: The SWITCH statement is redundant here.  Both conditions result in the same calculation.
+VAR Result =
+    SWITCH (
+        TRUE (),
+        TodayDate >= NovemberFirstThisYear, // If today's date is on or after November 1st of this year...
+            DATEDIFF (
+                NovemberFirstLastYear, // ...calculate the number of days between November 1st of *last* year and today.
+                TodayDate,
+                DAY
+            ),
+        TodayDate < NovemberFirstThisYear, // If today's date is before November 1st of this year...
+            DATEDIFF (
+                NovemberFirstLastYear, // ...calculate the number of days between November 1st of *last* year and today.
+                TodayDate,
+                DAY
+            )
+    )
+
+// Return a formatted string containing:
+// 1. The number of days since November 1st of the previous year.
+// 2. The number of days remaining until the *next* November 1st.  This relies on a measure "[Number of days]", which is assumed to be the total number of days in the current year.
+// 3. The percentage of time elapsed since the last November 1st.
+// 4. The percentage of time remaining until the next November 1st.
+RETURN
+    "+" & Result & " | " &
+    "-" & [Number of days] - Result & " | " &
+    "+" & FORMAT ( DIVIDE ( Result, [Number of days] ), "0.00%" ) & " | " &
+    "-" & FORMAT ( 1 - DIVIDE ( Result, [Number of days] ), "0.00%" )
+    MEASURE 'GEMINI'[@PHD_COLUMN_CHART] = // Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the date February 25th of the current year.
+VAR FebruaryTwentyFifthThisYear =
+    DATE ( CurrentYear, 02, 25 )
+
+// Calculate the number of days between February 25th of the previous year and today's date, 
+// OR the number of days between February 25th of the current year and today's date.
+VAR Result =
+    SWITCH (
+        TRUE (),
+        TodayDate < FebruaryTwentyFifthThisYear, // If today's date is *before* February 25th of this year...
+            DATEDIFF (
+                DATE ( CurrentYear - 1, 02, 25 ), // ...calculate the number of days between February 25th of the *previous* year...
+                TodayDate, // ...and today. This will be a *positive* number.
+                DAY
+            ),
+        DATEDIFF ( // Otherwise (today's date is *on or after* February 25th of this year)...
+            FebruaryTwentyFifthThisYear, // ...calculate the number of days between February 25th of *this* year...
+            TodayDate, // ...and today's date.
+            DAY
+        ) // This will be a *negative* number (or zero if today is Feb 25th).
+    )
+
+// Return the calculated number of days.
+RETURN
+    Result
+    MEASURE 'GEMINI'[@PHD_DATEDIFF] = // Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the date February 25th of the current year.
+VAR FebruaryTwentyFifthThisYear =
+    DATE ( CurrentYear, 02, 25 )
+
+// Calculate the number of days between February 25th of the previous year and today's date, 
+// OR the number of days between February 25th of the current year and today's date.
+VAR Result =
+    SWITCH (
+        TRUE (),
+        TodayDate < FebruaryTwentyFifthThisYear, // If today's date is *before* February 25th of this year...
+            DATEDIFF (
+                DATE ( CurrentYear - 1, 02, 25 ), // ...calculate the number of days between February 25th of the *previous* year...
+                TodayDate, // ...and today. This will be a *positive* number.
+                DAY
+            ),
+        DATEDIFF ( // Otherwise (today's date is *on or after* February 25th of this year)...
+            FebruaryTwentyFifthThisYear, // ...calculate the number of days between February 25th of *this* year...
+            TodayDate, // ...and today's date.
+            DAY
+        ) // This will be a *negative* number (or zero if today is Feb 25th).
+    )
+
+// Return a formatted string containing:
+// 1. The number of days since the last February 25th (or until the next - negative value).
+// 2. The number of days until the next February 25th. Relies on a measure "[Number of days]", which is assumed to be the total number of days in the current year.
+// 3. The percentage of the year passed (or remaining if Result is negative).
+// 4. The percentage of the year remaining (or passed if Result is negative).
+RETURN
+    "+" & Result & " | " &
+    "-" & [Number of days] - Result & " | " &
+    "+" & FORMAT ( DIVIDE ( Result, [Number of days] ), "0.00%" ) & " | " &
+    "-" & FORMAT ( 1 - DIVIDE ( Result, [Number of days] ), "0.00%" )
+    MEASURE 'GEMINI'[@EXPERIENCE] = // Define the start date.
+VAR StartDate =
+    DATE ( 2018, 09, 01 )
+
+// Get the current date.
+VAR CurrentDate =
+    TODAY ()
+
+// Check if the start date is valid (i.e., in the past).
+VAR IsValidDate = StartDate <= CurrentDate
+
+// Calculate the difference in years.
+VAR YearDiff =
+    YEAR ( CurrentDate ) - YEAR ( StartDate )
+
+// Calculate the difference in months.
+VAR MonthDiff =
+    MONTH ( CurrentDate ) - MONTH ( StartDate )
+
+// Calculate the difference in days.
+VAR DayDiff =
+    DAY ( CurrentDate ) - DAY ( StartDate )
+
+// Calculate total months, adjusting if the start day hasn't occurred yet this month.
+VAR TotalMonths =
+    YearDiff * 12 + MonthDiff
+    - SWITCH ( TRUE (), DayDiff < 0, 1, 0 )
+
+// Calculate the number of complete years.
+VAR CompleteYears =
+    QUOTIENT ( TotalMonths, 12 )
+
+// Calculate the number of remaining months.
+VAR RemainingMonths =
+    MOD ( TotalMonths, 12 )
+
+// Calculate the number of days since the 1st of the current or previous month.
+VAR DaysInPeriod =
+    VAR MonthlyAnniversary =
+        DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ), 01 ) // 1st of the current month
+    RETURN
+        SWITCH (
+            TRUE (),
+            CurrentDate > MonthlyAnniversary, // If current date is after the 1st of the current month...
+                DATEDIFF (
+                    CurrentDate,
+                    MonthlyAnniversary,
+                    DAY
+                ),  // ...calculate the days since the 1st of the current month.
+            DATEDIFF ( // Otherwise (current day is before or on the 1st)...
+                DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ) - 1, 01 ), // ...calculate the days since the 1st of the *previous* month.
+                CurrentDate,
+                DAY
+            )
+        )
+
+// Format the result string: Years, Months, and Days.
+VAR FormattedResult =
+    CompleteYears & " Years, " & RemainingMonths & " Months, "
+    & ABS ( DaysInPeriod ) + 1 & " Days" // +1 to correct the day count, as DATEDIFF is exclusive.
+
+// Return the formatted result if the start date is valid, otherwise return "Invalid date range".
+RETURN
+    SWITCH (
+        TRUE (),
+        IsValidDate, FormattedResult,
+        "Invalid date range"
+    )
+    MEASURE 'GEMINI'[@EXPERIENCE_DATEDIFF] = // Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the date September 1st of the *previous* year.
+VAR SeptemberFirstLastYear =
+    DATE ( CurrentYear - 1, 09, 01 )
+
+// Construct the date September 1st of the *current* year.
+VAR SeptemberFirstThisYear =
+    DATE ( CurrentYear, 09, 01 )
+
+// Calculate the number of days between September 1st of the *previous* year and today's date.
+// Note: The SWITCH statement is redundant here.  Both conditions result in the same calculation.
+VAR Result =
+    SWITCH (
+        TRUE (),
+        TodayDate >= SeptemberFirstThisYear, // If today's date is on or after September 1st of this year...
+            DATEDIFF (
+                SeptemberFirstLastYear, // ...calculate the number of days between September 1st of *last* year and today.
+                TodayDate,
+                DAY
+            ),
+        TodayDate < SeptemberFirstThisYear, // If today's date is before September 1st of this year...
+            DATEDIFF (
+                SeptemberFirstLastYear, // ...calculate the number of days between September 1st of *last* year and today.
+                TodayDate,
+                DAY
+            )
+    )
+
+// Return a formatted string containing:
+// 1. The number of days since September 1st of the previous year.
+// 2. The number of days remaining until the *next* September 1st.  This relies on a measure "[Number of days]", which is assumed to be the total number of days in the current year.
+// 3. The percentage of time elapsed since the last September 1st.
+// 4. The percentage of time remaining until the next September 1st.
+RETURN
+    "+" & Result & " | " &
+    "-" & [Number of days] - Result & " | " &
+    "+" & FORMAT ( DIVIDE ( Result, [Number of days] ), "0.00%" ) & " | " &
+    "-" & FORMAT ( 1 - DIVIDE ( Result, [Number of days] ), "0.00%" )
+    MEASURE 'GEMINI'[@EXPERIENCE_COLUMN_CHART] = // Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the date September 1st of the *previous* year.
+VAR SeptemberFirstLastYear =
+    DATE ( CurrentYear - 1, 09, 01 )
+
+// Construct the date September 1st of the *current* year.
+VAR SeptemberFirstThisYear =
+    DATE ( CurrentYear, 09, 01 )
+
+// Calculate the number of days between September 1st of the previous year and today's date.
+// Note: The SWITCH statement is redundant here. Both conditions result in the same calculation.
+VAR Result =
+    SWITCH (
+        TRUE (),
+        TodayDate >= SeptemberFirstThisYear, // If today's date is on or after September 1st of this year...
+            DATEDIFF (
+                SeptemberFirstLastYear, // ...calculate the number of days between September 1st of the previous year and today.
+                TodayDate,
+                DAY
+            ),
+        TodayDate < SeptemberFirstThisYear, // If today's date is before September 1st of this year...
+            DATEDIFF (
+                SeptemberFirstLastYear, // ...calculate the number of days between September 1st of the previous year and today.
+                TodayDate,
+                DAY
+            )
+    )
+
+// Return the calculated number of days.
+RETURN
+    Result
+    MEASURE 'GEMINI'[@AGE_START] = // Define the starting age calculation.
+// Define the birth date.
+VAR BirthDate =
+    DATE ( 1987, 01, 28 )
+
+// Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the birthday date for the current year (January 28th).
+VAR BirthdayThisYear =
+    DATE ( CurrentYear, 01, 28 )
+
+// Calculate the number of days until or since the birthday. This value will be positive if the birthday has passed, and negative if it is in the future.
+VAR Pct =
+    SWITCH (
+        TRUE (),
+        TodayDate >= BirthdayThisYear, // If today's date is on or after the birthday this year...
+        DATEDIFF (
+            BirthdayThisYear, // ...calculate the number of days *since* the birthday.
+            TodayDate,
+            DAY
+        ),
+        DATEDIFF ( // Otherwise (today's date is before the birthday this year)...
+            DATE ( CurrentYear - 1, 01, 28 ), // ...construct the birthday date for the *previous* year.
+            TodayDate, // ...calculate the number of days *since* the birthday last year.
+            DAY
+        )
+    )
+
+// Construct the result string, including the birth date and the percentage of the year passed (or remaining).
+// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+VAR Result =
+    "Date of birth: " & FORMAT ( BirthDate, "mm/dd/yyyy" ) & " | " & "+"
+    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" ) & " (" & "-" & [Number of days] - Pct & "D)"
+
+// Return the result string.
+RETURN
+    Result
+    MEASURE 'GEMINI'[@BUSINESS_START] = // Define the business start date calculation.
+// Define the founding date.
+VAR FoundingDate =
+    DATE ( 2020, 11, 01 )
+
+// Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the date November 1st of the *previous* year.
+VAR NovemberFirstLastYear =
+    DATE ( CurrentYear - 1, 11, 01 )
+
+// Construct the date November 1st of the *current* year.
+VAR NovemberFirstThisYear =
+    DATE ( CurrentYear, 11, 01 )
+
+// Calculate the number of days between November 1st of the previous year and today.
+// Note: The SWITCH statement is redundant, as both conditions perform the same calculation.
+VAR Pct =
+    SWITCH (
+        TRUE (),
+        TodayDate >= NovemberFirstThisYear,  // If today is on or after Nov 1st this year
+        DATEDIFF (
+            NovemberFirstLastYear,
+            TodayDate,
+            DAY
+        ),
+        TodayDate < NovemberFirstThisYear,   // If today is before Nov 1st this year
+        DATEDIFF (
+            NovemberFirstLastYear,
+            TodayDate,
+            DAY
+        )
+    )
+
+// Construct the result string, including the founding date and the percentage of the year passed (or remaining).
+// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+VAR Result =
+    "Business: "&FORMAT ( FoundingDate, "mm/dd/yyyy" ) & " | " & "+"
+    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" ) & " (" & "-" & [Number of days] - Pct & "D)"
+
+// Return the result string.
+RETURN
+    Result
+    MEASURE 'GEMINI'[@EXPERIENCE_START] = // Calculate experience start date.
+// Define the start date.
+VAR StartDate =
+    DATE ( 2018, 09, 01 )
+
+// Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the date September 1st of the *previous* year.
+VAR SeptemberFirstLastYear =
+    DATE ( CurrentYear - 1, 09, 01 )
+
+// Construct the date September 1st of the *current* year.
+VAR SeptemberFirstThisYear =
+    DATE ( CurrentYear, 09, 01 )
+
+// Calculate the number of days between September 1st of the previous year and today.
+// Note: The SWITCH statement is redundant, as both conditions perform the same calculation.
+VAR Pct =
+    SWITCH (
+        TRUE (),
+        TodayDate >= SeptemberFirstThisYear,  // If today is on or after Sep 1st this year
+        DATEDIFF (
+            SeptemberFirstLastYear,
+            TodayDate,
+            DAY
+        ),
+        TodayDate < SeptemberFirstThisYear,   // If today is before Sep 1st this year
+        DATEDIFF (
+            SeptemberFirstLastYear,
+            TodayDate,
+            DAY
+        )
+    )
+
+// Construct the result string, including the start date and the percentage of the year passed (or remaining).
+// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+VAR Result =
+    "Experience: "&FORMAT ( StartDate, "mm/dd/yyyy" ) & " | " & "+"
+    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" ) & " (" & "-" & [Number of days] - Pct & "D)"
+
+// Return the result string.
+RETURN
+    Result
+    MEASURE 'GEMINI'[@PHD_START] = // Calculate PhD start date.
+// Define the defense date.
+VAR DefenseDate =
+    DATE ( 2021, 02, 25 )
+
+// Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the date February 25th of the current year.
+VAR FebruaryTwentyFifthThisYear =
+    DATE ( CurrentYear, 02, 25 )
+
+// Calculate the number of days between February 25th of the previous year and today's date, 
+// OR the number of days between February 25th of the current year and today's date.
+VAR Pct =
+    SWITCH (
+        TRUE (),
+        TodayDate < FebruaryTwentyFifthThisYear, // If today's date is *before* February 25th of this year...
+        DATEDIFF (
+            DATE ( CurrentYear - 1, 02, 25 ), // ...calculate the number of days between February 25th of the *previous* year...
+            TodayDate, // ...and today. This will be a *positive* number.
+            DAY
+        ),
+        DATEDIFF ( // Otherwise (today's date is *on or after* February 25th of this year)...
+            FebruaryTwentyFifthThisYear, // ...calculate the number of days between February 25th of *this* year...
+            TodayDate, // ...and today's date.
+            DAY
+        ) // This will be a *negative* number (or zero if today is Feb 25th).
+    )
+
+// Construct the result string, including the defense date and the percentage of the year passed (or remaining).
+// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
+VAR Result =
+    "PhD: "&FORMAT ( DefenseDate, "mm/dd/yyyy" ) & " | " & "+"
+    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" ) & " (" & "-" & [Number of days] - Pct & "D)"
+
+// Return the result string.
+RETURN
+    Result
+
+EVALUATE
+    SUMMARIZECOLUMNS(
+        "MIN Today's Date", 'Today''s Date'[MIN Today's Date],
+        "Day number", 'Today''s Date'[Day number],
+        "Number of days", 'Today''s Date'[Number of days],
+        "Progress", 'Today''s Date'[Progress],
+        "Last refresh date", 'Today''s Date'[Last refresh date],
+        "@AGE", 'GEMINI'[@AGE],
+        "@BUSINESS", 'GEMINI'[@BUSINESS],
+        "@PHD", 'GEMINI'[@PHD],
+        "@AGE_COLUMN_CHART", 'GEMINI'[@AGE_COLUMN_CHART],
+        "@AGE_DATEDIFF", 'GEMINI'[@AGE_DATEDIFF],
+        "@BUSINESS_COLUMN_CHART", 'GEMINI'[@BUSINESS_COLUMN_CHART],
+        "@BUSINESS_DATEDIFF", 'GEMINI'[@BUSINESS_DATEDIFF],
+        "@PHD_COLUMN_CHART", 'GEMINI'[@PHD_COLUMN_CHART],
+        "@PHD_DATEDIFF", 'GEMINI'[@PHD_DATEDIFF],
+        "@EXPERIENCE", 'GEMINI'[@EXPERIENCE],
+        "@EXPERIENCE_DATEDIFF", 'GEMINI'[@EXPERIENCE_DATEDIFF],
+        "@EXPERIENCE_COLUMN_CHART", 'GEMINI'[@EXPERIENCE_COLUMN_CHART],
+        "@AGE_START", 'GEMINI'[@AGE_START],
+        "@BUSINESS_START", 'GEMINI'[@BUSINESS_START],
+        "@EXPERIENCE_START", 'GEMINI'[@EXPERIENCE_START],
+        "@PHD_START", 'GEMINI'[@PHD_START]
+    )

@@ -1,0 +1,38 @@
+DEFINE
+    MEASURE 'GEMINI'[@AGE_COLUMN_CHART] = // Get today's date.
+VAR TodayDate =
+    TODAY ()
+
+// Extract the current year.
+VAR CurrentYear =
+    YEAR ( TodayDate )
+
+// Construct the birthday date for the current year (January 28th).
+VAR BirthdayThisYear =
+    DATE ( CurrentYear, 01, 28 )
+
+// Calculate the number of days until or since the birthday.
+VAR Result =
+    SWITCH (
+        TRUE (),
+        TodayDate >= BirthdayThisYear, // If today's date is on or after the birthday this year...
+            DATEDIFF (
+                BirthdayThisYear, // ...calculate the number of days *since* the birthday. This will be a positive number.
+                TodayDate,
+                DAY
+            ),
+        DATEDIFF ( // Otherwise (today's date is before the birthday this year)...
+            DATE ( CurrentYear - 1, 01, 28 ), // ...construct the birthday date for the *previous* year.
+            TodayDate, // ...calculate the number of days *since* the birthday last year. This will be a negative number, representing days *until* the next birthday.
+            DAY
+        )
+    )
+
+// Return the calculated number of days.
+RETURN
+    Result
+
+EVALUATE
+    SUMMARIZECOLUMNS(
+        "@AGE_COLUMN_CHART", 'GEMINI'[@AGE_COLUMN_CHART]
+    )

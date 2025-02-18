@@ -1,0 +1,73 @@
+DEFINE
+    MEASURE 'GEMINI'[@AGE] = // Define the birth date.  This could be made dynamic by referencing a date column.
+VAR BirthDate =
+    DATE ( 1987, 01, 28 )
+
+// Get the current date.
+VAR CurrentDate =
+    TODAY ()
+
+// Check if the birth date is valid (i.e., in the past).
+VAR IsValidDate = BirthDate <= CurrentDate
+
+// Calculate the difference in years between the current date and the birth date.
+VAR YearDiff =
+    YEAR ( CurrentDate ) - YEAR ( BirthDate )
+
+// Calculate the difference in months.
+VAR MonthDiff =
+    MONTH ( CurrentDate ) - MONTH ( BirthDate )
+
+// Calculate the difference in days.
+VAR DayDiff =
+    DAY ( CurrentDate ) - DAY ( BirthDate )
+
+// Calculate the total number of months, adjusting if the birth day hasn't occurred yet this month.
+VAR TotalMonths =
+    YearDiff * 12 + MonthDiff
+    - SWITCH ( TRUE (), DayDiff < 0, 1, 0 ) // Subtract 1 if the birthday hasn't happened yet this month.
+
+// Calculate the number of complete years.
+VAR CompleteYears =
+    QUOTIENT ( TotalMonths, 12 )
+
+// Calculate the number of remaining months after the complete years.
+VAR RemainingMonths =
+    MOD ( TotalMonths, 12 )
+
+// Calculate the number of days since the person's "monthly birthday" (the 28th of the month).
+VAR DaysInPeriod =
+    VAR MonthlyBirthday =
+        DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ), 28 ) // Anchor date for day calculation.
+    RETURN
+        SWITCH (
+            TRUE (),
+            DAY ( CurrentDate ) >= 28, // If current day is on or after the 28th...
+                DATEDIFF (
+                    MonthlyBirthday, // ...calculate days since the 28th of the current month.
+                    CurrentDate,
+                    DAY
+                ),
+            DATEDIFF ( // Otherwise (current day is before the 28th)...
+                DATE ( YEAR ( CurrentDate ), MONTH ( CurrentDate ) - 1, 28 ), // ...calculate days since the 28th of the previous month.
+                CurrentDate,
+                DAY
+            )
+        )
+
+// Format the age string.
+VAR FormattedResult =
+    CompleteYears
+    & SWITCH ( TRUE (), CompleteYears = 1, " Year, ", " Years, " ) & RemainingMonths // Add "Year" or "Years".
+    & SWITCH ( TRUE (), RemainingMonths = 1, " Month, ", " Months, " ) // Add "Month" or "Months".
+    & ABS ( DaysInPeriod ) // Get the absolute value of days (can be negative if before the 28th).
+    & SWITCH ( TRUE (), ABS ( DaysInPeriod ) = 1, " Day", " Days" ) // Add "Day" or "Days".
+
+// Return the formatted age string if the birth date is valid, otherwise return "Invalid birth date".
+RETURN
+    SWITCH ( TRUE (), IsValidDate, FormattedResult, "Invalid birth date" )
+
+EVALUATE
+    SUMMARIZECOLUMNS(
+        "@AGE", 'GEMINI'[@AGE]
+    )

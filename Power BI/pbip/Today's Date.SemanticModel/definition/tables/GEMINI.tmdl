@@ -646,7 +646,7 @@ table GEMINI
 
 	measure @AGE_START =
 			
-			
+			// Define the starting age calculation.
 			// Define the birth date.
 			VAR BirthDate =
 			    DATE ( 1987, 01, 28 )
@@ -663,16 +663,16 @@ table GEMINI
 			VAR BirthdayThisYear =
 			    DATE ( CurrentYear, 01, 28 )
 			
-			// Calculate the number of days until or since the birthday.  This value will be positive if the birthday has passed, and negative if it is in the future.
+			// Calculate the number of days until or since the birthday. This value will be positive if the birthday has passed, and negative if it is in the future.
 			VAR Pct =
 			    SWITCH (
 			        TRUE (),
 			        TodayDate >= BirthdayThisYear, // If today's date is on or after the birthday this year...
-			            DATEDIFF (
-			                BirthdayThisYear, // ...calculate the number of days *since* the birthday.
-			                TodayDate,
-			                DAY
-			            ),
+			        DATEDIFF (
+			            BirthdayThisYear, // ...calculate the number of days *since* the birthday.
+			            TodayDate,
+			            DAY
+			        ),
 			        DATEDIFF ( // Otherwise (today's date is before the birthday this year)...
 			            DATE ( CurrentYear - 1, 01, 28 ), // ...construct the birthday date for the *previous* year.
 			            TodayDate, // ...calculate the number of days *since* the birthday last year.
@@ -684,7 +684,7 @@ table GEMINI
 			// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
 			VAR Result =
 			    "Date of birth: " & FORMAT ( BirthDate, "mm/dd/yyyy" ) & " | " & "+"
-			    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" )
+			    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" ) & " (" & "-" & [Number of days] - Pct & "D)"
 			
 			// Return the result string.
 			RETURN
@@ -693,7 +693,7 @@ table GEMINI
 
 	measure @BUSINESS_START =
 			
-			
+			// Define the business start date calculation.
 			// Define the founding date.
 			VAR FoundingDate =
 			    DATE ( 2020, 11, 01 )
@@ -720,24 +720,24 @@ table GEMINI
 			    SWITCH (
 			        TRUE (),
 			        TodayDate >= NovemberFirstThisYear,  // If today is on or after Nov 1st this year
-			            DATEDIFF (
-			                NovemberFirstLastYear,
-			                TodayDate,
-			                DAY
-			            ),
+			        DATEDIFF (
+			            NovemberFirstLastYear,
+			            TodayDate,
+			            DAY
+			        ),
 			        TodayDate < NovemberFirstThisYear,   // If today is before Nov 1st this year
-			            DATEDIFF (
-			                NovemberFirstLastYear,
-			                TodayDate,
-			                DAY
-			            )
+			        DATEDIFF (
+			            NovemberFirstLastYear,
+			            TodayDate,
+			            DAY
+			        )
 			    )
 			
 			// Construct the result string, including the founding date and the percentage of the year passed (or remaining).
 			// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
 			VAR Result =
 			    "Business: "&FORMAT ( FoundingDate, "mm/dd/yyyy" ) & " | " & "+"
-			    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" )
+			    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" ) & " (" & "-" & [Number of days] - Pct & "D)"
 			
 			// Return the result string.
 			RETURN
@@ -746,7 +746,7 @@ table GEMINI
 
 	measure @EXPERIENCE_START =
 			
-			
+			// Calculate experience start date.
 			// Define the start date.
 			VAR StartDate =
 			    DATE ( 2018, 09, 01 )
@@ -773,24 +773,24 @@ table GEMINI
 			    SWITCH (
 			        TRUE (),
 			        TodayDate >= SeptemberFirstThisYear,  // If today is on or after Sep 1st this year
-			            DATEDIFF (
-			                SeptemberFirstLastYear,
-			                TodayDate,
-			                DAY
-			            ),
+			        DATEDIFF (
+			            SeptemberFirstLastYear,
+			            TodayDate,
+			            DAY
+			        ),
 			        TodayDate < SeptemberFirstThisYear,   // If today is before Sep 1st this year
-			            DATEDIFF (
-			                SeptemberFirstLastYear,
-			                TodayDate,
-			                DAY
-			            )
+			        DATEDIFF (
+			            SeptemberFirstLastYear,
+			            TodayDate,
+			            DAY
+			        )
 			    )
 			
 			// Construct the result string, including the start date and the percentage of the year passed (or remaining).
 			// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
 			VAR Result =
 			    "Experience: "&FORMAT ( StartDate, "mm/dd/yyyy" ) & " | " & "+"
-			    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" )
+			    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" ) & " (" & "-" & [Number of days] - Pct & "D)"
 			
 			// Return the result string.
 			RETURN
@@ -799,7 +799,7 @@ table GEMINI
 
 	measure @PHD_START = ```
 			
-			
+			// Calculate PhD start date.
 			// Define the defense date.
 			VAR DefenseDate =
 			    DATE ( 2021, 02, 25 )
@@ -822,11 +822,11 @@ table GEMINI
 			    SWITCH (
 			        TRUE (),
 			        TodayDate < FebruaryTwentyFifthThisYear, // If today's date is *before* February 25th of this year...
-			            DATEDIFF (
-			                DATE ( CurrentYear - 1, 02, 25 ), // ...calculate the number of days between February 25th of the *previous* year...
-			                TodayDate, // ...and today. This will be a *positive* number.
-			                DAY
-			            ),
+			        DATEDIFF (
+			            DATE ( CurrentYear - 1, 02, 25 ), // ...calculate the number of days between February 25th of the *previous* year...
+			            TodayDate, // ...and today. This will be a *positive* number.
+			            DAY
+			        ),
 			        DATEDIFF ( // Otherwise (today's date is *on or after* February 25th of this year)...
 			            FebruaryTwentyFifthThisYear, // ...calculate the number of days between February 25th of *this* year...
 			            TodayDate, // ...and today's date.
@@ -838,7 +838,7 @@ table GEMINI
 			// Relies on a measure "[Number of days]", which likely represents the total number of days in the current year.
 			VAR Result =
 			    "PhD: "&FORMAT ( DefenseDate, "mm/dd/yyyy" ) & " | " & "+"
-			    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" )
+			    & FORMAT ( DIVIDE ( Pct, [Number of days] ), "0.00%" ) & " (" & "-" & [Number of days] - Pct & "D)"
 			
 			// Return the result string.
 			RETURN
