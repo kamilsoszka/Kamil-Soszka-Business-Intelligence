@@ -32,7 +32,6 @@ This Power BI report provides a detailed summary of key milestones and durations
 
 This report is an excellent example of Power BI's ability to track personal or professional timelines with precision and clarity.
 
+![image](https://github.com/user-attachments/assets/35e98fac-aef0-415e-b4bc-a184c81e0d29)
 
-![Report](https://github.com/user-attachments/assets/8814517c-333a-4324-8b3c-7e97d289f0cb)
-
-LINK: https://shorturl.at/qd7JN
+LINK: https://shorturl.at/ug8Hs
