@@ -1,0 +1,9 @@
+{
+  "name": "Margin_%_Overall",
+  "expression": [
+    "",
+    "ROUND ( CALCULATE ( [Margin_%], REMOVEFILTERS () ), 2 )"
+  ],
+  "formatString": "#,##0.00 %",
+  "lineageTag": "5369089b-1b80-4cfe-90b7-9701c811b9c3"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Customer Hierarchy",
+  "lineageTag": "855c53ed-0249-4679-86c6-0dc9c1c4a2fb",
+  "levels": [
+    {
+      "name": "Continent",
+      "ordinal": 0,
+      "column": "Continent",
+      "lineageTag": "6570ca21-582b-4944-ac1b-b0ed2621a1d9"
+    },
+    {
+      "name": "Country",
+      "ordinal": 1,
+      "column": "Country",
+      "lineageTag": "fe80d6ef-e7a0-46c3-b396-aa4a6f908c8d"
+    },
+    {
+      "name": "State",
+      "ordinal": 2,
+      "column": "State",
+      "lineageTag": "74cf2e16-ff03-4c3e-b87c-c56cc7b8f9e2"
+    },
+    {
+      "name": "City",
+      "ordinal": 3,
+      "column": "City",
+      "lineageTag": "1bb189d5-1cd2-424e-be57-64d443aaab93"
+    }
+  ]
+}

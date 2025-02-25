@@ -1,0 +1,7 @@
+{
+  "name": "Subcategory Code",
+  "dataType": "int64",
+  "sourceColumn": "Subcategory Code",
+  "sourceProviderType": "int",
+  "lineageTag": "1f5782bc-20bd-4c45-8045-9e70514ededa"
+}

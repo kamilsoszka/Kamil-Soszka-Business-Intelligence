@@ -1,0 +1,7 @@
+{
+  "name": "Order Date",
+  "dataType": "dateTime",
+  "sourceColumn": "Order Date",
+  "sourceProviderType": "date",
+  "lineageTag": "fafb9bcd-31d4-4406-af17-70e29e684378"
+}

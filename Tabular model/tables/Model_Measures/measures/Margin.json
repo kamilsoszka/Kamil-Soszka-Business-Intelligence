@@ -1,0 +1,9 @@
+{
+  "name": "Margin",
+  "expression": [
+    "",
+    "[Sales_Amount] - [Total_Cost]"
+  ],
+  "formatString": "$ #,##0.00",
+  "lineageTag": "4d07d796-ca20-424b-b82b-8dfa19d5f3e8"
+}

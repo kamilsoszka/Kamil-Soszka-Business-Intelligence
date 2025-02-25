@@ -1,0 +1,9 @@
+{
+  "name": "Total_Cost",
+  "expression": [
+    "",
+    "SUMX ( Sales, Sales[Quantity] * Sales[Unit Cost] )"
+  ],
+  "formatString": "$ #,##0.00",
+  "lineageTag": "e5b18cfd-0c93-443b-aa41-02f85e834165"
+}

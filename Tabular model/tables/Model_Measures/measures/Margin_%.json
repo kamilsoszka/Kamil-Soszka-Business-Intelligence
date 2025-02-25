@@ -1,0 +1,9 @@
+{
+  "name": "Margin_%",
+  "expression": [
+    "",
+    "DIVIDE ( [Margin], [Sales_Amount] )"
+  ],
+  "formatString": "#,##0.00 %",
+  "lineageTag": "34d5dc86-3216-4cac-8dac-3e932814410a"
+}
