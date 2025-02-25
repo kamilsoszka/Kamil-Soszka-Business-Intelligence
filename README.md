@@ -1,0 +1,1 @@
+# Kamil-Soszka-Business-Intelligence
