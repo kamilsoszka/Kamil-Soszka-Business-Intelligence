@@ -1,0 +1,6 @@
+{
+  "name": "DESKTOP-T1OJDSH Contoso V2 1M",
+  "connectionString": "data source=DESKTOP-T1OJDSH;initial catalog=\"Contoso V2 1M\";persist security info=True;user id=sa;password=********",
+  "impersonationMode": "impersonateServiceAccount",
+  "provider": "System.Data.SqlClient"
+}

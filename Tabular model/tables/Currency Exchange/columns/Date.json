@@ -1,0 +1,7 @@
+{
+  "name": "Date",
+  "dataType": "dateTime",
+  "sourceColumn": "Date",
+  "sourceProviderType": "date",
+  "lineageTag": "4403dc63-7159-41f5-a1ea-4d8d249e73d7"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "New Calculated Table",
+  "mode": "import",
+  "source": {
+    "type": "calculated",
+    "expression": [
+      "",
+      "{ \"\" }"
+    ]
+  }
+}

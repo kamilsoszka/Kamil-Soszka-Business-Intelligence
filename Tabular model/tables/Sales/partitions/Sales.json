@@ -1,0 +1,19 @@
+{
+  "name": "Sales",
+  "source": {
+    "type": "query",
+    "query": [
+      "SELECT",
+      "\t*",
+      "FROM",
+      "\t[dbo].[Sales]"
+    ],
+    "dataSource": "DESKTOP-T1OJDSH Contoso V2 1M"
+  },
+  "annotations": [
+    {
+      "name": "TabularEditor_TableSchema",
+      "value": "{\"Name\":\"Sales\",\"Schema\":\"dbo\",\"Database\":\"Contoso V2 1M\",\"IncludedColumns\":[\"Order Number\",\"Line Number\",\"Order Date\",\"Delivery Date\",\"CustomerKey\",\"StoreKey\",\"ProductKey\",\"Quantity\",\"Unit Price\",\"Net Price\",\"Unit Cost\",\"Currency Code\",\"Exchange Rate\"],\"SelectAll\":true}"
+    }
+  ]
+}

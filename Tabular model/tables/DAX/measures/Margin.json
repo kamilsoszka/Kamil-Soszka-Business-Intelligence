@@ -1,0 +1,11 @@
+{
+  "name": "Margin",
+  "expression": [
+    "",
+    "-- This measure calculates the margin, which is the difference between the Sales Amount and the Total Cost.",
+    "[Sales Amount] - [Total Cost]",
+    "-- Subtract the 'Total Cost' measure from the 'Sales Amount' measure to calculate the margin."
+  ],
+  "formatString": "$ #,##0.00",
+  "lineageTag": "c5121f28-39d8-4f7e-95ae-1f00a3014b18"
+}

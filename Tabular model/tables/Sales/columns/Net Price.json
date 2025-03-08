@@ -1,0 +1,7 @@
+{
+  "name": "Net Price",
+  "dataType": "decimal",
+  "sourceColumn": "Net Price",
+  "sourceProviderType": "money",
+  "lineageTag": "876e8f8d-e229-4303-83c3-1a5478378fce"
+}

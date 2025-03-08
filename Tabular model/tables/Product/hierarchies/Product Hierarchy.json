@@ -1,0 +1,30 @@
+{
+  "name": "Product Hierarchy",
+  "lineageTag": "e7106d12-4e69-4fd7-9cc5-a1ce9f36f56a",
+  "levels": [
+    {
+      "name": "Brand",
+      "ordinal": 0,
+      "column": "Brand",
+      "lineageTag": "4fa7feac-2b6c-48c4-acd3-7feb9f259207"
+    },
+    {
+      "name": "Category",
+      "ordinal": 1,
+      "column": "Category",
+      "lineageTag": "1bd97f79-c1e9-404f-bcec-d129821db8f4"
+    },
+    {
+      "name": "Subcategory",
+      "ordinal": 2,
+      "column": "Subcategory",
+      "lineageTag": "d0821230-c1ca-49a1-b254-f9f219856492"
+    },
+    {
+      "name": "Product Name",
+      "ordinal": 3,
+      "column": "Product Name",
+      "lineageTag": "4e98184d-e09d-44a0-ad2e-dc8c28472d2c"
+    }
+  ]
+}

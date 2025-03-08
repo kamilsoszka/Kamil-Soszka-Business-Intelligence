@@ -1,0 +1,7 @@
+{
+  "name": "Working Day Number",
+  "dataType": "int64",
+  "sourceColumn": "Working Day Number",
+  "sourceProviderType": "int",
+  "lineageTag": "b527f5d3-7779-4560-9591-9ff3e5eae350"
+}
