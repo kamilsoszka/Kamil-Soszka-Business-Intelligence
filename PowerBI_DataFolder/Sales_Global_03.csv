@@ -1,0 +1,1401 @@
+﻿Segment,Country,Product,ID,Discount Band,Units Sold,Manufacturing Price,Sale Price,Gross Sales,Discounts,Sales,COGS,Profit,Date,Month Number,Month Name,Year
+Government,Canada,Carretera,"Government,Canada,Carretera",None,924,17,32,29568,1478.4,28089.6,15708,12381.6,45204,10,Oct,2023
+Government,Germany,Carretera,"Government,Germany,Carretera",None,988,18,27,26676,1333.8,25342.2,17784,7558.2,45321,1,Jan,2024
+Midmarket,France,Carretera,"Midmarket,France,Carretera",None,691,16,33,22803,1140.15,21662.85,11056,10606.85,45354,3,Mar,2024
+Midmarket,Germany,Carretera,"Midmarket,Germany,Carretera",None,856,12,24,20544,1027.2,19516.8,10272,9244.8,45120,7,Jul,2023
+Midmarket,Mexico,Carretera,"Midmarket,Mexico,Carretera",None,200,12,24,4800,240,4560,2400,2160,45616,11,Nov,2024
+Government,Germany,Carretera,"Government,Germany,Carretera",None,967,18,27,26109,1305.45,24803.55,17406,7397.55,45325,2,Feb,2024
+Midmarket,Germany,Montana,"Midmarket,Germany,Montana",None,64,17,16,1024,51.2,972.8,1088,-115.2,45737,3,Mar,2025
+Channel Partners,Canada,Montana,"Channel Partners,Canada,Montana",None,979,18,24,23496,1174.8,22321.2,17622,4699.2,45517,8,Aug,2024
+Government,France,Montana,"Government,France,Montana",None,459,16,36,16524,826.2,15697.8,7344,8353.8,45184,9,Sep,2023
+Channel Partners,Germany,Montana,"Channel Partners,Germany,Montana",None,213,17,28,5964,298.2,5665.8,3621,2044.8,45202,10,Oct,2023
+Midmarket,Mexico,Montana,"Midmarket,Mexico,Montana",None,747,14,35,26145,1307.25,24837.75,10458,14379.75,45338,2,Feb,2024
+Enterprise,Canada,Montana,"Enterprise,Canada,Montana",None,834,10,24,20016,1000.8,19015.2,8340,10675.2,45470,6,Jun,2024
+Small Business,Mexico,Montana,"Small Business,Mexico,Montana",None,854,18,26,22204,1110.2,21093.8,15372,5721.8,45559,9,Sep,2024
+Government,Germany,Montana,"Government,Germany,Montana",None,345,15,18,6210,310.5,5899.5,5175,724.5,45643,12,Dec,2024
+Enterprise,Canada,Montana,"Enterprise,Canada,Montana",None,511,10,24,12264,613.2,11650.8,5110,6540.8,45172,9,Sep,2023
+Midmarket,USA,Montana,"Midmarket,USA,Montana",None,84,20,26,2184,109.2,2074.8,1680,394.8,45339,2,Feb,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",None,621,13,20,12420,621,11799,8073,3726,45633,12,Dec,2024
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",None,94,18,27,2538,126.9,2411.1,1692,719.1,45423,5,May,2024
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",None,644,10,34,21896,1094.8,20801.2,6440,14361.2,45318,1,Jan,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",None,909,15,32,29088,1454.4,27633.6,13635,13998.6,45254,11,Nov,2023
+Channel Partners,Germany,Paseo,"Channel Partners,Germany,Paseo",None,937,13,29,27173,1358.65,25814.35,12181,13633.35,45084,6,Jun,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",None,334,10,28,9352,467.6,8884.4,3340,5544.4,45078,6,Jun,2023
+Midmarket,France,Paseo,"Midmarket,France,Paseo",None,612,12,37,22644,1132.2,21511.8,7344,14167.8,45424,5,May,2024
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",None,641,20,36,23076,1153.8,21922.2,12820,9102.2,45123,7,Jul,2023
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",None,998,18,27,26946,1347.3,25598.7,17964,7634.7,45328,2,Feb,2024
+Government,USA,Paseo,"Government,USA,Paseo",None,51,18,20,1020,51,969,918,51,45271,12,Dec,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",None,16,13,20,320,3.2,316.8,208,108.8,45583,10,Oct,2024
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",None,779,16,22,17138,856.9,16281.1,12464,3817.1,45328,2,Feb,2024
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",None,648,18,33,21384,1069.2,20314.8,11664,8650.8,45107,6,Jun,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",None,699,13,20,13980,699,13281,9087,4194,45337,2,Feb,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",None,763,15,32,24416,1220.8,23195.2,11445,11750.2,45401,4,Apr,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",None,883,17,31,27373,1368.65,26004.35,15011,10993.35,45342,2,Feb,2024
+Enterprise,France,Velo,"Enterprise,France,Velo",None,351,15,17,5967,298.35,5668.65,5265,403.65,45517,8,Aug,2024
+Channel Partners,Germany,Velo,"Channel Partners,Germany,Velo",None,161,16,23,3703,185.15,3517.85,2576,941.85,45260,11,Nov,2023
+Government,Germany,Velo,"Government,Germany,Velo",None,381,15,37,14097,704.85,13392.15,5715,7677.15,45584,10,Oct,2024
+Channel Partners,Germany,Velo,"Channel Partners,Germany,Velo",None,187,16,23,4301,215.05,4085.95,2992,1093.95,45480,7,Jul,2024
+Enterprise,USA,Velo,"Enterprise,USA,Velo",None,649,10,17,11033,551.65,10481.35,6490,3991.35,45682,1,Jan,2025
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",None,781,13,26,20306,1015.3,19290.7,10153,9137.7,45710,2,Feb,2025
+Small Business,Canada,VTT,"Small Business,Canada,VTT",None,244,15,34,8296,414.8,7881.2,3660,4221.2,45114,7,Jul,2023
+Channel Partners,Germany,VTT,"Channel Partners,Germany,VTT",None,977,11,29,28333,1416.65,26916.35,10747,16169.35,45470,6,Jun,2024
+Midmarket,France,VTT,"Midmarket,France,VTT",None,673,16,36,24228,1211.4,23016.6,10768,12248.6,45372,3,Mar,2024
+Midmarket,Germany,VTT,"Midmarket,Germany,VTT",None,559,18,18,10062,503.1,9558.9,10062,-503.1,45547,9,Sep,2024
+Government,France,VTT,"Government,France,VTT",None,586,13,36,21096,1054.8,20041.2,7618,12423.2,45079,6,Jun,2023
+Small Business,France,VTT,"Small Business,France,VTT",None,864,17,24,20736,1036.8,19699.2,14688,5011.2,45417,5,May,2024
+Government,Canada,VTT,"Government,Canada,VTT",None,195,15,19,3705,185.25,3519.75,2925,594.75,45171,9,Sep,2023
+Government,France,Amarilla,"Government,France,Amarilla",None,322,14,26,8372,418.6,7953.4,4508,3445.4,45173,9,Sep,2023
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",None,963,11,36,34668,1733.4,32934.6,10593,22341.6,45308,1,Jan,2024
+Enterprise,Germany,Amarilla,"Enterprise,Germany,Amarilla",None,904,14,32,28928,1446.4,27481.6,12656,14825.6,45336,2,Feb,2024
+Government,France,Amarilla,"Government,France,Amarilla",None,166,14,26,4316,215.8,4100.2,2324,1776.2,45136,7,Jul,2023
+Government,Germany,Amarilla,"Government,Germany,Amarilla",None,46,14,21,966,9.66,956.34,644,312.34,45270,12,Dec,2023
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",None,241,11,36,8676,433.8,8242.2,2651,5591.2,45554,9,Sep,2024
+Government,USA,Amarilla,"Government,USA,Amarilla",None,424,15,28,11872,593.6,11278.4,6360,4918.4,45530,8,Aug,2024
+Midmarket,USA,Amarilla,"Midmarket,USA,Amarilla",None,84,15,22,1848,92.4,1755.6,1260,495.6,45610,11,Nov,2024
+Government,France,Paseo,"Government,France,Paseo",Low,914,18,20,18280,914,17366,16452,914,45747,3,Mar,2025
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Low,34,12,37,1258,62.9,1195.1,408,787.1,45165,8,Aug,2023
+Government,France,Paseo,"Government,France,Paseo",Low,316,18,20,6320,316,6004,5688,316,45434,5,May,2024
+Government,France,Velo,"Government,France,Velo",Low,807,15,31,25017,1250.85,23766.15,12105,11661.15,45085,6,Jun,2023
+Government,Canada,VTT,"Government,Canada,VTT",Low,886,15,19,16834,841.7,15992.3,13290,2702.3,45450,6,Jun,2024
+Channel Partners,USA,Carretera,"Channel Partners,USA,Carretera",Low,326,17,34,11084,554.2,10529.8,5542,4987.8,45614,11,Nov,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Low,631,11,23,14513,725.65,13787.35,6941,6846.35,45498,7,Jul,2024
+Government,USA,Carretera,"Government,USA,Carretera",Low,810,10,16,12960,648,12312,8100,4212,45093,6,Jun,2023
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Low,608,14,38,23104,1155.2,21948.8,8512,13436.8,45329,2,Feb,2024
+Enterprise,USA,Carretera,"Enterprise,USA,Carretera",Low,31,20,18,558,5.58,552.42,620,-67.58,45151,8,Aug,2023
+Channel Partners,France,Carretera,"Channel Partners,France,Carretera",Low,512,14,34,17408,870.4,16537.6,7168,9369.6,45637,12,Dec,2024
+Channel Partners,Germany,Carretera,"Channel Partners,Germany,Carretera",Low,81,15,19,1539,76.95,1462.05,1215,247.05,45466,6,Jun,2024
+Small Business,Mexico,Carretera,"Small Business,Mexico,Carretera",Low,996,11,38,37848,1892.4,35955.6,10956,24999.6,45303,1,Jan,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Low,574,11,23,13202,660.1,12541.9,6314,6227.9,45542,9,Sep,2024
+Government,France,Carretera,"Government,France,Carretera",Low,710,11,38,26980,1349,25631,7810,17821,45175,9,Sep,2023
+Midmarket,Mexico,Montana,"Midmarket,Mexico,Montana",Low,485,14,35,16975,848.75,16126.25,6790,9336.25,45257,11,Nov,2023
+Small Business,USA,Montana,"Small Business,USA,Montana",Low,144,16,24,3456,172.8,3283.2,2304,979.2,45705,2,Feb,2025
+Government,France,Montana,"Government,France,Montana",Low,348,16,36,12528,626.4,11901.6,5568,6333.6,45059,5,May,2023
+Government,Canada,Montana,"Government,Canada,Montana",Low,985,15,37,36445,1822.25,34622.75,14775,19847.75,45724,3,Mar,2025
+Small Business,USA,Montana,"Small Business,USA,Montana",Low,645,16,24,15480,774,14706,10320,4386,45423,5,May,2024
+Enterprise,USA,Montana,"Enterprise,USA,Montana",Low,951,14,34,32334,1616.7,30717.3,13314,17403.3,45252,11,Nov,2023
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Low,569,18,23,13087,654.35,12432.65,10242,2190.65,45504,7,Jul,2024
+Government,USA,Paseo,"Government,USA,Paseo",Low,222,18,20,4440,222,4218,3996,222,45552,9,Sep,2024
+Enterprise,USA,Paseo,"Enterprise,USA,Paseo",Low,819,15,38,31122,1556.1,29565.9,12285,17280.9,45128,7,Jul,2023
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Low,301,20,24,7224,361.2,6862.8,6020,842.8,45330,2,Feb,2024
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Low,954,13,26,24804,1240.2,23563.8,12402,11161.8,45158,8,Aug,2023
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",Low,873,13,18,15714,785.7,14928.3,11349,3579.3,45107,6,Jun,2023
+Channel Partners,Germany,Paseo,"Channel Partners,Germany,Paseo",Low,291,13,29,8439,421.95,8017.05,3783,4234.05,45438,5,May,2024
+Small Business,USA,Paseo,"Small Business,USA,Paseo",Low,669,11,34,22746,1137.3,21608.7,7359,14249.7,45459,6,Jun,2024
+Government,France,Paseo,"Government,France,Paseo",Low,296,18,20,5920,296,5624,5328,296,45104,6,Jun,2023
+Government,France,Velo,"Government,France,Velo",Low,309,15,31,9579,478.95,9100.05,4635,4465.05,45082,6,Jun,2023
+Government,Mexico,Velo,"Government,Mexico,Velo",Low,946,17,31,29326,1466.3,27859.7,16082,11777.7,45287,12,Dec,2023
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",Low,99,13,26,2574,128.7,2445.3,1287,1158.3,45724,3,Mar,2025
+Enterprise,USA,Velo,"Enterprise,USA,Velo",Low,602,10,17,10234,511.7,9722.3,6020,3702.3,45238,11,Nov,2023
+Government,Canada,Velo,"Government,Canada,Velo",Low,391,17,26,10166,508.3,9657.7,6647,3010.7,45714,2,Feb,2025
+Government,Germany,VTT,"Government,Germany,VTT",Low,48,19,25,1200,60,1140,912,228,45084,6,Jun,2023
+Government,Canada,VTT,"Government,Canada,VTT",Low,985,15,19,18715,935.75,17779.25,14775,3004.25,45568,10,Oct,2024
+Enterprise,USA,VTT,"Enterprise,USA,VTT",Low,358,15,26,9308,465.4,8842.6,5370,3472.6,45469,6,Jun,2024
+Enterprise,France,VTT,"Enterprise,France,VTT",Low,338,14,26,8788,439.4,8348.6,4732,3616.6,45195,9,Sep,2023
+Small Business,Germany,VTT,"Small Business,Germany,VTT",Low,303,19,32,9696,484.8,9211.2,5757,3454.2,45163,8,Aug,2023
+Small Business,Mexico,VTT,"Small Business,Mexico,VTT",Low,385,20,17,6545,327.25,6217.75,7700,-1482.25,45355,3,Mar,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",Low,834,19,33,27522,1376.1,26145.9,15846,10299.9,45249,11,Nov,2023
+Enterprise,France,VTT,"Enterprise,France,VTT",Low,973,14,26,25298,1264.9,24033.1,13622,10411.1,45522,8,Aug,2024
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",Low,602,11,36,21672,1083.6,20588.4,6622,13966.4,45730,3,Mar,2025
+Midmarket,France,Amarilla,"Midmarket,France,Amarilla",Low,976,16,25,24400,1220,23180,15616,7564,45428,5,May,2024
+Enterprise,Canada,Carretera,"Enterprise,Canada,Carretera",Low,136,13,26,3536,176.8,3359.2,1768,1591.2,45330,2,Feb,2024
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Low,253,14,38,9614,480.7,9133.3,3542,5591.3,45736,3,Mar,2025
+Small Business,Germany,Carretera,"Small Business,Germany,Carretera",Low,773,10,38,29374,1468.7,27905.3,7730,20175.3,45183,9,Sep,2023
+Government,France,Carretera,"Government,France,Carretera",Low,281,11,38,10678,533.9,10144.1,3091,7053.1,45445,6,Jun,2024
+Government,Canada,Carretera,"Government,Canada,Carretera",Low,350,17,32,11200,560,10640,5950,4690,45630,12,Dec,2024
+Channel Partners,USA,Montana,"Channel Partners,USA,Montana",Low,738,17,23,16974,848.7,16125.3,12546,3579.3,45242,11,Nov,2023
+Government,USA,Montana,"Government,USA,Montana",Low,634,10,26,16484,824.2,15659.8,6340,9319.8,45146,8,Aug,2023
+Channel Partners,Mexico,Montana,"Channel Partners,Mexico,Montana",Low,572,10,22,12584,629.2,11954.8,5720,6234.8,45702,2,Feb,2025
+Enterprise,Mexico,Montana,"Enterprise,Mexico,Montana",Low,301,15,36,10836,541.8,10294.2,4515,5779.2,45391,4,Apr,2024
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",Low,29,18,33,957,9.57,947.43,522,425.43,45250,11,Nov,2023
+Small Business,France,Paseo,"Small Business,France,Paseo",Low,325,19,29,9425,471.25,8953.75,6175,2778.75,45210,10,Oct,2023
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",Low,297,17,26,7722,386.1,7335.9,5049,2286.9,45497,7,Jul,2024
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",Low,300,16,22,6600,330,6270,4800,1470,45125,7,Jul,2023
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Low,863,13,26,22438,1121.9,21316.1,11219,10097.1,45200,10,Oct,2023
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",Low,758,10,34,25772,1288.6,24483.4,7580,16903.4,45628,12,Dec,2024
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Low,508,14,17,8636,431.8,8204.2,7112,1092.2,45580,10,Oct,2024
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Low,457,13,26,11882,594.1,11287.9,5941,5346.9,45217,10,Oct,2023
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",Low,563,12,38,21394,1069.7,20324.3,6756,13568.3,45504,7,Jul,2024
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",Low,957,12,27,25839,1291.95,24547.05,11484,13063.05,45380,3,Mar,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",Low,747,13,20,14940,747,14193,9711,4482,45707,2,Feb,2025
+Enterprise,Canada,Paseo,"Enterprise,Canada,Paseo",Low,196,11,37,7252,362.6,6889.4,2156,4733.4,45664,1,Jan,2025
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Low,948,18,23,21804,1090.2,20713.8,17064,3649.8,45696,2,Feb,2025
+Government,USA,Paseo,"Government,USA,Paseo",Low,995,18,20,19900,995,18905,17910,995,45250,11,Nov,2023
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",Low,899,12,38,34162,1708.1,32453.9,10788,21665.9,45513,8,Aug,2024
+Channel Partners,Mexico,Paseo,"Channel Partners,Mexico,Paseo",Low,309,20,32,9888,494.4,9393.6,6180,3213.6,45681,1,Jan,2025
+Government,USA,Velo,"Government,USA,Velo",Low,679,13,22,14938,746.9,14191.1,8827,5364.1,45225,10,Oct,2023
+Government,Germany,Velo,"Government,Germany,Velo",Low,208,15,37,7696,384.8,7311.2,3120,4191.2,45608,11,Nov,2024
+Government,Germany,Velo,"Government,Germany,Velo",Low,851,15,37,31487,1574.35,29912.65,12765,17147.65,45189,9,Sep,2023
+Enterprise,Germany,Velo,"Enterprise,Germany,Velo",Low,356,17,16,5696,284.8,5411.2,6052,-640.8,45324,2,Feb,2024
+Enterprise,Mexico,Velo,"Enterprise,Mexico,Velo",Low,536,16,25,13400,670,12730,8576,4154,45050,5,May,2023
+Channel Partners,France,Velo,"Channel Partners,France,Velo",Low,843,11,36,30348,1517.4,28830.6,9273,19557.6,45749,4,Apr,2025
+Government,Mexico,Velo,"Government,Mexico,Velo",Low,660,17,31,20460,1023,19437,11220,8217,45308,1,Jan,2024
+Channel Partners,Mexico,Velo,"Channel Partners,Mexico,Velo",Low,81,18,23,1863,93.15,1769.85,1458,311.85,45534,8,Aug,2024
+Enterprise,Mexico,VTT,"Enterprise,Mexico,VTT",Low,690,16,33,22770,1138.5,21631.5,11040,10591.5,45728,3,Mar,2025
+Small Business,Germany,VTT,"Small Business,Germany,VTT",Low,312,19,32,9984,499.2,9484.8,5928,3556.8,45494,7,Jul,2024
+Government,Germany,VTT,"Government,Germany,VTT",Low,144,19,25,3600,180,3420,2736,684,45089,6,Jun,2023
+Enterprise,Canada,VTT,"Enterprise,Canada,VTT",Low,230,12,19,4370,218.5,4151.5,2760,1391.5,45403,4,Apr,2024
+Government,USA,VTT,"Government,USA,VTT",Low,194,16,33,6402,320.1,6081.9,3104,2977.9,45254,11,Nov,2023
+Government,Mexico,VTT,"Government,Mexico,VTT",Low,27,19,33,891,8.91,882.09,513,369.09,45528,8,Aug,2024
+Small Business,Germany,Amarilla,"Small Business,Germany,Amarilla",Low,840,14,35,29400,1470,27930,11760,16170,45109,7,Jul,2023
+Small Business,Mexico,Amarilla,"Small Business,Mexico,Amarilla",Low,850,10,36,30600,1530,29070,8500,20570,45592,10,Oct,2024
+Enterprise,Germany,Amarilla,"Enterprise,Germany,Amarilla",Low,538,14,32,17216,860.8,16355.2,7532,8823.2,45600,11,Nov,2024
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Low,419,14,21,8799,439.95,8359.05,5866,2493.05,45171,9,Sep,2023
+Government,USA,Amarilla,"Government,USA,Amarilla",Low,390,15,28,10920,546,10374,5850,4524,45687,1,Jan,2025
+Government,France,Amarilla,"Government,France,Amarilla",Low,617,14,26,16042,802.1,15239.9,8638,6601.9,45121,7,Jul,2023
+Small Business,Canada,Amarilla,"Small Business,Canada,Amarilla",Low,128,18,36,4608,230.4,4377.6,2304,2073.6,45087,6,Jun,2023
+Enterprise,France,Carretera,"Enterprise,France,Carretera",Low,178,18,31,5518,275.9,5242.1,3204,2038.1,45367,3,Mar,2024
+Government,Germany,Carretera,"Government,Germany,Carretera",Low,914,18,27,24678,1233.9,23444.1,16452,6992.1,45109,7,Jul,2023
+Small Business,Germany,Carretera,"Small Business,Germany,Carretera",Low,552,10,38,20976,1048.8,19927.2,5520,14407.2,45369,3,Mar,2024
+Channel Partners,USA,Carretera,"Channel Partners,USA,Carretera",Low,751,17,34,25534,1276.7,24257.3,12767,11490.3,45650,12,Dec,2024
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Low,778,14,38,29564,1478.2,28085.8,10892,17193.8,45435,5,May,2024
+Government,Germany,Montana,"Government,Germany,Montana",Low,96,15,18,1728,86.4,1641.6,1440,201.6,45102,6,Jun,2023
+Channel Partners,France,Montana,"Channel Partners,France,Montana",Low,984,18,35,34440,1722,32718,17712,15006,45083,6,Jun,2023
+Government,France,Montana,"Government,France,Montana",Low,126,16,36,4536,226.8,4309.2,2016,2293.2,45643,12,Dec,2024
+Government,Germany,Montana,"Government,Germany,Montana",Low,895,15,18,16110,805.5,15304.5,13425,1879.5,45143,8,Aug,2023
+Enterprise,France,Montana,"Enterprise,France,Montana",Low,881,17,19,16739,836.95,15902.05,14977,925.05,45748,4,Apr,2025
+Enterprise,Germany,Montana,"Enterprise,Germany,Montana",Low,607,12,29,17603,880.15,16722.85,7284,9438.85,45518,8,Aug,2024
+Small Business,France,Paseo,"Small Business,France,Paseo",Low,380,19,29,11020,551,10469,7220,3249,45059,5,May,2023
+Enterprise,Canada,Paseo,"Enterprise,Canada,Paseo",Low,975,11,37,36075,1803.75,34271.25,10725,23546.25,45113,7,Jul,2023
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",Low,107,12,38,4066,203.3,3862.7,1284,2578.7,45165,8,Aug,2023
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",Low,196,17,26,5096,254.8,4841.2,3332,1509.2,45726,3,Mar,2025
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Low,28,14,17,476,4.76,471.24,392,79.24,45340,2,Feb,2024
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",Low,253,16,22,5566,278.3,5287.7,4048,1239.7,45226,10,Oct,2023
+Enterprise,Canada,Paseo,"Enterprise,Canada,Paseo",Low,289,11,37,10693,534.65,10158.35,3179,6979.35,45029,4,Apr,2023
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",Low,398,13,18,7164,358.2,6805.8,5174,1631.8,45678,1,Jan,2025
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Low,99,20,24,2376,118.8,2257.2,1980,277.2,45200,10,Oct,2023
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Low,55,14,17,935,9.35,925.65,770,155.65,45388,4,Apr,2024
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",Low,950,13,26,24700,1235,23465,12350,11115,45573,10,Oct,2024
+Small Business,USA,VTT,"Small Business,USA,VTT",Low,286,20,38,10868,543.4,10324.6,5720,4604.6,45162,8,Aug,2023
+Channel Partners,Mexico,VTT,"Channel Partners,Mexico,VTT",Low,26,19,29,754,7.54,746.46,494,252.46,45351,2,Feb,2024
+Enterprise,Germany,VTT,"Enterprise,Germany,VTT",Low,602,17,25,15050,752.5,14297.5,10234,4063.5,45143,8,Aug,2023
+Small Business,Canada,VTT,"Small Business,Canada,VTT",Low,640,15,34,21760,1088,20672,9600,11072,45090,6,Jun,2023
+Government,Mexico,VTT,"Government,Mexico,VTT",Low,99,19,33,3267,163.35,3103.65,1881,1222.65,45635,12,Dec,2024
+Midmarket,Germany,VTT,"Midmarket,Germany,VTT",Low,310,18,18,5580,279,5301,5580,-279,45343,2,Feb,2024
+Government,Canada,Carretera,"Government,Canada,Carretera",Low,496,17,32,15872,793.6,15078.4,8432,6646.4,45047,5,May,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Low,926,10,28,25928,1296.4,24631.6,9260,15371.6,45531,8,Aug,2024
+Government,Canada,Velo,"Government,Canada,Velo",Low,983,17,26,25558,1277.9,24280.1,16711,7569.1,45259,11,Nov,2023
+Channel Partners,Germany,VTT,"Channel Partners,Germany,VTT",Low,211,11,29,6119,305.95,5813.05,2321,3492.05,45089,6,Jun,2023
+Midmarket,Mexico,Montana,"Midmarket,Mexico,Montana",Low,214,14,35,7490,374.5,7115.5,2996,4119.5,45232,11,Nov,2023
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",Low,757,18,27,20439,1021.95,19417.05,13626,5791.05,45210,10,Oct,2023
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Low,255,12,37,9435,471.75,8963.25,3060,5903.25,45141,8,Aug,2023
+Government,USA,Velo,"Government,USA,Velo",Low,577,13,22,12694,634.7,12059.3,7501,4558.3,45324,2,Feb,2024
+Government,Canada,Carretera,"Government,Canada,Carretera",Low,802,17,32,25664,1283.2,24380.8,13634,10746.8,45246,11,Nov,2023
+Small Business,Germany,Carretera,"Small Business,Germany,Carretera",Low,914,10,38,34732,1736.6,32995.4,9140,23855.4,45300,1,Jan,2024
+Government,USA,Carretera,"Government,USA,Carretera",Low,668,10,16,10688,534.4,10153.6,6680,3473.6,45244,11,Nov,2023
+Midmarket,Canada,Montana,"Midmarket,Canada,Montana",Low,504,10,21,10584,529.2,10054.8,5040,5014.8,45643,12,Dec,2024
+Small Business,Germany,Montana,"Small Business,Germany,Montana",Low,721,19,17,12257,612.85,11644.15,13699,-2054.85,45271,12,Dec,2023
+Government,Canada,Montana,"Government,Canada,Montana",Low,682,15,37,25234,1261.7,23972.3,10230,13742.3,45049,5,May,2023
+Small Business,Germany,Montana,"Small Business,Germany,Montana",Low,98,19,17,1666,83.3,1582.7,1862,-279.3,45687,1,Jan,2025
+Enterprise,Mexico,Montana,"Enterprise,Mexico,Montana",Low,403,15,36,14508,725.4,13782.6,6045,7737.6,45031,4,Apr,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",Low,430,13,20,8600,430,8170,5590,2580,45686,1,Jan,2025
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Low,313,14,17,5321,266.05,5054.95,4382,672.95,45305,1,Jan,2024
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",Low,586,17,26,15236,761.8,14474.2,9962,4512.2,45149,8,Aug,2023
+Small Business,USA,Paseo,"Small Business,USA,Paseo",Low,324,11,34,11016,550.8,10465.2,3564,6901.2,45300,1,Jan,2024
+Government,USA,Paseo,"Government,USA,Paseo",Low,475,18,20,9500,475,9025,8550,475,45274,12,Dec,2023
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Low,224,20,24,5376,268.8,5107.2,4480,627.2,45177,9,Sep,2023
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",Low,822,18,33,27126,1356.3,25769.7,14796,10973.7,45390,4,Apr,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",Low,217,13,20,4340,217,4123,2821,1302,45537,9,Sep,2024
+Government,USA,Paseo,"Government,USA,Paseo",Low,399,18,20,7980,399,7581,7182,399,45362,3,Mar,2024
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Low,679,18,23,15617,780.85,14836.15,12222,2614.15,45121,7,Jul,2023
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",Low,59,18,27,1593,79.65,1513.35,1062,451.35,45233,11,Nov,2023
+Government,USA,Paseo,"Government,USA,Paseo",Low,904,18,20,18080,904,17176,16272,904,45352,3,Mar,2024
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Low,196,13,26,5096,254.8,4841.2,2548,2293.2,45212,10,Oct,2023
+Channel Partners,USA,Velo,"Channel Partners,USA,Velo",Low,423,12,27,11421,571.05,10849.95,5076,5773.95,45668,1,Jan,2025
+Government,Canada,Velo,"Government,Canada,Velo",Low,168,17,26,4368,218.4,4149.6,2856,1293.6,45296,1,Jan,2024
+Government,France,Velo,"Government,France,Velo",Low,69,15,31,2139,106.95,2032.05,1035,997.05,45066,5,May,2023
+Channel Partners,France,VTT,"Channel Partners,France,VTT",Low,419,10,29,12151,607.55,11543.45,4190,7353.45,45655,12,Dec,2024
+Government,USA,VTT,"Government,USA,VTT",Low,483,16,33,15939,796.95,15142.05,7728,7414.05,45609,11,Nov,2024
+Government,France,VTT,"Government,France,VTT",Low,544,13,36,19584,979.2,18604.8,7072,11532.8,45493,7,Jul,2024
+Midmarket,Mexico,VTT,"Midmarket,Mexico,VTT",Low,404,10,18,7272,363.6,6908.4,4040,2868.4,45258,11,Nov,2023
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Low,33,12,33,1089,54.45,1034.55,396,638.55,45552,9,Sep,2024
+Enterprise,Mexico,Amarilla,"Enterprise,Mexico,Amarilla",Low,264,19,29,7656,382.8,7273.2,5016,2257.2,45391,4,Apr,2024
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Low,514,14,21,10794,539.7,10254.3,7196,3058.3,45533,8,Aug,2024
+Midmarket,USA,Amarilla,"Midmarket,USA,Amarilla",Low,753,15,22,16566,828.3,15737.7,11295,4442.7,45043,4,Apr,2023
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Low,934,13,25,23350,1167.5,22182.5,12142,10040.5,45614,11,Nov,2024
+Government,Germany,Montana,"Government,Germany,Montana",Medium,193,15,18,3474,173.7,3300.3,2895,405.3,45063,5,May,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,340,15,32,10880,544,10336,5100,5236,45335,2,Feb,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,775,13,20,15500,775,14725,10075,4650,45529,8,Aug,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,154,10,28,4312,215.6,4096.4,1540,2556.4,45075,5,May,2023
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",Medium,649,10,34,22066,1103.3,20962.7,6490,14472.7,45383,4,Apr,2024
+Channel Partners,Canada,Velo,"Channel Partners,Canada,Velo",Medium,168,12,36,6048,302.4,5745.6,2016,3729.6,45077,5,May,2023
+Government,Mexico,VTT,"Government,Mexico,VTT",Medium,189,19,33,6237,311.85,5925.15,3591,2334.15,45054,5,May,2023
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Medium,653,12,33,21549,1077.45,20471.55,7836,12635.55,45716,2,Feb,2025
+Channel Partners,Mexico,Amarilla,"Channel Partners,Mexico,Amarilla",Medium,552,17,27,14904,745.2,14158.8,9384,4774.8,45285,12,Dec,2023
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Medium,796,14,21,16716,835.8,15880.2,11144,4736.2,45331,2,Feb,2024
+Channel Partners,France,Carretera,"Channel Partners,France,Carretera",Medium,69,14,34,2346,117.3,2228.7,966,1262.7,45127,7,Jul,2023
+Channel Partners,Germany,Carretera,"Channel Partners,Germany,Carretera",Medium,548,15,19,10412,520.6,9891.4,8220,1671.4,45084,6,Jun,2023
+Government,France,Carretera,"Government,France,Carretera",Medium,993,11,38,37734,1886.7,35847.3,10923,24924.3,45168,8,Aug,2023
+Small Business,USA,Carretera,"Small Business,USA,Carretera",Medium,340,13,20,6800,340,6460,4420,2040,45619,11,Nov,2024
+Government,Germany,Carretera,"Government,Germany,Carretera",Medium,736,18,27,19872,993.6,18878.4,13248,5630.4,45339,2,Feb,2024
+Midmarket,Mexico,Carretera,"Midmarket,Mexico,Carretera",Medium,202,12,24,4848,242.4,4605.6,2424,2181.6,45656,12,Dec,2024
+Government,USA,Carretera,"Government,USA,Carretera",Medium,908,10,16,14528,726.4,13801.6,9080,4721.6,45418,5,May,2024
+Government,France,Carretera,"Government,France,Carretera",Medium,878,11,38,33364,1668.2,31695.8,9658,22037.8,45330,2,Feb,2024
+Government,France,Montana,"Government,France,Montana",Medium,800,16,36,28800,1440,27360,12800,14560,45671,1,Jan,2025
+Enterprise,USA,Montana,"Enterprise,USA,Montana",Medium,396,14,34,13464,673.2,12790.8,5544,7246.8,45193,9,Sep,2023
+Government,Mexico,Montana,"Government,Mexico,Montana",Medium,602,12,26,15652,782.6,14869.4,7224,7645.4,45443,5,May,2024
+Channel Partners,Germany,Montana,"Channel Partners,Germany,Montana",Medium,344,17,28,9632,481.6,9150.4,5848,3302.4,45415,5,May,2024
+Small Business,Mexico,Montana,"Small Business,Mexico,Montana",Medium,314,18,26,8164,408.2,7755.8,5652,2103.8,45409,4,Apr,2024
+Government,France,Paseo,"Government,France,Paseo",Medium,177,18,20,3540,177,3363,3186,177,45092,6,Jun,2023
+Enterprise,USA,Paseo,"Enterprise,USA,Paseo",Medium,336,15,38,12768,638.4,12129.6,5040,7089.6,45400,4,Apr,2024
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Medium,406,20,24,9744,487.2,9256.8,8120,1136.8,45130,7,Jul,2023
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",Medium,621,20,36,22356,1117.8,21238.2,12420,8818.2,45437,5,May,2024
+Government,USA,Paseo,"Government,USA,Paseo",Medium,58,18,20,1160,58,1102,1044,58,45260,11,Nov,2023
+Small Business,USA,Paseo,"Small Business,USA,Paseo",Medium,568,11,34,19312,965.6,18346.4,6248,12098.4,45060,5,May,2023
+Government,USA,Paseo,"Government,USA,Paseo",Medium,732,18,20,14640,732,13908,13176,732,45535,8,Aug,2024
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Medium,557,12,37,20609,1030.45,19578.55,6684,12894.55,45739,3,Mar,2025
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,953,13,20,19060,953,18107,12389,5718,45095,6,Jun,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,26,13,20,520,5.2,514.8,338,176.8,45503,7,Jul,2024
+Enterprise,USA,Paseo,"Enterprise,USA,Paseo",Medium,893,15,38,33934,1696.7,32237.3,13395,18842.3,45474,7,Jul,2024
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Medium,981,20,24,23544,1177.2,22366.8,19620,2746.8,45144,8,Aug,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,716,13,20,14320,716,13604,9308,4296,45168,8,Aug,2023
+Government,USA,Paseo,"Government,USA,Paseo",Medium,444,18,20,8880,444,8436,7992,444,45514,8,Aug,2024
+Government,France,Paseo,"Government,France,Paseo",Medium,289,18,20,5780,289,5491,5202,289,45610,11,Nov,2024
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",Medium,478,13,18,8604,430.2,8173.8,6214,1959.8,45070,5,May,2023
+Midmarket,USA,Velo,"Midmarket,USA,Velo",Medium,492,19,35,17220,861,16359,9348,7011,45721,3,Mar,2025
+Midmarket,Mexico,Velo,"Midmarket,Mexico,Velo",Medium,69,11,19,1311,65.55,1245.45,759,486.45,45372,3,Mar,2024
+Enterprise,Germany,Velo,"Enterprise,Germany,Velo",Medium,730,17,16,11680,584,11096,12410,-1314,45045,4,Apr,2023
+Government,USA,Velo,"Government,USA,Velo",Medium,395,13,22,8690,434.5,8255.5,5135,3120.5,45518,8,Aug,2024
+Government,USA,Velo,"Government,USA,Velo",Medium,118,13,22,2596,129.8,2466.2,1534,932.2,45423,5,May,2024
+Government,France,Velo,"Government,France,Velo",Medium,973,15,31,30163,1508.15,28654.85,14595,14059.85,45076,5,May,2023
+Enterprise,USA,Velo,"Enterprise,USA,Velo",Medium,142,10,17,2414,120.7,2293.3,1420,873.3,45232,11,Nov,2023
+Enterprise,France,Velo,"Enterprise,France,Velo",Medium,737,15,17,12529,626.45,11902.55,11055,847.55,45245,11,Nov,2023
+Government,France,Velo,"Government,France,Velo",Medium,862,15,31,26722,1336.1,25385.9,12930,12455.9,45112,7,Jul,2023
+Small Business,Germany,Velo,"Small Business,Germany,Velo",Medium,335,13,32,10720,536,10184,4355,5829,45270,12,Dec,2023
+Government,Canada,VTT,"Government,Canada,VTT",Medium,130,15,19,2470,123.5,2346.5,1950,396.5,45472,6,Jun,2024
+Government,USA,VTT,"Government,USA,VTT",Medium,770,16,33,25410,1270.5,24139.5,12320,11819.5,45369,3,Mar,2024
+Government,Germany,VTT,"Government,Germany,VTT",Medium,246,19,25,6150,307.5,5842.5,4674,1168.5,45289,12,Dec,2023
+Government,USA,VTT,"Government,USA,VTT",Medium,664,16,33,21912,1095.6,20816.4,10624,10192.4,45029,4,Apr,2023
+Government,USA,VTT,"Government,USA,VTT",Medium,825,16,33,27225,1361.25,25863.75,13200,12663.75,45187,9,Sep,2023
+Government,France,VTT,"Government,France,VTT",Medium,880,13,36,31680,1584,30096,11440,18656,45150,8,Aug,2023
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Medium,444,14,21,9324,466.2,8857.8,6216,2641.8,45736,3,Mar,2025
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,541,13,25,13525,676.25,12848.75,7033,5815.75,45527,8,Aug,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,899,13,25,22475,1123.75,21351.25,11687,9664.25,45518,8,Aug,2024
+Small Business,Germany,Amarilla,"Small Business,Germany,Amarilla",Medium,96,14,35,3360,168,3192,1344,1848,45572,10,Oct,2024
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Medium,710,12,37,26270,1313.5,24956.5,8520,16436.5,45103,6,Jun,2023
+Government,USA,Carretera,"Government,USA,Carretera",Medium,628,10,16,10048,502.4,9545.6,6280,3265.6,45181,9,Sep,2023
+Midmarket,Canada,Carretera,"Midmarket,Canada,Carretera",Medium,846,13,30,25380,1269,24111,10998,13113,45430,5,May,2024
+Channel Partners,Mexico,Carretera,"Channel Partners,Mexico,Carretera",Medium,512,20,24,12288,614.4,11673.6,10240,1433.6,45743,3,Mar,2025
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Medium,958,14,38,36404,1820.2,34583.8,13412,21171.8,45632,12,Dec,2024
+Midmarket,USA,Carretera,"Midmarket,USA,Carretera",Medium,692,17,31,21452,1072.6,20379.4,11764,8615.4,45200,10,Oct,2023
+Government,USA,Carretera,"Government,USA,Carretera",Medium,775,10,16,12400,620,11780,7750,4030,45123,7,Jul,2023
+Enterprise,Germany,Carretera,"Enterprise,Germany,Carretera",Medium,977,13,16,15632,781.6,14850.4,12701,2149.4,45088,6,Jun,2023
+Government,Mexico,Montana,"Government,Mexico,Montana",Medium,608,12,26,15808,790.4,15017.6,7296,7721.6,45220,10,Oct,2023
+Government,Germany,Montana,"Government,Germany,Montana",Medium,536,15,18,9648,482.4,9165.6,8040,1125.6,45233,11,Nov,2023
+Government,France,Montana,"Government,France,Montana",Medium,679,16,36,24444,1222.2,23221.8,10864,12357.8,45328,2,Feb,2024
+Channel Partners,USA,Montana,"Channel Partners,USA,Montana",Medium,180,17,23,4140,207,3933,3060,873,45661,1,Jan,2025
+Government,France,Paseo,"Government,France,Paseo",Medium,274,18,20,5480,274,5206,4932,274,45553,9,Sep,2024
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",Medium,540,10,34,18360,918,17442,5400,12042,45721,3,Mar,2025
+Government,USA,Paseo,"Government,USA,Paseo",Medium,548,18,20,10960,548,10412,9864,548,45285,12,Dec,2023
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",Medium,855,13,26,22230,1111.5,21118.5,11115,10003.5,45533,8,Aug,2024
+Enterprise,USA,Velo,"Enterprise,USA,Velo",Medium,442,10,17,7514,375.7,7138.3,4420,2718.3,45193,9,Sep,2023
+Midmarket,Germany,Velo,"Midmarket,Germany,Velo",Medium,228,10,32,7296,364.8,6931.2,2280,4651.2,45592,10,Oct,2024
+Government,France,Velo,"Government,France,Velo",Medium,37,15,31,1147,57.35,1089.65,555,534.65,45648,12,Dec,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",Medium,361,17,31,11191,559.55,10631.45,6137,4494.45,45250,11,Nov,2023
+Small Business,France,Velo,"Small Business,France,Velo",Medium,509,13,20,10180,509,9671,6617,3054,45489,7,Jul,2024
+Government,France,Velo,"Government,France,Velo",Medium,717,15,31,22227,1111.35,21115.65,10755,10360.65,45419,5,May,2024
+Midmarket,Canada,VTT,"Midmarket,Canada,VTT",Medium,368,14,32,11776,588.8,11187.2,5152,6035.2,45278,12,Dec,2023
+Government,Mexico,VTT,"Government,Mexico,VTT",Medium,96,19,33,3168,158.4,3009.6,1824,1185.6,45700,2,Feb,2025
+Small Business,France,VTT,"Small Business,France,VTT",Medium,167,17,24,4008,200.4,3807.6,2839,968.6,45130,7,Jul,2023
+Government,Mexico,VTT,"Government,Mexico,VTT",Medium,670,19,33,22110,1105.5,21004.5,12730,8274.5,45446,6,Jun,2024
+Small Business,Canada,VTT,"Small Business,Canada,VTT",Medium,105,15,34,3570,178.5,3391.5,1575,1816.5,45424,5,May,2024
+Enterprise,France,Amarilla,"Enterprise,France,Amarilla",Medium,321,14,20,6420,321,6099,4494,1605,45565,9,Sep,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Medium,724,12,33,23892,1194.6,22697.4,8688,14009.4,45393,4,Apr,2024
+Government,USA,Amarilla,"Government,USA,Amarilla",Medium,985,15,28,27580,1379,26201,14775,11426,45462,6,Jun,2024
+Government,France,Amarilla,"Government,France,Amarilla",Medium,728,14,26,18928,946.4,17981.6,10192,7789.6,45057,5,May,2023
+Government,France,Amarilla,"Government,France,Amarilla",Medium,564,14,26,14664,733.2,13930.8,7896,6034.8,45150,8,Aug,2023
+Government,France,Montana,"Government,France,Montana",Medium,505,16,36,18180,909,17271,8080,9191,45378,3,Mar,2024
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Medium,915,18,23,21045,1052.25,19992.75,16470,3522.75,45113,7,Jul,2023
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",Medium,106,13,18,1908,95.4,1812.6,1378,434.6,45094,6,Jun,2023
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Medium,776,18,23,17848,892.4,16955.6,13968,2987.6,45206,10,Oct,2023
+Government,France,Paseo,"Government,France,Paseo",Medium,30,18,20,600,6,594,540,54,45087,6,Jun,2023
+Government,Germany,Velo,"Government,Germany,Velo",Medium,156,15,37,5772,288.6,5483.4,2340,3143.4,45358,3,Mar,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",Medium,935,17,31,28985,1449.25,27535.75,15895,11640.75,45151,8,Aug,2023
+Midmarket,USA,VTT,"Midmarket,USA,VTT",Medium,286,20,36,10296,514.8,9781.2,5720,4061.2,45525,8,Aug,2024
+Channel Partners,Mexico,Carretera,"Channel Partners,Mexico,Carretera",Medium,522,20,24,12528,626.4,11901.6,10440,1461.6,45424,5,May,2024
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Medium,311,14,38,11818,590.9,11227.1,4354,6873.1,45662,1,Jan,2025
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Medium,405,11,23,9315,465.75,8849.25,4455,4394.25,45075,5,May,2023
+Channel Partners,Mexico,Montana,"Channel Partners,Mexico,Montana",Medium,761,10,22,16742,837.1,15904.9,7610,8294.9,45690,2,Feb,2025
+Channel Partners,France,Montana,"Channel Partners,France,Montana",Medium,152,18,35,5320,266,5054,2736,2318,45430,5,May,2024
+Government,France,Paseo,"Government,France,Paseo",Medium,346,18,20,6920,346,6574,6228,346,45398,4,Apr,2024
+Midmarket,Canada,Velo,"Midmarket,Canada,Velo",Medium,138,11,30,4140,207,3933,1518,2415,45518,8,Aug,2024
+Government,Canada,Velo,"Government,Canada,Velo",Medium,678,17,26,17628,881.4,16746.6,11526,5220.6,45600,11,Nov,2024
+Government,USA,Velo,"Government,USA,Velo",Medium,995,13,22,21890,1094.5,20795.5,12935,7860.5,45152,8,Aug,2023
+Government,Canada,Velo,"Government,Canada,Velo",Medium,493,17,26,12818,640.9,12177.1,8381,3796.1,45503,7,Jul,2024
+Channel Partners,France,VTT,"Channel Partners,France,VTT",Medium,984,10,29,28536,1426.8,27109.2,9840,17269.2,45597,11,Nov,2024
+Channel Partners,Germany,VTT,"Channel Partners,Germany,VTT",Medium,359,11,29,10411,520.55,9890.45,3949,5941.45,45455,6,Jun,2024
+Government,Canada,VTT,"Government,Canada,VTT",Medium,993,15,19,18867,943.35,17923.65,14895,3028.65,45664,1,Jan,2025
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,616,13,25,15400,770,14630,8008,6622,45476,7,Jul,2024
+Government,USA,Carretera,"Government,USA,Carretera",Medium,499,10,16,7984,399.2,7584.8,4990,2594.8,45121,7,Jul,2023
+Small Business,France,Carretera,"Small Business,France,Carretera",Medium,629,18,21,13209,660.45,12548.55,11322,1226.55,45524,8,Aug,2024
+Small Business,France,Carretera,"Small Business,France,Carretera",Medium,986,18,21,20706,1035.3,19670.7,17748,1922.7,45169,8,Aug,2023
+Government,France,Montana,"Government,France,Montana",Medium,620,16,36,22320,1116,21204,9920,11284,45456,6,Jun,2024
+Small Business,France,Montana,"Small Business,France,Montana",Medium,578,16,19,10982,549.1,10432.9,9248,1184.9,45120,7,Jul,2023
+Enterprise,Germany,Montana,"Enterprise,Germany,Montana",Medium,843,12,29,24447,1222.35,23224.65,10116,13108.65,45286,12,Dec,2023
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",Medium,386,12,27,10422,521.1,9900.9,4632,5268.9,45372,3,Mar,2024
+Small Business,France,Paseo,"Small Business,France,Paseo",Medium,599,19,29,17371,868.55,16502.45,11381,5121.45,45136,7,Jul,2023
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Medium,533,14,17,9061,453.05,8607.95,7462,1145.95,45216,10,Oct,2023
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Medium,828,12,37,30636,1531.8,29104.2,9936,19168.2,45330,2,Feb,2024
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Medium,702,18,23,16146,807.3,15338.7,12636,2702.7,45408,4,Apr,2024
+Government,France,Paseo,"Government,France,Paseo",Medium,734,18,20,14680,734,13946,13212,734,45180,9,Sep,2023
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",Medium,183,17,26,4758,237.9,4520.1,3111,1409.1,45106,6,Jun,2023
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",Medium,448,12,27,12096,604.8,11491.2,5376,6115.2,45384,4,Apr,2024
+Channel Partners,Mexico,Paseo,"Channel Partners,Mexico,Paseo",Medium,440,20,32,14080,704,13376,8800,4576,45121,7,Jul,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,963,15,32,30816,1540.8,29275.2,14445,14830.2,45122,7,Jul,2023
+Small Business,France,Velo,"Small Business,France,Velo",Medium,801,13,20,16020,801,15219,10413,4806,45206,10,Oct,2023
+Government,Mexico,Velo,"Government,Mexico,Velo",Medium,187,17,31,5797,289.85,5507.15,3179,2328.15,45575,10,Oct,2024
+Enterprise,Germany,Velo,"Enterprise,Germany,Velo",Medium,606,17,16,9696,484.8,9211.2,10302,-1090.8,45547,9,Sep,2024
+Government,France,Velo,"Government,France,Velo",Medium,924,15,31,28644,1432.2,27211.8,13860,13351.8,45203,10,Oct,2023
+Government,USA,Velo,"Government,USA,Velo",Medium,432,13,22,9504,475.2,9028.8,5616,3412.8,45145,8,Aug,2023
+Small Business,USA,Velo,"Small Business,USA,Velo",Medium,429,15,19,8151,407.55,7743.45,6435,1308.45,45236,11,Nov,2023
+Government,Germany,Velo,"Government,Germany,Velo",Medium,222,15,37,8214,410.7,7803.3,3330,4473.3,45696,2,Feb,2025
+Channel Partners,Canada,VTT,"Channel Partners,Canada,VTT",Medium,542,15,26,14092,704.6,13387.4,8130,5257.4,45634,12,Dec,2024
+Small Business,France,VTT,"Small Business,France,VTT",Medium,101,17,24,2424,121.2,2302.8,1717,585.8,45710,2,Feb,2025
+Small Business,Mexico,VTT,"Small Business,Mexico,VTT",Medium,880,20,17,14960,748,14212,17600,-3388,45636,12,Dec,2024
+Enterprise,Canada,Amarilla,"Enterprise,Canada,Amarilla",Medium,55,16,30,1650,82.5,1567.5,880,687.5,45731,3,Mar,2025
+Government,France,Amarilla,"Government,France,Amarilla",Medium,206,14,26,5356,267.8,5088.2,2884,2204.2,45174,9,Sep,2023
+Enterprise,Germany,Amarilla,"Enterprise,Germany,Amarilla",Medium,850,14,32,27200,1360,25840,11900,13940,45211,10,Oct,2023
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,609,13,25,15225,761.25,14463.75,7917,6546.75,45093,6,Jun,2023
+Small Business,USA,Amarilla,"Small Business,USA,Amarilla",Medium,465,14,30,13950,697.5,13252.5,6510,6742.5,45669,1,Jan,2025
+Government,Canada,Montana,"Government,Canada,Montana",Medium,456,15,37,16872,843.6,16028.4,6840,9188.4,45229,10,Oct,2023
+Government,USA,Montana,"Government,USA,Montana",Medium,228,10,26,5928,296.4,5631.6,2280,3351.6,45672,1,Jan,2025
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,31,13,20,620,6.2,613.8,403,210.8,45689,2,Feb,2025
+Government,USA,Amarilla,"Government,USA,Amarilla",Medium,800,15,28,22400,1120,21280,12000,9280,45639,12,Dec,2024
+Enterprise,Mexico,Carretera,"Enterprise,Mexico,Carretera",Medium,350,11,17,5950,297.5,5652.5,3850,1802.5,45190,9,Sep,2023
+Midmarket,France,Carretera,"Midmarket,France,Carretera",Medium,470,16,33,15510,775.5,14734.5,7520,7214.5,45453,6,Jun,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Medium,813,11,23,18699,934.95,17764.05,8943,8821.05,45750,4,Apr,2025
+Midmarket,France,Montana,"Midmarket,France,Montana",Medium,447,11,33,14751,737.55,14013.45,4917,9096.45,45100,6,Jun,2023
+Government,Canada,Montana,"Government,Canada,Montana",Medium,907,15,37,33559,1677.95,31881.05,13605,18276.05,45145,8,Aug,2023
+Government,Germany,Montana,"Government,Germany,Montana",Medium,867,15,18,15606,780.3,14825.7,13005,1820.7,45639,12,Dec,2024
+Small Business,France,Montana,"Small Business,France,Montana",Medium,566,16,19,10754,537.7,10216.3,9056,1160.3,45375,3,Mar,2024
+Small Business,Canada,Montana,"Small Business,Canada,Montana",Medium,845,14,16,13520,676,12844,11830,1014,45411,4,Apr,2024
+Midmarket,Germany,Montana,"Midmarket,Germany,Montana",Medium,630,17,16,10080,504,9576,10710,-1134,45225,10,Oct,2023
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Medium,116,13,26,3016,150.8,2865.2,1508,1357.2,45408,4,Apr,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,11,15,32,352,3.52,348.48,165,183.48,45213,10,Oct,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,752,15,32,24064,1203.2,22860.8,11280,11580.8,45175,9,Sep,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,578,15,32,18496,924.8,17571.2,8670,8901.2,45556,9,Sep,2024
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",Medium,877,20,36,31572,1578.6,29993.4,17540,12453.4,45249,11,Nov,2023
+Government,USA,Paseo,"Government,USA,Paseo",Medium,634,18,20,12680,634,12046,11412,634,45536,9,Sep,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,622,15,32,19904,995.2,18908.8,9330,9578.8,45088,6,Jun,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,783,15,32,25056,1252.8,23803.2,11745,12058.2,45130,7,Jul,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,438,15,32,14016,700.8,13315.2,6570,6745.2,45681,1,Jan,2025
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,11,10,28,308,3.08,304.92,110,194.92,45345,2,Feb,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,892,15,32,28544,1427.2,27116.8,13380,13736.8,45621,11,Nov,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,59,10,28,1652,82.6,1569.4,590,979.4,45063,5,May,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,576,10,28,16128,806.4,15321.6,5760,9561.6,45262,12,Dec,2023
+Channel Partners,Canada,Velo,"Channel Partners,Canada,Velo",Medium,831,12,36,29916,1495.8,28420.2,9972,18448.2,45273,12,Dec,2023
+Government,USA,Velo,"Government,USA,Velo",Medium,479,13,22,10538,526.9,10011.1,6227,3784.1,45384,4,Apr,2024
+Government,Germany,Velo,"Government,Germany,Velo",Medium,949,15,37,35113,1755.65,33357.35,14235,19122.35,45060,5,May,2023
+Small Business,France,Velo,"Small Business,France,Velo",Medium,95,13,20,1900,95,1805,1235,570,45058,5,May,2023
+Small Business,Mexico,Velo,"Small Business,Mexico,Velo",Medium,723,10,27,19521,976.05,18544.95,7230,11314.95,45491,7,Jul,2024
+Government,France,VTT,"Government,France,VTT",Medium,138,13,36,4968,248.4,4719.6,1794,2925.6,45727,3,Mar,2025
+Government,Germany,VTT,"Government,Germany,VTT",Medium,145,19,25,3625,181.25,3443.75,2755,688.75,45664,1,Jan,2025
+Government,France,VTT,"Government,France,VTT",Medium,618,13,36,22248,1112.4,21135.6,8034,13101.6,45750,4,Apr,2025
+Government,Germany,VTT,"Government,Germany,VTT",Medium,403,19,25,10075,503.75,9571.25,7657,1914.25,45192,9,Sep,2023
+Small Business,Canada,VTT,"Small Business,Canada,VTT",Medium,622,15,34,21148,1057.4,20090.6,9330,10760.6,45471,6,Jun,2024
+Small Business,USA,VTT,"Small Business,USA,VTT",Medium,618,20,38,23484,1174.2,22309.8,12360,9949.8,45508,8,Aug,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,855,13,25,21375,1068.75,20306.25,11115,9191.25,45463,6,Jun,2024
+Government,USA,Amarilla,"Government,USA,Amarilla",Medium,201,15,28,5628,281.4,5346.6,3015,2331.6,45085,6,Jun,2023
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Medium,204,14,21,4284,214.2,4069.8,2856,1213.8,45234,11,Nov,2023
+Small Business,Mexico,Amarilla,"Small Business,Mexico,Amarilla",Medium,685,10,36,24660,1233,23427,6850,16577,45082,6,Jun,2023
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Medium,304,14,21,6384,319.2,6064.8,4256,1808.8,45716,2,Feb,2025
+Midmarket,Germany,Amarilla,"Midmarket,Germany,Amarilla",Medium,670,15,16,10720,536,10184,10050,134,45443,5,May,2024
+Channel Partners,Mexico,Amarilla,"Channel Partners,Mexico,Amarilla",Medium,26,17,27,702,7.02,694.98,442,252.98,45256,11,Nov,2023
+Small Business,Mexico,Amarilla,"Small Business,Mexico,Amarilla",Medium,320,10,36,11520,576,10944,3200,7744,45246,11,Nov,2023
+Government,USA,VTT,"Government,USA,VTT",Medium,437,16,33,14421,721.05,13699.95,6992,6707.95,45111,7,Jul,2023
+Small Business,Canada,Carretera,"Small Business,Canada,Carretera",Medium,918,14,25,22950,1147.5,21802.5,12852,8950.5,45743,3,Mar,2025
+Channel Partners,Mexico,Carretera,"Channel Partners,Mexico,Carretera",Medium,925,20,24,22200,1110,21090,18500,2590,45227,10,Oct,2023
+Small Business,Canada,Montana,"Small Business,Canada,Montana",Medium,710,14,16,11360,568,10792,9940,852,45341,2,Feb,2024
+Government,France,Montana,"Government,France,Montana",Medium,910,16,36,32760,1638,31122,14560,16562,45307,1,Jan,2024
+Small Business,France,Montana,"Small Business,France,Montana",Medium,676,16,19,12844,642.2,12201.8,10816,1385.8,45601,11,Nov,2024
+Channel Partners,Canada,Montana,"Channel Partners,Canada,Montana",Medium,231,18,24,5544,277.2,5266.8,4158,1108.8,45701,2,Feb,2025
+Enterprise,France,Montana,"Enterprise,France,Montana",Medium,226,17,19,4294,214.7,4079.3,3842,237.3,45033,4,Apr,2023
+Government,Canada,Montana,"Government,Canada,Montana",Medium,757,15,37,28009,1400.45,26608.55,11355,15253.55,45503,7,Jul,2024
+Enterprise,USA,Montana,"Enterprise,USA,Montana",Medium,932,14,34,31688,1584.4,30103.6,13048,17055.6,45344,2,Feb,2024
+Small Business,Germany,Montana,"Small Business,Germany,Montana",Medium,77,19,17,1309,65.45,1243.55,1463,-219.45,45626,11,Nov,2024
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",Medium,387,20,36,13932,696.6,13235.4,7740,5495.4,45273,12,Dec,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,529,10,28,14812,740.6,14071.4,5290,8781.4,45052,5,May,2023
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Medium,962,18,23,22126,1106.3,21019.7,17316,3703.7,45572,10,Oct,2024
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",Medium,712,12,27,19224,961.2,18262.8,8544,9718.8,45380,3,Mar,2024
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Medium,152,12,37,5624,281.2,5342.8,1824,3518.8,45230,10,Oct,2023
+Channel Partners,Mexico,Paseo,"Channel Partners,Mexico,Paseo",Medium,360,20,32,11520,576,10944,7200,3744,45364,3,Mar,2024
+Small Business,France,Paseo,"Small Business,France,Paseo",Medium,660,19,29,19140,957,18183,12540,5643,45372,3,Mar,2024
+Channel Partners,Germany,Paseo,"Channel Partners,Germany,Paseo",Medium,372,13,29,10788,539.4,10248.6,4836,5412.6,45146,8,Aug,2023
+Enterprise,USA,Paseo,"Enterprise,USA,Paseo",Medium,724,15,38,27512,1375.6,26136.4,10860,15276.4,45467,6,Jun,2024
+Midmarket,Mexico,Velo,"Midmarket,Mexico,Velo",Medium,885,11,19,16815,840.75,15974.25,9735,6239.25,45542,9,Sep,2024
+Small Business,Canada,Velo,"Small Business,Canada,Velo",Medium,240,11,26,6240,312,5928,2640,3288,45074,5,May,2023
+Government,Germany,Velo,"Government,Germany,Velo",Medium,695,15,37,25715,1285.75,24429.25,10425,14004.25,45463,6,Jun,2024
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",Medium,706,13,26,18356,917.8,17438.2,9178,8260.2,45664,1,Jan,2025
+Enterprise,Mexico,Velo,"Enterprise,Mexico,Velo",Medium,643,16,25,16075,803.75,15271.25,10288,4983.25,45573,10,Oct,2024
+Government,Canada,Velo,"Government,Canada,Velo",Medium,769,17,26,19994,999.7,18994.3,13073,5921.3,45393,4,Apr,2024
+Channel Partners,USA,VTT,"Channel Partners,USA,VTT",Medium,802,18,23,18446,922.3,17523.7,14436,3087.7,45714,2,Feb,2025
+Small Business,Germany,VTT,"Small Business,Germany,VTT",Medium,920,19,32,29440,1472,27968,17480,10488,45261,12,Dec,2023
+Government,USA,VTT,"Government,USA,VTT",Medium,543,16,33,17919,895.95,17023.05,8688,8335.05,45593,10,Oct,2024
+Channel Partners,Germany,VTT,"Channel Partners,Germany,VTT",Medium,249,11,29,7221,361.05,6859.95,2739,4120.95,45032,4,Apr,2023
+Small Business,USA,VTT,"Small Business,USA,VTT",Medium,255,20,38,9690,484.5,9205.5,5100,4105.5,45373,3,Mar,2024
+Channel Partners,France,VTT,"Channel Partners,France,VTT",Medium,890,10,29,25810,1290.5,24519.5,8900,15619.5,45602,11,Nov,2024
+Midmarket,France,VTT,"Midmarket,France,VTT",Medium,875,16,36,31500,1575,29925,14000,15925,45439,5,May,2024
+Enterprise,Mexico,VTT,"Enterprise,Mexico,VTT",Medium,128,16,33,4224,211.2,4012.8,2048,1964.8,45157,8,Aug,2023
+Government,USA,Amarilla,"Government,USA,Amarilla",Medium,115,15,28,3220,161,3059,1725,1334,45690,2,Feb,2025
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,320,13,25,8000,400,7600,4160,3440,45172,9,Sep,2023
+Midmarket,Germany,Amarilla,"Midmarket,Germany,Amarilla",Medium,994,15,16,15904,795.2,15108.8,14910,198.8,45046,4,Apr,2023
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Medium,178,12,33,5874,293.7,5580.3,2136,3444.3,45668,1,Jan,2025
+Government,Germany,Carretera,"Government,Germany,Carretera",Medium,657,18,27,17739,886.95,16852.05,11826,5026.05,45613,11,Nov,2024
+Government,Canada,Carretera,"Government,Canada,Carretera",Medium,654,17,32,20928,1046.4,19881.6,11118,8763.6,45350,2,Feb,2024
+Channel Partners,Germany,Carretera,"Channel Partners,Germany,Carretera",Medium,587,15,19,11153,557.65,10595.35,8805,1790.35,45135,7,Jul,2023
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Medium,616,11,23,14168,708.4,13459.6,6776,6683.6,45678,1,Jan,2025
+Government,USA,Paseo,"Government,USA,Paseo",Medium,106,18,20,2120,106,2014,1908,106,45453,6,Jun,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,602,10,28,16856,842.8,16013.2,6020,9993.2,45574,10,Oct,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,763,15,32,24416,1220.8,23195.2,11445,11750.2,45133,7,Jul,2023
+Channel Partners,France,Velo,"Channel Partners,France,Velo",Medium,839,11,36,30204,1510.2,28693.8,9229,19464.8,45490,7,Jul,2024
+Midmarket,Mexico,Velo,"Midmarket,Mexico,Velo",Medium,735,11,19,13965,698.25,13266.75,8085,5181.75,45368,3,Mar,2024
+Government,Germany,VTT,"Government,Germany,VTT",Medium,618,19,25,15450,772.5,14677.5,11742,2935.5,45327,2,Feb,2024
+Government,France,VTT,"Government,France,VTT",Medium,21,13,36,756,7.56,748.44,273,475.44,45582,10,Oct,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",Medium,410,19,33,13530,676.5,12853.5,7790,5063.5,45420,5,May,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Medium,277,12,33,9141,457.05,8683.95,3324,5359.95,45049,5,May,2023
+Midmarket,Canada,Amarilla,"Midmarket,Canada,Amarilla",Medium,758,19,23,17434,871.7,16562.3,14402,2160.3,45461,6,Jun,2024
+Channel Partners,France,Amarilla,"Channel Partners,France,Amarilla",Medium,621,14,23,14283,714.15,13568.85,8694,4874.85,45429,5,May,2024
+Channel Partners,USA,Carretera,"Channel Partners,USA,Carretera",High,82,17,34,2788,139.4,2648.6,1394,1254.6,45228,10,Oct,2023
+Government,USA,Montana,"Government,USA,Montana",High,782,10,26,20332,1016.6,19315.4,7820,11495.4,45115,7,Jul,2023
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",High,732,16,22,16104,805.2,15298.8,11712,3586.8,45161,8,Aug,2023
+Enterprise,USA,Carretera,"Enterprise,USA,Carretera",High,647,20,18,11646,582.3,11063.7,12940,-1876.3,45164,8,Aug,2023
+Enterprise,France,Carretera,"Enterprise,France,Carretera",High,738,18,31,22878,1143.9,21734.1,13284,8450.1,45291,12,Dec,2023
+Government,USA,Montana,"Government,USA,Montana",High,926,10,26,24076,1203.8,22872.2,9260,13612.2,45561,9,Sep,2024
+Enterprise,USA,Montana,"Enterprise,USA,Montana",High,272,14,34,9248,462.4,8785.6,3808,4977.6,45461,6,Jun,2024
+Midmarket,France,Montana,"Midmarket,France,Montana",High,490,11,33,16170,808.5,15361.5,5390,9971.5,45277,12,Dec,2023
+Government,France,Paseo,"Government,France,Paseo",High,191,18,20,3820,191,3629,3438,191,45699,2,Feb,2025
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",High,325,20,36,11700,585,11115,6500,4615,45457,6,Jun,2024
+Midmarket,France,Paseo,"Midmarket,France,Paseo",High,458,12,37,16946,847.3,16098.7,5496,10602.7,45639,12,Dec,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",High,192,15,32,6144,307.2,5836.8,2880,2956.8,45177,9,Sep,2023
+Midmarket,Germany,Velo,"Midmarket,Germany,Velo",High,698,10,32,22336,1116.8,21219.2,6980,14239.2,45044,4,Apr,2023
+Midmarket,Germany,Velo,"Midmarket,Germany,Velo",High,49,10,32,1568,78.4,1489.6,490,999.6,45336,2,Feb,2024
+Midmarket,USA,Velo,"Midmarket,USA,Velo",High,767,19,35,26845,1342.25,25502.75,14573,10929.75,45236,11,Nov,2023
+Government,France,Velo,"Government,France,Velo",High,158,15,31,4898,244.9,4653.1,2370,2283.1,45686,1,Jan,2025
+Enterprise,USA,Velo,"Enterprise,USA,Velo",High,317,10,17,5389,269.45,5119.55,3170,1949.55,45696,2,Feb,2025
+Small Business,USA,Velo,"Small Business,USA,Velo",High,626,15,19,11894,594.7,11299.3,9390,1909.3,45443,5,May,2024
+Government,Germany,Velo,"Government,Germany,Velo",High,595,15,37,22015,1100.75,20914.25,8925,11989.25,45649,12,Dec,2024
+Government,Germany,Velo,"Government,Germany,Velo",High,383,15,37,14171,708.55,13462.45,5745,7717.45,45596,10,Oct,2024
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",High,240,13,26,6240,312,5928,3120,2808,45119,7,Jul,2023
+Small Business,France,Velo,"Small Business,France,Velo",High,472,13,20,9440,472,8968,6136,2832,45263,12,Dec,2023
+Enterprise,Mexico,VTT,"Enterprise,Mexico,VTT",High,539,16,33,17787,889.35,16897.65,8624,8273.65,45354,3,Mar,2024
+Midmarket,Mexico,VTT,"Midmarket,Mexico,VTT",High,830,10,18,14940,747,14193,8300,5893,45666,1,Jan,2025
+Government,USA,VTT,"Government,USA,VTT",High,550,16,33,18150,907.5,17242.5,8800,8442.5,45445,6,Jun,2024
+Small Business,Mexico,VTT,"Small Business,Mexico,VTT",High,726,20,17,12342,617.1,11724.9,14520,-2795.1,45557,9,Sep,2024
+Small Business,USA,VTT,"Small Business,USA,VTT",High,642,20,38,24396,1219.8,23176.2,12840,10336.2,45321,1,Jan,2024
+Midmarket,France,VTT,"Midmarket,France,VTT",High,701,16,36,25236,1261.8,23974.2,11216,12758.2,45699,2,Feb,2025
+Enterprise,Canada,VTT,"Enterprise,Canada,VTT",High,553,12,19,10507,525.35,9981.65,6636,3345.65,45662,1,Jan,2025
+Government,Germany,VTT,"Government,Germany,VTT",High,961,19,25,24025,1201.25,22823.75,18259,4564.75,45527,8,Aug,2024
+Enterprise,USA,Amarilla,"Enterprise,USA,Amarilla",High,454,19,37,16798,839.9,15958.1,8626,7332.1,45325,2,Feb,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",High,444,13,25,11100,555,10545,5772,4773,45565,9,Sep,2024
+Small Business,USA,Amarilla,"Small Business,USA,Amarilla",High,13,14,30,390,3.9,386.1,182,204.1,45261,12,Dec,2023
+Channel Partners,Canada,Amarilla,"Channel Partners,Canada,Amarilla",High,943,18,23,21689,1084.45,20604.55,16974,3630.55,45492,7,Jul,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",High,382,12,33,12606,630.3,11975.7,4584,7391.7,45727,3,Mar,2025
+Channel Partners,Germany,Amarilla,"Channel Partners,Germany,Amarilla",High,415,18,36,14940,747,14193,7470,6723,45638,12,Dec,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",High,106,13,25,2650,132.5,2517.5,1378,1139.5,45503,7,Jul,2024
+Midmarket,France,Amarilla,"Midmarket,France,Amarilla",High,34,16,25,850,8.5,841.5,544,297.5,45731,3,Mar,2025
+Small Business,France,Amarilla,"Small Business,France,Amarilla",High,101,16,21,2121,106.05,2014.95,1616,398.95,45261,12,Dec,2023
+Channel Partners,France,Carretera,"Channel Partners,France,Carretera",High,915,14,34,31110,1555.5,29554.5,12810,16744.5,45642,12,Dec,2024
+Government,France,Paseo,"Government,France,Paseo",High,615,18,20,12300,615,11685,11070,615,45493,7,Jul,2024
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",High,994,12,38,37772,1888.6,35883.4,11928,23955.4,45722,3,Mar,2025
+Midmarket,Canada,Velo,"Midmarket,Canada,Velo",High,624,11,30,18720,936,17784,6864,10920,45569,10,Oct,2024
+Channel Partners,Germany,Velo,"Channel Partners,Germany,Velo",High,580,16,23,13340,667,12673,9280,3393,45081,6,Jun,2023
+Government,USA,VTT,"Government,USA,VTT",High,469,16,33,15477,773.85,14703.15,7504,7199.15,45567,10,Oct,2024
+Channel Partners,Mexico,VTT,"Channel Partners,Mexico,VTT",High,633,19,29,18357,917.85,17439.15,12027,5412.15,45638,12,Dec,2024
+Midmarket,USA,Amarilla,"Midmarket,USA,Amarilla",High,303,15,22,6666,333.3,6332.7,4545,1787.7,45339,2,Feb,2024
+Channel Partners,Germany,Amarilla,"Channel Partners,Germany,Amarilla",High,452,18,36,16272,813.6,15458.4,8136,7322.4,45441,5,May,2024
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",High,490,14,38,18620,931,17689,6860,10829,45131,7,Jul,2023
+Government,Germany,Carretera,"Government,Germany,Carretera",High,366,18,27,9882,494.1,9387.9,6588,2799.9,45406,4,Apr,2024
+Small Business,Germany,Carretera,"Small Business,Germany,Carretera",High,175,10,38,6650,332.5,6317.5,1750,4567.5,45259,11,Nov,2023
+Enterprise,France,Carretera,"Enterprise,France,Carretera",High,447,18,31,13857,692.85,13164.15,8046,5118.15,45735,3,Mar,2025
+Midmarket,Canada,Carretera,"Midmarket,Canada,Carretera",High,429,13,30,12870,643.5,12226.5,5577,6649.5,45303,1,Jan,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",High,429,11,23,9867,493.35,9373.65,4719,4654.65,45329,2,Feb,2024
+Government,Germany,Montana,"Government,Germany,Montana",High,108,15,18,1944,97.2,1846.8,1620,226.8,45546,9,Sep,2024
+Government,Germany,Montana,"Government,Germany,Montana",High,831,15,18,14958,747.9,14210.1,12465,1745.1,45393,4,Apr,2024
+Midmarket,Mexico,Montana,"Midmarket,Mexico,Montana",High,673,14,35,23555,1177.75,22377.25,9422,12955.25,45382,3,Mar,2024
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",High,58,12,27,1566,78.3,1487.7,696,791.7,45462,6,Jun,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,320,10,28,8960,448,8512,3200,5312,45322,1,Jan,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",High,666,13,20,13320,666,12654,8658,3996,45445,6,Jun,2024
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",High,64,10,34,2176,108.8,2067.2,640,1427.2,45476,7,Jul,2024
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",High,617,12,38,23446,1172.3,22273.7,7404,14869.7,45518,8,Aug,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",High,534,13,20,10680,534,10146,6942,3204,45685,1,Jan,2025
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",High,658,18,27,17766,888.3,16877.7,11844,5033.7,45415,5,May,2024
+Enterprise,France,Paseo,"Enterprise,France,Paseo",High,400,20,24,9600,480,9120,8000,1120,45752,4,Apr,2025
+Government,Germany,Paseo,"Government,Germany,Paseo",High,422,15,32,13504,675.2,12828.8,6330,6498.8,45687,1,Jan,2025
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",High,336,12,27,9072,453.6,8618.4,4032,4586.4,45260,11,Nov,2023
+Government,France,Velo,"Government,France,Velo",High,24,15,31,744,7.44,736.56,360,376.56,45234,11,Nov,2023
+Midmarket,Mexico,Velo,"Midmarket,Mexico,Velo",High,978,11,19,18582,929.1,17652.9,10758,6894.9,45556,9,Sep,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",High,676,17,31,20956,1047.8,19908.2,11492,8416.2,45191,9,Sep,2023
+Government,Canada,Velo,"Government,Canada,Velo",High,890,17,26,23140,1157,21983,15130,6853,45493,7,Jul,2024
+Channel Partners,France,VTT,"Channel Partners,France,VTT",High,634,10,29,18386,919.3,17466.7,6340,11126.7,45276,12,Dec,2023
+Enterprise,Mexico,VTT,"Enterprise,Mexico,VTT",High,34,16,33,1122,56.1,1065.9,544,521.9,45071,5,May,2023
+Government,Canada,VTT,"Government,Canada,VTT",High,627,15,19,11913,595.65,11317.35,9405,1912.35,45539,9,Sep,2024
+Enterprise,Germany,Amarilla,"Enterprise,Germany,Amarilla",High,125,14,32,4000,200,3800,1750,2050,45515,8,Aug,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",High,123,12,33,4059,202.95,3856.05,1476,2380.05,45229,10,Oct,2023
+Enterprise,France,Amarilla,"Enterprise,France,Amarilla",High,61,14,20,1220,61,1159,854,305,45582,10,Oct,2024
+Enterprise,Mexico,Amarilla,"Enterprise,Mexico,Amarilla",High,946,19,29,27434,1371.7,26062.3,17974,8088.3,45242,11,Nov,2023
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",High,218,12,33,7194,359.7,6834.3,2616,4218.3,45181,9,Sep,2023
+Midmarket,Mexico,Amarilla,"Midmarket,Mexico,Amarilla",High,441,16,23,10143,507.15,9635.85,7056,2579.85,45275,12,Dec,2023
+Government,USA,Paseo,"Government,USA,Paseo",High,699,18,20,13980,699,13281,12582,699,45714,2,Feb,2025
+Government,Mexico,Carretera,"Government,Mexico,Carretera",High,767,11,23,17641,882.05,16758.95,8437,8321.95,45276,12,Dec,2023
+Enterprise,Canada,Carretera,"Enterprise,Canada,Carretera",High,869,13,26,22594,1129.7,21464.3,11297,10167.3,45690,2,Feb,2025
+Enterprise,Mexico,Carretera,"Enterprise,Mexico,Carretera",High,681,11,17,11577,578.85,10998.15,7491,3507.15,45547,9,Sep,2024
+Midmarket,Canada,Carretera,"Midmarket,Canada,Carretera",High,325,13,30,9750,487.5,9262.5,4225,5037.5,45393,4,Apr,2024
+Midmarket,USA,Montana,"Midmarket,USA,Montana",High,503,20,26,13078,653.9,12424.1,10060,2364.1,45109,7,Jul,2023
+Small Business,France,Montana,"Small Business,France,Montana",High,131,16,19,2489,124.45,2364.55,2096,268.55,45256,11,Nov,2023
+Government,Mexico,Montana,"Government,Mexico,Montana",High,262,12,26,6812,340.6,6471.4,3144,3327.4,45273,12,Dec,2023
+Government,Canada,Montana,"Government,Canada,Montana",High,46,15,37,1702,85.1,1616.9,690,926.9,45198,9,Sep,2023
+Government,Mexico,Montana,"Government,Mexico,Montana",High,176,12,26,4576,228.8,4347.2,2112,2235.2,45393,4,Apr,2024
+Small Business,France,Montana,"Small Business,France,Montana",High,790,16,19,15010,750.5,14259.5,12640,1619.5,45555,9,Sep,2024
+Small Business,USA,Paseo,"Small Business,USA,Paseo",High,948,11,34,32232,1611.6,30620.4,10428,20192.4,45402,4,Apr,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,966,10,28,27048,1352.4,25695.6,9660,16035.6,45190,9,Sep,2023
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",High,533,13,26,13858,692.9,13165.1,6929,6236.1,45670,1,Jan,2025
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,850,10,28,23800,1190,22610,8500,14110,45746,3,Mar,2025
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,754,10,28,21112,1055.6,20056.4,7540,12516.4,45512,8,Aug,2024
+Government,France,Paseo,"Government,France,Paseo",High,264,18,20,5280,264,5016,4752,264,45408,4,Apr,2024
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",High,227,17,26,5902,295.1,5606.9,3859,1747.9,45550,9,Sep,2024
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",High,655,20,36,23580,1179,22401,13100,9301,45574,10,Oct,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,362,10,28,10136,506.8,9629.2,3620,6009.2,45142,8,Aug,2023
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",High,397,18,27,10719,535.95,10183.05,7146,3037.05,45432,5,May,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,946,10,28,26488,1324.4,25163.6,9460,15703.6,45315,1,Jan,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",High,111,17,31,3441,172.05,3268.95,1887,1381.95,45457,6,Jun,2024
+Government,USA,Velo,"Government,USA,Velo",High,905,13,22,19910,995.5,18914.5,11765,7149.5,45033,4,Apr,2023
+Government,Mexico,Velo,"Government,Mexico,Velo",High,554,17,31,17174,858.7,16315.3,9418,6897.3,45401,4,Apr,2024
+Channel Partners,Canada,VTT,"Channel Partners,Canada,VTT",High,746,15,26,19396,969.8,18426.2,11190,7236.2,45684,1,Jan,2025
+Midmarket,France,VTT,"Midmarket,France,VTT",High,130,16,36,4680,234,4446,2080,2366,45372,3,Mar,2024
+Government,Canada,VTT,"Government,Canada,VTT",High,372,15,19,7068,353.4,6714.6,5580,1134.6,45734,3,Mar,2025
+Government,USA,VTT,"Government,USA,VTT",High,427,16,33,14091,704.55,13386.45,6832,6554.45,45707,2,Feb,2025
+Enterprise,USA,VTT,"Enterprise,USA,VTT",High,905,15,26,23530,1176.5,22353.5,13575,8778.5,45557,9,Sep,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",High,951,19,33,31383,1569.15,29813.85,18069,11744.85,45414,5,May,2024
+Government,USA,Amarilla,"Government,USA,Amarilla",High,397,15,28,11116,555.8,10560.2,5955,4605.2,45651,12,Dec,2024
+Government,France,Amarilla,"Government,France,Amarilla",High,61,14,26,1586,79.3,1506.7,854,652.7,45269,12,Dec,2023
+Government,Canada,Amarilla,"Government,Canada,Amarilla",High,483,13,25,12075,603.75,11471.25,6279,5192.25,45703,2,Feb,2025
+Midmarket,USA,Amarilla,"Midmarket,USA,Amarilla",High,332,15,22,7304,365.2,6938.8,4980,1958.8,45676,1,Jan,2025
+Government,France,Carretera,"Government,France,Carretera",High,787,11,38,29906,1495.3,28410.7,8657,19753.7,45102,6,Jun,2023
+Channel Partners,Mexico,Montana,"Channel Partners,Mexico,Montana",High,813,10,22,17886,894.3,16991.7,8130,8861.7,45123,7,Jul,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",High,152,15,32,4864,243.2,4620.8,2280,2340.8,45166,8,Aug,2023
+Government,France,VTT,"Government,France,VTT",High,344,13,36,12384,619.2,11764.8,4472,7292.8,45276,12,Dec,2023
+Government,Germany,VTT,"Government,Germany,VTT",High,777,19,25,19425,971.25,18453.75,14763,3690.75,45335,2,Feb,2024
+Channel Partners,Canada,Amarilla,"Channel Partners,Canada,Amarilla",High,635,18,23,14605,730.25,13874.75,11430,2444.75,45457,6,Jun,2024
+Midmarket,USA,Carretera,"Midmarket,USA,Carretera",High,978,17,31,30318,1515.9,28802.1,16626,12176.1,45258,11,Nov,2023
+Midmarket,USA,VTT,"Midmarket,USA,VTT",High,426,20,36,15336,766.8,14569.2,8520,6049.2,45708,2,Feb,2025
+Government,Canada,Carretera,"Government,Canada,Carretera",High,407,17,32,13024,651.2,12372.8,6919,5453.8,45347,2,Feb,2024
+Government,France,Carretera,"Government,France,Carretera",High,448,11,38,17024,851.2,16172.8,4928,11244.8,45747,3,Mar,2025
+Government,Germany,Carretera,"Government,Germany,Carretera",High,920,18,27,24840,1242,23598,16560,7038,45389,4,Apr,2024
+Government,USA,Montana,"Government,USA,Montana",High,623,10,26,16198,809.9,15388.1,6230,9158.1,45674,1,Jan,2025
+Government,USA,Montana,"Government,USA,Montana",High,79,10,26,2054,102.7,1951.3,790,1161.3,45638,12,Dec,2024
+Channel Partners,Mexico,Montana,"Channel Partners,Mexico,Montana",High,686,10,22,15092,754.6,14337.4,6860,7477.4,45428,5,May,2024
+Government,Mexico,Montana,"Government,Mexico,Montana",High,234,12,26,6084,304.2,5779.8,2808,2971.8,45678,1,Jan,2025
+Government,Canada,Montana,"Government,Canada,Montana",High,93,15,37,3441,172.05,3268.95,1395,1873.95,45095,6,Jun,2023
+Government,USA,Paseo,"Government,USA,Paseo",High,460,18,20,9200,460,8740,8280,460,45227,10,Oct,2023
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",High,307,17,26,7982,399.1,7582.9,5219,2363.9,45628,12,Dec,2024
+Government,USA,Paseo,"Government,USA,Paseo",High,54,18,20,1080,54,1026,972,54,45272,12,Dec,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",High,730,15,32,23360,1168,22192,10950,11242,45733,3,Mar,2025
+Government,Canada,Paseo,"Government,Canada,Paseo",High,726,13,20,14520,726,13794,9438,4356,45070,5,May,2023
+Enterprise,Canada,Paseo,"Enterprise,Canada,Paseo",High,394,11,37,14578,728.9,13849.1,4334,9515.1,45600,11,Nov,2024
+Channel Partners,Mexico,Paseo,"Channel Partners,Mexico,Paseo",High,706,20,32,22592,1129.6,21462.4,14120,7342.4,45264,12,Dec,2023
+Government,France,Paseo,"Government,France,Paseo",High,251,18,20,5020,251,4769,4518,251,45277,12,Dec,2023
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,977,18,33,32241,1612.05,30628.95,17586,13042.95,45042,4,Apr,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",High,899,13,20,17980,899,17081,11687,5394,45308,1,Jan,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",High,240,15,32,7680,384,7296,3600,3696,45221,10,Oct,2023
+Channel Partners,Germany,Paseo,"Channel Partners,Germany,Paseo",High,975,13,29,28275,1413.75,26861.25,12675,14186.25,45124,7,Jul,2023
+Midmarket,France,Velo,"Midmarket,France,Velo",High,736,10,29,21344,1067.2,20276.8,7360,12916.8,45612,11,Nov,2024
+Government,Canada,Velo,"Government,Canada,Velo",High,336,17,26,8736,436.8,8299.2,5712,2587.2,45355,3,Mar,2024
+Government,France,Velo,"Government,France,Velo",High,419,15,31,12989,649.45,12339.55,6285,6054.55,45679,1,Jan,2025
+Channel Partners,Mexico,Velo,"Channel Partners,Mexico,Velo",High,590,18,23,13570,678.5,12891.5,10620,2271.5,45690,2,Feb,2025
+Midmarket,Germany,Velo,"Midmarket,Germany,Velo",High,327,10,32,10464,523.2,9940.8,3270,6670.8,45259,11,Nov,2023
+Channel Partners,Mexico,Velo,"Channel Partners,Mexico,Velo",High,723,18,23,16629,831.45,15797.55,13014,2783.55,45482,7,Jul,2024
+Small Business,Mexico,Velo,"Small Business,Mexico,Velo",High,534,10,27,14418,720.9,13697.1,5340,8357.1,45492,7,Jul,2024
+Channel Partners,Germany,Velo,"Channel Partners,Germany,Velo",High,340,16,23,7820,391,7429,5440,1989,45200,10,Oct,2023
+Enterprise,Canada,VTT,"Enterprise,Canada,VTT",High,319,12,19,6061,303.05,5757.95,3828,1929.95,45189,9,Sep,2023
+Midmarket,Canada,VTT,"Midmarket,Canada,VTT",High,802,14,32,25664,1283.2,24380.8,11228,13152.8,45724,3,Mar,2025
+Enterprise,Canada,Amarilla,"Enterprise,Canada,Amarilla",High,679,16,30,20370,1018.5,19351.5,10864,8487.5,45542,9,Sep,2024
+Government,France,Amarilla,"Government,France,Amarilla",High,473,14,26,12298,614.9,11683.1,6622,5061.1,45645,12,Dec,2024
+Channel Partners,Mexico,Amarilla,"Channel Partners,Mexico,Amarilla",High,166,17,27,4482,224.1,4257.9,2822,1435.9,45182,9,Sep,2023
+Channel Partners,Germany,Amarilla,"Channel Partners,Germany,Amarilla",High,987,18,36,35532,1776.6,33755.4,17766,15989.4,45657,12,Dec,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",High,460,11,23,10580,529,10051,5060,4991,45211,10,Oct,2023
+Government,USA,Carretera,"Government,USA,Carretera",High,397,10,16,6352,317.6,6034.4,3970,2064.4,45273,12,Dec,2023
+Government,USA,Carretera,"Government,USA,Carretera",High,261,10,16,4176,208.8,3967.2,2610,1357.2,45691,2,Feb,2025
+Government,Germany,Carretera,"Government,Germany,Carretera",High,91,18,27,2457,122.85,2334.15,1638,696.15,45566,10,Oct,2024
+Government,France,Montana,"Government,France,Montana",High,660,16,36,23760,1188,22572,10560,12012,45307,1,Jan,2024
+Government,USA,Montana,"Government,USA,Montana",High,958,10,26,24908,1245.4,23662.6,9580,14082.6,45074,5,May,2023
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",High,964,13,18,17352,867.6,16484.4,12532,3952.4,45466,6,Jun,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",High,776,13,20,15520,776,14744,10088,4656,45325,2,Feb,2024
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",High,625,18,23,14375,718.75,13656.25,11250,2406.25,45752,4,Apr,2025
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",High,197,12,38,7486,374.3,7111.7,2364,4747.7,45440,5,May,2024
+Government,Germany,VTT,"Government,Germany,VTT",High,298,19,25,7450,372.5,7077.5,5662,1415.5,45633,12,Dec,2024
+Channel Partners,France,Amarilla,"Channel Partners,France,Amarilla",High,928,14,23,21344,1067.2,20276.8,12992,7284.8,45619,11,Nov,2024
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",High,653,11,36,23508,1175.4,22332.6,7183,15149.6,45210,10,Oct,2023
+Small Business,Mexico,Carretera,"Small Business,Mexico,Carretera",High,966,11,38,36708,1835.4,34872.6,10626,24246.6,45552,9,Sep,2024
+Enterprise,France,Carretera,"Enterprise,France,Carretera",High,551,18,31,17081,854.05,16226.95,9918,6308.95,45483,7,Jul,2024
+Small Business,Canada,Carretera,"Small Business,Canada,Carretera",High,787,14,25,19675,983.75,18691.25,11018,7673.25,45328,2,Feb,2024
+Small Business,USA,Carretera,"Small Business,USA,Carretera",High,513,13,20,10260,513,9747,6669,3078,45184,9,Sep,2023
+Midmarket,Germany,Carretera,"Midmarket,Germany,Carretera",High,635,12,24,15240,762,14478,7620,6858,45506,8,Aug,2024
+Midmarket,Canada,Carretera,"Midmarket,Canada,Carretera",High,195,13,30,5850,292.5,5557.5,2535,3022.5,45101,6,Jun,2023
+Enterprise,Mexico,Carretera,"Enterprise,Mexico,Carretera",High,507,11,17,8619,430.95,8188.05,5577,2611.05,45639,12,Dec,2024
+Government,Canada,Montana,"Government,Canada,Montana",High,732,15,37,27084,1354.2,25729.8,10980,14749.8,45188,9,Sep,2023
+Government,Germany,Montana,"Government,Germany,Montana",High,94,15,18,1692,84.6,1607.4,1410,197.4,45625,11,Nov,2024
+Government,Canada,Montana,"Government,Canada,Montana",High,704,15,37,26048,1302.4,24745.6,10560,14185.6,45571,10,Oct,2024
+Government,Canada,Montana,"Government,Canada,Montana",High,812,15,37,30044,1502.2,28541.8,12180,16361.8,45342,2,Feb,2024
+Government,Mexico,Montana,"Government,Mexico,Montana",High,157,12,26,4082,204.1,3877.9,1884,1993.9,45506,8,Aug,2024
+Midmarket,Canada,Montana,"Midmarket,Canada,Montana",High,188,10,21,3948,197.4,3750.6,1880,1870.6,45082,6,Jun,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,822,10,28,23016,1150.8,21865.2,8220,13645.2,45057,5,May,2023
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,341,18,33,11253,562.65,10690.35,6138,4552.35,45141,8,Aug,2023
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,198,18,33,6534,326.7,6207.3,3564,2643.3,45454,6,Jun,2024
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",High,46,16,22,1012,50.6,961.4,736,225.4,45745,3,Mar,2025
+Government,France,Paseo,"Government,France,Paseo",High,299,18,20,5980,299,5681,5382,299,45167,8,Aug,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",High,930,13,20,18600,930,17670,12090,5580,45663,1,Jan,2025
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",High,375,10,34,12750,637.5,12112.5,3750,8362.5,45614,11,Nov,2024
+Government,USA,Paseo,"Government,USA,Paseo",High,148,18,20,2960,148,2812,2664,148,45506,8,Aug,2024
+Government,France,Paseo,"Government,France,Paseo",High,901,18,20,18020,901,17119,16218,901,45349,2,Feb,2024
+Enterprise,Mexico,Velo,"Enterprise,Mexico,Velo",High,751,16,25,18775,938.75,17836.25,12016,5820.25,45537,9,Sep,2024
+Government,USA,Velo,"Government,USA,Velo",High,502,13,22,11044,552.2,10491.8,6526,3965.8,45167,8,Aug,2023
+Small Business,USA,Velo,"Small Business,USA,Velo",High,337,15,19,6403,320.15,6082.85,5055,1027.85,45516,8,Aug,2024
+Small Business,Canada,Velo,"Small Business,Canada,Velo",High,354,11,26,9204,460.2,8743.8,3894,4849.8,45635,12,Dec,2024
+Small Business,Germany,Velo,"Small Business,Germany,Velo",High,979,13,32,31328,1566.4,29761.6,12727,17034.6,45430,5,May,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",High,59,19,33,1947,97.35,1849.65,1121,728.65,45749,4,Apr,2025
+Small Business,USA,VTT,"Small Business,USA,VTT",High,115,20,38,4370,218.5,4151.5,2300,1851.5,45060,5,May,2023
+Small Business,Canada,VTT,"Small Business,Canada,VTT",High,173,15,34,5882,294.1,5587.9,2595,2992.9,45734,3,Mar,2025
+Small Business,Canada,VTT,"Small Business,Canada,VTT",High,547,15,34,18598,929.9,17668.1,8205,9463.1,45468,6,Jun,2024
+Small Business,USA,VTT,"Small Business,USA,VTT",High,792,20,38,30096,1504.8,28591.2,15840,12751.2,45740,3,Mar,2025
+Government,France,VTT,"Government,France,VTT",High,832,13,36,29952,1497.6,28454.4,10816,17638.4,45589,10,Oct,2024
+Small Business,Canada,Amarilla,"Small Business,Canada,Amarilla",High,333,18,36,11988,599.4,11388.6,5994,5394.6,45118,7,Jul,2023
+Enterprise,USA,Amarilla,"Enterprise,USA,Amarilla",High,282,19,37,10434,521.7,9912.3,5358,4554.3,45444,6,Jun,2024
+Channel Partners,France,Amarilla,"Channel Partners,France,Amarilla",High,254,14,23,5842,292.1,5549.9,3556,1993.9,45660,1,Jan,2025
+Midmarket,Canada,Amarilla,"Midmarket,Canada,Amarilla",High,350,19,23,8050,402.5,7647.5,6650,997.5,45666,1,Jan,2025
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",High,777,11,36,27972,1398.6,26573.4,8547,18026.4,45672,1,Jan,2025
+Government,France,Amarilla,"Government,France,Amarilla",High,505,14,26,13130,656.5,12473.5,7070,5403.5,45374,3,Mar,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",High,666,12,33,21978,1098.9,20879.1,7992,12887.1,45342,2,Feb,2024
+Midmarket,Mexico,Amarilla,"Midmarket,Mexico,Amarilla",High,964,16,23,22172,1108.6,21063.4,15424,5639.4,45369,3,Mar,2024
+Enterprise,France,Carretera,"Enterprise,France,Carretera",High,353,18,31,10943,547.15,10395.85,6354,4041.85,45247,11,Nov,2023
+Enterprise,Germany,Carretera,"Enterprise,Germany,Carretera",High,836,13,16,13376,668.8,12707.2,10868,1839.2,45741,3,Mar,2025
+Enterprise,Germany,Carretera,"Enterprise,Germany,Carretera",High,632,13,16,10112,505.6,9606.4,8216,1390.4,45058,5,May,2023
+Small Business,Mexico,Montana,"Small Business,Mexico,Montana",High,448,18,26,11648,582.4,11065.6,8064,3001.6,45262,12,Dec,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",High,241,15,32,7712,385.6,7326.4,3615,3711.4,45460,6,Jun,2024
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,417,18,33,13761,688.05,13072.95,7506,5566.95,45441,5,May,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,330,10,28,9240,462,8778,3300,5478,45754,4,Apr,2025
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,695,10,28,19460,973,18487,6950,11537,45028,4,Apr,2023
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,358,18,33,11814,590.7,11223.3,6444,4779.3,45147,8,Aug,2023
+Government,USA,Paseo,"Government,USA,Paseo",High,858,18,20,17160,858,16302,15444,858,45433,5,May,2024
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",High,715,14,17,12155,607.75,11547.25,10010,1537.25,45543,9,Sep,2024
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",High,394,13,18,7092,354.6,6737.4,5122,1615.4,45180,9,Sep,2023
+Government,USA,Paseo,"Government,USA,Paseo",High,505,18,20,10100,505,9595,9090,505,45260,11,Nov,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,451,10,28,12628,631.4,11996.6,4510,7486.6,45355,3,Mar,2024
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",High,728,16,22,16016,800.8,15215.2,11648,3567.2,45236,11,Nov,2023
+Government,France,Paseo,"Government,France,Paseo",High,856,18,20,17120,856,16264,15408,856,45477,7,Jul,2024
+Channel Partners,Mexico,Velo,"Channel Partners,Mexico,Velo",High,422,18,23,9706,485.3,9220.7,7596,1624.7,45182,9,Sep,2023
+Midmarket,France,Velo,"Midmarket,France,Velo",High,523,10,29,15167,758.35,14408.65,5230,9178.65,45372,3,Mar,2024
+Enterprise,France,Velo,"Enterprise,France,Velo",High,890,15,17,15130,756.5,14373.5,13350,1023.5,45678,1,Jan,2025
+Small Business,USA,Velo,"Small Business,USA,Velo",High,305,15,19,5795,289.75,5505.25,4575,930.25,45688,1,Jan,2025
+Enterprise,USA,Velo,"Enterprise,USA,Velo",High,148,10,17,2516,125.8,2390.2,1480,910.2,45536,9,Sep,2024
+Channel Partners,USA,Velo,"Channel Partners,USA,Velo",High,22,12,27,594,5.94,588.06,264,324.06,45730,3,Mar,2025
+Government,Canada,VTT,"Government,Canada,VTT",High,619,15,19,11761,588.05,11172.95,9285,1887.95,45408,4,Apr,2024
+Midmarket,Germany,VTT,"Midmarket,Germany,VTT",High,538,18,18,9684,484.2,9199.8,9684,-484.2,45419,5,May,2024
+Government,USA,VTT,"Government,USA,VTT",High,170,16,33,5610,280.5,5329.5,2720,2609.5,45548,9,Sep,2024
+Midmarket,Germany,VTT,"Midmarket,Germany,VTT",High,758,18,18,13644,682.2,12961.8,13644,-682.2,45143,8,Aug,2023
+Enterprise,Canada,VTT,"Enterprise,Canada,VTT",High,290,12,19,5510,275.5,5234.5,3480,1754.5,45539,9,Sep,2024
+Enterprise,Germany,VTT,"Enterprise,Germany,VTT",High,255,17,25,6375,318.75,6056.25,4335,1721.25,45624,11,Nov,2024
+Government,France,VTT,"Government,France,VTT",High,772,13,36,27792,1389.6,26402.4,10036,16366.4,45438,5,May,2024
+Small Business,France,Amarilla,"Small Business,France,Amarilla",High,405,16,21,8505,425.25,8079.75,6480,1599.75,45063,5,May,2023
+Small Business,Mexico,Amarilla,"Small Business,Mexico,Amarilla",High,292,10,36,10512,525.6,9986.4,2920,7066.4,45282,12,Dec,2023
+Government,Mexico,Montana,"Government,Mexico,Montana",High,438,12,26,11388,569.4,10818.6,5256,5562.6,45101,6,Jun,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",High,601,13,20,12020,601,11419,7813,3606,45377,3,Mar,2024
+Channel Partners,USA,VTT,"Channel Partners,USA,VTT",High,524,18,23,12052,602.6,11449.4,9432,2017.4,45332,2,Feb,2024
+Government,Canada,Carretera,"Government,Canada,Carretera",None,896,17,32,28672,1433.6,27238.4,15232,12006.4,45555,9,Sep,2024
+Government,Germany,Carretera,"Government,Germany,Carretera",None,491,18,27,13257,662.85,12594.15,8838,3756.15,45317,1,Jan,2024
+Midmarket,France,Carretera,"Midmarket,France,Carretera",None,783,16,33,25839,1291.95,24547.05,12528,12019.05,45589,10,Oct,2024
+Midmarket,Germany,Carretera,"Midmarket,Germany,Carretera",None,336,12,24,8064,403.2,7660.8,4032,3628.8,45704,2,Feb,2025
+Midmarket,Mexico,Carretera,"Midmarket,Mexico,Carretera",None,160,12,24,3840,192,3648,1920,1728,45587,10,Oct,2024
+Government,Germany,Carretera,"Government,Germany,Carretera",None,968,18,27,26136,1306.8,24829.2,17424,7405.2,45097,6,Jun,2023
+Midmarket,Germany,Montana,"Midmarket,Germany,Montana",None,513,17,16,8208,410.4,7797.6,8721,-923.4,45103,6,Jun,2023
+Channel Partners,Canada,Montana,"Channel Partners,Canada,Montana",None,737,18,24,17688,884.4,16803.6,13266,3537.6,45526,8,Aug,2024
+Government,France,Montana,"Government,France,Montana",None,702,16,36,25272,1263.6,24008.4,11232,12776.4,45333,2,Feb,2024
+Channel Partners,Germany,Montana,"Channel Partners,Germany,Montana",None,806,17,28,22568,1128.4,21439.6,13702,7737.6,45176,9,Sep,2023
+Midmarket,Mexico,Montana,"Midmarket,Mexico,Montana",None,135,14,35,4725,236.25,4488.75,1890,2598.75,45153,8,Aug,2023
+Enterprise,Canada,Montana,"Enterprise,Canada,Montana",None,530,10,24,12720,636,12084,5300,6784,45388,4,Apr,2024
+Small Business,Mexico,Montana,"Small Business,Mexico,Montana",None,772,18,26,20072,1003.6,19068.4,13896,5172.4,45534,8,Aug,2024
+Government,Germany,Montana,"Government,Germany,Montana",None,960,15,18,17280,864,16416,14400,2016,45626,11,Nov,2024
+Enterprise,Canada,Montana,"Enterprise,Canada,Montana",None,336,10,24,8064,403.2,7660.8,3360,4300.8,45292,1,Jan,2024
+Midmarket,USA,Montana,"Midmarket,USA,Montana",None,881,20,26,22906,1145.3,21760.7,17620,4140.7,45137,7,Jul,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",None,746,13,20,14920,746,14174,9698,4476,45390,4,Apr,2024
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",None,259,18,27,6993,349.65,6643.35,4662,1981.35,45454,6,Jun,2024
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",None,867,10,34,29478,1473.9,28004.1,8670,19334.1,45581,10,Oct,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",None,220,15,32,7040,352,6688,3300,3388,45161,8,Aug,2023
+Channel Partners,Germany,Paseo,"Channel Partners,Germany,Paseo",None,856,13,29,24824,1241.2,23582.8,11128,12454.8,45125,7,Jul,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",None,425,10,28,11900,595,11305,4250,7055,45626,11,Nov,2024
+Midmarket,France,Paseo,"Midmarket,France,Paseo",None,565,12,37,20905,1045.25,19859.75,6780,13079.75,45674,1,Jan,2025
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",None,556,20,36,20016,1000.8,19015.2,11120,7895.2,45483,7,Jul,2024
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",None,882,18,27,23814,1190.7,22623.3,15876,6747.3,45425,5,May,2024
+Government,USA,Paseo,"Government,USA,Paseo",None,770,18,20,15400,770,14630,13860,770,45099,6,Jun,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",None,163,13,20,3260,163,3097,2119,978,45090,6,Jun,2023
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",None,115,16,22,2530,126.5,2403.5,1840,563.5,45339,2,Feb,2024
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",None,478,18,33,15774,788.7,14985.3,8604,6381.3,45240,11,Nov,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",None,802,13,20,16040,802,15238,10426,4812,45059,5,May,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",None,977,15,32,31264,1563.2,29700.8,14655,15045.8,45173,9,Sep,2023
+Government,Mexico,Velo,"Government,Mexico,Velo",None,403,17,31,12493,624.65,11868.35,6851,5017.35,45650,12,Dec,2024
+Enterprise,France,Velo,"Enterprise,France,Velo",None,155,15,17,2635,131.75,2503.25,2325,178.25,45225,10,Oct,2023
+Channel Partners,Germany,Velo,"Channel Partners,Germany,Velo",None,577,16,23,13271,663.55,12607.45,9232,3375.45,45493,7,Jul,2024
+Government,Germany,Velo,"Government,Germany,Velo",None,622,15,37,23014,1150.7,21863.3,9330,12533.3,45605,11,Nov,2024
+Channel Partners,Germany,Velo,"Channel Partners,Germany,Velo",None,781,16,23,17963,898.15,17064.85,12496,4568.85,45131,7,Jul,2023
+Enterprise,USA,Velo,"Enterprise,USA,Velo",None,667,10,17,11339,566.95,10772.05,6670,4102.05,45287,12,Dec,2023
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",None,154,13,26,4004,200.2,3803.8,2002,1801.8,45433,5,May,2024
+Small Business,Canada,VTT,"Small Business,Canada,VTT",None,362,15,34,12308,615.4,11692.6,5430,6262.6,45681,1,Jan,2025
+Channel Partners,Germany,VTT,"Channel Partners,Germany,VTT",None,709,11,29,20561,1028.05,19532.95,7799,11733.95,45106,6,Jun,2023
+Midmarket,France,VTT,"Midmarket,France,VTT",None,803,16,36,28908,1445.4,27462.6,12848,14614.6,45075,5,May,2023
+Midmarket,Germany,VTT,"Midmarket,Germany,VTT",None,169,18,18,3042,152.1,2889.9,3042,-152.1,45341,2,Feb,2024
+Government,France,VTT,"Government,France,VTT",None,728,13,36,26208,1310.4,24897.6,9464,15433.6,45058,5,May,2023
+Small Business,France,VTT,"Small Business,France,VTT",None,816,17,24,19584,979.2,18604.8,13872,4732.8,45651,12,Dec,2024
+Government,Canada,VTT,"Government,Canada,VTT",None,120,15,19,2280,114,2166,1800,366,45309,1,Jan,2024
+Government,France,Amarilla,"Government,France,Amarilla",None,87,14,26,2262,113.1,2148.9,1218,930.9,45595,10,Oct,2024
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",None,75,11,36,2700,135,2565,825,1740,45633,12,Dec,2024
+Enterprise,Germany,Amarilla,"Enterprise,Germany,Amarilla",None,948,14,32,30336,1516.8,28819.2,13272,15547.2,45672,1,Jan,2025
+Government,France,Amarilla,"Government,France,Amarilla",None,55,14,26,1430,71.5,1358.5,770,588.5,45753,4,Apr,2025
+Government,Germany,Amarilla,"Government,Germany,Amarilla",None,125,14,21,2625,131.25,2493.75,1750,743.75,45544,9,Sep,2024
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",None,590,11,36,21240,1062,20178,6490,13688,45217,10,Oct,2023
+Government,USA,Amarilla,"Government,USA,Amarilla",None,623,15,28,17444,872.2,16571.8,9345,7226.8,45653,12,Dec,2024
+Midmarket,USA,Amarilla,"Midmarket,USA,Amarilla",None,78,15,22,1716,85.8,1630.2,1170,460.2,45429,5,May,2024
+Government,France,Paseo,"Government,France,Paseo",Low,524,18,20,10480,524,9956,9432,524,45351,2,Feb,2024
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Low,671,12,37,24827,1241.35,23585.65,8052,15533.65,45571,10,Oct,2024
+Government,France,Paseo,"Government,France,Paseo",Low,844,18,20,16880,844,16036,15192,844,45590,10,Oct,2024
+Government,France,Velo,"Government,France,Velo",Low,723,15,31,22413,1120.65,21292.35,10845,10447.35,45028,4,Apr,2023
+Government,Canada,VTT,"Government,Canada,VTT",Low,229,15,19,4351,217.55,4133.45,3435,698.45,45695,2,Feb,2025
+Channel Partners,USA,Carretera,"Channel Partners,USA,Carretera",Low,879,17,34,29886,1494.3,28391.7,14943,13448.7,45430,5,May,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Low,206,11,23,4738,236.9,4501.1,2266,2235.1,45299,1,Jan,2024
+Government,USA,Carretera,"Government,USA,Carretera",Low,517,10,16,8272,413.6,7858.4,5170,2688.4,45308,1,Jan,2024
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Low,94,14,38,3572,178.6,3393.4,1316,2077.4,45204,10,Oct,2023
+Enterprise,USA,Carretera,"Enterprise,USA,Carretera",Low,453,20,18,8154,407.7,7746.3,9060,-1313.7,45436,5,May,2024
+Channel Partners,France,Carretera,"Channel Partners,France,Carretera",Low,972,14,34,33048,1652.4,31395.6,13608,17787.6,45333,2,Feb,2024
+Channel Partners,Germany,Carretera,"Channel Partners,Germany,Carretera",Low,324,15,19,6156,307.8,5848.2,4860,988.2,45581,10,Oct,2024
+Small Business,Mexico,Carretera,"Small Business,Mexico,Carretera",Low,298,11,38,11324,566.2,10757.8,3278,7479.8,45425,5,May,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Low,420,11,23,9660,483,9177,4620,4557,45508,8,Aug,2024
+Government,France,Carretera,"Government,France,Carretera",Low,345,11,38,13110,655.5,12454.5,3795,8659.5,45411,4,Apr,2024
+Midmarket,Mexico,Montana,"Midmarket,Mexico,Montana",Low,490,14,35,17150,857.5,16292.5,6860,9432.5,45632,12,Dec,2024
+Small Business,USA,Montana,"Small Business,USA,Montana",Low,679,16,24,16296,814.8,15481.2,10864,4617.2,45436,5,May,2024
+Government,France,Montana,"Government,France,Montana",Low,24,16,36,864,8.64,855.36,384,471.36,45756,4,Apr,2025
+Government,Canada,Montana,"Government,Canada,Montana",Low,592,15,37,21904,1095.2,20808.8,8880,11928.8,45161,8,Aug,2023
+Small Business,USA,Montana,"Small Business,USA,Montana",Low,992,16,24,23808,1190.4,22617.6,15872,6745.6,45702,2,Feb,2025
+Enterprise,USA,Montana,"Enterprise,USA,Montana",Low,172,14,34,5848,292.4,5555.6,2408,3147.6,45450,6,Jun,2024
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Low,619,18,23,14237,711.85,13525.15,11142,2383.15,45396,4,Apr,2024
+Government,USA,Paseo,"Government,USA,Paseo",Low,300,18,20,6000,300,5700,5400,300,45252,11,Nov,2023
+Enterprise,USA,Paseo,"Enterprise,USA,Paseo",Low,189,15,38,7182,359.1,6822.9,2835,3987.9,45518,8,Aug,2024
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Low,935,20,24,22440,1122,21318,18700,2618,45493,7,Jul,2024
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Low,364,13,26,9464,473.2,8990.8,4732,4258.8,45345,2,Feb,2024
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",Low,757,13,18,13626,681.3,12944.7,9841,3103.7,45754,4,Apr,2025
+Channel Partners,Germany,Paseo,"Channel Partners,Germany,Paseo",Low,253,13,29,7337,366.85,6970.15,3289,3681.15,45539,9,Sep,2024
+Small Business,USA,Paseo,"Small Business,USA,Paseo",Low,13,11,34,442,4.42,437.58,143,294.58,45286,12,Dec,2023
+Government,France,Paseo,"Government,France,Paseo",Low,693,18,20,13860,693,13167,12474,693,45147,8,Aug,2023
+Government,France,Velo,"Government,France,Velo",Low,474,15,31,14694,734.7,13959.3,7110,6849.3,45450,6,Jun,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",Low,976,17,31,30256,1512.8,28743.2,16592,12151.2,45121,7,Jul,2023
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",Low,416,13,26,10816,540.8,10275.2,5408,4867.2,45295,1,Jan,2024
+Enterprise,USA,Velo,"Enterprise,USA,Velo",Low,843,10,17,14331,716.55,13614.45,8430,5184.45,45666,1,Jan,2025
+Government,Canada,Velo,"Government,Canada,Velo",Low,510,17,26,13260,663,12597,8670,3927,45672,1,Jan,2025
+Government,Germany,VTT,"Government,Germany,VTT",Low,971,19,25,24275,1213.75,23061.25,18449,4612.25,45360,3,Mar,2024
+Government,Canada,VTT,"Government,Canada,VTT",Low,553,15,19,10507,525.35,9981.65,8295,1686.65,45462,6,Jun,2024
+Enterprise,USA,VTT,"Enterprise,USA,VTT",Low,38,15,26,988,9.88,978.12,570,408.12,45492,7,Jul,2024
+Enterprise,France,VTT,"Enterprise,France,VTT",Low,17,14,26,442,4.42,437.58,238,199.58,45125,7,Jul,2023
+Small Business,Germany,VTT,"Small Business,Germany,VTT",Low,653,19,32,20896,1044.8,19851.2,12407,7444.2,45100,6,Jun,2023
+Small Business,Mexico,VTT,"Small Business,Mexico,VTT",Low,560,20,17,9520,476,9044,11200,-2156,45429,5,May,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",Low,520,19,33,17160,858,16302,9880,6422,45525,8,Aug,2024
+Enterprise,France,VTT,"Enterprise,France,VTT",Low,234,14,26,6084,304.2,5779.8,3276,2503.8,45560,9,Sep,2024
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",Low,831,11,36,29916,1495.8,28420.2,9141,19279.2,45261,12,Dec,2023
+Midmarket,France,Amarilla,"Midmarket,France,Amarilla",Low,389,16,25,9725,486.25,9238.75,6224,3014.75,45519,8,Aug,2024
+Enterprise,Canada,Carretera,"Enterprise,Canada,Carretera",Low,516,13,26,13416,670.8,12745.2,6708,6037.2,45138,7,Jul,2023
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Low,420,14,38,15960,798,15162,5880,9282,45041,4,Apr,2023
+Small Business,Germany,Carretera,"Small Business,Germany,Carretera",Low,466,10,38,17708,885.4,16822.6,4660,12162.6,45438,5,May,2024
+Government,France,Carretera,"Government,France,Carretera",Low,913,11,38,34694,1734.7,32959.3,10043,22916.3,45448,6,Jun,2024
+Government,Canada,Carretera,"Government,Canada,Carretera",Low,426,17,32,13632,681.6,12950.4,7242,5708.4,45104,6,Jun,2023
+Channel Partners,USA,Montana,"Channel Partners,USA,Montana",Low,76,17,23,1748,87.4,1660.6,1292,368.6,45166,8,Aug,2023
+Government,USA,Montana,"Government,USA,Montana",Low,599,10,26,15574,778.7,14795.3,5990,8805.3,45156,8,Aug,2023
+Channel Partners,Mexico,Montana,"Channel Partners,Mexico,Montana",Low,252,10,22,5544,277.2,5266.8,2520,2746.8,45658,1,Jan,2025
+Enterprise,Mexico,Montana,"Enterprise,Mexico,Montana",Low,704,15,36,25344,1267.2,24076.8,10560,13516.8,45259,11,Nov,2023
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",Low,57,18,33,1881,94.05,1786.95,1026,760.95,45115,7,Jul,2023
+Small Business,France,Paseo,"Small Business,France,Paseo",Low,446,19,29,12934,646.7,12287.3,8474,3813.3,45686,1,Jan,2025
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",Low,598,17,26,15548,777.4,14770.6,10166,4604.6,45747,3,Mar,2025
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",Low,99,16,22,2178,108.9,2069.1,1584,485.1,45274,12,Dec,2023
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Low,839,13,26,21814,1090.7,20723.3,10907,9816.3,45534,8,Aug,2024
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",Low,379,10,34,12886,644.3,12241.7,3790,8451.7,45368,3,Mar,2024
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Low,362,14,17,6154,307.7,5846.3,5068,778.3,45681,1,Jan,2025
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Low,316,13,26,8216,410.8,7805.2,4108,3697.2,45359,3,Mar,2024
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",Low,767,12,38,29146,1457.3,27688.7,9204,18484.7,45100,6,Jun,2023
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",Low,150,12,27,4050,202.5,3847.5,1800,2047.5,45373,3,Mar,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",Low,133,13,20,2660,133,2527,1729,798,45636,12,Dec,2024
+Enterprise,Canada,Paseo,"Enterprise,Canada,Paseo",Low,953,11,37,35261,1763.05,33497.95,10483,23014.95,45423,5,May,2024
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Low,658,18,23,15134,756.7,14377.3,11844,2533.3,45295,1,Jan,2024
+Government,USA,Paseo,"Government,USA,Paseo",Low,924,18,20,18480,924,17556,16632,924,45103,6,Jun,2023
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",Low,217,12,38,8246,412.3,7833.7,2604,5229.7,45350,2,Feb,2024
+Channel Partners,Mexico,Paseo,"Channel Partners,Mexico,Paseo",Low,407,20,32,13024,651.2,12372.8,8140,4232.8,45460,6,Jun,2024
+Government,USA,Velo,"Government,USA,Velo",Low,689,13,22,15158,757.9,14400.1,8957,5443.1,45450,6,Jun,2024
+Government,Germany,Velo,"Government,Germany,Velo",Low,876,15,37,32412,1620.6,30791.4,13140,17651.4,45357,3,Mar,2024
+Government,Germany,Velo,"Government,Germany,Velo",Low,259,15,37,9583,479.15,9103.85,3885,5218.85,45289,12,Dec,2023
+Enterprise,Germany,Velo,"Enterprise,Germany,Velo",Low,944,17,16,15104,755.2,14348.8,16048,-1699.2,45613,11,Nov,2024
+Enterprise,Mexico,Velo,"Enterprise,Mexico,Velo",Low,195,16,25,4875,243.75,4631.25,3120,1511.25,45345,2,Feb,2024
+Channel Partners,France,Velo,"Channel Partners,France,Velo",Low,225,11,36,8100,405,7695,2475,5220,45304,1,Jan,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",Low,963,17,31,29853,1492.65,28360.35,16371,11989.35,45029,4,Apr,2023
+Channel Partners,Mexico,Velo,"Channel Partners,Mexico,Velo",Low,659,18,23,15157,757.85,14399.15,11862,2537.15,45682,1,Jan,2025
+Enterprise,Mexico,VTT,"Enterprise,Mexico,VTT",Low,459,16,33,15147,757.35,14389.65,7344,7045.65,45669,1,Jan,2025
+Small Business,Germany,VTT,"Small Business,Germany,VTT",Low,789,19,32,25248,1262.4,23985.6,14991,8994.6,45697,2,Feb,2025
+Government,Germany,VTT,"Government,Germany,VTT",Low,888,19,25,22200,1110,21090,16872,4218,45182,9,Sep,2023
+Enterprise,Canada,VTT,"Enterprise,Canada,VTT",Low,474,12,19,9006,450.3,8555.7,5688,2867.7,45695,2,Feb,2025
+Government,USA,VTT,"Government,USA,VTT",Low,908,16,33,29964,1498.2,28465.8,14528,13937.8,45439,5,May,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",Low,460,19,33,15180,759,14421,8740,5681,45446,6,Jun,2024
+Small Business,Germany,Amarilla,"Small Business,Germany,Amarilla",Low,498,14,35,17430,871.5,16558.5,6972,9586.5,45710,2,Feb,2025
+Small Business,Mexico,Amarilla,"Small Business,Mexico,Amarilla",Low,359,10,36,12924,646.2,12277.8,3590,8687.8,45441,5,May,2024
+Enterprise,Germany,Amarilla,"Enterprise,Germany,Amarilla",Low,640,14,32,20480,1024,19456,8960,10496,45128,7,Jul,2023
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Low,953,14,21,20013,1000.65,19012.35,13342,5670.35,45561,9,Sep,2024
+Government,USA,Amarilla,"Government,USA,Amarilla",Low,819,15,28,22932,1146.6,21785.4,12285,9500.4,45677,1,Jan,2025
+Government,France,Amarilla,"Government,France,Amarilla",Low,296,14,26,7696,384.8,7311.2,4144,3167.2,45364,3,Mar,2024
+Small Business,Canada,Amarilla,"Small Business,Canada,Amarilla",Low,186,18,36,6696,334.8,6361.2,3348,3013.2,45134,7,Jul,2023
+Enterprise,France,Carretera,"Enterprise,France,Carretera",Low,504,18,31,15624,781.2,14842.8,9072,5770.8,45634,12,Dec,2024
+Government,Germany,Carretera,"Government,Germany,Carretera",Low,123,18,27,3321,166.05,3154.95,2214,940.95,45728,3,Mar,2025
+Small Business,Germany,Carretera,"Small Business,Germany,Carretera",Low,446,10,38,16948,847.4,16100.6,4460,11640.6,45426,5,May,2024
+Channel Partners,USA,Carretera,"Channel Partners,USA,Carretera",Low,22,17,34,748,7.48,740.52,374,366.52,45647,12,Dec,2024
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Low,937,14,38,35606,1780.3,33825.7,13118,20707.7,45028,4,Apr,2023
+Government,Germany,Montana,"Government,Germany,Montana",Low,466,15,18,8388,419.4,7968.6,6990,978.6,45536,9,Sep,2024
+Channel Partners,France,Montana,"Channel Partners,France,Montana",Low,680,18,35,23800,1190,22610,12240,10370,45173,9,Sep,2023
+Government,France,Montana,"Government,France,Montana",Low,620,16,36,22320,1116,21204,9920,11284,45053,5,May,2023
+Government,Germany,Montana,"Government,Germany,Montana",Low,762,15,18,13716,685.8,13030.2,11430,1600.2,45183,9,Sep,2023
+Enterprise,France,Montana,"Enterprise,France,Montana",Low,704,17,19,13376,668.8,12707.2,11968,739.2,45573,10,Oct,2024
+Enterprise,Germany,Montana,"Enterprise,Germany,Montana",Low,422,12,29,12238,611.9,11626.1,5064,6562.1,45294,1,Jan,2024
+Small Business,France,Paseo,"Small Business,France,Paseo",Low,772,19,29,22388,1119.4,21268.6,14668,6600.6,45558,9,Sep,2024
+Enterprise,Canada,Paseo,"Enterprise,Canada,Paseo",Low,550,11,37,20350,1017.5,19332.5,6050,13282.5,45233,11,Nov,2023
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",Low,971,12,38,36898,1844.9,35053.1,11652,23401.1,45118,7,Jul,2023
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",Low,174,17,26,4524,226.2,4297.8,2958,1339.8,45545,9,Sep,2024
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Low,307,14,17,5219,260.95,4958.05,4298,660.05,45722,3,Mar,2025
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",Low,656,16,22,14432,721.6,13710.4,10496,3214.4,45051,5,May,2023
+Enterprise,Canada,Paseo,"Enterprise,Canada,Paseo",Low,756,11,37,27972,1398.6,26573.4,8316,18257.4,45255,11,Nov,2023
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",Low,724,13,18,13032,651.6,12380.4,9412,2968.4,45461,6,Jun,2024
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Low,658,20,24,15792,789.6,15002.4,13160,1842.4,45347,2,Feb,2024
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Low,360,14,17,6120,306,5814,5040,774,45339,2,Feb,2024
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",Low,67,13,26,1742,87.1,1654.9,871,783.9,45227,10,Oct,2023
+Small Business,USA,VTT,"Small Business,USA,VTT",Low,717,20,38,27246,1362.3,25883.7,14340,11543.7,45224,10,Oct,2023
+Channel Partners,Mexico,VTT,"Channel Partners,Mexico,VTT",Low,807,19,29,23403,1170.15,22232.85,15333,6899.85,45707,2,Feb,2025
+Enterprise,Germany,VTT,"Enterprise,Germany,VTT",Low,453,17,25,11325,566.25,10758.75,7701,3057.75,45704,2,Feb,2025
+Small Business,Canada,VTT,"Small Business,Canada,VTT",Low,850,15,34,28900,1445,27455,12750,14705,45499,7,Jul,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",Low,781,19,33,25773,1288.65,24484.35,14839,9645.35,45447,6,Jun,2024
+Midmarket,Germany,VTT,"Midmarket,Germany,VTT",Low,321,18,18,5778,288.9,5489.1,5778,-288.9,45720,3,Mar,2025
+Government,Canada,Carretera,"Government,Canada,Carretera",Low,59,17,32,1888,94.4,1793.6,1003,790.6,45086,6,Jun,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Low,736,10,28,20608,1030.4,19577.6,7360,12217.6,45587,10,Oct,2024
+Government,Canada,Velo,"Government,Canada,Velo",Low,971,17,26,25246,1262.3,23983.7,16507,7476.7,45157,8,Aug,2023
+Channel Partners,Germany,VTT,"Channel Partners,Germany,VTT",Low,445,11,29,12905,645.25,12259.75,4895,7364.75,45341,2,Feb,2024
+Midmarket,Mexico,Montana,"Midmarket,Mexico,Montana",Low,76,14,35,2660,133,2527,1064,1463,45283,12,Dec,2023
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",Low,112,18,27,3024,151.2,2872.8,2016,856.8,45557,9,Sep,2024
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Low,366,12,37,13542,677.1,12864.9,4392,8472.9,45464,6,Jun,2024
+Government,USA,Velo,"Government,USA,Velo",Low,384,13,22,8448,422.4,8025.6,4992,3033.6,45289,12,Dec,2023
+Government,Canada,Carretera,"Government,Canada,Carretera",Low,195,17,32,6240,312,5928,3315,2613,45384,4,Apr,2024
+Small Business,Germany,Carretera,"Small Business,Germany,Carretera",Low,379,10,38,14402,720.1,13681.9,3790,9891.9,45394,4,Apr,2024
+Government,USA,Carretera,"Government,USA,Carretera",Low,432,10,16,6912,345.6,6566.4,4320,2246.4,45507,8,Aug,2024
+Midmarket,Canada,Montana,"Midmarket,Canada,Montana",Low,174,10,21,3654,182.7,3471.3,1740,1731.3,45242,11,Nov,2023
+Small Business,Germany,Montana,"Small Business,Germany,Montana",Low,264,19,17,4488,224.4,4263.6,5016,-752.4,45250,11,Nov,2023
+Government,Canada,Montana,"Government,Canada,Montana",Low,123,15,37,4551,227.55,4323.45,1845,2478.45,45164,8,Aug,2023
+Small Business,Germany,Montana,"Small Business,Germany,Montana",Low,356,19,17,6052,302.6,5749.4,6764,-1014.6,45126,7,Jul,2023
+Enterprise,Mexico,Montana,"Enterprise,Mexico,Montana",Low,303,15,36,10908,545.4,10362.6,4545,5817.6,45105,6,Jun,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",Low,207,13,20,4140,207,3933,2691,1242,45321,1,Jan,2024
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Low,861,14,17,14637,731.85,13905.15,12054,1851.15,45633,12,Dec,2024
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",Low,15,17,26,390,3.9,386.1,255,131.1,45706,2,Feb,2025
+Small Business,USA,Paseo,"Small Business,USA,Paseo",Low,223,11,34,7582,379.1,7202.9,2453,4749.9,45120,7,Jul,2023
+Government,USA,Paseo,"Government,USA,Paseo",Low,378,18,20,7560,378,7182,6804,378,45380,3,Mar,2024
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Low,355,20,24,8520,426,8094,7100,994,45603,11,Nov,2024
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",Low,310,18,33,10230,511.5,9718.5,5580,4138.5,45319,1,Jan,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",Low,743,13,20,14860,743,14117,9659,4458,45214,10,Oct,2023
+Government,USA,Paseo,"Government,USA,Paseo",Low,905,18,20,18100,905,17195,16290,905,45627,12,Dec,2024
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Low,986,18,23,22678,1133.9,21544.1,17748,3796.1,45744,3,Mar,2025
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",Low,373,18,27,10071,503.55,9567.45,6714,2853.45,45489,7,Jul,2024
+Government,USA,Paseo,"Government,USA,Paseo",Low,596,18,20,11920,596,11324,10728,596,45152,8,Aug,2023
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Low,191,13,26,4966,248.3,4717.7,2483,2234.7,45754,4,Apr,2025
+Channel Partners,USA,Velo,"Channel Partners,USA,Velo",Low,901,12,27,24327,1216.35,23110.65,10812,12298.65,45527,8,Aug,2024
+Government,Canada,Velo,"Government,Canada,Velo",Low,822,17,26,21372,1068.6,20303.4,13974,6329.4,45264,12,Dec,2023
+Government,France,Velo,"Government,France,Velo",Low,751,15,31,23281,1164.05,22116.95,11265,10851.95,45146,8,Aug,2023
+Channel Partners,France,VTT,"Channel Partners,France,VTT",Low,21,10,29,609,6.09,602.91,210,392.91,45631,12,Dec,2024
+Government,USA,VTT,"Government,USA,VTT",Low,389,16,33,12837,641.85,12195.15,6224,5971.15,45244,11,Nov,2023
+Government,France,VTT,"Government,France,VTT",Low,80,13,36,2880,144,2736,1040,1696,45145,8,Aug,2023
+Midmarket,Mexico,VTT,"Midmarket,Mexico,VTT",Low,556,10,18,10008,500.4,9507.6,5560,3947.6,45483,7,Jul,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Low,781,12,33,25773,1288.65,24484.35,9372,15112.35,45113,7,Jul,2023
+Enterprise,Mexico,Amarilla,"Enterprise,Mexico,Amarilla",Low,948,19,29,27492,1374.6,26117.4,18012,8105.4,45553,9,Sep,2024
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Low,60,14,21,1260,63,1197,840,357,45194,9,Sep,2023
+Midmarket,USA,Amarilla,"Midmarket,USA,Amarilla",Low,310,15,22,6820,341,6479,4650,1829,45358,3,Mar,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Low,936,13,25,23400,1170,22230,12168,10062,45278,12,Dec,2023
+Government,Germany,Montana,"Government,Germany,Montana",Medium,663,15,18,11934,596.7,11337.3,9945,1392.3,45296,1,Jan,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,639,15,32,20448,1022.4,19425.6,9585,9840.6,45062,5,May,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,59,13,20,1180,59,1121,767,354,45251,11,Nov,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,494,10,28,13832,691.6,13140.4,4940,8200.4,45642,12,Dec,2024
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",Medium,676,10,34,22984,1149.2,21834.8,6760,15074.8,45637,12,Dec,2024
+Channel Partners,Canada,Velo,"Channel Partners,Canada,Velo",Medium,320,12,36,11520,576,10944,3840,7104,45404,4,Apr,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",Medium,131,19,33,4323,216.15,4106.85,2489,1617.85,45224,10,Oct,2023
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Medium,590,12,33,19470,973.5,18496.5,7080,11416.5,45403,4,Apr,2024
+Channel Partners,Mexico,Amarilla,"Channel Partners,Mexico,Amarilla",Medium,976,17,27,26352,1317.6,25034.4,16592,8442.4,45037,4,Apr,2023
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Medium,886,14,21,18606,930.3,17675.7,12404,5271.7,45686,1,Jan,2025
+Channel Partners,France,Carretera,"Channel Partners,France,Carretera",Medium,545,14,34,18530,926.5,17603.5,7630,9973.5,45443,5,May,2024
+Channel Partners,Germany,Carretera,"Channel Partners,Germany,Carretera",Medium,167,15,19,3173,158.65,3014.35,2505,509.35,45679,1,Jan,2025
+Government,France,Carretera,"Government,France,Carretera",Medium,295,11,38,11210,560.5,10649.5,3245,7404.5,45407,4,Apr,2024
+Small Business,USA,Carretera,"Small Business,USA,Carretera",Medium,89,13,20,1780,89,1691,1157,534,45110,7,Jul,2023
+Government,Germany,Carretera,"Government,Germany,Carretera",Medium,889,18,27,24003,1200.15,22802.85,16002,6800.85,45160,8,Aug,2023
+Midmarket,Mexico,Carretera,"Midmarket,Mexico,Carretera",Medium,223,12,24,5352,267.6,5084.4,2676,2408.4,45554,9,Sep,2024
+Government,USA,Carretera,"Government,USA,Carretera",Medium,798,10,16,12768,638.4,12129.6,7980,4149.6,45327,2,Feb,2024
+Government,France,Carretera,"Government,France,Carretera",Medium,386,11,38,14668,733.4,13934.6,4246,9688.6,45452,6,Jun,2024
+Government,France,Montana,"Government,France,Montana",Medium,467,16,36,16812,840.6,15971.4,7472,8499.4,45505,8,Aug,2024
+Enterprise,USA,Montana,"Enterprise,USA,Montana",Medium,567,14,34,19278,963.9,18314.1,7938,10376.1,45386,4,Apr,2024
+Government,Mexico,Montana,"Government,Mexico,Montana",Medium,143,12,26,3718,185.9,3532.1,1716,1816.1,45156,8,Aug,2023
+Channel Partners,Germany,Montana,"Channel Partners,Germany,Montana",Medium,81,17,28,2268,113.4,2154.6,1377,777.6,45732,3,Mar,2025
+Small Business,Mexico,Montana,"Small Business,Mexico,Montana",Medium,307,18,26,7982,399.1,7582.9,5526,2056.9,45367,3,Mar,2024
+Government,France,Paseo,"Government,France,Paseo",Medium,165,18,20,3300,165,3135,2970,165,45377,3,Mar,2024
+Enterprise,USA,Paseo,"Enterprise,USA,Paseo",Medium,421,15,38,15998,799.9,15198.1,6315,8883.1,45285,12,Dec,2023
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Medium,81,20,24,1944,97.2,1846.8,1620,226.8,45355,3,Mar,2024
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",Medium,387,20,36,13932,696.6,13235.4,7740,5495.4,45046,4,Apr,2023
+Government,USA,Paseo,"Government,USA,Paseo",Medium,252,18,20,5040,252,4788,4536,252,45100,6,Jun,2023
+Small Business,USA,Paseo,"Small Business,USA,Paseo",Medium,471,11,34,16014,800.7,15213.3,5181,10032.3,45457,6,Jun,2024
+Government,USA,Paseo,"Government,USA,Paseo",Medium,138,18,20,2760,138,2622,2484,138,45706,2,Feb,2025
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Medium,426,12,37,15762,788.1,14973.9,5112,9861.9,45637,12,Dec,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,125,13,20,2500,125,2375,1625,750,45634,12,Dec,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,700,13,20,14000,700,13300,9100,4200,45322,1,Jan,2024
+Enterprise,USA,Paseo,"Enterprise,USA,Paseo",Medium,925,15,38,35150,1757.5,33392.5,13875,19517.5,45444,6,Jun,2024
+Enterprise,France,Paseo,"Enterprise,France,Paseo",Medium,534,20,24,12816,640.8,12175.2,10680,1495.2,45376,3,Mar,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,71,13,20,1420,71,1349,923,426,45279,12,Dec,2023
+Government,USA,Paseo,"Government,USA,Paseo",Medium,945,18,20,18900,945,17955,17010,945,45389,4,Apr,2024
+Government,France,Paseo,"Government,France,Paseo",Medium,440,18,20,8800,440,8360,7920,440,45207,10,Oct,2023
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",Medium,776,13,18,13968,698.4,13269.6,10088,3181.6,45176,9,Sep,2023
+Midmarket,USA,Velo,"Midmarket,USA,Velo",Medium,232,19,35,8120,406,7714,4408,3306,45082,6,Jun,2023
+Midmarket,Mexico,Velo,"Midmarket,Mexico,Velo",Medium,633,11,19,12027,601.35,11425.65,6963,4462.65,45757,4,Apr,2025
+Enterprise,Germany,Velo,"Enterprise,Germany,Velo",Medium,320,17,16,5120,256,4864,5440,-576,45344,2,Feb,2024
+Government,USA,Velo,"Government,USA,Velo",Medium,691,13,22,15202,760.1,14441.9,8983,5458.9,45348,2,Feb,2024
+Government,USA,Velo,"Government,USA,Velo",Medium,669,13,22,14718,735.9,13982.1,8697,5285.1,45749,4,Apr,2025
+Government,France,Velo,"Government,France,Velo",Medium,605,15,31,18755,937.75,17817.25,9075,8742.25,45377,3,Mar,2024
+Enterprise,USA,Velo,"Enterprise,USA,Velo",Medium,98,10,17,1666,83.3,1582.7,980,602.7,45402,4,Apr,2024
+Enterprise,France,Velo,"Enterprise,France,Velo",Medium,667,15,17,11339,566.95,10772.05,10005,767.05,45748,4,Apr,2025
+Government,France,Velo,"Government,France,Velo",Medium,620,15,31,19220,961,18259,9300,8959,45451,6,Jun,2024
+Small Business,Germany,Velo,"Small Business,Germany,Velo",Medium,765,13,32,24480,1224,23256,9945,13311,45637,12,Dec,2024
+Government,Canada,VTT,"Government,Canada,VTT",Medium,300,15,19,5700,285,5415,4500,915,45471,6,Jun,2024
+Government,USA,VTT,"Government,USA,VTT",Medium,594,16,33,19602,980.1,18621.9,9504,9117.9,45057,5,May,2023
+Government,Germany,VTT,"Government,Germany,VTT",Medium,465,19,25,11625,581.25,11043.75,8835,2208.75,45382,3,Mar,2024
+Government,USA,VTT,"Government,USA,VTT",Medium,677,16,33,22341,1117.05,21223.95,10832,10391.95,45326,2,Feb,2024
+Government,USA,VTT,"Government,USA,VTT",Medium,133,16,33,4389,219.45,4169.55,2128,2041.55,45613,11,Nov,2024
+Government,France,VTT,"Government,France,VTT",Medium,559,13,36,20124,1006.2,19117.8,7267,11850.8,45395,4,Apr,2024
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Medium,693,14,21,14553,727.65,13825.35,9702,4123.35,45538,9,Sep,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,753,13,25,18825,941.25,17883.75,9789,8094.75,45287,12,Dec,2023
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,293,13,25,7325,366.25,6958.75,3809,3149.75,45706,2,Feb,2025
+Small Business,Germany,Amarilla,"Small Business,Germany,Amarilla",Medium,13,14,35,455,4.55,450.45,182,268.45,45232,11,Nov,2023
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Medium,779,12,37,28823,1441.15,27381.85,9348,18033.85,45266,12,Dec,2023
+Government,USA,Carretera,"Government,USA,Carretera",Medium,475,10,16,7600,380,7220,4750,2470,45449,6,Jun,2024
+Midmarket,Canada,Carretera,"Midmarket,Canada,Carretera",Medium,346,13,30,10380,519,9861,4498,5363,45106,6,Jun,2023
+Channel Partners,Mexico,Carretera,"Channel Partners,Mexico,Carretera",Medium,953,20,24,22872,1143.6,21728.4,19060,2668.4,45116,7,Jul,2023
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Medium,852,14,38,32376,1618.8,30757.2,11928,18829.2,45378,3,Mar,2024
+Midmarket,USA,Carretera,"Midmarket,USA,Carretera",Medium,130,17,31,4030,201.5,3828.5,2210,1618.5,45191,9,Sep,2023
+Government,USA,Carretera,"Government,USA,Carretera",Medium,276,10,16,4416,220.8,4195.2,2760,1435.2,45739,3,Mar,2025
+Enterprise,Germany,Carretera,"Enterprise,Germany,Carretera",Medium,407,13,16,6512,325.6,6186.4,5291,895.4,45281,12,Dec,2023
+Government,Mexico,Montana,"Government,Mexico,Montana",Medium,467,12,26,12142,607.1,11534.9,5604,5930.9,45228,10,Oct,2023
+Government,Germany,Montana,"Government,Germany,Montana",Medium,400,15,18,7200,360,6840,6000,840,45278,12,Dec,2023
+Government,France,Montana,"Government,France,Montana",Medium,160,16,36,5760,288,5472,2560,2912,45131,7,Jul,2023
+Channel Partners,USA,Montana,"Channel Partners,USA,Montana",Medium,304,17,23,6992,349.6,6642.4,5168,1474.4,45717,3,Mar,2025
+Government,France,Paseo,"Government,France,Paseo",Medium,451,18,20,9020,451,8569,8118,451,45670,1,Jan,2025
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",Medium,783,10,34,26622,1331.1,25290.9,7830,17460.9,45253,11,Nov,2023
+Government,USA,Paseo,"Government,USA,Paseo",Medium,259,18,20,5180,259,4921,4662,259,45172,9,Sep,2023
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",Medium,752,13,26,19552,977.6,18574.4,9776,8798.4,45479,7,Jul,2024
+Enterprise,USA,Velo,"Enterprise,USA,Velo",Medium,15,10,17,255,2.55,252.45,150,102.45,45350,2,Feb,2024
+Midmarket,Germany,Velo,"Midmarket,Germany,Velo",Medium,453,10,32,14496,724.8,13771.2,4530,9241.2,45404,4,Apr,2024
+Government,France,Velo,"Government,France,Velo",Medium,188,15,31,5828,291.4,5536.6,2820,2716.6,45033,4,Apr,2023
+Government,Mexico,Velo,"Government,Mexico,Velo",Medium,92,17,31,2852,142.6,2709.4,1564,1145.4,45726,3,Mar,2025
+Small Business,France,Velo,"Small Business,France,Velo",Medium,627,13,20,12540,627,11913,8151,3762,45073,5,May,2023
+Government,France,Velo,"Government,France,Velo",Medium,739,15,31,22909,1145.45,21763.55,11085,10678.55,45741,3,Mar,2025
+Midmarket,Canada,VTT,"Midmarket,Canada,VTT",Medium,500,14,32,16000,800,15200,7000,8200,45678,1,Jan,2025
+Government,Mexico,VTT,"Government,Mexico,VTT",Medium,140,19,33,4620,231,4389,2660,1729,45472,6,Jun,2024
+Small Business,France,VTT,"Small Business,France,VTT",Medium,273,17,24,6552,327.6,6224.4,4641,1583.4,45336,2,Feb,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",Medium,496,19,33,16368,818.4,15549.6,9424,6125.6,45292,1,Jan,2024
+Small Business,Canada,VTT,"Small Business,Canada,VTT",Medium,943,15,34,32062,1603.1,30458.9,14145,16313.9,45122,7,Jul,2023
+Enterprise,France,Amarilla,"Enterprise,France,Amarilla",Medium,524,14,20,10480,524,9956,7336,2620,45585,10,Oct,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Medium,575,12,33,18975,948.75,18026.25,6900,11126.25,45470,6,Jun,2024
+Government,USA,Amarilla,"Government,USA,Amarilla",Medium,804,15,28,22512,1125.6,21386.4,12060,9326.4,45530,8,Aug,2024
+Government,France,Amarilla,"Government,France,Amarilla",Medium,60,14,26,1560,78,1482,840,642,45044,4,Apr,2023
+Government,France,Amarilla,"Government,France,Amarilla",Medium,329,14,26,8554,427.7,8126.3,4606,3520.3,45494,7,Jul,2024
+Government,France,Montana,"Government,France,Montana",Medium,651,16,36,23436,1171.8,22264.2,10416,11848.2,45576,10,Oct,2024
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Medium,145,18,23,3335,166.75,3168.25,2610,558.25,45589,10,Oct,2024
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",Medium,207,13,18,3726,186.3,3539.7,2691,848.7,45187,9,Sep,2023
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Medium,545,18,23,12535,626.75,11908.25,9810,2098.25,45577,10,Oct,2024
+Government,France,Paseo,"Government,France,Paseo",Medium,622,18,20,12440,622,11818,11196,622,45225,10,Oct,2023
+Government,Germany,Velo,"Government,Germany,Velo",Medium,828,15,37,30636,1531.8,29104.2,12420,16684.2,45459,6,Jun,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",Medium,557,17,31,17267,863.35,16403.65,9469,6934.65,45357,3,Mar,2024
+Midmarket,USA,VTT,"Midmarket,USA,VTT",Medium,814,20,36,29304,1465.2,27838.8,16280,11558.8,45620,11,Nov,2024
+Channel Partners,Mexico,Carretera,"Channel Partners,Mexico,Carretera",Medium,444,20,24,10656,532.8,10123.2,8880,1243.2,45292,1,Jan,2024
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",Medium,590,14,38,22420,1121,21299,8260,13039,45193,9,Sep,2023
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Medium,652,11,23,14996,749.8,14246.2,7172,7074.2,45421,5,May,2024
+Channel Partners,Mexico,Montana,"Channel Partners,Mexico,Montana",Medium,449,10,22,9878,493.9,9384.1,4490,4894.1,45349,2,Feb,2024
+Channel Partners,France,Montana,"Channel Partners,France,Montana",Medium,960,18,35,33600,1680,31920,17280,14640,45342,2,Feb,2024
+Government,France,Paseo,"Government,France,Paseo",Medium,509,18,20,10180,509,9671,9162,509,45208,10,Oct,2023
+Midmarket,Canada,Velo,"Midmarket,Canada,Velo",Medium,890,11,30,26700,1335,25365,9790,15575,45684,1,Jan,2025
+Government,Canada,Velo,"Government,Canada,Velo",Medium,382,17,26,9932,496.6,9435.4,6494,2941.4,45205,10,Oct,2023
+Government,USA,Velo,"Government,USA,Velo",Medium,876,13,22,19272,963.6,18308.4,11388,6920.4,45419,5,May,2024
+Government,Canada,Velo,"Government,Canada,Velo",Medium,871,17,26,22646,1132.3,21513.7,14807,6706.7,45411,4,Apr,2024
+Channel Partners,France,VTT,"Channel Partners,France,VTT",Medium,424,10,29,12296,614.8,11681.2,4240,7441.2,45442,5,May,2024
+Channel Partners,Germany,VTT,"Channel Partners,Germany,VTT",Medium,735,11,29,21315,1065.75,20249.25,8085,12164.25,45360,3,Mar,2024
+Government,Canada,VTT,"Government,Canada,VTT",Medium,206,15,19,3914,195.7,3718.3,3090,628.3,45719,3,Mar,2025
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,171,13,25,4275,213.75,4061.25,2223,1838.25,45755,4,Apr,2025
+Government,USA,Carretera,"Government,USA,Carretera",Medium,969,10,16,15504,775.2,14728.8,9690,5038.8,45744,3,Mar,2025
+Small Business,France,Carretera,"Small Business,France,Carretera",Medium,495,18,21,10395,519.75,9875.25,8910,965.25,45198,9,Sep,2023
+Small Business,France,Carretera,"Small Business,France,Carretera",Medium,788,18,21,16548,827.4,15720.6,14184,1536.6,45498,7,Jul,2024
+Government,France,Montana,"Government,France,Montana",Medium,126,16,36,4536,226.8,4309.2,2016,2293.2,45413,5,May,2024
+Small Business,France,Montana,"Small Business,France,Montana",Medium,277,16,19,5263,263.15,4999.85,4432,567.85,45467,6,Jun,2024
+Enterprise,Germany,Montana,"Enterprise,Germany,Montana",Medium,963,12,29,27927,1396.35,26530.65,11556,14974.65,45231,11,Nov,2023
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",Medium,36,12,27,972,9.72,962.28,432,530.28,45357,3,Mar,2024
+Small Business,France,Paseo,"Small Business,France,Paseo",Medium,949,19,29,27521,1376.05,26144.95,18031,8113.95,45105,6,Jun,2023
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",Medium,263,14,17,4471,223.55,4247.45,3682,565.45,45164,8,Aug,2023
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Medium,827,12,37,30599,1529.95,29069.05,9924,19145.05,45184,9,Sep,2023
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Medium,863,18,23,19849,992.45,18856.55,15534,3322.55,45104,6,Jun,2023
+Government,France,Paseo,"Government,France,Paseo",Medium,303,18,20,6060,303,5757,5454,303,45533,8,Aug,2024
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",Medium,264,17,26,6864,343.2,6520.8,4488,2032.8,45280,12,Dec,2023
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",Medium,303,12,27,8181,409.05,7771.95,3636,4135.95,45042,4,Apr,2023
+Channel Partners,Mexico,Paseo,"Channel Partners,Mexico,Paseo",Medium,40,20,32,1280,64,1216,800,416,45538,9,Sep,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,335,15,32,10720,536,10184,5025,5159,45542,9,Sep,2024
+Small Business,France,Velo,"Small Business,France,Velo",Medium,743,13,20,14860,743,14117,9659,4458,45301,1,Jan,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",Medium,658,17,31,20398,1019.9,19378.1,11186,8192.1,45080,6,Jun,2023
+Enterprise,Germany,Velo,"Enterprise,Germany,Velo",Medium,88,17,16,1408,70.4,1337.6,1496,-158.4,45573,10,Oct,2024
+Government,France,Velo,"Government,France,Velo",Medium,239,15,31,7409,370.45,7038.55,3585,3453.55,45080,6,Jun,2023
+Government,USA,Velo,"Government,USA,Velo",Medium,426,13,22,9372,468.6,8903.4,5538,3365.4,45336,2,Feb,2024
+Small Business,USA,Velo,"Small Business,USA,Velo",Medium,923,15,19,17537,876.85,16660.15,13845,2815.15,45105,6,Jun,2023
+Government,Germany,Velo,"Government,Germany,Velo",Medium,816,15,37,30192,1509.6,28682.4,12240,16442.4,45324,2,Feb,2024
+Channel Partners,Canada,VTT,"Channel Partners,Canada,VTT",Medium,891,15,26,23166,1158.3,22007.7,13365,8642.7,45184,9,Sep,2023
+Small Business,France,VTT,"Small Business,France,VTT",Medium,209,17,24,5016,250.8,4765.2,3553,1212.2,45160,8,Aug,2023
+Small Business,Mexico,VTT,"Small Business,Mexico,VTT",Medium,132,20,17,2244,112.2,2131.8,2640,-508.2,45301,1,Jan,2024
+Enterprise,Canada,Amarilla,"Enterprise,Canada,Amarilla",Medium,592,16,30,17760,888,16872,9472,7400,45637,12,Dec,2024
+Government,France,Amarilla,"Government,France,Amarilla",Medium,692,14,26,17992,899.6,17092.4,9688,7404.4,45597,11,Nov,2024
+Enterprise,Germany,Amarilla,"Enterprise,Germany,Amarilla",Medium,746,14,32,23872,1193.6,22678.4,10444,12234.4,45708,2,Feb,2025
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,332,13,25,8300,415,7885,4316,3569,45590,10,Oct,2024
+Small Business,USA,Amarilla,"Small Business,USA,Amarilla",Medium,321,14,30,9630,481.5,9148.5,4494,4654.5,45258,11,Nov,2023
+Government,Canada,Montana,"Government,Canada,Montana",Medium,968,15,37,35816,1790.8,34025.2,14520,19505.2,45126,7,Jul,2023
+Government,USA,Montana,"Government,USA,Montana",Medium,879,10,26,22854,1142.7,21711.3,8790,12921.3,45296,1,Jan,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",Medium,822,13,20,16440,822,15618,10686,4932,45313,1,Jan,2024
+Government,USA,Amarilla,"Government,USA,Amarilla",Medium,438,15,28,12264,613.2,11650.8,6570,5080.8,45703,2,Feb,2025
+Enterprise,Mexico,Carretera,"Enterprise,Mexico,Carretera",Medium,130,11,17,2210,110.5,2099.5,1430,669.5,45616,11,Nov,2024
+Midmarket,France,Carretera,"Midmarket,France,Carretera",Medium,681,16,33,22473,1123.65,21349.35,10896,10453.35,45041,4,Apr,2023
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Medium,936,11,23,21528,1076.4,20451.6,10296,10155.6,45636,12,Dec,2024
+Midmarket,France,Montana,"Midmarket,France,Montana",Medium,965,11,33,31845,1592.25,30252.75,10615,19637.75,45175,9,Sep,2023
+Government,Canada,Montana,"Government,Canada,Montana",Medium,84,15,37,3108,155.4,2952.6,1260,1692.6,45610,11,Nov,2024
+Government,Germany,Montana,"Government,Germany,Montana",Medium,18,15,18,324,3.24,320.76,270,50.76,45051,5,May,2023
+Small Business,France,Montana,"Small Business,France,Montana",Medium,58,16,19,1102,55.1,1046.9,928,118.9,45073,5,May,2023
+Small Business,Canada,Montana,"Small Business,Canada,Montana",Medium,243,14,16,3888,194.4,3693.6,3402,291.6,45161,8,Aug,2023
+Midmarket,Germany,Montana,"Midmarket,Germany,Montana",Medium,299,17,16,4784,239.2,4544.8,5083,-538.2,45637,12,Dec,2024
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",Medium,88,13,26,2288,114.4,2173.6,1144,1029.6,45522,8,Aug,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,269,15,32,8608,430.4,8177.6,4035,4142.6,45121,7,Jul,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,368,15,32,11776,588.8,11187.2,5520,5667.2,45643,12,Dec,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,956,15,32,30592,1529.6,29062.4,14340,14722.4,45038,4,Apr,2023
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",Medium,597,20,36,21492,1074.6,20417.4,11940,8477.4,45046,4,Apr,2023
+Government,USA,Paseo,"Government,USA,Paseo",Medium,132,18,20,2640,132,2508,2376,132,45527,8,Aug,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,341,15,32,10912,545.6,10366.4,5115,5251.4,45508,8,Aug,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,490,15,32,15680,784,14896,7350,7546,45195,9,Sep,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,739,15,32,23648,1182.4,22465.6,11085,11380.6,45373,3,Mar,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,863,10,28,24164,1208.2,22955.8,8630,14325.8,45731,3,Mar,2025
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,352,15,32,11264,563.2,10700.8,5280,5420.8,45528,8,Aug,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,501,10,28,14028,701.4,13326.6,5010,8316.6,45125,7,Jul,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,658,10,28,18424,921.2,17502.8,6580,10922.8,45525,8,Aug,2024
+Channel Partners,Canada,Velo,"Channel Partners,Canada,Velo",Medium,347,12,36,12492,624.6,11867.4,4164,7703.4,45218,10,Oct,2023
+Government,USA,Velo,"Government,USA,Velo",Medium,855,13,22,18810,940.5,17869.5,11115,6754.5,45595,10,Oct,2024
+Government,Germany,Velo,"Government,Germany,Velo",Medium,224,15,37,8288,414.4,7873.6,3360,4513.6,45431,5,May,2024
+Small Business,France,Velo,"Small Business,France,Velo",Medium,780,13,20,15600,780,14820,10140,4680,45605,11,Nov,2024
+Small Business,Mexico,Velo,"Small Business,Mexico,Velo",Medium,615,10,27,16605,830.25,15774.75,6150,9624.75,45164,8,Aug,2023
+Government,France,VTT,"Government,France,VTT",Medium,989,13,36,35604,1780.2,33823.8,12857,20966.8,45080,6,Jun,2023
+Government,Germany,VTT,"Government,Germany,VTT",Medium,539,19,25,13475,673.75,12801.25,10241,2560.25,45321,1,Jan,2024
+Government,France,VTT,"Government,France,VTT",Medium,872,13,36,31392,1569.6,29822.4,11336,18486.4,45588,10,Oct,2024
+Government,Germany,VTT,"Government,Germany,VTT",Medium,448,19,25,11200,560,10640,8512,2128,45436,5,May,2024
+Small Business,Canada,VTT,"Small Business,Canada,VTT",Medium,337,15,34,11458,572.9,10885.1,5055,5830.1,45138,7,Jul,2023
+Small Business,USA,VTT,"Small Business,USA,VTT",Medium,892,20,38,33896,1694.8,32201.2,17840,14361.2,45588,10,Oct,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,945,13,25,23625,1181.25,22443.75,12285,10158.75,45236,11,Nov,2023
+Government,USA,Amarilla,"Government,USA,Amarilla",Medium,917,15,28,25676,1283.8,24392.2,13755,10637.2,45376,3,Mar,2024
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Medium,986,14,21,20706,1035.3,19670.7,13804,5866.7,45366,3,Mar,2024
+Small Business,Mexico,Amarilla,"Small Business,Mexico,Amarilla",Medium,223,10,36,8028,401.4,7626.6,2230,5396.6,45308,1,Jan,2024
+Government,Germany,Amarilla,"Government,Germany,Amarilla",Medium,137,14,21,2877,143.85,2733.15,1918,815.15,45032,4,Apr,2023
+Midmarket,Germany,Amarilla,"Midmarket,Germany,Amarilla",Medium,321,15,16,5136,256.8,4879.2,4815,64.2,45709,2,Feb,2025
+Channel Partners,Mexico,Amarilla,"Channel Partners,Mexico,Amarilla",Medium,173,17,27,4671,233.55,4437.45,2941,1496.45,45707,2,Feb,2025
+Small Business,Mexico,Amarilla,"Small Business,Mexico,Amarilla",Medium,238,10,36,8568,428.4,8139.6,2380,5759.6,45584,10,Oct,2024
+Government,USA,VTT,"Government,USA,VTT",Medium,906,16,33,29898,1494.9,28403.1,14496,13907.1,45483,7,Jul,2024
+Small Business,Canada,Carretera,"Small Business,Canada,Carretera",Medium,817,14,25,20425,1021.25,19403.75,11438,7965.75,45251,11,Nov,2023
+Channel Partners,Mexico,Carretera,"Channel Partners,Mexico,Carretera",Medium,142,20,24,3408,170.4,3237.6,2840,397.6,45538,9,Sep,2024
+Small Business,Canada,Montana,"Small Business,Canada,Montana",Medium,404,14,16,6464,323.2,6140.8,5656,484.8,45129,7,Jul,2023
+Government,France,Montana,"Government,France,Montana",Medium,183,16,36,6588,329.4,6258.6,2928,3330.6,45053,5,May,2023
+Small Business,France,Montana,"Small Business,France,Montana",Medium,895,16,19,17005,850.25,16154.75,14320,1834.75,45468,6,Jun,2024
+Channel Partners,Canada,Montana,"Channel Partners,Canada,Montana",Medium,607,18,24,14568,728.4,13839.6,10926,2913.6,45254,11,Nov,2023
+Enterprise,France,Montana,"Enterprise,France,Montana",Medium,610,17,19,11590,579.5,11010.5,10370,640.5,45457,6,Jun,2024
+Government,Canada,Montana,"Government,Canada,Montana",Medium,713,15,37,26381,1319.05,25061.95,10695,14366.95,45489,7,Jul,2024
+Enterprise,USA,Montana,"Enterprise,USA,Montana",Medium,425,14,34,14450,722.5,13727.5,5950,7777.5,45029,4,Apr,2023
+Small Business,Germany,Montana,"Small Business,Germany,Montana",Medium,282,19,17,4794,239.7,4554.3,5358,-803.7,45323,2,Feb,2024
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",Medium,328,20,36,11808,590.4,11217.6,6560,4657.6,45098,6,Jun,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,138,10,28,3864,193.2,3670.8,1380,2290.8,45326,2,Feb,2024
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",Medium,599,18,23,13777,688.85,13088.15,10782,2306.15,45331,2,Feb,2024
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",Medium,784,12,27,21168,1058.4,20109.6,9408,10701.6,45475,7,Jul,2024
+Midmarket,France,Paseo,"Midmarket,France,Paseo",Medium,757,12,37,28009,1400.45,26608.55,9084,17524.55,45051,5,May,2023
+Channel Partners,Mexico,Paseo,"Channel Partners,Mexico,Paseo",Medium,292,20,32,9344,467.2,8876.8,5840,3036.8,45660,1,Jan,2025
+Small Business,France,Paseo,"Small Business,France,Paseo",Medium,208,19,29,6032,301.6,5730.4,3952,1778.4,45178,9,Sep,2023
+Channel Partners,Germany,Paseo,"Channel Partners,Germany,Paseo",Medium,632,13,29,18328,916.4,17411.6,8216,9195.6,45044,4,Apr,2023
+Enterprise,USA,Paseo,"Enterprise,USA,Paseo",Medium,491,15,38,18658,932.9,17725.1,7365,10360.1,45126,7,Jul,2023
+Midmarket,Mexico,Velo,"Midmarket,Mexico,Velo",Medium,306,11,19,5814,290.7,5523.3,3366,2157.3,45604,11,Nov,2024
+Small Business,Canada,Velo,"Small Business,Canada,Velo",Medium,941,11,26,24466,1223.3,23242.7,10351,12891.7,45313,1,Jan,2024
+Government,Germany,Velo,"Government,Germany,Velo",Medium,911,15,37,33707,1685.35,32021.65,13665,18356.65,45698,2,Feb,2025
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",Medium,744,13,26,19344,967.2,18376.8,9672,8704.8,45389,4,Apr,2024
+Enterprise,Mexico,Velo,"Enterprise,Mexico,Velo",Medium,780,16,25,19500,975,18525,12480,6045,45347,2,Feb,2024
+Government,Canada,Velo,"Government,Canada,Velo",Medium,730,17,26,18980,949,18031,12410,5621,45748,4,Apr,2025
+Channel Partners,USA,VTT,"Channel Partners,USA,VTT",Medium,121,18,23,2783,139.15,2643.85,2178,465.85,45592,10,Oct,2024
+Small Business,Germany,VTT,"Small Business,Germany,VTT",Medium,852,19,32,27264,1363.2,25900.8,16188,9712.8,45507,8,Aug,2024
+Government,USA,VTT,"Government,USA,VTT",Medium,855,16,33,28215,1410.75,26804.25,13680,13124.25,45142,8,Aug,2023
+Channel Partners,Germany,VTT,"Channel Partners,Germany,VTT",Medium,268,11,29,7772,388.6,7383.4,2948,4435.4,45538,9,Sep,2024
+Small Business,USA,VTT,"Small Business,USA,VTT",Medium,598,20,38,22724,1136.2,21587.8,11960,9627.8,45148,8,Aug,2023
+Channel Partners,France,VTT,"Channel Partners,France,VTT",Medium,283,10,29,8207,410.35,7796.65,2830,4966.65,45292,1,Jan,2024
+Midmarket,France,VTT,"Midmarket,France,VTT",Medium,553,16,36,19908,995.4,18912.6,8848,10064.6,45232,11,Nov,2023
+Enterprise,Mexico,VTT,"Enterprise,Mexico,VTT",Medium,98,16,33,3234,161.7,3072.3,1568,1504.3,45198,9,Sep,2023
+Government,USA,Amarilla,"Government,USA,Amarilla",Medium,152,15,28,4256,212.8,4043.2,2280,1763.2,45563,9,Sep,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",Medium,431,13,25,10775,538.75,10236.25,5603,4633.25,45583,10,Oct,2024
+Midmarket,Germany,Amarilla,"Midmarket,Germany,Amarilla",Medium,144,15,16,2304,115.2,2188.8,2160,28.8,45376,3,Mar,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Medium,115,12,33,3795,189.75,3605.25,1380,2225.25,45041,4,Apr,2023
+Government,Germany,Carretera,"Government,Germany,Carretera",Medium,621,18,27,16767,838.35,15928.65,11178,4750.65,45515,8,Aug,2024
+Government,Canada,Carretera,"Government,Canada,Carretera",Medium,117,17,32,3744,187.2,3556.8,1989,1567.8,45513,8,Aug,2024
+Channel Partners,Germany,Carretera,"Channel Partners,Germany,Carretera",Medium,285,15,19,5415,270.75,5144.25,4275,869.25,45140,8,Aug,2023
+Government,Mexico,Carretera,"Government,Mexico,Carretera",Medium,208,11,23,4784,239.2,4544.8,2288,2256.8,45250,11,Nov,2023
+Government,USA,Paseo,"Government,USA,Paseo",Medium,777,18,20,15540,777,14763,13986,777,45398,4,Apr,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",Medium,655,10,28,18340,917,17423,6550,10873,45556,9,Sep,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",Medium,241,15,32,7712,385.6,7326.4,3615,3711.4,45524,8,Aug,2024
+Channel Partners,France,Velo,"Channel Partners,France,Velo",Medium,119,11,36,4284,214.2,4069.8,1309,2760.8,45535,8,Aug,2024
+Midmarket,Mexico,Velo,"Midmarket,Mexico,Velo",Medium,211,11,19,4009,200.45,3808.55,2321,1487.55,45452,6,Jun,2024
+Government,Germany,VTT,"Government,Germany,VTT",Medium,161,19,25,4025,201.25,3823.75,3059,764.75,45622,11,Nov,2024
+Government,France,VTT,"Government,France,VTT",Medium,724,13,36,26064,1303.2,24760.8,9412,15348.8,45592,10,Oct,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",Medium,959,19,33,31647,1582.35,30064.65,18221,11843.65,45435,5,May,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",Medium,653,12,33,21549,1077.45,20471.55,7836,12635.55,45580,10,Oct,2024
+Midmarket,Canada,Amarilla,"Midmarket,Canada,Amarilla",Medium,153,19,23,3519,175.95,3343.05,2907,436.05,45175,9,Sep,2023
+Channel Partners,France,Amarilla,"Channel Partners,France,Amarilla",Medium,610,14,23,14030,701.5,13328.5,8540,4788.5,45660,1,Jan,2025
+Channel Partners,USA,Carretera,"Channel Partners,USA,Carretera",High,48,17,34,1632,81.6,1550.4,816,734.4,45590,10,Oct,2024
+Government,USA,Montana,"Government,USA,Montana",High,25,10,26,650,6.5,643.5,250,393.5,45319,1,Jan,2024
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",High,426,16,22,9372,468.6,8903.4,6816,2087.4,45232,11,Nov,2023
+Enterprise,USA,Carretera,"Enterprise,USA,Carretera",High,174,20,18,3132,156.6,2975.4,3480,-504.6,45343,2,Feb,2024
+Enterprise,France,Carretera,"Enterprise,France,Carretera",High,498,18,31,15438,771.9,14666.1,8964,5702.1,45420,5,May,2024
+Government,USA,Montana,"Government,USA,Montana",High,55,10,26,1430,71.5,1358.5,550,808.5,45207,10,Oct,2023
+Enterprise,USA,Montana,"Enterprise,USA,Montana",High,373,14,34,12682,634.1,12047.9,5222,6825.9,45152,8,Aug,2023
+Midmarket,France,Montana,"Midmarket,France,Montana",High,823,11,33,27159,1357.95,25801.05,9053,16748.05,45709,2,Feb,2025
+Government,France,Paseo,"Government,France,Paseo",High,762,18,20,15240,762,14478,13716,762,45678,1,Jan,2025
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",High,642,20,36,23112,1155.6,21956.4,12840,9116.4,45129,7,Jul,2023
+Midmarket,France,Paseo,"Midmarket,France,Paseo",High,901,12,37,33337,1666.85,31670.15,10812,20858.15,45065,5,May,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",High,493,15,32,15776,788.8,14987.2,7395,7592.2,45369,3,Mar,2024
+Midmarket,Germany,Velo,"Midmarket,Germany,Velo",High,842,10,32,26944,1347.2,25596.8,8420,17176.8,45191,9,Sep,2023
+Midmarket,Germany,Velo,"Midmarket,Germany,Velo",High,935,10,32,29920,1496,28424,9350,19074,45179,9,Sep,2023
+Midmarket,USA,Velo,"Midmarket,USA,Velo",High,774,19,35,27090,1354.5,25735.5,14706,11029.5,45106,6,Jun,2023
+Government,France,Velo,"Government,France,Velo",High,402,15,31,12462,623.1,11838.9,6030,5808.9,45142,8,Aug,2023
+Enterprise,USA,Velo,"Enterprise,USA,Velo",High,719,10,17,12223,611.15,11611.85,7190,4421.85,45234,11,Nov,2023
+Small Business,USA,Velo,"Small Business,USA,Velo",High,610,15,19,11590,579.5,11010.5,9150,1860.5,45275,12,Dec,2023
+Government,Germany,Velo,"Government,Germany,Velo",High,272,15,37,10064,503.2,9560.8,4080,5480.8,45103,6,Jun,2023
+Government,Germany,Velo,"Government,Germany,Velo",High,838,15,37,31006,1550.3,29455.7,12570,16885.7,45035,4,Apr,2023
+Enterprise,Canada,Velo,"Enterprise,Canada,Velo",High,433,13,26,11258,562.9,10695.1,5629,5066.1,45295,1,Jan,2024
+Small Business,France,Velo,"Small Business,France,Velo",High,252,13,20,5040,252,4788,3276,1512,45387,4,Apr,2024
+Enterprise,Mexico,VTT,"Enterprise,Mexico,VTT",High,477,16,33,15741,787.05,14953.95,7632,7321.95,45559,9,Sep,2024
+Midmarket,Mexico,VTT,"Midmarket,Mexico,VTT",High,258,10,18,4644,232.2,4411.8,2580,1831.8,45146,8,Aug,2023
+Government,USA,VTT,"Government,USA,VTT",High,914,16,33,30162,1508.1,28653.9,14624,14029.9,45660,1,Jan,2025
+Small Business,Mexico,VTT,"Small Business,Mexico,VTT",High,890,20,17,15130,756.5,14373.5,17800,-3426.5,45342,2,Feb,2024
+Small Business,USA,VTT,"Small Business,USA,VTT",High,794,20,38,30172,1508.6,28663.4,15880,12783.4,45028,4,Apr,2023
+Midmarket,France,VTT,"Midmarket,France,VTT",High,131,16,36,4716,235.8,4480.2,2096,2384.2,45048,5,May,2023
+Enterprise,Canada,VTT,"Enterprise,Canada,VTT",High,37,12,19,703,7.03,695.97,444,251.97,45433,5,May,2024
+Government,Germany,VTT,"Government,Germany,VTT",High,536,19,25,13400,670,12730,10184,2546,45343,2,Feb,2024
+Enterprise,USA,Amarilla,"Enterprise,USA,Amarilla",High,767,19,37,28379,1418.95,26960.05,14573,12387.05,45217,10,Oct,2023
+Government,Canada,Amarilla,"Government,Canada,Amarilla",High,978,13,25,24450,1222.5,23227.5,12714,10513.5,45521,8,Aug,2024
+Small Business,USA,Amarilla,"Small Business,USA,Amarilla",High,851,14,30,25530,1276.5,24253.5,11914,12339.5,45536,9,Sep,2024
+Channel Partners,Canada,Amarilla,"Channel Partners,Canada,Amarilla",High,65,18,23,1495,74.75,1420.25,1170,250.25,45531,8,Aug,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",High,45,12,33,1485,74.25,1410.75,540,870.75,45065,5,May,2023
+Channel Partners,Germany,Amarilla,"Channel Partners,Germany,Amarilla",High,932,18,36,33552,1677.6,31874.4,16776,15098.4,45512,8,Aug,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",High,327,13,25,8175,408.75,7766.25,4251,3515.25,45643,12,Dec,2024
+Midmarket,France,Amarilla,"Midmarket,France,Amarilla",High,848,16,25,21200,1060,20140,13568,6572,45405,4,Apr,2024
+Small Business,France,Amarilla,"Small Business,France,Amarilla",High,579,16,21,12159,607.95,11551.05,9264,2287.05,45700,2,Feb,2025
+Channel Partners,France,Carretera,"Channel Partners,France,Carretera",High,671,14,34,22814,1140.7,21673.3,9394,12279.3,45262,12,Dec,2023
+Government,France,Paseo,"Government,France,Paseo",High,337,18,20,6740,337,6403,6066,337,45393,4,Apr,2024
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",High,189,12,38,7182,359.1,6822.9,2268,4554.9,45569,10,Oct,2024
+Midmarket,Canada,Velo,"Midmarket,Canada,Velo",High,718,11,30,21540,1077,20463,7898,12565,45463,6,Jun,2024
+Channel Partners,Germany,Velo,"Channel Partners,Germany,Velo",High,978,16,23,22494,1124.7,21369.3,15648,5721.3,45448,6,Jun,2024
+Government,USA,VTT,"Government,USA,VTT",High,968,16,33,31944,1597.2,30346.8,15488,14858.8,45190,9,Sep,2023
+Channel Partners,Mexico,VTT,"Channel Partners,Mexico,VTT",High,621,19,29,18009,900.45,17108.55,11799,5309.55,45209,10,Oct,2023
+Midmarket,USA,Amarilla,"Midmarket,USA,Amarilla",High,17,15,22,374,3.74,370.26,255,115.26,45249,11,Nov,2023
+Channel Partners,Germany,Amarilla,"Channel Partners,Germany,Amarilla",High,404,18,36,14544,727.2,13816.8,7272,6544.8,45293,1,Jan,2024
+Channel Partners,Canada,Carretera,"Channel Partners,Canada,Carretera",High,196,14,38,7448,372.4,7075.6,2744,4331.6,45477,7,Jul,2024
+Government,Germany,Carretera,"Government,Germany,Carretera",High,48,18,27,1296,64.8,1231.2,864,367.2,45710,2,Feb,2025
+Small Business,Germany,Carretera,"Small Business,Germany,Carretera",High,505,10,38,19190,959.5,18230.5,5050,13180.5,45503,7,Jul,2024
+Enterprise,France,Carretera,"Enterprise,France,Carretera",High,649,18,31,20119,1005.95,19113.05,11682,7431.05,45506,8,Aug,2024
+Midmarket,Canada,Carretera,"Midmarket,Canada,Carretera",High,21,13,30,630,6.3,623.7,273,350.7,45579,10,Oct,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",High,479,11,23,11017,550.85,10466.15,5269,5197.15,45116,7,Jul,2023
+Government,Germany,Montana,"Government,Germany,Montana",High,566,15,18,10188,509.4,9678.6,8490,1188.6,45287,12,Dec,2023
+Government,Germany,Montana,"Government,Germany,Montana",High,227,15,18,4086,204.3,3881.7,3405,476.7,45389,4,Apr,2024
+Midmarket,Mexico,Montana,"Midmarket,Mexico,Montana",High,872,14,35,30520,1526,28994,12208,16786,45683,1,Jan,2025
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",High,676,12,27,18252,912.6,17339.4,8112,9227.4,45131,7,Jul,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,966,10,28,27048,1352.4,25695.6,9660,16035.6,45390,4,Apr,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",High,961,13,20,19220,961,18259,12493,5766,45034,4,Apr,2023
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",High,879,10,34,29886,1494.3,28391.7,8790,19601.7,45344,2,Feb,2024
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",High,929,12,38,35302,1765.1,33536.9,11148,22388.9,45754,4,Apr,2025
+Government,Canada,Paseo,"Government,Canada,Paseo",High,881,13,20,17620,881,16739,11453,5286,45634,12,Dec,2024
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",High,536,18,27,14472,723.6,13748.4,9648,4100.4,45461,6,Jun,2024
+Enterprise,France,Paseo,"Enterprise,France,Paseo",High,309,20,24,7416,370.8,7045.2,6180,865.2,45052,5,May,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",High,554,15,32,17728,886.4,16841.6,8310,8531.6,45668,1,Jan,2025
+Small Business,Canada,Paseo,"Small Business,Canada,Paseo",High,318,12,27,8586,429.3,8156.7,3816,4340.7,45493,7,Jul,2024
+Government,France,Velo,"Government,France,Velo",High,226,15,31,7006,350.3,6655.7,3390,3265.7,45030,4,Apr,2023
+Midmarket,Mexico,Velo,"Midmarket,Mexico,Velo",High,149,11,19,2831,141.55,2689.45,1639,1050.45,45444,6,Jun,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",High,599,17,31,18569,928.45,17640.55,10183,7457.55,45656,12,Dec,2024
+Government,Canada,Velo,"Government,Canada,Velo",High,949,17,26,24674,1233.7,23440.3,16133,7307.3,45538,9,Sep,2024
+Channel Partners,France,VTT,"Channel Partners,France,VTT",High,420,10,29,12180,609,11571,4200,7371,45227,10,Oct,2023
+Enterprise,Mexico,VTT,"Enterprise,Mexico,VTT",High,91,16,33,3003,150.15,2852.85,1456,1396.85,45727,3,Mar,2025
+Government,Canada,VTT,"Government,Canada,VTT",High,441,15,19,8379,418.95,7960.05,6615,1345.05,45675,1,Jan,2025
+Enterprise,Germany,Amarilla,"Enterprise,Germany,Amarilla",High,23,14,32,736,7.36,728.64,322,406.64,45250,11,Nov,2023
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",High,870,12,33,28710,1435.5,27274.5,10440,16834.5,45567,10,Oct,2024
+Enterprise,France,Amarilla,"Enterprise,France,Amarilla",High,995,14,20,19900,995,18905,13930,4975,45543,9,Sep,2024
+Enterprise,Mexico,Amarilla,"Enterprise,Mexico,Amarilla",High,821,19,29,23809,1190.45,22618.55,15599,7019.55,45668,1,Jan,2025
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",High,208,12,33,6864,343.2,6520.8,2496,4024.8,45311,1,Jan,2024
+Midmarket,Mexico,Amarilla,"Midmarket,Mexico,Amarilla",High,489,16,23,11247,562.35,10684.65,7824,2860.65,45381,3,Mar,2024
+Government,USA,Paseo,"Government,USA,Paseo",High,286,18,20,5720,286,5434,5148,286,45484,7,Jul,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",High,441,11,23,10143,507.15,9635.85,4851,4784.85,45716,2,Feb,2025
+Enterprise,Canada,Carretera,"Enterprise,Canada,Carretera",High,555,13,26,14430,721.5,13708.5,7215,6493.5,45487,7,Jul,2024
+Enterprise,Mexico,Carretera,"Enterprise,Mexico,Carretera",High,84,11,17,1428,71.4,1356.6,924,432.6,45753,4,Apr,2025
+Midmarket,Canada,Carretera,"Midmarket,Canada,Carretera",High,923,13,30,27690,1384.5,26305.5,11999,14306.5,45615,11,Nov,2024
+Midmarket,USA,Montana,"Midmarket,USA,Montana",High,49,20,26,1274,63.7,1210.3,980,230.3,45216,10,Oct,2023
+Small Business,France,Montana,"Small Business,France,Montana",High,166,16,19,3154,157.7,2996.3,2656,340.3,45720,3,Mar,2025
+Government,Mexico,Montana,"Government,Mexico,Montana",High,390,12,26,10140,507,9633,4680,4953,45470,6,Jun,2024
+Government,Canada,Montana,"Government,Canada,Montana",High,1000,15,37,37000,1850,35150,15000,20150,45258,11,Nov,2023
+Government,Mexico,Montana,"Government,Mexico,Montana",High,511,12,26,13286,664.3,12621.7,6132,6489.7,45518,8,Aug,2024
+Small Business,France,Montana,"Small Business,France,Montana",High,730,16,19,13870,693.5,13176.5,11680,1496.5,45273,12,Dec,2023
+Small Business,USA,Paseo,"Small Business,USA,Paseo",High,572,11,34,19448,972.4,18475.6,6292,12183.6,45270,12,Dec,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,423,10,28,11844,592.2,11251.8,4230,7021.8,45747,3,Mar,2025
+Enterprise,Mexico,Paseo,"Enterprise,Mexico,Paseo",High,766,13,26,19916,995.8,18920.2,9958,8962.2,45731,3,Mar,2025
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,712,10,28,19936,996.8,18939.2,7120,11819.2,45602,11,Nov,2024
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,160,10,28,4480,224,4256,1600,2656,45388,4,Apr,2024
+Government,France,Paseo,"Government,France,Paseo",High,701,18,20,14020,701,13319,12618,701,45577,10,Oct,2024
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",High,824,17,26,21424,1071.2,20352.8,14008,6344.8,45212,10,Oct,2023
+Small Business,Mexico,Paseo,"Small Business,Mexico,Paseo",High,271,20,36,9756,487.8,9268.2,5420,3848.2,45187,9,Sep,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,514,10,28,14392,719.6,13672.4,5140,8532.4,45233,11,Nov,2023
+Midmarket,Mexico,Paseo,"Midmarket,Mexico,Paseo",High,491,18,27,13257,662.85,12594.15,8838,3756.15,45664,1,Jan,2025
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,899,10,28,25172,1258.6,23913.4,8990,14923.4,45563,9,Sep,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",High,230,17,31,7130,356.5,6773.5,3910,2863.5,45557,9,Sep,2024
+Government,USA,Velo,"Government,USA,Velo",High,114,13,22,2508,125.4,2382.6,1482,900.6,45464,6,Jun,2024
+Government,Mexico,Velo,"Government,Mexico,Velo",High,344,17,31,10664,533.2,10130.8,5848,4282.8,45178,9,Sep,2023
+Channel Partners,Canada,VTT,"Channel Partners,Canada,VTT",High,164,15,26,4264,213.2,4050.8,2460,1590.8,45397,4,Apr,2024
+Midmarket,France,VTT,"Midmarket,France,VTT",High,812,16,36,29232,1461.6,27770.4,12992,14778.4,45157,8,Aug,2023
+Government,Canada,VTT,"Government,Canada,VTT",High,666,15,19,12654,632.7,12021.3,9990,2031.3,45643,12,Dec,2024
+Government,USA,VTT,"Government,USA,VTT",High,515,16,33,16995,849.75,16145.25,8240,7905.25,45624,11,Nov,2024
+Enterprise,USA,VTT,"Enterprise,USA,VTT",High,167,15,26,4342,217.1,4124.9,2505,1619.9,45359,3,Mar,2024
+Government,Mexico,VTT,"Government,Mexico,VTT",High,836,19,33,27588,1379.4,26208.6,15884,10324.6,45666,1,Jan,2025
+Government,USA,Amarilla,"Government,USA,Amarilla",High,447,15,28,12516,625.8,11890.2,6705,5185.2,45488,7,Jul,2024
+Government,France,Amarilla,"Government,France,Amarilla",High,976,14,26,25376,1268.8,24107.2,13664,10443.2,45612,11,Nov,2024
+Government,Canada,Amarilla,"Government,Canada,Amarilla",High,780,13,25,19500,975,18525,10140,8385,45116,7,Jul,2023
+Midmarket,USA,Amarilla,"Midmarket,USA,Amarilla",High,501,15,22,11022,551.1,10470.9,7515,2955.9,45279,12,Dec,2023
+Government,France,Carretera,"Government,France,Carretera",High,585,11,38,22230,1111.5,21118.5,6435,14683.5,45558,9,Sep,2024
+Channel Partners,Mexico,Montana,"Channel Partners,Mexico,Montana",High,543,10,22,11946,597.3,11348.7,5430,5918.7,45267,12,Dec,2023
+Government,Germany,Paseo,"Government,Germany,Paseo",High,328,15,32,10496,524.8,9971.2,4920,5051.2,45312,1,Jan,2024
+Government,France,VTT,"Government,France,VTT",High,288,13,36,10368,518.4,9849.6,3744,6105.6,45290,12,Dec,2023
+Government,Germany,VTT,"Government,Germany,VTT",High,727,19,25,18175,908.75,17266.25,13813,3453.25,45755,4,Apr,2025
+Channel Partners,Canada,Amarilla,"Channel Partners,Canada,Amarilla",High,961,18,23,22103,1105.15,20997.85,17298,3699.85,45050,5,May,2023
+Midmarket,USA,Carretera,"Midmarket,USA,Carretera",High,48,17,31,1488,74.4,1413.6,816,597.6,45500,7,Jul,2024
+Midmarket,USA,VTT,"Midmarket,USA,VTT",High,256,20,36,9216,460.8,8755.2,5120,3635.2,45253,11,Nov,2023
+Government,Canada,Carretera,"Government,Canada,Carretera",High,382,17,32,12224,611.2,11612.8,6494,5118.8,45255,11,Nov,2023
+Government,France,Carretera,"Government,France,Carretera",High,769,11,38,29222,1461.1,27760.9,8459,19301.9,45433,5,May,2024
+Government,Germany,Carretera,"Government,Germany,Carretera",High,740,18,27,19980,999,18981,13320,5661,45452,6,Jun,2024
+Government,USA,Montana,"Government,USA,Montana",High,369,10,26,9594,479.7,9114.3,3690,5424.3,45086,6,Jun,2023
+Government,USA,Montana,"Government,USA,Montana",High,429,10,26,11154,557.7,10596.3,4290,6306.3,45602,11,Nov,2024
+Channel Partners,Mexico,Montana,"Channel Partners,Mexico,Montana",High,45,10,22,990,9.9,980.1,450,530.1,45088,6,Jun,2023
+Government,Mexico,Montana,"Government,Mexico,Montana",High,253,12,26,6578,328.9,6249.1,3036,3213.1,45505,8,Aug,2024
+Government,Canada,Montana,"Government,Canada,Montana",High,265,15,37,9805,490.25,9314.75,3975,5339.75,45295,1,Jan,2024
+Government,USA,Paseo,"Government,USA,Paseo",High,328,18,20,6560,328,6232,5904,328,45728,3,Mar,2025
+Small Business,Germany,Paseo,"Small Business,Germany,Paseo",High,201,17,26,5226,261.3,4964.7,3417,1547.7,45578,10,Oct,2024
+Government,USA,Paseo,"Government,USA,Paseo",High,833,18,20,16660,833,15827,14994,833,45341,2,Feb,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",High,620,15,32,19840,992,18848,9300,9548,45474,7,Jul,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",High,707,13,20,14140,707,13433,9191,4242,45638,12,Dec,2024
+Enterprise,Canada,Paseo,"Enterprise,Canada,Paseo",High,64,11,37,2368,118.4,2249.6,704,1545.6,45114,7,Jul,2023
+Channel Partners,Mexico,Paseo,"Channel Partners,Mexico,Paseo",High,324,20,32,10368,518.4,9849.6,6480,3369.6,45294,1,Jan,2024
+Government,France,Paseo,"Government,France,Paseo",High,198,18,20,3960,198,3762,3564,198,45661,1,Jan,2025
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,380,18,33,12540,627,11913,6840,5073,45378,3,Mar,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",High,437,13,20,8740,437,8303,5681,2622,45418,5,May,2024
+Government,Germany,Paseo,"Government,Germany,Paseo",High,820,15,32,26240,1312,24928,12300,12628,45728,3,Mar,2025
+Channel Partners,Germany,Paseo,"Channel Partners,Germany,Paseo",High,354,13,29,10266,513.3,9752.7,4602,5150.7,45749,4,Apr,2025
+Midmarket,France,Velo,"Midmarket,France,Velo",High,339,10,29,9831,491.55,9339.45,3390,5949.45,45570,10,Oct,2024
+Government,Canada,Velo,"Government,Canada,Velo",High,584,17,26,15184,759.2,14424.8,9928,4496.8,45525,8,Aug,2024
+Government,France,Velo,"Government,France,Velo",High,813,15,31,25203,1260.15,23942.85,12195,11747.85,45530,8,Aug,2024
+Channel Partners,Mexico,Velo,"Channel Partners,Mexico,Velo",High,505,18,23,11615,580.75,11034.25,9090,1944.25,45378,3,Mar,2024
+Midmarket,Germany,Velo,"Midmarket,Germany,Velo",High,707,10,32,22624,1131.2,21492.8,7070,14422.8,45289,12,Dec,2023
+Channel Partners,Mexico,Velo,"Channel Partners,Mexico,Velo",High,56,18,23,1288,64.4,1223.6,1008,215.6,45728,3,Mar,2025
+Small Business,Mexico,Velo,"Small Business,Mexico,Velo",High,390,10,27,10530,526.5,10003.5,3900,6103.5,45756,4,Apr,2025
+Channel Partners,Germany,Velo,"Channel Partners,Germany,Velo",High,866,16,23,19918,995.9,18922.1,13856,5066.1,45600,11,Nov,2024
+Enterprise,Canada,VTT,"Enterprise,Canada,VTT",High,917,12,19,17423,871.15,16551.85,11004,5547.85,45341,2,Feb,2024
+Midmarket,Canada,VTT,"Midmarket,Canada,VTT",High,781,14,32,24992,1249.6,23742.4,10934,12808.4,45743,3,Mar,2025
+Enterprise,Canada,Amarilla,"Enterprise,Canada,Amarilla",High,377,16,30,11310,565.5,10744.5,6032,4712.5,45732,3,Mar,2025
+Government,France,Amarilla,"Government,France,Amarilla",High,536,14,26,13936,696.8,13239.2,7504,5735.2,45242,11,Nov,2023
+Channel Partners,Mexico,Amarilla,"Channel Partners,Mexico,Amarilla",High,122,17,27,3294,164.7,3129.3,2074,1055.3,45189,9,Sep,2023
+Channel Partners,Germany,Amarilla,"Channel Partners,Germany,Amarilla",High,591,18,36,21276,1063.8,20212.2,10638,9574.2,45349,2,Feb,2024
+Government,Mexico,Carretera,"Government,Mexico,Carretera",High,965,11,23,22195,1109.75,21085.25,10615,10470.25,45700,2,Feb,2025
+Government,USA,Carretera,"Government,USA,Carretera",High,827,10,16,13232,661.6,12570.4,8270,4300.4,45254,11,Nov,2023
+Government,USA,Carretera,"Government,USA,Carretera",High,192,10,16,3072,153.6,2918.4,1920,998.4,45044,4,Apr,2023
+Government,Germany,Carretera,"Government,Germany,Carretera",High,286,18,27,7722,386.1,7335.9,5148,2187.9,45196,9,Sep,2023
+Government,France,Montana,"Government,France,Montana",High,396,16,36,14256,712.8,13543.2,6336,7207.2,45615,11,Nov,2024
+Government,USA,Montana,"Government,USA,Montana",High,219,10,26,5694,284.7,5409.3,2190,3219.3,45715,2,Feb,2025
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",High,619,13,18,11142,557.1,10584.9,8047,2537.9,45125,7,Jul,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",High,482,13,20,9640,482,9158,6266,2892,45757,4,Apr,2025
+Midmarket,USA,Paseo,"Midmarket,USA,Paseo",High,351,18,23,8073,403.65,7669.35,6318,1351.35,45305,1,Jan,2024
+Channel Partners,France,Paseo,"Channel Partners,France,Paseo",High,71,12,38,2698,134.9,2563.1,852,1711.1,45509,8,Aug,2024
+Government,Germany,VTT,"Government,Germany,VTT",High,626,19,25,15650,782.5,14867.5,11894,2973.5,45639,12,Dec,2024
+Channel Partners,France,Amarilla,"Channel Partners,France,Amarilla",High,548,14,23,12604,630.2,11973.8,7672,4301.8,45704,2,Feb,2025
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",High,209,11,36,7524,376.2,7147.8,2299,4848.8,45149,8,Aug,2023
+Small Business,Mexico,Carretera,"Small Business,Mexico,Carretera",High,294,11,38,11172,558.6,10613.4,3234,7379.4,45564,9,Sep,2024
+Enterprise,France,Carretera,"Enterprise,France,Carretera",High,291,18,31,9021,451.05,8569.95,5238,3331.95,45422,5,May,2024
+Small Business,Canada,Carretera,"Small Business,Canada,Carretera",High,961,14,25,24025,1201.25,22823.75,13454,9369.75,45564,9,Sep,2024
+Small Business,USA,Carretera,"Small Business,USA,Carretera",High,421,13,20,8420,421,7999,5473,2526,45565,9,Sep,2024
+Midmarket,Germany,Carretera,"Midmarket,Germany,Carretera",High,849,12,24,20376,1018.8,19357.2,10188,9169.2,45385,4,Apr,2024
+Midmarket,Canada,Carretera,"Midmarket,Canada,Carretera",High,964,13,30,28920,1446,27474,12532,14942,45361,3,Mar,2024
+Enterprise,Mexico,Carretera,"Enterprise,Mexico,Carretera",High,692,11,17,11764,588.2,11175.8,7612,3563.8,45706,2,Feb,2025
+Government,Canada,Montana,"Government,Canada,Montana",High,812,15,37,30044,1502.2,28541.8,12180,16361.8,45409,4,Apr,2024
+Government,Germany,Montana,"Government,Germany,Montana",High,114,15,18,2052,102.6,1949.4,1710,239.4,45477,7,Jul,2024
+Government,Canada,Montana,"Government,Canada,Montana",High,897,15,37,33189,1659.45,31529.55,13455,18074.55,45705,2,Feb,2025
+Government,Canada,Montana,"Government,Canada,Montana",High,876,15,37,32412,1620.6,30791.4,13140,17651.4,45517,8,Aug,2024
+Government,Mexico,Montana,"Government,Mexico,Montana",High,424,12,26,11024,551.2,10472.8,5088,5384.8,45727,3,Mar,2025
+Midmarket,Canada,Montana,"Midmarket,Canada,Montana",High,133,10,21,2793,139.65,2653.35,1330,1323.35,45722,3,Mar,2025
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,563,10,28,15764,788.2,14975.8,5630,9345.8,45662,1,Jan,2025
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,775,18,33,25575,1278.75,24296.25,13950,10346.25,45460,6,Jun,2024
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,652,18,33,21516,1075.8,20440.2,11736,8704.2,45587,10,Oct,2024
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",High,953,16,22,20966,1048.3,19917.7,15248,4669.7,45286,12,Dec,2023
+Government,France,Paseo,"Government,France,Paseo",High,437,18,20,8740,437,8303,7866,437,45100,6,Jun,2023
+Government,Canada,Paseo,"Government,Canada,Paseo",High,653,13,20,13060,653,12407,8489,3918,45622,11,Nov,2024
+Channel Partners,Canada,Paseo,"Channel Partners,Canada,Paseo",High,659,10,34,22406,1120.3,21285.7,6590,14695.7,45285,12,Dec,2023
+Government,USA,Paseo,"Government,USA,Paseo",High,848,18,20,16960,848,16112,15264,848,45173,9,Sep,2023
+Government,France,Paseo,"Government,France,Paseo",High,549,18,20,10980,549,10431,9882,549,45694,2,Feb,2025
+Enterprise,Mexico,Velo,"Enterprise,Mexico,Velo",High,62,16,25,1550,77.5,1472.5,992,480.5,45236,11,Nov,2023
+Government,USA,Velo,"Government,USA,Velo",High,658,13,22,14476,723.8,13752.2,8554,5198.2,45286,12,Dec,2023
+Small Business,USA,Velo,"Small Business,USA,Velo",High,144,15,19,2736,136.8,2599.2,2160,439.2,45400,4,Apr,2024
+Small Business,Canada,Velo,"Small Business,Canada,Velo",High,333,11,26,8658,432.9,8225.1,3663,4562.1,45250,11,Nov,2023
+Small Business,Germany,Velo,"Small Business,Germany,Velo",High,711,13,32,22752,1137.6,21614.4,9243,12371.4,45079,6,Jun,2023
+Government,Mexico,VTT,"Government,Mexico,VTT",High,22,19,33,726,7.26,718.74,418,300.74,45652,12,Dec,2024
+Small Business,USA,VTT,"Small Business,USA,VTT",High,953,20,38,36214,1810.7,34403.3,19060,15343.3,45385,4,Apr,2024
+Small Business,Canada,VTT,"Small Business,Canada,VTT",High,660,15,34,22440,1122,21318,9900,11418,45405,4,Apr,2024
+Small Business,Canada,VTT,"Small Business,Canada,VTT",High,466,15,34,15844,792.2,15051.8,6990,8061.8,45292,1,Jan,2024
+Small Business,USA,VTT,"Small Business,USA,VTT",High,139,20,38,5282,264.1,5017.9,2780,2237.9,45717,3,Mar,2025
+Government,France,VTT,"Government,France,VTT",High,644,13,36,23184,1159.2,22024.8,8372,13652.8,45135,7,Jul,2023
+Small Business,Canada,Amarilla,"Small Business,Canada,Amarilla",High,744,18,36,26784,1339.2,25444.8,13392,12052.8,45381,3,Mar,2024
+Enterprise,USA,Amarilla,"Enterprise,USA,Amarilla",High,443,19,37,16391,819.55,15571.45,8417,7154.45,45455,6,Jun,2024
+Channel Partners,France,Amarilla,"Channel Partners,France,Amarilla",High,685,14,23,15755,787.75,14967.25,9590,5377.25,45407,4,Apr,2024
+Midmarket,Canada,Amarilla,"Midmarket,Canada,Amarilla",High,338,19,23,7774,388.7,7385.3,6422,963.3,45160,8,Aug,2023
+Channel Partners,USA,Amarilla,"Channel Partners,USA,Amarilla",High,987,11,36,35532,1776.6,33755.4,10857,22898.4,45199,9,Sep,2023
+Government,France,Amarilla,"Government,France,Amarilla",High,903,14,26,23478,1173.9,22304.1,12642,9662.1,45518,8,Aug,2024
+Government,Mexico,Amarilla,"Government,Mexico,Amarilla",High,580,12,33,19140,957,18183,6960,11223,45684,1,Jan,2025
+Midmarket,Mexico,Amarilla,"Midmarket,Mexico,Amarilla",High,13,16,23,299,2.99,296.01,208,88.01,45169,8,Aug,2023
+Enterprise,France,Carretera,"Enterprise,France,Carretera",High,958,18,31,29698,1484.9,28213.1,17244,10969.1,45751,4,Apr,2025
+Enterprise,Germany,Carretera,"Enterprise,Germany,Carretera",High,286,13,16,4576,228.8,4347.2,3718,629.2,45177,9,Sep,2023
+Enterprise,Germany,Carretera,"Enterprise,Germany,Carretera",High,675,13,16,10800,540,10260,8775,1485,45688,1,Jan,2025
+Small Business,Mexico,Montana,"Small Business,Mexico,Montana",High,838,18,26,21788,1089.4,20698.6,15084,5614.6,45670,1,Jan,2025
+Government,Germany,Paseo,"Government,Germany,Paseo",High,841,15,32,26912,1345.6,25566.4,12615,12951.4,45541,9,Sep,2024
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,872,18,33,28776,1438.8,27337.2,15696,11641.2,45705,2,Feb,2025
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,570,10,28,15960,798,15162,5700,9462,45151,8,Aug,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,897,10,28,25116,1255.8,23860.2,8970,14890.2,45171,9,Sep,2023
+Midmarket,Canada,Paseo,"Midmarket,Canada,Paseo",High,356,18,33,11748,587.4,11160.6,6408,4752.6,45273,12,Dec,2023
+Government,USA,Paseo,"Government,USA,Paseo",High,276,18,20,5520,276,5244,4968,276,45269,12,Dec,2023
+Enterprise,Germany,Paseo,"Enterprise,Germany,Paseo",High,934,14,17,15878,793.9,15084.1,13076,2008.1,45494,7,Jul,2024
+Midmarket,Germany,Paseo,"Midmarket,Germany,Paseo",High,325,13,18,5850,292.5,5557.5,4225,1332.5,45528,8,Aug,2024
+Government,USA,Paseo,"Government,USA,Paseo",High,119,18,20,2380,119,2261,2142,119,45056,5,May,2023
+Government,Mexico,Paseo,"Government,Mexico,Paseo",High,324,10,28,9072,453.6,8618.4,3240,5378.4,45721,3,Mar,2025
+Channel Partners,USA,Paseo,"Channel Partners,USA,Paseo",High,538,16,22,11836,591.8,11244.2,8608,2636.2,45440,5,May,2024
+Government,France,Paseo,"Government,France,Paseo",High,393,18,20,7860,393,7467,7074,393,45111,7,Jul,2023
+Channel Partners,Mexico,Velo,"Channel Partners,Mexico,Velo",High,443,18,23,10189,509.45,9679.55,7974,1705.55,45757,4,Apr,2025
+Midmarket,France,Velo,"Midmarket,France,Velo",High,535,10,29,15515,775.75,14739.25,5350,9389.25,45047,5,May,2023
+Enterprise,France,Velo,"Enterprise,France,Velo",High,868,15,17,14756,737.8,14018.2,13020,998.2,45055,5,May,2023
+Small Business,USA,Velo,"Small Business,USA,Velo",High,180,15,19,3420,171,3249,2700,549,45165,8,Aug,2023
+Enterprise,USA,Velo,"Enterprise,USA,Velo",High,733,10,17,12461,623.05,11837.95,7330,4507.95,45593,10,Oct,2024
+Channel Partners,USA,Velo,"Channel Partners,USA,Velo",High,223,12,27,6021,301.05,5719.95,2676,3043.95,45591,10,Oct,2024
+Government,Canada,VTT,"Government,Canada,VTT",High,55,15,19,1045,52.25,992.75,825,167.75,45255,11,Nov,2023
+Midmarket,Germany,VTT,"Midmarket,Germany,VTT",High,954,18,18,17172,858.6,16313.4,17172,-858.6,45606,11,Nov,2024
+Government,USA,VTT,"Government,USA,VTT",High,746,16,33,24618,1230.9,23387.1,11936,11451.1,45391,4,Apr,2024
+Midmarket,Germany,VTT,"Midmarket,Germany,VTT",High,272,18,18,4896,244.8,4651.2,4896,-244.8,45274,12,Dec,2023
+Enterprise,Canada,VTT,"Enterprise,Canada,VTT",High,267,12,19,5073,253.65,4819.35,3204,1615.35,45694,2,Feb,2025
+Enterprise,Germany,VTT,"Enterprise,Germany,VTT",High,626,17,25,15650,782.5,14867.5,10642,4225.5,45395,4,Apr,2024
+Government,France,VTT,"Government,France,VTT",High,17,13,36,612,6.12,605.88,221,384.88,45560,9,Sep,2024
+Small Business,France,Amarilla,"Small Business,France,Amarilla",High,213,16,21,4473,223.65,4249.35,3408,841.35,45449,6,Jun,2024
+Small Business,Mexico,Amarilla,"Small Business,Mexico,Amarilla",High,965,10,36,34740,1737,33003,9650,23353,45154,8,Aug,2023
+Government,Mexico,Montana,"Government,Mexico,Montana",High,326,12,26,8476,423.8,8052.2,3912,4140.2,45394,4,Apr,2024
+Government,Canada,Paseo,"Government,Canada,Paseo",High,788,13,20,15760,788,14972,10244,4728,45733,3,Mar,2025
+Channel Partners,USA,VTT,"Channel Partners,USA,VTT",High,666,18,23,15318,765.9,14552.1,11988,2564.1,45517,8,Aug,2024
