@@ -33,7 +33,7 @@ Integration: Through RESTful APIs and service principals, Power BI offers robust
 
 This layered approach not only ensures robust data connectivity and high performance but also supports extensibility and automation—critical for modern analytics environments. By integrating a gateway for secure on-premises connectivity, RESTful APIs for extensive programmability, and service principals for secure automation, Power BI delivers a holistic platform that adapts to diverse business needs.
 
-![Power BI Architecture Diagram](https://github.com/user-attachments/assets/05ab7441-3f7e-430e-ac83-3a33957cea4e)
+![architecture](https://github.com/user-attachments/assets/708d59c9-8999-4994-adfe-12cd17ae4b8c)
 
 # Power BI Report: Overview, Purpose, Features, and Benefits
 ## Core Purpose of a Power BI Report
@@ -77,9 +77,7 @@ Conclusion
 
 A Power BI report is an indispensable tool for businesses looking to optimize their data visualization, analytics, and business intelligence capabilities. By leveraging its powerful features, organizations can gain real-time insights, improve operational efficiency, and drive data-informed strategies for long-term success.
 
-![Power BI Report](https://github.com/user-attachments/assets/9618f269-6efc-406e-8418-01fdb29b9273)
-
-link: https://shorturl.at/h1ccY
+![report](https://github.com/user-attachments/assets/c916ce41-1602-4aaa-84ee-c58f0a6be7ac)
 
 ### Assessment of the Report Layout and Design
 
@@ -180,7 +178,7 @@ Key Benefits for Organizations & Stakeholders
 
 A Power BI dashboard is a powerful BI tool that consolidates key metrics into an easy-to-read, interactive interface. By enabling real-time data monitoring, advanced analytics, and seamless collaboration, organizations can drive better decision-making, optimize workflows, and stay competitive in a rapidly evolving business environment.
 
-![Power BI Dashboard](https://github.com/user-attachments/assets/c79c7184-6382-4429-b352-2079276102d6)
+![dashboard](https://github.com/user-attachments/assets/9c4d71ee-fa61-4e9c-872c-4ae70315259c)
 
 The dashboard layout appears to be generally intuitive and easy to navigate, but there are areas where improvements could enhance usability and adherence to best practices in data visualization. Below is an assessment based on the provided image:
 
@@ -280,7 +278,7 @@ Key Benefits for Organizations & Stakeholders
 
 A Power BI app is an essential tool for organizations looking to enhance their business intelligence capabilities. By providing a centralized, interactive platform for accessing dashboards, reports, and datasets, Power BI apps empower users to make data-driven decisions, collaborate effectively, and monitor performance in real time. With features that promote efficiency, security, and user engagement, Power BI apps are invaluable assets for organizations aiming to leverage data for strategic advantage.
 
-![Power BI App](https://github.com/user-attachments/assets/73c350ad-c8d6-4e86-a020-2779396b7e78)
+![app](https://github.com/user-attachments/assets/96926dd7-fa3b-4c25-b1c3-2725c1cb3397)
 
 The app layout appears to be well-structured and largely adheres to best practices in data visualization. Here's an assessment based on the provided image:
 
