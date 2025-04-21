@@ -77,7 +77,7 @@ Conclusion
 
 A Power BI report is an indispensable tool for businesses looking to optimize their data visualization, analytics, and business intelligence capabilities. By leveraging its powerful features, organizations can gain real-time insights, improve operational efficiency, and drive data-informed strategies for long-term success.
 
-![report](https://github.com/user-attachments/assets/c916ce41-1602-4aaa-84ee-c58f0a6be7ac)
+![Report](https://github.com/user-attachments/assets/388604c0-fefd-484a-b2c7-cf1eeae50e30)
 
 ### Assessment of the Report Layout and Design
 
@@ -178,7 +178,7 @@ Key Benefits for Organizations & Stakeholders
 
 A Power BI dashboard is a powerful BI tool that consolidates key metrics into an easy-to-read, interactive interface. By enabling real-time data monitoring, advanced analytics, and seamless collaboration, organizations can drive better decision-making, optimize workflows, and stay competitive in a rapidly evolving business environment.
 
-![dashboard](https://github.com/user-attachments/assets/9c4d71ee-fa61-4e9c-872c-4ae70315259c)
+![Dashboard](https://github.com/user-attachments/assets/3d1b9655-07d5-4929-b9b1-cce9499ee266)
 
 The dashboard layout appears to be generally intuitive and easy to navigate, but there are areas where improvements could enhance usability and adherence to best practices in data visualization. Below is an assessment based on the provided image:
 
@@ -260,11 +260,18 @@ Key Benefits for Organizations & Stakeholders
 The availability and use of Power BI Mobile Reports offer significant benefits:
 
 ✔️ Enhanced Decision-Making: Facilitates faster and more informed decisions by providing access to critical data at the point of action.
+
 ✔️ Increased Productivity: Saves time by eliminating the need to wait for access to a desktop to view reports.
+
 ✔️ Improved Collaboration: Enables easier sharing of insights and discussions around data among team members, regardless of location.
+
 ✔️ Greater Accessibility: Makes business intelligence accessible to a broader range of employees, democratizing data access.
+
 ✔️ Real-time Awareness: Keeps stakeholders informed with the latest business performance data, allowing for proactive responses.
+
 ✔️ Optimized User Experience: Provides a touch-friendly and intuitively designed interface for interacting with reports on mobile devices.
+
+![Mobile](https://github.com/user-attachments/assets/982c7f8d-6f3f-4e84-80a1-34a6face8355)
 
 # Conclusion
 Power BI Mobile Reports are an indispensable extension of the Power BI platform for organizations that require their workforce to be data-driven and agile in a mobile world. By providing an optimized, interactive, and secure way to access business intelligence on smartphones and tablets, these reports ensure that crucial insights are always within reach, empowering users to make timely and effective decisions that contribute to overall business success.
@@ -319,7 +326,7 @@ Key Benefits for Organizations & Stakeholders
 
 A Power BI app is an essential tool for organizations looking to enhance their business intelligence capabilities. By providing a centralized, interactive platform for accessing dashboards, reports, and datasets, Power BI apps empower users to make data-driven decisions, collaborate effectively, and monitor performance in real time. With features that promote efficiency, security, and user engagement, Power BI apps are invaluable assets for organizations aiming to leverage data for strategic advantage.
 
-![app](https://github.com/user-attachments/assets/96926dd7-fa3b-4c25-b1c3-2725c1cb3397)
+![App](https://github.com/user-attachments/assets/5e3acf89-cfda-402a-8790-d50e6f5dd59c)
 
 The app layout appears to be well-structured and largely adheres to best practices in data visualization. Here's an assessment based on the provided image:
 
