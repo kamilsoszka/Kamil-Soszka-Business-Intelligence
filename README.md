@@ -479,7 +479,7 @@ Benefit: Keeps the scorecard relevant and ensures timely monitoring and action.
 ## Consider Additional Relevant Metrics:
 Recommendation: Depending on the business, assess if other related financial or operational metrics should be included in this scorecard for a more holistic view (e.g., Gross Margin, Operating Expenses).
 Benefit: Provides a more complete picture of financial performance and interdependencies between metrics.
-## Optimize for Mobile Layout:
+## Optimize for Layout:
 Recommendation: As this is a scorecard, ensure the mobile layout has been specifically designed in Power BI to ensure the visuals are optimally arranged and easy to interact with on a phone screen.
 Benefit: Guarantees a positive user experience for mobile access.
 By implementing these recommendations, the "DAX Scorecard" can become an even more powerful tool for monitoring performance, driving accountability, and facilitating data-driven decision-making on the go.
