@@ -352,11 +352,11 @@ The app layout appears to be well-structured and largely adheres to best practic
 
 Overall, the app layout is intuitive and facilitates quick access to insights. The visualizations are appropriate for the data being represented and adhere to principles of clarity and consistency.
 
-# Power BI Mobile Scorecard: Overview, Purpose, Features, and Benefits (Power BI Goals/Metrics)
-Power BI Mobile Scorecards, often referred to as Power BI Goals or Metrics, are a feature within the Power BI service and its mobile applications designed to provide a consolidated and easily digestible view of key business objectives and their performance against targets. They offer a structured way to track, monitor, and drive accountability around the metrics that matter most to an organization, accessible directly from mobile devices.
+# Power BI Scorecard: Overview, Purpose, Features, and Benefits (Power BI Goals/Metrics)
+Power BI Scorecards, often referred to as Power BI Goals or Metrics, are a feature within the Power BI service and its mobile applications designed to provide a consolidated and easily digestible view of key business objectives and their performance against targets. They offer a structured way to track, monitor, and drive accountability around the metrics that matter most to an organization, accessible directly from mobile devices.
 
-## Core Purpose of a Power BI Mobile Scorecard
-The core purpose of a Power BI Mobile Scorecard is to centralize and simplify the tracking of key performance indicators (KPIs) and strategic goals for users on the go. They aim to move beyond passive data consumption by enabling users to actively monitor progress, understand the health of key metrics at a glance, and contribute updates directly from their mobile devices. This facilitates a performance-driven culture and ensures that critical objectives remain top of mind, regardless of location.
+## Core Purpose of a Power BI Scorecard
+The core purpose of a Power BI Scorecard is to centralize and simplify the tracking of key performance indicators (KPIs) and strategic goals for users on the go. They aim to move beyond passive data consumption by enabling users to actively monitor progress, understand the health of key metrics at a glance, and contribute updates directly from their mobile devices. This facilitates a performance-driven culture and ensures that critical objectives remain top of mind, regardless of location.
 
 ## Features & Functionality
 ### Power BI Mobile Scorecards offer a focused set of features designed for effective mobile performance tracking:
@@ -392,7 +392,7 @@ Implementing and utilizing Power BI Mobile Scorecards offers several key benefit
 ✔️ Simplified Performance Reviews: Provides a consolidated history of performance against goals, aiding in reviews and performance discussions.
 ✔️ Data-Driven Culture: Fosters a culture where performance is continuously monitored, discussed, and acted upon based on data.
 ## Conclusion
-Power BI Mobile Scorecards (Goals/Metrics) are a powerful addition to the Power BI suite, specifically designed to make performance tracking accessible and actionable on mobile devices. By providing a centralized, intuitive, and collaborative platform for monitoring KPIs and strategic objectives, they empower organizations to stay focused on what matters, drive accountability, and react swiftly to performance trends, ultimately contributing to improved business outcomes in a dynamic environment.
+Power BI Scorecards (Goals/Metrics) are a powerful addition to the Power BI suite, specifically designed to make performance tracking accessible and actionable on mobile devices. By providing a centralized, intuitive, and collaborative platform for monitoring KPIs and strategic objectives, they empower organizations to stay focused on what matters, drive accountability, and react swiftly to performance trends, ultimately contributing to improved business outcomes in a dynamic environment.
 
 ![Scorecard](https://github.com/user-attachments/assets/2095b114-6795-4336-af7d-618421404d3a)
 
@@ -406,7 +406,7 @@ Visual Cues: The use of status colors and trend arrows is effective for quickly 
 Completeness: For a basic view of these financial targets, it appears reasonably complete. However, without knowing the specific business context, it's hard to say if other critical metrics are missing.
 # Recommendations:
 
-To enhance this Power BI Mobile Scorecard and make it even more effective, consider the following recommendations:
+To enhance this Power BI Scorecard and make it even more effective, consider the following recommendations:
 
 ## Add Contextual Information:
 Recommendation: Include a brief description for each goal (e.g., "Sales Target - Q4 2025 for Region North"). This clarifies the scope of the goal.
@@ -433,6 +433,6 @@ Benefit: Keeps the scorecard relevant and ensures timely monitoring and action.
 Recommendation: Depending on the business, assess if other related financial or operational metrics should be included in this scorecard for a more holistic view (e.g., Gross Margin, Operating Expenses).
 Benefit: Provides a more complete picture of financial performance and interdependencies between metrics.
 ## Optimize for Mobile Layout:
-Recommendation: As this is a mobile scorecard, ensure the mobile layout has been specifically designed in Power BI to ensure the visuals are optimally arranged and easy to interact with on a phone screen.
+Recommendation: As this is a scorecard, ensure the mobile layout has been specifically designed in Power BI to ensure the visuals are optimally arranged and easy to interact with on a phone screen.
 Benefit: Guarantees a positive user experience for mobile access.
 By implementing these recommendations, the "DAX Scorecard" can become an even more powerful tool for monitoring performance, driving accountability, and facilitating data-driven decision-making on the go.
