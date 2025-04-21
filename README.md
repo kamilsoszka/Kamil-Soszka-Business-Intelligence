@@ -237,27 +237,45 @@ The core purpose of a Power BI Mobile Report is to provide mobile users with con
 Power BI Mobile Reports offer a range of features tailored for the mobile experience:
 
 Mobile-Optimized Layouts: Reports can be specifically designed with a mobile layout view in Power BI Desktop or the Power BI service, allowing creators to arrange and format visuals for optimal viewing in portrait orientation on phones.
+
 Interactive Visualizations: Users can interact with charts, graphs, and other visuals through touch gestures, including tapping data points for tooltips, drilling down into hierarchies, and filtering data.
+
 Accessibility: Supports features like showing report visuals as tables to improve accessibility for users who rely on screen readers.
+
 Data Refresh: Mobile reports display the latest data, benefiting from the scheduled data refreshes set up in the Power BI service.
+
 Annotations and Sharing: Users can annotate report snapshots with text, drawings, or stamps and easily share them with others, facilitating collaboration.
+
 Data Alerts: Users can set up data alerts on dashboards to be notified when key metrics exceed or fall below a predefined threshold.
+
 Scanning Barcodes and QR Codes: In some cases, reports can be filtered by scanning barcodes or QR codes, connecting physical items to relevant data.
+
 Integration with Device Features: Can integrate with device features like Siri shortcuts (on iOS) for quick access to reports.
+
 Offline Access (for some content): Depending on configuration, some content may be available for offline viewing.
+
 Full Screen Mode: Allows users to view reports in full screen for a less obstructed view of the data.
+
 Copilot Integration: Provides AI-driven summaries and insights for reports directly within the mobile app.
+
 NFC Support: Enables connecting physical locations or items to Power BI content by tapping an NFC tag.
-Role in Business Intelligence & Analytics
+
+## Role in Business Intelligence & Analytics
 Power BI Mobile Reports play a crucial role in modern business intelligence and analytics by:
 
 Extending BI Reach: Bringing data and insights to users who are away from their desks, enabling continuous monitoring and decision-making.
+
 Increasing Data Consumption: Making it easier and more convenient for a wider audience within an organization to access and engage with BI content.
+
 Enabling Real-time Monitoring: Providing access to up-to-date data allows for timely identification of trends, opportunities, and issues.
+
 Improving Agility: Empowering mobile users to react quickly to changing business conditions based on readily available information.
+
 Supporting Field and Frontline Workers: Providing essential data and performance metrics to employees who are typically away from traditional workstations.
+
 Key Benefits for Organizations & Stakeholders
-The availability and use of Power BI Mobile Reports offer significant benefits:
+
+### The availability and use of Power BI Mobile Reports offer significant benefits:
 
 ✔️ Enhanced Decision-Making: Facilitates faster and more informed decisions by providing access to critical data at the point of action.
 
