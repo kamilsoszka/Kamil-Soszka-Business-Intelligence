@@ -1,0 +1,141 @@
+﻿Segment,Country,Product,Discount Band,Units Sold,Manufacturing Price,Sale Price,Gross Sales,Discounts, Sales,COGS,Profit,Date,Month Number,Month Name,Year
+Midmarket,United States of America,Montana,None,615,5,15,9225,0,9225,6150,3075,41974,12,December,2014
+Government,United States of America,Paseo,None,1143,10,7,8001,0,8001,5715,2286,41913,10,October,2014
+Channel Partners,United States of America,Paseo,None,912,10,12,10944,0,10944,2736,8208,41579,11,November,2013
+Enterprise,United States of America,Velo,None,2821,120,125,352625,0,352625,338520,14105,41852,8,August,2014
+Channel Partners,United States of America,Amarilla,None,1953,260,12,23436,0,23436,5859,17577,41730,4,April,2014
+Channel Partners,United States of America,Amarilla,None,2141,260,12,25692,0,25692,6423,19269,41852,8,August,2014
+Government,United States of America,Amarilla,None,1143,260,7,8001,0,8001,5715,2286,41913,10,October,2014
+Midmarket,United States of America,Amarilla,None,615,260,15,9225,0,9225,6150,3075,41974,12,December,2014
+Channel Partners,United States of America,Carretera,Low,1858,3,12,22296,222.96,22073.04,5574,16499.04,41671,2,February,2014
+Government,United States of America,Carretera,Low,2529,3,7,17703,177.03,17525.97,12645,4880.97,41821,7,July,2014
+Enterprise,United States of America,Carretera,Low,330,3,125,41250,412.5,40837.5,39600,1237.5,41518,9,September,2013
+Small Business,United States of America,Montana,Low,2301,5,300,690300,6903,683397,575250,108147,41730,4,April,2014
+Small Business,United States of America,Montana,Low,2498,5,300,749400,7494,741906,624500,117406,41518,9,September,2013
+Enterprise,United States of America,Montana,Low,663,5,125,82875,828.75,82046.25,79560,2486.25,41548,10,October,2013
+Midmarket,United States of America,Paseo,Low,1514,10,15,22710,227.1,22482.9,15140,7342.9,41671,2,February,2014
+Government,United States of America,Paseo,Low,4492.5,10,7,31447.5,314.475,31133.025,22462.5,8670.525,41730,4,April,2014
+Enterprise,United States of America,Paseo,Low,727,10,125,90875,908.75,89966.25,87240,2726.25,41791,6,June,2014
+Small Business,United States of America,Paseo,Low,2905,10,300,871500,8715,862785,726250,136535,41944,11,November,2014
+Enterprise,United States of America,Velo,Low,663,120,125,82875,828.75,82046.25,79560,2486.25,41548,10,October,2013
+Enterprise,United States of America,VTT,Low,727,250,125,90875,908.75,89966.25,87240,2726.25,41791,6,June,2014
+Channel Partners,United States of America,Amarilla,Low,1989,260,12,23868,238.68,23629.32,5967,17662.32,41518,9,September,2013
+Channel Partners,United States of America,Montana,Low,1142,5,12,13704,274.08,13429.92,3426,10003.92,41791,6,June,2014
+Government,United States of America,Montana,Low,1566,5,20,31320,626.4,30693.6,15660,15033.6,41913,10,October,2014
+Channel Partners,United States of America,Paseo,Low,1142,10,12,13704,274.08,13429.92,3426,10003.92,41791,6,June,2014
+Midmarket,United States of America,Paseo,Low,1925,10,15,28875,577.5,28297.5,19250,9047.5,41609,12,December,2013
+Government,United States of America,Paseo,Low,2013,10,7,14091,281.82,13809.18,10065,3744.18,41609,12,December,2013
+Government,United States of America,Velo,Low,1566,120,20,31320,626.4,30693.6,15660,15033.6,41913,10,October,2014
+Government,United States of America,VTT,Low,266,250,350,93100,1862,91238,69160,22078,41609,12,December,2013
+Government,United States of America,Amarilla,Low,1236,260,20,24720,494.4,24225.6,12360,11865.6,41944,11,November,2014
+Channel Partners,United States of America,Carretera,Low,1947,3,12,23364,700.92,22663.08,5841,16822.08,41883,9,September,2014
+Channel Partners,United States of America,Paseo,Low,1369.5,10,12,16434,493.02,15940.98,4108.5,11832.48,41821,7,July,2014
+Small Business,United States of America,VTT,Low,2844,250,300,853200,25596,827604,711000,116604,41671,2,February,2014
+Government,United States of America,Velo,Low,736,120,20,14720,588.8,14131.2,7360,6771.2,41518,9,September,2013
+Government,United States of America,Carretera,Low,274,3,350,95900,3836,92064,71240,20824,41974,12,December,2014
+Small Business,United States of America,Paseo,Low,2918,10,300,875400,35016,840384,729500,110884,41760,5,May,2014
+Government,United States of America,Paseo,Low,3450,10,350,1207500,48300,1159200,897000,262200,41821,7,July,2014
+Government,United States of America,Paseo,Low,1056,10,20,21120,844.8,20275.2,10560,9715.2,41883,9,September,2014
+Midmarket,United States of America,Paseo,Low,671,10,15,10065,402.6,9662.4,6710,2952.4,41548,10,October,2013
+Government,United States of America,Paseo,Low,274,10,350,95900,3836,92064,71240,20824,41974,12,December,2014
+Channel Partners,United States of America,Velo,Low,1465,120,12,17580,703.2,16876.8,4395,12481.8,41699,3,March,2014
+Government,United States of America,VTT,Low,349,250,350,122150,4886,117264,90740,26524,41518,9,September,2013
+Midmarket,United States of America,Amarilla,Low,671,260,15,10065,402.6,9662.4,6710,2952.4,41548,10,October,2013
+Small Business,United States of America,Carretera,Medium,991,3,300,297300,14865,282435,247750,34685,41791,6,June,2014
+Government,United States of America,Carretera,Medium,570,3,7,3990,199.5,3790.5,2850,940.5,41974,12,December,2014
+Enterprise,United States of America,Montana,Medium,3627,5,125,453375,22668.75,430706.25,435240,-4533.75,41821,7,July,2014
+Enterprise,United States of America,Paseo,Medium,2992,10,125,374000,18700,355300,359040,-3740,41699,3,March,2014
+Government,United States of America,Paseo,Medium,2327,10,7,16289,814.45,15474.55,11635,3839.55,41760,5,May,2014
+Small Business,United States of America,Paseo,Medium,991,10,300,297300,14865,282435,247750,34685,41791,6,June,2014
+Government,United States of America,Paseo,Medium,602,10,350,210700,10535,200165,156520,43645,41791,6,June,2014
+Enterprise,United States of America,Paseo,Medium,861,10,125,107625,5381.25,102243.75,103320,-1076.25,41913,10,October,2014
+Government,United States of America,Paseo,Medium,2663,10,20,53260,2663,50597,26630,23967,41974,12,December,2014
+Midmarket,United States of America,Velo,Medium,555,120,15,8325,416.25,7908.75,5550,2358.75,41640,1,January,2014
+Government,United States of America,Velo,Medium,602,120,350,210700,10535,200165,156520,43645,41791,6,June,2014
+Government,United States of America,Velo,Medium,2832,120,20,56640,2832,53808,28320,25488,41852,8,August,2014
+Enterprise,United States of America,Velo,Medium,861,120,125,107625,5381.25,102243.75,103320,-1076.25,41913,10,October,2014
+Government,United States of America,VTT,Medium,1265,250,20,25300,1265,24035,12650,11385,41579,11,November,2013
+Government,United States of America,VTT,Medium,2663,250,20,53260,2663,50597,26630,23967,41974,12,December,2014
+Government,United States of America,VTT,Medium,570,250,7,3990,199.5,3790.5,2850,940.5,41974,12,December,2014
+Government,United States of America,Carretera,Medium,1117.5,3,20,22350,1341,21009,11175,9834,41640,1,January,2014
+Midmarket,United States of America,Carretera,Medium,2030,3,15,30450,1827,28623,20300,8323,41944,11,November,2014
+Government,United States of America,Carretera,Medium,263,3,7,1841,110.46,1730.54,1315,415.54,41579,11,November,2013
+Channel Partners,United States of America,Montana,Medium,2723,5,12,32676,1960.56,30715.44,8169,22546.44,41944,11,November,2014
+Government,United States of America,Paseo,Medium,727,10,350,254450,15267,239183,189020,50163,41548,10,October,2013
+Enterprise,United States of America,Velo,Medium,2755,120,125,344375,20662.5,323712.5,330600,-6887.5,41671,2,February,2014
+Government,United States of America,Amarilla,Medium,727,260,350,254450,15267,239183,189020,50163,41548,10,October,2013
+Midmarket,United States of America,Paseo,Medium,2198,10,15,32970,1978.2,30991.8,21980,9011.8,41852,8,August,2014
+Midmarket,United States of America,Paseo,Medium,1153,10,15,17295,1037.7,16257.3,11530,4727.3,41913,10,October,2014
+Midmarket,United States of America,VTT,Medium,1153,250,15,17295,1037.7,16257.3,11530,4727.3,41913,10,October,2014
+Government,United States of America,Velo,Medium,547,120,7,3829,268.03,3560.97,2735,825.97,41944,11,November,2014
+Government,United States of America,Carretera,Medium,1761,3,350,616350,43144.5,573205.5,457860,115345.5,41699,3,March,2014
+Midmarket,United States of America,Paseo,Medium,2931,10,15,43965,3077.55,40887.45,29310,11577.45,41518,9,September,2013
+Government,United States of America,Velo,Medium,1421,120,20,28420,1989.4,26430.6,14210,12220.6,41609,12,December,2013
+Small Business,United States of America,Velo,Medium,1372,120,300,411600,28812,382788,343000,39788,41974,12,December,2014
+Small Business,United States of America,Amarilla,Medium,1372,260,300,411600,28812,382788,343000,39788,41974,12,December,2014
+Government,United States of America,Montana,Medium,1282,5,20,25640,2051.2,23588.8,12820,10768.8,41791,6,June,2014
+Government,United States of America,Amarilla,Medium,1282,260,20,25640,2051.2,23588.8,12820,10768.8,41791,6,June,2014
+Government,United States of America,Paseo,Medium,678,10,7,4746,379.68,4366.32,3390,976.32,41852,8,August,2014
+Government,United States of America,Velo,Medium,2907,120,7,20349,1627.92,18721.08,14535,4186.08,41791,6,June,2014
+Small Business,United States of America,VTT,Medium,808,250,300,242400,19392,223008,202000,21008,41609,12,December,2013
+Government,United States of America,Amarilla,Medium,2907,260,7,20349,1627.92,18721.08,14535,4186.08,41791,6,June,2014
+Government,United States of America,VTT,Medium,436.5,250,20,8730,698.4,8031.6,4365,3666.6,41821,7,July,2014
+Enterprise,United States of America,Montana,Medium,2797,5,125,349625,31466.25,318158.75,335640,-17481.25,41974,12,December,2014
+Midmarket,United States of America,Paseo,Medium,3675,10,15,55125,4961.25,50163.75,36750,13413.75,41730,4,April,2014
+Enterprise,United States of America,Paseo,Medium,2797,10,125,349625,31466.25,318158.75,335640,-17481.25,41974,12,December,2014
+Channel Partners,United States of America,VTT,Medium,1956,250,12,23472,2112.48,21359.52,5868,15491.52,41640,1,January,2014
+Government,United States of America,VTT,Medium,1351.5,250,350,473025,42572.25,430452.75,351390,79062.75,41730,4,April,2014
+Small Business,United States of America,VTT,Medium,1867,250,300,560100,50409,509691,466750,42941,41883,9,September,2014
+Government,United States of America,Amarilla,Medium,2071,260,350,724850,65236.5,659613.5,538460,121153.5,41883,9,September,2014
+Government,United States of America,Paseo,Medium,973,10,20,19460,1751.4,17708.6,9730,7978.6,41699,3,March,2014
+Channel Partners,United States of America,Carretera,High,386,3,12,4632,463.2,4168.8,1158,3010.8,41548,10,October,2013
+Government,United States of America,Montana,High,2328,5,7,16296,1629.6,14666.4,11640,3026.4,41883,9,September,2014
+Channel Partners,United States of America,Paseo,High,386,10,12,4632,463.2,4168.8,1158,3010.8,41548,10,October,2013
+Enterprise,United States of America,Carretera,High,3445.5,3,125,430687.5,43068.75,387618.75,413460,-25841.25,41730,4,April,2014
+Government,United States of America,Montana,High,2313,5,350,809550,80955,728595,601380,127215,41760,5,May,2014
+Enterprise,United States of America,Montana,High,1804,5,125,225500,22550,202950,216480,-13530,41579,11,November,2013
+Midmarket,United States of America,Velo,High,790,120,15,11850,1185,10665,7900,2765,41760,5,May,2014
+Enterprise,United States of America,Velo,High,1596,120,125,199500,19950,179550,191520,-11970,41883,9,September,2014
+Small Business,United States of America,Velo,High,2294,120,300,688200,68820,619380,573500,45880,41548,10,October,2013
+Government,United States of America,VTT,High,2807,250,350,982450,98245,884205,729820,154385,41852,8,August,2014
+Small Business,United States of America,VTT,High,2294,250,300,688200,68820,619380,573500,45880,41548,10,October,2013
+Enterprise,United States of America,Amarilla,High,579,260,125,72375,7237.5,65137.5,69480,-4342.5,41640,1,January,2014
+Small Business,United States of America,Amarilla,High,2993,260,300,897900,89790,808110,748250,59860,41699,3,March,2014
+Government,United States of America,VTT,High,1579,250,7,11053,1215.83,9837.17,7895,1942.17,41699,3,March,2014
+Midmarket,United States of America,Amarilla,High,3199.5,260,15,47992.5,5279.175,42713.325,31995,10718.325,41821,7,July,2014
+Government,United States of America,Paseo,High,380,10,7,2660,292.6,2367.4,1900,467.4,41518,9,September,2013
+Midmarket,United States of America,Montana,High,677,5,15,10155,1218.6,8936.4,6770,2166.4,41699,3,March,2014
+Small Business,United States of America,Paseo,High,3495,10,300,1048500,125820,922680,873750,48930,41640,1,January,2014
+Government,United States of America,Velo,High,986,120,350,345100,41412,303688,256360,47328,41913,10,October,2014
+Government,United States of America,VTT,High,986,250,350,345100,41412,303688,256360,47328,41913,10,October,2014
+Enterprise,United States of America,VTT,High,2387,250,125,298375,35805,262570,286440,-23870,41944,11,November,2014
+Government,United States of America,Amarilla,High,270,260,350,94500,11340,83160,70200,12960,41671,2,February,2014
+Midmarket,United States of America,Amarilla,High,2548,260,15,38220,4586.4,33633.6,25480,8153.6,41579,11,November,2013
+Midmarket,United States of America,Carretera,High,2567,3,15,38505,5005.65,33499.35,25670,7829.35,41791,6,June,2014
+Midmarket,United States of America,VTT,High,2567,250,15,38505,5005.65,33499.35,25670,7829.35,41791,6,June,2014
+Government,United States of America,Montana,High,982.5,5,350,343875,44703.75,299171.25,255450,43721.25,41640,1,January,2014
+Government,United States of America,Montana,High,1298,5,7,9086,1181.18,7904.82,6490,1414.82,41671,2,February,2014
+Government,United States of America,Paseo,High,1438.5,10,7,10069.5,1309.035,8760.465,7192.5,1567.965,41640,1,January,2014
+Government,United States of America,Paseo,High,2641,10,20,52820,6866.6,45953.4,26410,19543.4,41671,2,February,2014
+Government,United States of America,Carretera,High,1743,3,20,34860,4880.4,29979.6,17430,12549.6,41760,5,May,2014
+Government,United States of America,Carretera,High,2996,3,7,20972,2936.08,18035.92,14980,3055.92,41548,10,October,2013
+Government,United States of America,Montana,High,2996,5,7,20972,2936.08,18035.92,14980,3055.92,41548,10,October,2013
+Midmarket,United States of America,Paseo,High,1767,10,15,26505,3710.7,22794.3,17670,5124.3,41883,9,September,2014
+Channel Partners,United States of America,Amarilla,High,2015,260,12,24180,3385.2,20794.8,6045,14749.8,41609,12,December,2013
+Small Business,United States of America,Carretera,High,1010,3,300,303000,42420,260580,252500,8080,41913,10,October,2014
+Channel Partners,United States of America,Paseo,High,2914,10,12,34968,4895.52,30072.48,8742,21330.48,41913,10,October,2014
+Government,United States of America,Paseo,High,1177,10,350,411950,57673,354277,306020,48257,41944,11,November,2014
+Government,United States of America,Velo,High,606,120,20,12120,1696.8,10423.2,6060,4363.2,41730,4,April,2014
+Small Business,United States of America,Velo,High,2460,120,300,738000,103320,634680,615000,19680,41821,7,July,2014
+Small Business,United States of America,VTT,High,2541,250,300,762300,106722,655578,635250,20328,41852,8,August,2014
+Small Business,United States of America,VTT,High,1010,250,300,303000,42420,260580,252500,8080,41913,10,October,2014
+Enterprise,United States of America,Amarilla,High,2844,260,125,355500,49770,305730,341280,-35550,41760,5,May,2014
+Channel Partners,United States of America,Amarilla,High,2914,260,12,34968,4895.52,30072.48,8742,21330.48,41913,10,October,2014
+Government,United States of America,Paseo,High,267,10,20,5340,801,4539,2670,1869,41548,10,October,2013
+Government,United States of America,Paseo,High,2007,10,350,702450,105367.5,597082.5,521820,75262.5,41579,11,November,2013
+Channel Partners,United States of America,Paseo,High,914,10,12,10968,1645.2,9322.8,2742,6580.8,41974,12,December,2014
+Small Business,United States of America,Velo,High,2574,120,300,772200,115830,656370,643500,12870,41579,11,November,2013
+Enterprise,United States of America,Velo,High,2438,120,125,304750,45712.5,259037.5,292560,-33522.5,41609,12,December,2013
+Channel Partners,United States of America,Velo,High,914,120,12,10968,1645.2,9322.8,2742,6580.8,41974,12,December,2014
+Government,United States of America,VTT,High,267,250,20,5340,801,4539,2670,1869,41548,10,October,2013
+Channel Partners,United States of America,VTT,High,1806,250,12,21672,3250.8,18421.2,5418,13003.2,41760,5,May,2014
