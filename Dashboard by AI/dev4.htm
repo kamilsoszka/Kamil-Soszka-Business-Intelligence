@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Insights Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4567b7;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .chart-card {
+      background-color: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(69, 103, 183, 0.2);
+    }
+
+    .chart-title {
+      margin-bottom: 1rem;
+      color: #ffffffcc;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    canvas {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📊 Financial Performance Dashboard</h1>
+
+<div class="grid">
+  <!-- Line Charts -->
+  <div class="chart-card">
+    <div class="chart-title">Monthly Sales</div>
+    <canvas id="lineSales"></canvas>
+  </div>
+  <div class="chart-card">
+    <div class="chart-title">Monthly Profit</div>
+    <canvas id="lineProfit"></canvas>
+  </div>
+  <div class="chart-card">
+    <div class="chart-title">Units Sold</div>
+    <canvas id="lineUnits"></canvas>
+  </div>
+
+  <!-- Bar Charts -->
+  <div class="chart-card">
+    <div class="chart-title">Gross Sales by Month</div>
+    <canvas id="barGrossSales"></canvas>
+  </div>
+  <div class="chart-card">
+    <div class="chart-title">Average Sale Price by Month</div>
+    <canvas id="barPrice"></canvas>
+  </div>
+  <div class="chart-card">
+    <div class="chart-title">COGS by Month</div>
+    <canvas id="barCOGS"></canvas>
+  </div>
+</div>
+
+<script>
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  // Mocked example data – replace with actual aggregated data
+  const sales = [32000, 28000, 31000, 29000, 34000, 37000, 36000, 39000, 40000, 42000, 45000, 47000];
+  const profit = [16000, 14000, 15000, 14500, 17000, 18500, 18000, 19500, 20000, 21000, 22000, 23000];
+  const units = [1200, 1100, 1250, 1300, 1400, 1500, 1480, 1550, 1600, 1650, 1700, 1800];
+  const grossSales = [34000, 30000, 32000, 31000, 35500, 38000, 37000, 39500, 40500, 43000, 46000, 48000];
+  const avgPrice = [20, 22, 21, 23, 24, 25, 24, 26, 27, 28, 29, 30];
+  const cogs = [16000, 15000, 15500, 16000, 17000, 18000, 18500, 19000, 19500, 20000, 21000, 22000];
+
+  const lineConfig = (ctx, label, data) => new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: months,
+      datasets: [{
+        label: label,
+        data: data,
+        borderColor: '#4567b7',
+        backgroundColor: 'rgba(69, 103, 183, 0.1)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 3
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: '#fff' }, grid: { color: '#333' } },
+        y: { ticks: { color: '#fff' }, grid: { color: '#333' } }
+      }
+    }
+  });
+
+  const barConfig = (ctx, label, data) => new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: months,
+      datasets: [{
+        label: label,
+        data: data,
+        backgroundColor: '#4567b7'
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: '#fff' }, grid: { color: '#333' } },
+        y: { ticks: { color: '#fff' }, grid: { color: '#333' } }
+      }
+    }
+  });
+
+  lineConfig(document.getElementById('lineSales'), 'Sales', sales);
+  lineConfig(document.getElementById('lineProfit'), 'Profit', profit);
+  lineConfig(document.getElementById('lineUnits'), 'Units Sold', units);
+  barConfig(document.getElementById('barGrossSales'), 'Gross Sales', grossSales);
+  barConfig(document.getElementById('barPrice'), 'Sale Price', avgPrice);
+  barConfig(document.getElementById('barCOGS'), 'COGS', cogs);
+</script>
+
+</body>
+</html>
