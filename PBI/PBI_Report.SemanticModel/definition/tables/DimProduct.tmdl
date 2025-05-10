@@ -1,0 +1,58 @@
+table DimProduct
+	lineageTag: 475029f6-f0ef-467e-8446-9ff047293c47
+
+	column Product
+		dataType: string
+		lineageTag: cad67ffc-8c08-45be-8303-ca2a639d49ed
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Product
+		dataType: int64
+		formatString: 0
+		lineageTag: 34dcd8b4-73cc-4881-a7d1-d6a257dbb198
+		summarizeBy: none
+		sourceColumn: ID_Product
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProduct = m
+		mode: import
+		source = ```
+				let
+				    // Step 1: Decode and decompress the Base64-encoded, compressed binary data
+				    // Then parse the resulting JSON into a table structure
+				    Source = Table.FromRows(
+				        Json.Document(
+				            Binary.Decompress(
+				                Binary.FromText(
+				                    "i45Wck4sKkotSS1KVNJRMlSK1YlW8s3PK0nMA/GNwPyAxOLUfCDPGMwLS80BcUwgnJAQINsUzHbMTSzKzMkB6TNTio0FAA==", 
+				                    BinaryEncoding.Base64
+				                ), 
+				                Compression.Deflate
+				            )
+				        ),
+				        // Define the table type using nullable text for both columns initially
+				        let _t = ((type nullable text) meta [Serialized.Text = true]) 
+				        in type table [Product = _t, ID_Product = _t]
+				    ),
+				
+				    // Step 2: Change column data types to appropriate types
+				    // "Product" -> text
+				    // "ID_Product" -> 64-bit integer
+				    #"Changed Type" = Table.TransformColumnTypes(
+				        Source,
+				        {{"Product", type text}, {"ID_Product", Int64.Type}}
+				    )
+				
+				in
+				    // Return the final transformed table
+				    #"Changed Type"
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

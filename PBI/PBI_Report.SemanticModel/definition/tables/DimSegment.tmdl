@@ -1,0 +1,57 @@
+table DimSegment
+	lineageTag: 3dc89ce2-5954-4966-a2ca-088bccf0a0e7
+
+	column Segment
+		dataType: string
+		lineageTag: 57a29cc8-75c9-4c21-98e4-5fdf8999e916
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Segment
+		dataType: int64
+		formatString: 0
+		lineageTag: 82671398-86bb-4008-8e1f-9e56eb8d769a
+		summarizeBy: none
+		sourceColumn: ID_Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimSegment = m
+		mode: import
+		source = ```
+				let
+				    // Step 1: Decompress and parse the Base64-encoded JSON data into a table
+				    Source = Table.FromRows(
+				        Json.Document(
+				            Binary.Decompress(
+				                Binary.FromText(
+				                    "HcpNCoAgEEDhq8is3fR3gSJaBUFLcSE0kKRTzFjnT91+7xkDy/0hU0RKoKEBqw2s/oiOLyzSVplOR4RBbY4TIUsOXQ0zJeSHvWCmvtIeXQhqfMUTSjkHsPYH", 
+				                    BinaryEncoding.Base64
+				                ), 
+				                Compression.Deflate
+				            )
+				        ), 
+				        // Define the column types after decompression (both as nullable text initially)
+				        let _t = ((type nullable text) meta [Serialized.Text = true]) 
+				        in type table [Segment = _t, ID_Segment = _t]
+				    ),
+				
+				    // Step 2: Change column types to appropriate types
+				    // "Segment" -> text
+				    // "ID_Segment" -> 64-bit integer
+				    #"Changed Type" = Table.TransformColumnTypes(
+				        Source,
+				        {{"Segment", type text}, {"ID_Segment", Int64.Type}}
+				    )
+				
+				in
+				    // Output the final transformed table
+				    #"Changed Type"
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

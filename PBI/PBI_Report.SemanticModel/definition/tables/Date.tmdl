@@ -1,0 +1,130 @@
+table Date
+	lineageTag: 58d47fea-a8bc-4ecc-b3ed-a11821db5341
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: mm/dd/yyyy
+		lineageTag: f7075d55-1928-41b7-a9f2-238869931aeb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Year
+		formatString: 0
+		lineageTag: 35bd2ed8-f3e6-4a12-9eeb-f801bb4d156b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month'
+		lineageTag: 5c4d5105-113c-4392-90a8-a4f9e790614a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year Month]
+		sortByColumn: 'Year Month Order'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month Order'
+		lineageTag: d4f017fd-9173-4745-853a-630df906d71e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year Month Order]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: ac486492-dd23-4c0a-90fe-69c4661a2517
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: db4149d5-62d0-4027-ba50-faf840829077
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+		sortByColumn: 'Month Number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: fcdf4610-7783-485b-8758-5e4cc02d71fc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Date Hierarchy'
+		lineageTag: 876d6db5-92a1-4ab5-a13e-3e41fdda7c54
+
+		level Year
+			lineageTag: 38cf797e-5855-4901-a52b-a0fe53d9b56b
+			column: Year
+
+		level Quarter
+			lineageTag: b026f174-c9a3-46a3-8cc4-231d3cf9ef87
+			column: Quarter
+
+		level Month
+			lineageTag: 68b2b010-4159-44e4-9244-e2c3da6895a8
+			column: Month
+
+		level Date
+			lineageTag: 35a68a5c-b8a7-4980-80d8-a28f74358d3e
+			column: Date
+
+	partition Date = calculated
+		mode: import
+		source = ```
+				
+				VAR __startdate = 
+				    // Get the first non-blank Sales[Date] where [Sales] has values
+				    FIRSTNONBLANK('Sales'[Date], [Sales])
+				
+				VAR __enddate = 
+				    // Get the last non-blank Sales[Date] where [Sales] has values
+				    LASTNONBLANK('Sales'[Date], [Sales])
+				
+				VAR Result = 
+				    // Create a calculated table using CALENDAR function from start to end date
+				    ADDCOLUMNS(
+				        CALENDAR(__startdate, __enddate),
+				        
+				        // Add "Year" column
+				        "Year", YEAR([Date]),
+				
+				        // Add formatted Year-Month (e.g., "2023-Jan")
+				        "Year Month", FORMAT([Date], "yyyy-mmm"),
+				
+				        // Add sortable YearMonth format (e.g., "202301")
+				        "Year Month Order", FORMAT([Date], "yyyymm"),
+				
+				        // Add Quarter in format "Q1", "Q2", etc.
+				        "Quarter", "Q" & QUARTER([Date]),
+				
+				        // Add abbreviated month name (e.g., "Jan")
+				        "Month", FORMAT([Date], "mmm"),
+				
+				        // Add numeric month value (1–12)
+				        "Month Number", MONTH([Date])
+				    )
+				
+				RETURN
+				    Result
+				
+				```
+
+	annotation PBI_Id = ee0048671a434aa582efe3d201e2497b
+

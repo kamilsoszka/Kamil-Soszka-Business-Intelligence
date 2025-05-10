@@ -1,0 +1,17 @@
+EVALUATE
+	SELECTCOLUMNS(
+		TOPN(
+			100,
+			'Sales',
+			'Sales'[Date],
+			ASC
+		),
+		'Sales'[Date],
+		'Sales'[Value],
+		'Sales'[ID_Segment],
+		'Sales'[ID_Country],
+		'Sales'[ID_Product],
+		'Sales'[Sales],
+		'Sales'[COGS]
+	)
+	ORDER BY 'Sales'[Date] ASC
