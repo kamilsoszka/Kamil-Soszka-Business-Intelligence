@@ -49,7 +49,7 @@ table DAX
 			VAR __max =
 			    MAXX ( ALLSELECTED ( DimProduct[Product] ), [Sales] )
 			VAR Result =
-			    SWITCH ( TRUE (), [Sales] = __max, "Green", [Sales] = __min, "Red", "#061953" )
+			    SWITCH ( TRUE (), [Sales] = __max, "Green", [Sales] = __min, "Red", "#0050EB" )
 			RETURN
 			    Result
 		lineageTag: 61a828f0-9c27-442e-8164-cebfd40a880e
@@ -61,7 +61,7 @@ table DAX
 			VAR __max =
 			    MAXX ( ALLSELECTED ( DimProduct[Product] ), [COGS] )
 			VAR Result =
-			    SWITCH ( TRUE (), [COGS] = __max, "Red", [COGS] = __min, "Green", "#061953" )
+			    SWITCH ( TRUE (), [COGS] = __max, "Red", [COGS] = __min, "Green", "#0050EB" )
 			RETURN
 			    Result
 		lineageTag: ac9712db-1622-4d86-b4dc-c148dc101a33
@@ -77,7 +77,7 @@ table DAX
 			        TRUE (),
 			        [Profit] = __max, "Green",
 			        [Profit] = __min, "Red",
-			        "#061953"
+			        "#0050EB"
 			    )
 			RETURN
 			    Result
@@ -182,6 +182,53 @@ table DAX
 			    ALLSELECTED ()
 			)
 		lineageTag: 95591961-961d-4920-a964-def36981345e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '(max X)' =
+			
+			MAXX(
+			    {
+			        MAXX ( ALLSELECTED ( DimProduct[Product] ), [Sales] )
+			    }
+			    ,[Value] + ([Value] * 0.08)
+			)
+		formatString: #,0
+		lineageTag: 7ff86d7d-7720-45df-9374-83146e642773
+
+	measure '(max Y)' =
+			
+			MAXX(
+			    {
+			        MAXX ( ALLSELECTED ( DimProduct[Product] ), [COGS] )
+			    }
+			    ,[Value] + ([Value] * 0.08)
+			)
+		lineageTag: 3fa330bc-f9f1-46e6-ae68-7bebb89c9511
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '(min X)' =
+			
+			MINX(
+			    {
+			        MINX( ALLSELECTED ( DimProduct[Product] ), [Sales] )
+			    }
+			    ,[Value] - ([Value] * 0.08)
+			)
+		lineageTag: 7cf18cce-dbc0-41de-b4dd-24ebdee69887
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '(min Y)' =
+			
+			MINX(
+			    {
+			        MINX( ALLSELECTED ( DimProduct[Product] ), [COGS] )
+			    }
+			    ,[Value] - ([Value] * 0.08)
+			)
+		lineageTag: 351dca5b-d3cf-4bb5-ad73-78fcc9ad76aa
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
