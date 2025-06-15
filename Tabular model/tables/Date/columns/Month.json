@@ -1,8 +1,0 @@
-{
-  "name": "Month",
-  "dataType": "string",
-  "sourceColumn": "Month",
-  "sortByColumn": "Month Number",
-  "sourceProviderType": "nvarchar",
-  "lineageTag": "621c4ca9-d106-431e-a8e7-ea31e7bec27b"
-}

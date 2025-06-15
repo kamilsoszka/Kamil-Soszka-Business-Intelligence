@@ -1,7 +1,0 @@
-{
-  "name": "CustomerKey",
-  "dataType": "int64",
-  "sourceColumn": "CustomerKey",
-  "sourceProviderType": "int",
-  "lineageTag": "10a12ba6-1f9b-4cf7-b245-7c09154fe76d"
-}

@@ -1,7 +1,0 @@
-{
-  "name": "8ea92613-cfad-490c-ae74-7c8d8adcf4be",
-  "fromTable": "Sales",
-  "fromColumn": "CustomerKey",
-  "toTable": "Customer",
-  "toColumn": "CustomerKey"
-}

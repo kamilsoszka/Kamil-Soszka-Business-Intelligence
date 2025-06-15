@@ -1,7 +1,0 @@
-{
-  "name": "Year Month Number",
-  "dataType": "int64",
-  "sourceColumn": "Year Month Number",
-  "sourceProviderType": "int",
-  "lineageTag": "744986c0-6e19-40ab-8003-b2dc7e1d713b"
-}

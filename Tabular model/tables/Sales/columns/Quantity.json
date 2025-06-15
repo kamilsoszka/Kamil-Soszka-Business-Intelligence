@@ -1,7 +1,0 @@
-{
-  "name": "Quantity",
-  "dataType": "int64",
-  "sourceColumn": "Quantity",
-  "sourceProviderType": "int",
-  "lineageTag": "9f3294d2-a32b-47ba-874a-16b026d06e75"
-}

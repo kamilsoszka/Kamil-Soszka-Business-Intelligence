@@ -1,7 +1,0 @@
-{
-  "name": "ProductKey",
-  "dataType": "int64",
-  "sourceColumn": "ProductKey",
-  "sourceProviderType": "int",
-  "lineageTag": "d0c4982f-db08-4ee5-88b4-e23adf5c0cdc"
-}

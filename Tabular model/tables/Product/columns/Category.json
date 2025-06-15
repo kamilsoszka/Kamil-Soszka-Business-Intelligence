@@ -1,7 +1,0 @@
-{
-  "name": "Category",
-  "dataType": "string",
-  "sourceColumn": "Category",
-  "sourceProviderType": "nvarchar",
-  "lineageTag": "4f6b61be-3d93-4523-b18e-89457cdf327b"
-}

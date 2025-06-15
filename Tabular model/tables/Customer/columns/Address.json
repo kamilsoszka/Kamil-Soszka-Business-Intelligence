@@ -1,7 +1,0 @@
-{
-  "name": "Address",
-  "dataType": "string",
-  "sourceColumn": "Address",
-  "sourceProviderType": "nvarchar",
-  "lineageTag": "00354f96-eaae-49ce-9ed8-2361b6e62703"
-}

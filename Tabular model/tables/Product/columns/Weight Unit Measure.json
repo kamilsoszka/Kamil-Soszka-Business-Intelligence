@@ -1,7 +1,0 @@
-{
-  "name": "Weight Unit Measure",
-  "dataType": "string",
-  "sourceColumn": "Weight Unit Measure",
-  "sourceProviderType": "nvarchar",
-  "lineageTag": "6062fe54-fa4b-4689-98fb-e1bd21d37fd0"
-}

@@ -1,8 +1,0 @@
-{
-  "name": "Day of Week Short",
-  "dataType": "string",
-  "sourceColumn": "Day of Week Short",
-  "sortByColumn": "Day of Week Number",
-  "sourceProviderType": "nvarchar",
-  "lineageTag": "3801f766-09a4-4557-afd6-6f75fc4eb6e4"
-}

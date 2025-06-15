@@ -1,7 +1,0 @@
-{
-  "name": "State",
-  "dataType": "string",
-  "sourceColumn": "State",
-  "sourceProviderType": "nvarchar",
-  "lineageTag": "fa318c4c-3687-46c3-b44b-da0927d781cb"
-}

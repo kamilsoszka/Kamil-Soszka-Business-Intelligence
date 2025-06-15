@@ -1,7 +1,0 @@
-{
-  "name": "Age",
-  "dataType": "int64",
-  "sourceColumn": "Age",
-  "sourceProviderType": "int",
-  "lineageTag": "e29ff223-05f1-4845-bead-2caa6c24a38d"
-}

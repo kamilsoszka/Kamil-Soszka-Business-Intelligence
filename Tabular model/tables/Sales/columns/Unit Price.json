@@ -1,7 +1,0 @@
-{
-  "name": "Unit Price",
-  "dataType": "decimal",
-  "sourceColumn": "Unit Price",
-  "sourceProviderType": "money",
-  "lineageTag": "72e51d03-e1ec-425a-81c3-866a57b90582"
-}

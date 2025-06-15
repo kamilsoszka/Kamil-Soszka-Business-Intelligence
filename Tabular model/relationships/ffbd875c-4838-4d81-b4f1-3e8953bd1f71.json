@@ -1,7 +1,0 @@
-{
-  "name": "ffbd875c-4838-4d81-b4f1-3e8953bd1f71",
-  "fromTable": "Sales",
-  "fromColumn": "Order Date",
-  "toTable": "Date",
-  "toColumn": "Date"
-}

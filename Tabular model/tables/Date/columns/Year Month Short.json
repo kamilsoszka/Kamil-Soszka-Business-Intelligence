@@ -1,8 +1,0 @@
-{
-  "name": "Year Month Short",
-  "dataType": "string",
-  "sourceColumn": "Year Month Short",
-  "sortByColumn": "Month Number",
-  "sourceProviderType": "nvarchar",
-  "lineageTag": "d6cb9116-7f0e-4555-9087-1d862476f894"
-}

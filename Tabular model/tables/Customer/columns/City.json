@@ -1,7 +1,0 @@
-{
-  "name": "City",
-  "dataType": "string",
-  "sourceColumn": "City",
-  "sourceProviderType": "nvarchar",
-  "lineageTag": "170ae5de-4289-4b80-96fe-409ac5c08aeb"
-}

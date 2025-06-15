@@ -1,7 +1,0 @@
-{
-  "name": "FromCurrency",
-  "dataType": "string",
-  "sourceColumn": "FromCurrency",
-  "sourceProviderType": "nchar",
-  "lineageTag": "d1592387-0a5a-41de-bc62-7f5c82b3995e"
-}
