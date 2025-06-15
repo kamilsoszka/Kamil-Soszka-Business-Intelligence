@@ -1,0 +1,8 @@
+{
+  "name": "Day of Week",
+  "dataType": "string",
+  "sourceColumn": "Day of Week",
+  "sortByColumn": "Day of Week Number",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "545e06f0-f46d-440a-89fa-13fb99c798bd"
+}

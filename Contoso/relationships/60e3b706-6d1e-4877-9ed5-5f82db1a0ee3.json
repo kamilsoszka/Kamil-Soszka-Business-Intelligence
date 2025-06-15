@@ -1,0 +1,7 @@
+{
+  "name": "60e3b706-6d1e-4877-9ed5-5f82db1a0ee3",
+  "fromTable": "Sales",
+  "fromColumn": "ProductKey",
+  "toTable": "Product",
+  "toColumn": "ProductKey"
+}

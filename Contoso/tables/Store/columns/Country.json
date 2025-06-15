@@ -1,0 +1,7 @@
+{
+  "name": "Country",
+  "dataType": "string",
+  "sourceColumn": "Country",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "f9ac05fe-96da-4ced-bdcc-b3122fb0f4f6"
+}

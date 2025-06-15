@@ -1,0 +1,7 @@
+{
+  "name": "Manufacturer",
+  "dataType": "string",
+  "sourceColumn": "Manufacturer",
+  "sourceProviderType": "nvarchar",
+  "lineageTag": "7f5e95f4-5f6a-4242-90d8-7378a62094c3"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Exchange",
+  "dataType": "double",
+  "sourceColumn": "Exchange",
+  "sourceProviderType": "float",
+  "lineageTag": "e4187f76-0d6f-4e79-9162-5fcd101fa411"
+}

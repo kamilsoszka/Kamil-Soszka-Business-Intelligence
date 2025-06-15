@@ -1,0 +1,15 @@
+{
+  "name": "Total Cost",
+  "expression": [
+    "",
+    "-- This measure calculates the total cost of sales.",
+    "SUMX (",
+    "    -- SUMX iterates over a table and returns the sum of an expression evaluated for each row in the table.",
+    "    Sales,",
+    "    -- The table to iterate over is the 'Sales' table.",
+    "    Sales[Quantity] * Sales[Unit Cost] -- For each row in the 'Sales' table, multiply the 'Quantity' column by the 'Unit Cost' column to get the cost for each sale.",
+    ")"
+  ],
+  "formatString": "$ #,##0.00",
+  "lineageTag": "6f06895c-974b-411e-9406-b060247f6629"
+}

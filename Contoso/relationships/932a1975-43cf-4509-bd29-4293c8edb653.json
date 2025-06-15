@@ -1,0 +1,7 @@
+{
+  "name": "932a1975-43cf-4509-bd29-4293c8edb653",
+  "fromTable": "Sales",
+  "fromColumn": "StoreKey",
+  "toTable": "Store",
+  "toColumn": "StoreKey"
+}

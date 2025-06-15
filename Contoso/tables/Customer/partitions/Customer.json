@@ -1,0 +1,19 @@
+{
+  "name": "Customer",
+  "source": {
+    "type": "query",
+    "query": [
+      "SELECT",
+      "\t*",
+      "FROM",
+      "\t[dbo].[Customer]"
+    ],
+    "dataSource": "DESKTOP-T1OJDSH Contoso V2 1M"
+  },
+  "annotations": [
+    {
+      "name": "TabularEditor_TableSchema",
+      "value": "{\"Name\":\"Customer\",\"Schema\":\"dbo\",\"Database\":\"Contoso V2 1M\",\"IncludedColumns\":[\"CustomerKey\",\"Gender\",\"Name\",\"Address\",\"City\",\"State Code\",\"State\",\"Zip Code\",\"Country Code\",\"Country\",\"Continent\",\"Birthday\",\"Age\"],\"SelectAll\":true}"
+    }
+  ]
+}
