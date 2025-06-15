@@ -1,0 +1,93 @@
+Dates = 
+ADDCOLUMNS (
+    CALENDAR (
+        DATE ( YEAR ( TODAY () ) - 5, MONTH ( TODAY () ), DAY ( TODAY () ) ),
+        TODAY ()
+    ),
+    "DateKey", VALUE ( FORMAT ( [Date], "yyyyMMdd" ) ),
+    "Year", YEAR ( [Date] ),
+    "Quarter", QUARTER ( [Date] ),
+    "Month", MONTH ( [Date] ),
+    "Day", DAY ( [Date] ),
+    "Week", WEEKNUM ( [Date] ),
+    "MonthName", FORMAT ( [Date], "MMMM" ),
+    "QuarterName", "Q" & QUARTER ( [Date] )
+)
+
+Sales = 
+VAR BaseTable =
+    GENERATESERIES ( 1, 10000, 1 )
+VAR WithRandoms =
+    ADDCOLUMNS (
+        BaseTable,
+        "RndCat", RANDBETWEEN ( 0, 3 ),
+        "RndSub", RANDBETWEEN ( 0, 2 )
+    )
+VAR ComputedSales1 =
+    ADDCOLUMNS (
+        WithRandoms,
+        "SalesID", [Value],
+        "SaleDate",
+            VAR _minDate =
+                MINX ( 'Dates', 'Dates'[Date] )
+            VAR _totalDays =
+                COUNTROWS ( 'Dates' ) - 1
+            VAR _offset =
+                RANDBETWEEN ( 0, _totalDays )
+            RETURN
+                _minDate + _offset
+    )
+VAR ComputedSales2 =
+    ADDCOLUMNS (
+        ComputedSales1,
+        "DateKey", VALUE ( FORMAT ( [SaleDate], "yyyyMMdd" ) ),
+        "SalesAmount",
+            ROUND ( RAND () * ( 5000 - 10 ) + 10, 2 ),
+        "Category",
+            SWITCH (
+                [RndCat],
+                0, "Electronics",
+                1, "Clothing",
+                2, "Home & Garden",
+                3, "Books"
+            ),
+        "Subcategory",
+            SWITCH (
+                SWITCH (
+                    [RndCat],
+                    0, "Electronics",
+                    1, "Clothing",
+                    2, "Home & Garden",
+                    3, "Books"
+                ),
+                "Electronics", SWITCH ( [RndSub], 0, "Smartphones", 1, "Laptops", 2, "Accessories" ),
+                "Clothing", SWITCH ( [RndSub], 0, "Men's", 1, "Women's", 2, "Children's" ),
+                "Home & Garden", SWITCH ( [RndSub], 0, "Kitchen", 1, "Furniture", 2, "Gardening" ),
+                "Books", SWITCH ( [RndSub], 0, "Fiction", 1, "Non-Fiction", 2, "Science" )
+            ),
+        "Product",
+            VAR _category =
+                SWITCH (
+                    [RndCat],
+                    0, "Electronics",
+                    1, "Clothing",
+                    2, "Home & Garden",
+                    3, "Books"
+                )
+            VAR _letter =
+                UNICHAR ( 65 + RANDBETWEEN ( 0, 25 ) )
+            VAR _num =
+                FORMAT ( RANDBETWEEN ( 0, 999 ), "000" )
+            RETURN
+                _category & " Product " & _letter & _num
+    )
+RETURN
+    SELECTCOLUMNS (
+        ComputedSales2,
+        "SalesID", [SalesID],
+        "DateKey", [DateKey],
+        "SalesAmount", [SalesAmount],
+        "Category", [Category],
+        "Subcategory", [Subcategory],
+        "Product", [Product]
+    )
