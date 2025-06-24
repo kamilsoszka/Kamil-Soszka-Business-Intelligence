@@ -1,58 +1,42 @@
--- Database Setup and Initialization
--- This section prepares the database for our sales data analysis.
-
--- Connect to the 'Gemini' Database
-USE Gemini;
-GO
-
--- Turn Off Row Count Messages
--- This command prevents messages like "(1 row affected)" from appearing after each query,
--- making the output cleaner and easier to read.
+-- General Settings
+-- Disables the message that shows the number of rows affected by a Transact-SQL statement.
 SET NOCOUNT ON;
 GO
 
--- Clean Up Existing Sales Data Table (if it exists)
--- This checks if a table named 'Sales' already exists and, if so, removes it.
--- This ensures we start with a clean slate for our new data.
+-- Table Dropping
+-- Checks if the 'Sales' table exists and drops it to ensure a clean slate for recreation.
 IF OBJECT_ID('dbo.Sales', 'U') IS NOT NULL
     DROP TABLE dbo.Sales;
 GO
 
--- Clean Up Existing Dates Table (if it exists)
--- Similar to the 'Sales' table, this checks for and removes an existing 'Dates' table.
+-- Checks if the 'Dates' table exists and drops it to ensure a clean slate for recreation.
 IF OBJECT_ID('dbo.Dates', 'U') IS NOT NULL
     DROP TABLE dbo.Dates;
 GO
 
----
---- Data Table Creation and Population
-
--- Create the 'Dates' Table
--- This creates a table to store information about dates, which will be used to track sales over time.
--- It includes details like year, quarter, month, and day.
+-- Dates Table Creation
+-- Creates the 'Dates' table which will act as a dimension table for time-based analysis.
 CREATE TABLE dbo.Dates
 (
-    DateKey INT PRIMARY KEY,              -- A unique number for each date (e.g., 20241231 for December 31, 2024).
-    [Date] DATETIME,                      -- The full date and time.
-    [Year] INT,                           -- The year of the date.
-    [Quarter] INT,                        -- The quarter of the year (1 for Jan-Mar, 2 for Apr-Jun, etc.).
-    [Month] INT,                          -- The month of the year (1 for January, 2 for February, etc.).
-    [Day] INT,                            -- The day of the month.
-    [Week] INT,                           -- The week number of the year.
-    MonthName VARCHAR(20),                -- The name of the month (e.g., 'January').
-    QuarterName VARCHAR(6)                -- The name of the quarter (e.g., 'Q1').
+    DateKey INT PRIMARY KEY,         -- Unique key for each date (e.g., YYYYMMDD)
+    [Date] DATETIME,                 -- Full date
+    [Year] INT,                      -- Year part of the date
+    [Quarter] INT,                   -- Quarter part of the date (1-4)
+    [Month] INT,                     -- Month part of the date (1-12)
+    [Day] INT,                       -- Day part of the date (1-31)
+    [Week] INT,                      -- Week number of the year
+    MonthName VARCHAR(20),           -- Full name of the month (e.g., January)
+    QuarterName VARCHAR(6)           -- Name of the quarter (e.g., Q1, Q2)
 );
 GO
 
--- Set Up Date Range for Data Population
--- We're defining a period to fill the 'Dates' table.
--- @StartDate is today's date, and @EndDate is 5 years before today.
+-- Populating Dates Table
+-- Declares variables for the start and end dates for populating the Dates table.
 DECLARE @StartDate DATETIME = GETDATE();
-DECLARE @EndDate DATETIME = DATEADD(YEAR, -5, @StartDate);
+DECLARE @EndDate DATETIME = DATEADD(YEAR, -5, @StartDate); -- Populates dates for the last 5 years
 
--- Populate the 'Dates' Table
--- This part of the code fills the 'Dates' table with every day's information for the last 5 years.
-WHILE @StartDate >= @EndDate
+-- Loop to insert each day from @EndDate up to @StartDate into the Dates table.
+WHILE @EndDate <= @StartDate
 BEGIN
     INSERT INTO dbo.Dates
     (
@@ -66,214 +50,232 @@ BEGIN
         MonthName,
         QuarterName
     )
-    SELECT CONVERT(INT, CONVERT(VARCHAR(8), @EndDate, 112)), -- Converts the date into a unique number (YYYYMMDD).
-           @EndDate,                                         -- The actual date.
-           DATEPART(YEAR, @EndDate),                           -- Extracts the year.
-           DATEPART(QUARTER, @EndDate),                        -- Extracts the quarter.
-           DATEPART(MONTH, @EndDate),                          -- Extracts the month.
-           DATEPART(DAY, @EndDate),                            -- Extracts the day.
-           DATEPART(WEEK, @EndDate),                           -- Extracts the week number.
-           DATENAME(MONTH, @EndDate),                          -- Extracts the month's name.
-           'Q' + CAST(DATEPART(QUARTER, @EndDate) AS VARCHAR(1)); -- Creates quarter names like 'Q1'.
+    SELECT CONVERT(INT, CONVERT(VARCHAR(8), @EndDate, 112)), -- Converts date to INT (YYYYMMDD)
+           @EndDate,
+           DATEPART(YEAR, @EndDate),
+           DATEPART(QUARTER, @EndDate),
+           DATEPART(MONTH, @EndDate),
+           DATEPART(DAY, @EndDate),
+           DATEPART(WEEK, @EndDate),
+           DATENAME(MONTH, @EndDate),
+           'Q' + CAST(DATEPART(QUARTER, @EndDate) AS VARCHAR(1));
 
-    SET @EndDate = DATEADD(DAY, 1, @EndDate); -- Moves to the next day in the loop.
+    SET @EndDate = DATEADD(DAY, 1, @EndDate); -- Increments the date by one day
 END;
 GO
 
--- Create the 'Sales' Table
--- This creates a table to record individual sales transactions, including what was sold and for how much.
+-- Sales Table Creation
+-- Creates the 'Sales' fact table to store sales transaction data.
 CREATE TABLE dbo.Sales
 (
-    SalesID INT IDENTITY(1, 1) PRIMARY KEY, -- A unique ID number for each sale, automatically increasing.
-    DateKey INT,                          -- A link to the 'Dates' table, connecting the sale to a specific date.
-    SalesAmount DECIMAL(10, 2),            -- The amount of money for the sale.
-    Category VARCHAR(50),                  -- The main group the product belongs to (e.g., 'Electronics').
-    Subcategory VARCHAR(50),               -- A more specific group within the category (e.g., 'Smartphones').
-    Product VARCHAR(100),                  -- The name of the specific product sold.
-    CONSTRAINT FK_Sales_Dates FOREIGN KEY (DateKey) REFERENCES dbo.Dates (DateKey) -- Ensures sales dates match valid dates in the 'Dates' table.
+    SalesID INT IDENTITY(1, 1) PRIMARY KEY, -- Unique identifier for each sales record
+    DateKey INT,                          -- Foreign key linking to the Dates table
+    SalesAmount DECIMAL(10, 2),           -- Total sales amount for the transaction
+    Price DECIMAL(10, 2),                 -- Price of a single unit of the product
+    QuantitySold INT,                     -- Number of units sold in the transaction
+    Category VARCHAR(50),                 -- Product category (e.g., Electronics, Clothing)
+    Subcategory VARCHAR(50),              -- Product subcategory (e.g., Smartphones, Laptops)
+    Product VARCHAR(100),                 -- Name of the product
+    CONSTRAINT FK_Sales_Dates FOREIGN KEY (DateKey) REFERENCES dbo.Dates (DateKey) -- Foreign key constraint
 );
 GO
 
--- Set Up Variables for Sales Data Population
--- These variables will help us generate fake sales data for testing and demonstration.
-DECLARE @i INT = 1;                                      -- A counter to keep track of how many sales records we've created.
-DECLARE @TotalRecords INT = 10000;                     -- The total number of fake sales records we want to generate.
-DECLARE @RandomDateKey INT;                              -- Will store a randomly picked date from our 'Dates' table.
-DECLARE @RandomSalesAmount DECIMAL(10, 2);               -- Will store a random sales amount.
-DECLARE @RandomCategory VARCHAR(50);                     -- Will store a random product category.
-DECLARE @RandomSubcategory VARCHAR(50);                  -- Will store a random product subcategory.
-DECLARE @RandomProduct VARCHAR(100);                     -- Will store a random product name.
+-- Product Data Initialization
+-- Declares a table variable to hold static product information for simulation.
+DECLARE @Products TABLE (
+    ProductID INT IDENTITY(1,1),
+    ProductName VARCHAR(100),
+    CategoryName VARCHAR(50),
+    SubcategoryName VARCHAR(50),
+    BasePrice DECIMAL(10, 2)
+);
 
--- Populate the 'Sales' Table with Random Data
--- This loop generates and inserts 10,000 fake sales records into the 'Sales' table.
--- Each record will have a random date, sales amount, category, subcategory, and product.
-WHILE @i <= @TotalRecords
-BEGIN
-    -- Pick a random date from the 'Dates' table.
-    SELECT TOP 1 @RandomDateKey = DateKey FROM dbo.Dates ORDER BY NEWID();
+-- Populates the @Products table with sample product data.
+INSERT INTO @Products (ProductName, CategoryName, SubcategoryName, BasePrice) VALUES
+('Smartphone X', 'Electronics', 'Smartphones', 899.99),
+('Smartphone Y', 'Electronics', 'Smartphones', 799.99),
+('Laptop A', 'Electronics', 'Laptops', 1499.99),
+('Laptop B', 'Electronics', 'Laptops', 1299.99),
+('Headphones Z', 'Electronics', 'Accessories', 49.99),
+('Charger Kit', 'Electronics', 'Accessories', 25.00),
+('Men''s Classic Shirt', 'Clothing', 'Men''s', 65.00),
+('Men''s Casual Jeans', 'Clothing', 'Men''s', 85.00),
+('Women''s Summer Dress', 'Clothing', 'Women''s', 95.00),
+('Women''s Silk Blouse', 'Clothing', 'Women''s', 70.00),
+('Kid''s Play T-shirt', 'Clothing', 'Children''s', 20.00),
+('Kid''s Denim Shorts', 'Clothing', 'Children''s', 30.00),
+('Blender Pro', 'Home & Garden', 'Kitchen', 120.00),
+('Coffee Maker Deluxe', 'Home & Garden', 'Kitchen', 80.00),
+('Ergonomic Chair', 'Home & Garden', 'Furniture', 350.00),
+('Dining Table Set', 'Home & Garden', 'Furniture', 600.00),
+('Gardening Gloves Set', 'Home & Garden', 'Gardening', 15.00),
+('Garden Shovel Heavy Duty', 'Home & Garden', 'Gardening', 35.00),
+('Fantasy Novel Series', 'Books', 'Fiction', 25.99),
+('Thriller Best Seller', 'Books', 'Fiction', 18.50),
+('History of the World', 'Books', 'Non-Fiction', 35.00),
+('Biography of Innovators', 'Books', 'Non-Fiction', 28.00),
+('Advanced Physics Book', 'Books', 'Science', 45.00),
+('Chemistry Lab Guide', 'Books', 'Science', 22.00);
 
-    -- Generate a random sales amount between $10.00 and $5000.00.
-    SET @RandomSalesAmount = ROUND((RAND() * (5000 - 10) + 10), 2);
-
-    -- Assign a random main product category.
-    SELECT @RandomCategory = CASE (ABS(CHECKSUM(NEWID())) % 4)
-                                 WHEN 0 THEN 'Electronics'
-                                 WHEN 1 THEN 'Clothing'
-                                 WHEN 2 THEN 'Home & Garden'
-                                 ELSE 'Books'
-                             END;
-
-    -- Assign a random subcategory based on the main category.
-    SELECT @RandomSubcategory = CASE @RandomCategory
-                                     WHEN 'Electronics' THEN
-                                         CASE (ABS(CHECKSUM(NEWID())) % 3)
-                                             WHEN 0 THEN 'Smartphones'
-                                             WHEN 1 THEN 'Laptops'
-                                             ELSE 'Accessories'
-                                         END
-                                     WHEN 'Clothing' THEN
-                                         CASE (ABS(CHECKSUM(NEWID())) % 3)
-                                             WHEN 0 THEN 'Men''s'
-                                             WHEN 1 THEN 'Women''s'
-                                             ELSE 'Children''s'
-                                         END
-                                     WHEN 'Home & Garden' THEN
-                                         CASE (ABS(CHECKSUM(NEWID())) % 3)
-                                             WHEN 0 THEN 'Kitchen'
-                                             WHEN 1 THEN 'Furniture'
-                                             ELSE 'Gardening'
-                                         END
-                                     WHEN 'Books' THEN
-                                         CASE (ABS(CHECKSUM(NEWID())) % 3)
-                                             WHEN 0 THEN 'Fiction'
-                                             WHEN 1 THEN 'Non-Fiction'
-                                             ELSE 'Science'
-                                         END
-                                 END;
-
-    -- Create a random product name using the subcategory.
-    SELECT @RandomProduct = @RandomSubcategory + ' Product ' + CHAR(65 + (ABS(CHECKSUM(NEWID())) % 26)) + CAST(ABS(CHECKSUM(NEWID())) % 1000 AS VARCHAR(4));
-
-    -- Insert the new random sales record into the 'Sales' table.
-    INSERT INTO dbo.Sales (DateKey, SalesAmount, Category, Subcategory, Product)
-    VALUES (@RandomDateKey, @RandomSalesAmount, @RandomCategory, @RandomSubcategory, @RandomProduct);
-
-    SET @i = @i + 1; -- Increase the counter to create the next record.
-END;
+-- Populating Sales Table
+-- Uses a Common Table Expression (CTE) to generate daily product sales data.
+WITH DailyProductSales AS (
+    SELECT
+        d.DateKey,
+        p.ProductName,
+        p.CategoryName,
+        p.SubcategoryName,
+        p.BasePrice,
+        FLOOR(RAND(CHECKSUM(NEWID())) * (5 - 1) + 1) AS CalculatedQuantity -- Generates a random quantity between 1 and 4
+    FROM dbo.Dates d
+    CROSS JOIN @Products p -- Creates a Cartesian product to generate sales for each product on each date
+)
+-- Inserts the generated sales data into the dbo.Sales table.
+INSERT INTO dbo.Sales (DateKey, SalesAmount, Price, QuantitySold, Category, Subcategory, Product)
+SELECT
+    dps.DateKey,
+    dps.BasePrice * dps.CalculatedQuantity AS SalesAmount, -- Calculates total sales amount
+    dps.BasePrice AS Price,
+    dps.CalculatedQuantity AS QuantitySold,
+    dps.CategoryName,
+    dps.SubcategoryName,
+    dps.ProductName
+FROM DailyProductSales dps;
 GO
 
----
---- Data Verification and Reporting
-
--- Display Status Messages
--- These messages confirm that the tables have been created and filled with data.
-PRINT 'Successfully generated 10,000 random sales records.';
+-- Verification and Sample Data
+-- Displays the total number of sales records generated.
+DECLARE @ActualTotalRecords INT;
+SELECT @ActualTotalRecords = COUNT(*) FROM dbo.Sales;
+PRINT 'Successfully generated ' + CAST(@ActualTotalRecords AS VARCHAR(10)) + ' sales records.';
 PRINT 'The Sales and Dates tables have been created and populated.';
 PRINT '---------------------------------------------------------';
 PRINT 'Sample of 10 records from the Sales table:';
 
--- Show a Sample of Sales Data
--- This query displays the first 10 sales records, along with their related date information,
--- to give a quick overview of the generated data.
+-- Selects and displays the top 10 sales records, joining with the Dates table for full date information.
 SELECT TOP 10
-    s.SalesID,             -- The unique ID for each sale.
-    d.[Date],              -- The full date of the sale.
-    s.SalesAmount,         -- The amount of the sale.
-    s.Category,            -- The main category of the product.
-    s.Subcategory,         -- The specific subcategory of the product.
-    s.Product,             -- The name of the product.
-    d.[Year],              -- The year of the sale.
-    d.QuarterName,         -- The quarter of the year (e.g., 'Q1').
-    d.MonthName,           -- The name of the month (e.g., 'January').
-    d.[Week]               -- The week number of the year.
-FROM dbo.Sales s           -- From the 'Sales' table (aliased as 's').
-JOIN dbo.Dates d ON s.DateKey = d.DateKey -- Connects sales records to their corresponding dates.
-ORDER BY d.[Date];         -- Orders the results by date, showing the oldest sales first.
-GO
-
----
---- Advanced Sales Analysis Queries
-
--- Analyze Sales by Category and Subcategory (CUBE)
--- This query summarizes sales by different combinations of Category and Subcategory,
--- including totals for each category and a grand total for all sales.
-SELECT s.Category,
-       s.Subcategory,
-       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales', -- Shows total sales, formatted for thousands (e.g., 1,234K).
-       'GROUP BY CUBE' AS 'Grouping Type'                       -- Labels this analysis as a 'CUBE' grouping.
+    s.SalesID,
+    d.[Date],
+    s.SalesAmount,
+    s.Price,
+    s.QuantitySold,
+    s.Category,
+    s.Subcategory,
+    s.Product,
+    d.[Year],
+    d.QuarterName,
+    d.MonthName,
+    d.[Week]
 FROM dbo.Sales s
 JOIN dbo.Dates d ON s.DateKey = d.DateKey
-WHERE s.Subcategory IN ('Science', 'Non-Fiction', 'Accessories', 'Smartphones') -- Focuses on specific subcategories.
-GROUP BY CUBE(s.Category, s.Subcategory) -- Creates all possible grouping combinations for Category and Subcategory.
+ORDER BY d.[Date];
+GO
+
+-- Sales Analysis - GROUP BY CUBE (Category, Subcategory)
+-- Aggregates sales data using CUBE for Category and Subcategory, providing grand totals and subtotals.
+SELECT s.Category,
+       s.Subcategory,
+       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales', -- Formats sales amount for readability
+       'GROUP BY CUBE' AS 'Grouping Type'
+FROM dbo.Sales s
+JOIN dbo.Dates d ON s.DateKey = d.DateKey
+WHERE s.Subcategory IN ('Science', 'Non-Fiction', 'Accessories', 'Smartphones')
+GROUP BY CUBE(s.Category, s.Subcategory) -- Generates all possible groupings
 ORDER BY s.Category;
 GO
 
--- Analyze Sales by Category and Subcategory (ROLLUP)
--- This query provides a hierarchical summary of sales, first by subcategory within each category,
--- then by category totals, and finally a grand total.
+-- Sales Analysis - GROUP BY ROLLUP (Category, Subcategory)
+-- Aggregates sales data using ROLLUP for Category and Subcategory, providing hierarchical subtotals and a grand total.
 SELECT s.Category,
        s.Subcategory,
-       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales', -- Shows total sales, formatted for thousands.
-       'GROUP BY ROLLUP' AS 'Grouping Type'                    -- Labels this analysis as a 'ROLLUP' grouping.
+       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales',
+       'GROUP BY ROLLUP' AS 'Grouping Type'
 FROM dbo.Sales s
 JOIN dbo.Dates d ON s.DateKey = d.DateKey
-WHERE s.Subcategory IN ('Science', 'Non-Fiction', 'Accessories', 'Smartphones') -- Focuses on specific subcategories.
-GROUP BY ROLLUP(s.Category, s.Subcategory) -- Creates hierarchical totals for Category and Subcategory.
+WHERE s.Subcategory IN ('Science', 'Non-Fiction', 'Accessories', 'Smartphones')
+GROUP BY ROLLUP(s.Category, s.Subcategory) -- Generates hierarchical groupings
 ORDER BY s.Category;
 GO
 
--- Analyze Sales by Category and Subcategory (GROUPING SETS)
--- This query allows us to define specific ways to group our sales data.
--- Here, it shows totals by individual categories and individual subcategories, but not all combinations.
+-- Sales Analysis - GROUPING SETS (Category, Subcategory)
+-- Aggregates sales data using GROUPING SETS for specific groupings of Category and Subcategory.
 SELECT s.Category,
        s.Subcategory,
-       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales', -- Shows total sales, formatted for thousands.
-       'GROUPING SETS' AS 'Grouping Type'                      -- Labels this analysis as 'GROUPING SETS'.
+       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales',
+       'GROUPING SETS' AS 'Grouping Type'
 FROM dbo.Sales s
 JOIN dbo.Dates d ON s.DateKey = d.DateKey
-WHERE s.Subcategory IN ('Science', 'Non-Fiction', 'Accessories', 'Smartphones') -- Focuses on specific subcategories.
-GROUP BY GROUPING SETS(s.Category, s.Subcategory) -- Groups by Category and separately by Subcategory.
+WHERE s.Subcategory IN ('Science', 'Non-Fiction', 'Accessories', 'Smartphones')
+GROUP BY GROUPING SETS(s.Category, s.Subcategory) -- Specifies individual grouping combinations
 ORDER BY s.Category;
 GO
 
--- Analyze Sales by Year and Quarter (CUBE)
--- This query summarizes sales by different combinations of Year and Quarter,
--- including totals for each year and a grand total for all sales within the specified years.
+-- Sales Analysis - GROUP BY CUBE (Year, Quarter)
+-- Aggregates sales data using CUBE for Year and Quarter.
 SELECT d.Year,
        d.Quarter,
-       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales', -- Shows total sales, formatted for thousands.
-       'GROUP BY CUBE' AS 'Grouping Type'                       -- Labels this analysis as a 'CUBE' grouping.
+       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales',
+       'GROUP BY CUBE' AS 'Grouping Type'
 FROM dbo.Sales s
 JOIN dbo.Dates d ON s.DateKey = d.DateKey
-WHERE d.Year IN (2023, 2024)                                   -- Focuses on sales data from 2023 and 2024.
-GROUP BY CUBE(d.Year, d.Quarter) -- Creates all possible grouping combinations for Year and Quarter.
+WHERE d.Year IN (2023, 2024)
+GROUP BY CUBE(d.Year, d.Quarter)
 ORDER BY d.Year, d.Quarter;
 GO
 
--- Analyze Sales by Year and Quarter (ROLLUP)
--- This query provides a hierarchical summary of sales by year, then by quarter within each year,
--- and finally a grand total for the selected years.
+-- Sales Analysis - GROUP BY ROLLUP (Year, Quarter)
+-- Aggregates sales data using ROLLUP for Year and Quarter.
 SELECT d.Year,
        d.Quarter,
-       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales', -- Shows total sales, formatted for thousands.
-       'GROUP BY ROLLUP' AS 'Grouping Type'                    -- Labels this analysis as a 'ROLLUP' grouping.
+       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales',
+       'GROUP BY ROLLUP' AS 'Grouping Type'
 FROM dbo.Sales s
 JOIN dbo.Dates d ON s.DateKey = d.DateKey
-WHERE d.Year IN (2023, 2024)                                   -- Focuses on sales data from 2023 and 2024.
-GROUP BY ROLLUP(d.Year, d.Quarter) -- Creates hierarchical totals for Year and Quarter.
+WHERE d.Year IN (2023, 2024)
+GROUP BY ROLLUP(d.Year, d.Quarter)
 ORDER BY d.Year;
 GO
 
--- Analyze Sales by Year and Quarter (GROUPING SETS)
--- This query allows us to define specific ways to group our sales data by year and quarter.
--- Here, it shows totals by individual years and individual quarters, but not all combinations.
+-- Sales Analysis - GROUPING SETS (Year, Quarter)
+-- Aggregates sales data using GROUPING SETS for specific groupings of Year and Quarter.
 SELECT d.Year,
        d.Quarter,
-       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales', -- Shows total sales, formatted for thousands.
-       'GROUPING SETS' AS 'Grouping Type'                      -- Labels this analysis as 'GROUPING SETS'.
+       FORMAT(SUM(s.SalesAmount), '#,,#,K') AS 'Total Sales',
+       'GROUPING SETS' AS 'Grouping Type'
 FROM dbo.Sales s
 JOIN dbo.Dates d ON s.DateKey = d.DateKey
-WHERE d.Year IN (2023, 2024)                                   -- Focuses on sales data from 2023 and 2024.
-GROUP BY GROUPING SETS(d.Year, d.Quarter) -- Groups by Year and separately by Quarter.
+WHERE d.Year IN (2023, 2024)
+GROUP BY GROUPING SETS(d.Year, d.Quarter)
 ORDER BY d.Year;
 GO
+
+-- Detailed Sales Figures
+PRINT '---------------------------------------------------------';
+PRINT 'Sales Figures by Product and Date:';
+-- Provides a detailed view of sales amounts grouped by date and product.
+SELECT
+    d.[Date],
+    s.Product,
+    FORMAT(SUM(s.SalesAmount), '#,,#.00') AS 'Total Sales Amount'
+FROM dbo.Sales s
+JOIN dbo.Dates d ON s.DateKey = d.DateKey
+GROUP BY d.[Date], s.Product
+ORDER BY d.[Date], s.Product;
+GO
+
+-- Aggregated Sales by Product Details
+-- Shows aggregated sales, price, and quantity for each product, category, and subcategory.
+SELECT
+    FORMAT(SUM([SalesAmount]), '#,,#')          'Sales v1', -- Sum of pre-calculated SalesAmount
+    FORMAT(SUM([Price] * [QuantitySold]), '#,,#') 'Sales v2', -- Recalculated sales (Price * QuantitySold)
+    MAX([Price])                                'Price',      -- Maximum price for the product
+    FORMAT(SUM([QuantitySold]), '#,,#')         'Quantity',   -- Total quantity sold
+    [Category],
+    [Subcategory],
+    [Product]
+FROM
+    [dbo].[Sales] -- Assuming the database context is 'Gemini' as per the original script
+GROUP BY
+    [Category],
+    [Subcategory],
+    [Product];
