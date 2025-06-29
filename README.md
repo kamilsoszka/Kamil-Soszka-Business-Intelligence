@@ -1,6 +1,6 @@
 # 📊 Power BI Service – Contoso Workspace
 
-![Power BI Pro](https://github.com/user-attachments/assets/6e4eef0e-63f9-47b5-a779-6b9c74c82543)
+![Contoso workspace](https://github.com/user-attachments/assets/2fc4f164-ae3a-4347-a6ef-1b6fb1756635)
 
 
 ## 🧾 Type of Service
