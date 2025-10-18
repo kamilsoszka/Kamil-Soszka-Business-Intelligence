@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "a68757f03f640bff3d14",
+  "displayName": "002_PBI Bar Charts",
+  "displayOption": "FitToWidth",
+  "height": 1440,
+  "width": 1280,
+  "visibility": "HiddenInViewMode"
+}

@@ -1,0 +1,80 @@
+createOrReplace
+
+	table DAX
+		lineageTag: ae8e2a89-c83d-4295-83fe-4e256ae39fb3
+
+		measure 'Sales Amount' = SUMX ( Sales, Sales[Quantity] * Sales[Net Price] )
+			formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+			lineageTag: 9eece577-bbce-43c2-a38e-90e39d9aad03
+
+			annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+		measure FLOWERBOUND = FLOWERBOUND ( 0 )
+			formatString: 0
+			lineageTag: ec382886-ae93-4392-a2c1-66a0edffc298
+
+		measure FPY = FPY ( [Sales Amount] )
+			formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+			lineageTag: d81d3f67-3d70-43bd-8bfa-a20adba39ede
+
+			annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+		measure FYOY = FYOY ( [Sales Amount] )
+			formatString: #,0.00
+			lineageTag: 280f262b-caa4-4ffe-bbb5-6c7bd95be52e
+
+		measure FREFLINE2 = FREFLINE2 ( 0.25 )
+			lineageTag: 5aba0dbd-547e-400f-a333-95dd92f2d717
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure FREFLINE3 = FREFLINE3 ( 0.5 )
+			lineageTag: 8320da03-f49e-4132-82dd-a507dd641a08
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure FREFLINE4 = FREFLINE4 ( 0.75 )
+			lineageTag: 08d6b545-9e60-4d82-b816-27d8db20eaa0
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure FREFLINE5 = FREFLINE5 ( 1 )
+			formatString: 0
+			lineageTag: 68f12876-1228-4237-9521-0a82b2ed03f8
+
+		measure FREFLINE1 = FREFLINE1 ( 0 )
+			formatString: 0
+			lineageTag: 90c1f2cf-c433-4271-aeb7-5fccc7b04ce1
+
+		measure FCOLOR = FCOLOR ( [Sales Amount] )
+			lineageTag: 0a9b5668-731f-46ac-8c10-74525dba1fd8
+
+		measure FVERSION = FVERSION ( "v8.10/18/2025" )
+			lineageTag: 961ed2a8-33e1-4547-bccb-7a35a788353c
+
+		measure FLASTREFRESHDATE = FLASTREFRESHDATE ( UTCNOW () )
+			formatString: General Date
+			lineageTag: e462ec65-6845-4bcb-a88c-daef964e62a4
+
+		measure FMAXX = FMAXX ( [Sales Amount] )
+			formatString: #,0
+			lineageTag: d5fbf6e6-9d6d-4745-bbd7-c2a3e4a45023
+
+		column Value
+			isHidden
+			lineageTag: 88e202b2-0027-43a5-bb02-4108de5434c3
+			summarizeBy: none
+			isNameInferred
+			sourceColumn: [Value]
+
+			annotation SummarizationSetBy = Automatic
+
+		partition DAX = calculated
+			mode: import
+			source = ```
+					
+					    { "" }
+					```
+
+		annotation PBI_Id = 246adfa278d945b2aa3c7202853e0692
+
