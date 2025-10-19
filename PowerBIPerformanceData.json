@@ -1,0 +1,1505 @@
+﻿{
+    "version": "1.1.0",
+    "events": [
+        {
+            "name": "User Action",
+            "component": "Report Canvas",
+            "start": "2025-10-19T07:08:24.447Z",
+            "id": "d2ca2efe907246b09ae0",
+            "metrics": {
+                "sourceLabel": "UserAction_Refresh"
+            }
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.455Z",
+            "end": "2025-10-19T07:08:24.532Z",
+            "id": "86dfa726b66b2851aead-1c327a3088bd7c8e7518",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Card",
+                "visualId": "86dfa726b66b2851aead",
+                "visualType": "card",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.456Z",
+            "end": "2025-10-19T07:08:24.467Z",
+            "id": "672a95a6-1181-4647-8655-a93298a0088d",
+            "parentId": "86dfa726b66b2851aead-1c327a3088bd7c8e7518"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.467Z",
+            "end": "2025-10-19T07:08:24.529Z",
+            "id": "6a5e71e4-7d8a-468b-8e83-3c4d5e9e5bbf",
+            "parentId": "86dfa726b66b2851aead-1c327a3088bd7c8e7518"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.529Z",
+            "end": "2025-10-19T07:08:24.532Z",
+            "id": "4fca55c7-ecbd-4579-bb4a-57d2cdffce57",
+            "parentId": "86dfa726b66b2851aead-1c327a3088bd7c8e7518"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.531Z",
+            "end": "2025-10-19T07:08:24.531Z",
+            "id": "30926de8-c6b9-4cc9-b2ce-f5de22ad9269",
+            "parentId": "4fca55c7-ecbd-4579-bb4a-57d2cdffce57"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.521Z",
+            "id": "07e96042-07a6-41b5-b0f9-f3088968dcf7",
+            "parentId": "6a5e71e4-7d8a-468b-8e83-3c4d5e9e5bbf"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.470Z",
+            "end": "2025-10-19T07:08:24.470Z",
+            "id": "fe72e21f-3c96-46b8-b709-889e680c2a55",
+            "parentId": "6a5e71e4-7d8a-468b-8e83-3c4d5e9e5bbf"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.512Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "c9563e39-8ffe-41e5-b884-98a488d943e2",
+            "parentId": "6a5e71e4-7d8a-468b-8e83-3c4d5e9e5bbf"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.528Z",
+            "end": "2025-10-19T07:08:24.528Z",
+            "id": "16afa1e6-c660-4070-aa6a-3b6e9d6e6e10",
+            "parentId": "6a5e71e4-7d8a-468b-8e83-3c4d5e9e5bbf"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.517Z",
+            "end": "2025-10-19T07:08:24.520Z",
+            "id": "5700c4e4-3b55-47b6-a89d-a839d18398ff",
+            "parentId": "07e96042-07a6-41b5-b0f9-f3088968dcf7",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\nEVALUATE\r\n\tSUMMARIZECOLUMNS(__DS0FilterTable, __DS0FilterTable2, \"FVERSION\", IGNORE('DAX'[FVERSION]))",
+                "RowCount": 1
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.520Z",
+            "id": "A037D7F8-4779-44EC-8818-C3110C7AEFD3",
+            "parentId": "5700c4e4-3b55-47b6-a89d-a839d18398ff"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.520Z",
+            "id": "871D6D34-11C6-4691-8E05-B47A89B14921",
+            "parentId": "A037D7F8-4779-44EC-8818-C3110C7AEFD3"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.456Z",
+            "end": "2025-10-19T07:08:24.505Z",
+            "id": "836a52207938647e0c10-230018444b9567704589",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Slicer",
+                "visualId": "836a52207938647e0c10",
+                "visualType": "slicer",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.457Z",
+            "end": "2025-10-19T07:08:24.467Z",
+            "id": "23d04a66-5d93-4da8-805e-b8d2b6b9dea1",
+            "parentId": "836a52207938647e0c10-230018444b9567704589"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.467Z",
+            "end": "2025-10-19T07:08:24.497Z",
+            "id": "d24e7897-5017-4453-bc93-f2bf2706db8c",
+            "parentId": "836a52207938647e0c10-230018444b9567704589"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.497Z",
+            "end": "2025-10-19T07:08:24.505Z",
+            "id": "b7dfa96f-6aa5-41da-8c8c-beeba8f1570a",
+            "parentId": "836a52207938647e0c10-230018444b9567704589"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.503Z",
+            "end": "2025-10-19T07:08:24.503Z",
+            "id": "0ba5da1c-a667-4acb-abcd-69de66c765e9",
+            "parentId": "b7dfa96f-6aa5-41da-8c8c-beeba8f1570a"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.504Z",
+            "end": "2025-10-19T07:08:24.505Z",
+            "id": "a3924ad7-bcfd-49d8-8d47-3b927d7a5cd8",
+            "parentId": "b7dfa96f-6aa5-41da-8c8c-beeba8f1570a"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.504Z",
+            "end": "2025-10-19T07:08:24.504Z",
+            "id": "42148e4a-70a7-4c7f-ae5a-46a6a465fa5a",
+            "parentId": "b7dfa96f-6aa5-41da-8c8c-beeba8f1570a"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.470Z",
+            "end": "2025-10-19T07:08:24.471Z",
+            "id": "59b04164-7d2f-44a4-91dc-4039b9d2522a",
+            "parentId": "d24e7897-5017-4453-bc93-f2bf2706db8c"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.457Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "e6faaf4541db54101dc4-57d4a2cbe816b308c348",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount by Brand",
+                "visualId": "e6faaf4541db54101dc4",
+                "visualType": "clusteredBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.457Z",
+            "end": "2025-10-19T07:08:24.467Z",
+            "id": "1bc6ff1a-657c-45d0-86c9-cccd9a352f2c",
+            "parentId": "e6faaf4541db54101dc4-57d4a2cbe816b308c348"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.467Z",
+            "end": "2025-10-19T07:08:24.540Z",
+            "id": "731b85ed-147c-4c6c-81b4-cc4a511428da",
+            "parentId": "e6faaf4541db54101dc4-57d4a2cbe816b308c348"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.540Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "44d55a11-9258-4863-be5b-4aa9cb03b3d9",
+            "parentId": "e6faaf4541db54101dc4-57d4a2cbe816b308c348"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.556Z",
+            "end": "2025-10-19T07:08:24.557Z",
+            "id": "f771b26f-9bb4-4919-9f9d-9e20e9ee7d7b",
+            "parentId": "44d55a11-9258-4863-be5b-4aa9cb03b3d9"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.557Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "7b4ba162-208f-40e8-9d04-0abbd3641471",
+            "parentId": "44d55a11-9258-4863-be5b-4aa9cb03b3d9"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.557Z",
+            "end": "2025-10-19T07:08:24.557Z",
+            "id": "8a39c84b-782a-46f7-b565-080dc3deb2df",
+            "parentId": "44d55a11-9258-4863-be5b-4aa9cb03b3d9"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.522Z",
+            "id": "004e34ed-e568-4f36-8765-684341245c2d",
+            "parentId": "731b85ed-147c-4c6c-81b4-cc4a511428da"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.471Z",
+            "end": "2025-10-19T07:08:24.472Z",
+            "id": "0e6470aa-e602-44cc-96b2-0f7b4e04d2c4",
+            "parentId": "731b85ed-147c-4c6c-81b4-cc4a511428da"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.512Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "b904e8c5-c8da-4627-ba46-84d1c44742c7",
+            "parentId": "731b85ed-147c-4c6c-81b4-cc4a511428da"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.539Z",
+            "end": "2025-10-19T07:08:24.539Z",
+            "id": "ac8b217a-f38f-4b81-93f2-69e83e30c8db",
+            "parentId": "731b85ed-147c-4c6c-81b4-cc4a511428da"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.517Z",
+            "end": "2025-10-19T07:08:24.522Z",
+            "id": "ea0d0f54-42c0-4440-91f8-e1e5ce3ac3df",
+            "parentId": "004e34ed-e568-4f36-8765-684341245c2d",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount]\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [Sales_Amount], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[Sales_Amount] DESC, 'Product'[Brand]",
+                "RowCount": 9
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "55960792-2520-4E16-8C27-6479535BC948",
+            "parentId": "ea0d0f54-42c0-4440-91f8-e1e5ce3ac3df"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.523Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "EA6B6B0D-F0EE-437E-B790-57B30757F659",
+            "parentId": "55960792-2520-4E16-8C27-6479535BC948"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.458Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "3b07de7242994180680e-be4ac806ec277774d0a0",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount by Brand",
+                "visualId": "3b07de7242994180680e",
+                "visualType": "clusteredBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.458Z",
+            "end": "2025-10-19T07:08:24.467Z",
+            "id": "1adc98f1-5e92-4c62-8837-e4e96d4c67e6",
+            "parentId": "3b07de7242994180680e-be4ac806ec277774d0a0"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.467Z",
+            "end": "2025-10-19T07:08:24.541Z",
+            "id": "7585d494-173a-464e-8557-bd4b675b9e9a",
+            "parentId": "3b07de7242994180680e-be4ac806ec277774d0a0"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.540Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "173d0c62-e2f2-4eed-b290-9aeac04d3318",
+            "parentId": "3b07de7242994180680e-be4ac806ec277774d0a0"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.557Z",
+            "end": "2025-10-19T07:08:24.558Z",
+            "id": "50c296d5-aaf1-42ab-b108-461018184cd6",
+            "parentId": "173d0c62-e2f2-4eed-b290-9aeac04d3318"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.558Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "dc020f28-4ab3-4c8d-89d0-b9c1939a6ff5",
+            "parentId": "173d0c62-e2f2-4eed-b290-9aeac04d3318"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.558Z",
+            "end": "2025-10-19T07:08:24.558Z",
+            "id": "3b3f7e6a-017f-45cf-8b3d-2733e2ba5cb1",
+            "parentId": "173d0c62-e2f2-4eed-b290-9aeac04d3318"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.522Z",
+            "id": "004e34ed-e568-4f36-8765-684341245c2d",
+            "parentId": "7585d494-173a-464e-8557-bd4b675b9e9a"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.472Z",
+            "end": "2025-10-19T07:08:24.473Z",
+            "id": "1d29467e-0cc3-4a56-9a03-c8ad9ba12afd",
+            "parentId": "7585d494-173a-464e-8557-bd4b675b9e9a"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.539Z",
+            "end": "2025-10-19T07:08:24.539Z",
+            "id": "fd734f56-c193-4a5d-a964-d9705902fb4b",
+            "parentId": "7585d494-173a-464e-8557-bd4b675b9e9a"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.517Z",
+            "end": "2025-10-19T07:08:24.522Z",
+            "id": "ea0d0f54-42c0-4440-91f8-e1e5ce3ac3df",
+            "parentId": "004e34ed-e568-4f36-8765-684341245c2d",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount]\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [Sales_Amount], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[Sales_Amount] DESC, 'Product'[Brand]",
+                "RowCount": 9
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "55960792-2520-4E16-8C27-6479535BC948",
+            "parentId": "ea0d0f54-42c0-4440-91f8-e1e5ce3ac3df"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.523Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "EA6B6B0D-F0EE-437E-B790-57B30757F659",
+            "parentId": "55960792-2520-4E16-8C27-6479535BC948"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.458Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "7dda074b3834872d9ee0-add610e1a8ce35bdd558",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount by Brand",
+                "visualId": "7dda074b3834872d9ee0",
+                "visualType": "clusteredBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.458Z",
+            "end": "2025-10-19T07:08:24.467Z",
+            "id": "c6d4f673-b5b0-46e8-bee5-725e445580ff",
+            "parentId": "7dda074b3834872d9ee0-add610e1a8ce35bdd558"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.467Z",
+            "end": "2025-10-19T07:08:24.544Z",
+            "id": "6debb021-4776-4d8e-9c8c-d3771f03f3c0",
+            "parentId": "7dda074b3834872d9ee0-add610e1a8ce35bdd558"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.543Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "b4d1b859-bd90-4df1-bd80-f5d207c0abc3",
+            "parentId": "7dda074b3834872d9ee0-add610e1a8ce35bdd558"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.558Z",
+            "end": "2025-10-19T07:08:24.559Z",
+            "id": "91873910-b06d-4348-a6d0-0137c10e569a",
+            "parentId": "b4d1b859-bd90-4df1-bd80-f5d207c0abc3"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.559Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "a92395f0-1972-4388-af1f-80cdf3afde49",
+            "parentId": "b4d1b859-bd90-4df1-bd80-f5d207c0abc3"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.559Z",
+            "end": "2025-10-19T07:08:24.559Z",
+            "id": "2b4fcd8a-7f7a-4922-9d6d-2900aa4ab0fc",
+            "parentId": "b4d1b859-bd90-4df1-bd80-f5d207c0abc3"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.522Z",
+            "id": "7ab102e4-2c1b-4c65-809e-482603a4b077",
+            "parentId": "6debb021-4776-4d8e-9c8c-d3771f03f3c0"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.473Z",
+            "end": "2025-10-19T07:08:24.474Z",
+            "id": "34d18c33-0531-4b97-b972-c12581bef787",
+            "parentId": "6debb021-4776-4d8e-9c8c-d3771f03f3c0"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.512Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "c6e4c198-1b88-4fd5-ae00-8b3de14ede26",
+            "parentId": "6debb021-4776-4d8e-9c8c-d3771f03f3c0"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.543Z",
+            "end": "2025-10-19T07:08:24.543Z",
+            "id": "a22e282a-52ec-45a9-bb3d-800b04da359c",
+            "parentId": "6debb021-4776-4d8e-9c8c-d3771f03f3c0"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.517Z",
+            "end": "2025-10-19T07:08:24.522Z",
+            "id": "4755b498-65b6-45ea-bd04-aea2e6bd90d3",
+            "parentId": "7ab102e4-2c1b-4c65-809e-482603a4b077",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount],\r\n\t\t\t\"FLOWERBOUND\", IGNORE('DAX'[FLOWERBOUND])\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [Sales_Amount], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[Sales_Amount] DESC, 'Product'[Brand]",
+                "RowCount": 9
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "3F453A44-8A20-4019-9CCC-37B8D5154738",
+            "parentId": "4755b498-65b6-45ea-bd04-aea2e6bd90d3"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.523Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "60640F78-D275-42E2-9B67-352BFE987F31",
+            "parentId": "3F453A44-8A20-4019-9CCC-37B8D5154738"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.459Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "50a18b7f2966465a7077-1e90fbe79bc45ae28081",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount by Brand",
+                "visualId": "50a18b7f2966465a7077",
+                "visualType": "clusteredBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.459Z",
+            "end": "2025-10-19T07:08:24.468Z",
+            "id": "89a9bdab-e0b4-40a3-8c4c-3b11b202238a",
+            "parentId": "50a18b7f2966465a7077-1e90fbe79bc45ae28081"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.468Z",
+            "end": "2025-10-19T07:08:24.544Z",
+            "id": "707951a0-0aee-4e52-8f2c-e20c46f32442",
+            "parentId": "50a18b7f2966465a7077-1e90fbe79bc45ae28081"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.544Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "fa8b8c64-1128-47d4-a152-688436b5f009",
+            "parentId": "50a18b7f2966465a7077-1e90fbe79bc45ae28081"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.559Z",
+            "end": "2025-10-19T07:08:24.560Z",
+            "id": "0447acf1-a994-4bbe-9184-39cc06222ea4",
+            "parentId": "fa8b8c64-1128-47d4-a152-688436b5f009"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.560Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "19981457-ab30-4925-ac87-0222b1947f6b",
+            "parentId": "fa8b8c64-1128-47d4-a152-688436b5f009"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.560Z",
+            "end": "2025-10-19T07:08:24.560Z",
+            "id": "2f9c6113-e5a8-4084-b03b-6e4297f4dbc4",
+            "parentId": "fa8b8c64-1128-47d4-a152-688436b5f009"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.522Z",
+            "id": "7ab102e4-2c1b-4c65-809e-482603a4b077",
+            "parentId": "707951a0-0aee-4e52-8f2c-e20c46f32442"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.475Z",
+            "end": "2025-10-19T07:08:24.475Z",
+            "id": "14ba60ea-e059-47cd-8644-88ac36cf4ba5",
+            "parentId": "707951a0-0aee-4e52-8f2c-e20c46f32442"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.543Z",
+            "end": "2025-10-19T07:08:24.543Z",
+            "id": "d08811eb-facf-4656-a28b-2bb2e6881b77",
+            "parentId": "707951a0-0aee-4e52-8f2c-e20c46f32442"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.517Z",
+            "end": "2025-10-19T07:08:24.522Z",
+            "id": "4755b498-65b6-45ea-bd04-aea2e6bd90d3",
+            "parentId": "7ab102e4-2c1b-4c65-809e-482603a4b077",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount],\r\n\t\t\t\"FLOWERBOUND\", IGNORE('DAX'[FLOWERBOUND])\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [Sales_Amount], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[Sales_Amount] DESC, 'Product'[Brand]",
+                "RowCount": 9
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "3F453A44-8A20-4019-9CCC-37B8D5154738",
+            "parentId": "4755b498-65b6-45ea-bd04-aea2e6bd90d3"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.523Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "60640F78-D275-42E2-9B67-352BFE987F31",
+            "parentId": "3F453A44-8A20-4019-9CCC-37B8D5154738"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.459Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "7c68e91a7d4442c3d7c1-34fd8c82035abed28268",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount by Brand",
+                "visualId": "7c68e91a7d4442c3d7c1",
+                "visualType": "clusteredBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.459Z",
+            "end": "2025-10-19T07:08:24.468Z",
+            "id": "d66ec815-c5bf-4634-81fd-27867911dc77",
+            "parentId": "7c68e91a7d4442c3d7c1-34fd8c82035abed28268"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.468Z",
+            "end": "2025-10-19T07:08:24.549Z",
+            "id": "1f685f0b-d11f-4874-a0ff-790b76ee051d",
+            "parentId": "7c68e91a7d4442c3d7c1-34fd8c82035abed28268"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.549Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "24c160b1-5949-4b7a-9e31-34cb71f5a3c8",
+            "parentId": "7c68e91a7d4442c3d7c1-34fd8c82035abed28268"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.560Z",
+            "end": "2025-10-19T07:08:24.561Z",
+            "id": "830726cf-50bf-441b-b331-fa014decaeb9",
+            "parentId": "24c160b1-5949-4b7a-9e31-34cb71f5a3c8"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.561Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "976327e3-7fb8-401b-b206-77a43105ec8f",
+            "parentId": "24c160b1-5949-4b7a-9e31-34cb71f5a3c8"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.561Z",
+            "end": "2025-10-19T07:08:24.561Z",
+            "id": "481cc489-d394-4efe-ad52-1315971cb1fd",
+            "parentId": "24c160b1-5949-4b7a-9e31-34cb71f5a3c8"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.526Z",
+            "id": "0ebd1f67-6f80-40d1-9826-d645bd3ae3c1",
+            "parentId": "1f685f0b-d11f-4874-a0ff-790b76ee051d"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.476Z",
+            "end": "2025-10-19T07:08:24.476Z",
+            "id": "2e95e2b4-61ad-4db2-981f-9224cfac0840",
+            "parentId": "1f685f0b-d11f-4874-a0ff-790b76ee051d"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.514Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "98fa4e51-e0cb-4c6f-80da-f17385c1b0ad",
+            "parentId": "1f685f0b-d11f-4874-a0ff-790b76ee051d"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.548Z",
+            "end": "2025-10-19T07:08:24.548Z",
+            "id": "fc03292b-0773-456e-9513-61431258392a",
+            "parentId": "1f685f0b-d11f-4874-a0ff-790b76ee051d"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.517Z",
+            "end": "2025-10-19T07:08:24.525Z",
+            "id": "8519b9b2-e6ea-4740-ab7b-6b74570117be",
+            "parentId": "0ebd1f67-6f80-40d1-9826-d645bd3ae3c1",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount],\r\n\t\t\t\"FLOWERBOUND\", IGNORE('DAX'[FLOWERBOUND]),\r\n\t\t\t\"FPY\", IGNORE('DAX'[FPY])\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [Sales_Amount], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[Sales_Amount] DESC, 'Product'[Brand]",
+                "RowCount": 9
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "71405D08-D2B5-4F17-A284-61FBCCB0B232",
+            "parentId": "8519b9b2-e6ea-4740-ab7b-6b74570117be"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.523Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "3D4700DD-8885-42A1-A0D3-77A54E76D62C",
+            "parentId": "71405D08-D2B5-4F17-A284-61FBCCB0B232"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.460Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "62f3ffc1e098470a8845-39b6dcc8492a0e51c053",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount by Brand and Continent",
+                "visualId": "62f3ffc1e098470a8845",
+                "visualType": "barChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.460Z",
+            "end": "2025-10-19T07:08:24.468Z",
+            "id": "736d8bde-a090-4568-9fa8-16403c4d181e",
+            "parentId": "62f3ffc1e098470a8845-39b6dcc8492a0e51c053"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.468Z",
+            "end": "2025-10-19T07:08:24.554Z",
+            "id": "7850cec5-6350-4c9f-9092-1c8ced7747ef",
+            "parentId": "62f3ffc1e098470a8845-39b6dcc8492a0e51c053"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.553Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "1e40bc45-c06c-46bf-ba98-03cfa7127ef0",
+            "parentId": "62f3ffc1e098470a8845-39b6dcc8492a0e51c053"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.561Z",
+            "end": "2025-10-19T07:08:24.562Z",
+            "id": "d6eba7a3-ac19-4c45-a53a-b95d83e52a1e",
+            "parentId": "1e40bc45-c06c-46bf-ba98-03cfa7127ef0"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.562Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "fdec4f27-b215-4d5e-bdb0-344f09505ea9",
+            "parentId": "1e40bc45-c06c-46bf-ba98-03cfa7127ef0"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.562Z",
+            "end": "2025-10-19T07:08:24.562Z",
+            "id": "b561a1cf-9c1c-4b26-bbb6-aabf0b43f506",
+            "parentId": "1e40bc45-c06c-46bf-ba98-03cfa7127ef0"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.517Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "1157dd03-6b82-49c3-8003-f5de85a24e6b",
+            "parentId": "7850cec5-6350-4c9f-9092-1c8ced7747ef"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.477Z",
+            "end": "2025-10-19T07:08:24.477Z",
+            "id": "540c97bf-0867-40b7-aa25-7a92584f17de",
+            "parentId": "7850cec5-6350-4c9f-9092-1c8ced7747ef"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.514Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "4beb61e7-1eeb-4779-9673-2e5be83184c4",
+            "parentId": "7850cec5-6350-4c9f-9092-1c8ced7747ef"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.553Z",
+            "end": "2025-10-19T07:08:24.553Z",
+            "id": "0f530a54-f310-4063-8781-cee6db9cb503",
+            "parentId": "7850cec5-6350-4c9f-9092-1c8ced7747ef"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.519Z",
+            "end": "2025-10-19T07:08:24.526Z",
+            "id": "b29f5898-a5b6-4ed2-9c5a-a50d87e01060",
+            "parentId": "1157dd03-6b82-49c3-8003-f5de85a24e6b",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\tROLLUPADDISSUBTOTAL('Customer'[Continent], \"IsGrandTotalColumnTotal\"),\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount]\r\n\t\t)\r\n\r\n\tVAR __DS0CoreOnlyOutputTotals = \r\n\t\tSELECTCOLUMNS(\r\n\t\t\tKEEPFILTERS(FILTER(KEEPFILTERS(__DS0Core), [IsGrandTotalColumnTotal] = FALSE)),\r\n\t\t\t\"'Product'[Brand]\", 'Product'[Brand],\r\n\t\t\t\"'Customer'[Continent]\", 'Customer'[Continent],\r\n\t\t\t\"Sales_Amount\", [Sales_Amount]\r\n\t\t)\r\n\r\n\tVAR __DS0CoreTableByDM0 = \r\n\t\tSELECTCOLUMNS(\r\n\t\t\tKEEPFILTERS(FILTER(KEEPFILTERS(__DS0Core), [IsGrandTotalColumnTotal] = TRUE)),\r\n\t\t\t\"'Product'[Brand]\", 'Product'[Brand],\r\n\t\t\t\"SortBy_DM0_0\", [Sales_Amount]\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWithSortColumns = \r\n\t\tNATURALLEFTOUTERJOIN(\r\n\t\t\tSUMMARIZE(__DS0Core, 'Product'[Brand]),\r\n\t\t\t__DS0CoreTableByDM0\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(201, __DS0PrimaryWithSortColumns, [SortBy_DM0_0], 0, 'Product'[Brand], 1)\r\n\r\n\tVAR __DS0SecondaryBase = \r\n\t\tSUMMARIZE(__DS0CoreOnlyOutputTotals, 'Customer'[Continent])\r\n\r\n\tVAR __DS0Secondary = \r\n\t\tTOPN(62, __DS0SecondaryBase, 'Customer'[Continent], 1)\r\n\r\n\tVAR __DS0BodyLimited = \r\n\t\tNATURALLEFTOUTERJOIN(\r\n\t\t\t__DS0PrimaryWindowed,\r\n\t\t\tSUBSTITUTEWITHINDEX(\r\n\t\t\t\t__DS0CoreOnlyOutputTotals,\r\n\t\t\t\t\"ColumnIndex\",\r\n\t\t\t\t__DS0Secondary,\r\n\t\t\t\t'Customer'[Continent],\r\n\t\t\t\tASC\r\n\t\t\t)\r\n\t\t)\r\n\r\nEVALUATE\r\n\t__DS0Secondary\r\n\r\nORDER BY\r\n\t'Customer'[Continent]\r\n\r\nEVALUATE\r\n\t__DS0BodyLimited\r\n\r\nORDER BY\r\n\t[SortBy_DM0_0] DESC, 'Product'[Brand], [ColumnIndex]",
+                "RowCount": 30
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.523Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "D04697B3-F660-4C72-BF9B-132BA5DBEDD9",
+            "parentId": "b29f5898-a5b6-4ed2-9c5a-a50d87e01060"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.527Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "8EC19CEE-B79E-4786-8590-8A8DB420E47C",
+            "parentId": "D04697B3-F660-4C72-BF9B-132BA5DBEDD9"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.460Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "35c254daa212036de04c-c396b83cee820dc0121d",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount by Brand and Continent",
+                "visualId": "35c254daa212036de04c",
+                "visualType": "hundredPercentStackedBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.460Z",
+            "end": "2025-10-19T07:08:24.468Z",
+            "id": "cb37cd0d-54a7-44e3-92ba-0cbb883fd31f",
+            "parentId": "35c254daa212036de04c-c396b83cee820dc0121d"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.468Z",
+            "end": "2025-10-19T07:08:24.550Z",
+            "id": "6f880bcb-f197-42aa-baad-425e97c556a0",
+            "parentId": "35c254daa212036de04c-c396b83cee820dc0121d"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.550Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "68f78069-602d-4155-9c1b-b4ad3e9d239e",
+            "parentId": "35c254daa212036de04c-c396b83cee820dc0121d"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.562Z",
+            "end": "2025-10-19T07:08:24.563Z",
+            "id": "516139f9-69fd-4d75-97e9-f8428e696575",
+            "parentId": "68f78069-602d-4155-9c1b-b4ad3e9d239e"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.563Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "ab95e55a-bbc5-4576-908a-de6927a5314a",
+            "parentId": "68f78069-602d-4155-9c1b-b4ad3e9d239e"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.563Z",
+            "end": "2025-10-19T07:08:24.563Z",
+            "id": "6c06e4d1-9229-40d8-b846-7372844e8184",
+            "parentId": "68f78069-602d-4155-9c1b-b4ad3e9d239e"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.526Z",
+            "id": "29906dd6-2351-413e-9abf-88188261ef44",
+            "parentId": "6f880bcb-f197-42aa-baad-425e97c556a0"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.478Z",
+            "end": "2025-10-19T07:08:24.478Z",
+            "id": "f482d272-a56f-4f56-a4f5-19bbdeb0bfc2",
+            "parentId": "6f880bcb-f197-42aa-baad-425e97c556a0"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.515Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "79e2e0b4-4586-4db7-b55c-724372741752",
+            "parentId": "6f880bcb-f197-42aa-baad-425e97c556a0"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.549Z",
+            "end": "2025-10-19T07:08:24.550Z",
+            "id": "2b297fa9-bc67-4157-91e8-33218c8d0905",
+            "parentId": "6f880bcb-f197-42aa-baad-425e97c556a0"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.518Z",
+            "end": "2025-10-19T07:08:24.525Z",
+            "id": "05a5f43b-379e-4a63-a575-6f3ecbd23761",
+            "parentId": "29906dd6-2351-413e-9abf-88188261ef44",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\tROLLUPADDISSUBTOTAL('Customer'[Continent], \"IsGrandTotalColumnTotal\"),\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount]\r\n\t\t)\r\n\r\n\tVAR __DS0CoreOnlyOutputTotals = \r\n\t\tSELECTCOLUMNS(\r\n\t\t\tKEEPFILTERS(FILTER(KEEPFILTERS(__DS0Core), [IsGrandTotalColumnTotal] = FALSE)),\r\n\t\t\t\"'Product'[Brand]\", 'Product'[Brand],\r\n\t\t\t\"'Customer'[Continent]\", 'Customer'[Continent],\r\n\t\t\t\"Sales_Amount\", [Sales_Amount]\r\n\t\t)\r\n\r\n\tVAR __DS0CoreTableByDM0 = \r\n\t\tSELECTCOLUMNS(\r\n\t\t\tKEEPFILTERS(FILTER(KEEPFILTERS(__DS0Core), [IsGrandTotalColumnTotal] = TRUE)),\r\n\t\t\t\"'Product'[Brand]\", 'Product'[Brand],\r\n\t\t\t\"SortBy_DM0_0\", [Sales_Amount]\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWithSortColumns = \r\n\t\tNATURALLEFTOUTERJOIN(\r\n\t\t\tSUMMARIZE(__DS0Core, 'Product'[Brand]),\r\n\t\t\t__DS0CoreTableByDM0\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(201, __DS0PrimaryWithSortColumns, [SortBy_DM0_0], 0, 'Product'[Brand], 1)\r\n\r\n\tVAR __DS0SecondaryBase = \r\n\t\tSUMMARIZE(__DS0CoreOnlyOutputTotals, 'Customer'[Continent])\r\n\r\n\tVAR __DS0Secondary = \r\n\t\tTOPN(62, __DS0SecondaryBase, 'Customer'[Continent], 1)\r\n\r\n\tVAR __DS0BodyLimited = \r\n\t\tNATURALLEFTOUTERJOIN(\r\n\t\t\t__DS0PrimaryWindowed,\r\n\t\t\tSUBSTITUTEWITHINDEX(\r\n\t\t\t\t__DS0CoreOnlyOutputTotals,\r\n\t\t\t\t\"ColumnIndex\",\r\n\t\t\t\t__DS0Secondary,\r\n\t\t\t\t'Customer'[Continent],\r\n\t\t\t\tASC\r\n\t\t\t)\r\n\t\t)\r\n\r\nEVALUATE\r\n\t__DS0Secondary\r\n\r\nORDER BY\r\n\t'Customer'[Continent]\r\n\r\nEVALUATE\r\n\t__DS0BodyLimited\r\n\r\nORDER BY\r\n\t[SortBy_DM0_0] DESC, 'Product'[Brand], [ColumnIndex]",
+                "RowCount": 30
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "ECF3553B-CF7E-40CA-9F31-11FD9608AF4E",
+            "parentId": "05a5f43b-379e-4a63-a575-6f3ecbd23761"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.527Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "E9FE1D45-447E-47A4-A628-D939A77ED0BC",
+            "parentId": "ECF3553B-CF7E-40CA-9F31-11FD9608AF4E"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.461Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "e4d73359747518d69504-12983b21848e657da3b9",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "FYOY by Brand",
+                "visualId": "e4d73359747518d69504",
+                "visualType": "clusteredBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.461Z",
+            "end": "2025-10-19T07:08:24.468Z",
+            "id": "57dd3c81-081c-4f24-b7a0-48b258ff33bb",
+            "parentId": "e4d73359747518d69504-12983b21848e657da3b9"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.468Z",
+            "end": "2025-10-19T07:08:24.552Z",
+            "id": "6e3afba0-2631-4dc8-9369-00419e8f96f8",
+            "parentId": "e4d73359747518d69504-12983b21848e657da3b9"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.552Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "1d6696a9-ab70-49ba-8266-e98c0d890361",
+            "parentId": "e4d73359747518d69504-12983b21848e657da3b9"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.563Z",
+            "end": "2025-10-19T07:08:24.564Z",
+            "id": "4934a612-59e3-43df-af68-f98b1ac4978d",
+            "parentId": "1d6696a9-ab70-49ba-8266-e98c0d890361"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.564Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "7870f32c-fd6c-4c7c-97df-d10ec759332a",
+            "parentId": "1d6696a9-ab70-49ba-8266-e98c0d890361"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.564Z",
+            "end": "2025-10-19T07:08:24.564Z",
+            "id": "7967dca4-ae49-43a6-b558-cc508f75e168",
+            "parentId": "1d6696a9-ab70-49ba-8266-e98c0d890361"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "5605b841-6578-428d-8430-ae15ebd56494",
+            "parentId": "6e3afba0-2631-4dc8-9369-00419e8f96f8"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.479Z",
+            "end": "2025-10-19T07:08:24.479Z",
+            "id": "292cd031-7fce-4abf-9c76-01c5f639e09d",
+            "parentId": "6e3afba0-2631-4dc8-9369-00419e8f96f8"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.515Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "aa9bfc93-4807-4f74-8c20-dce45925bf66",
+            "parentId": "6e3afba0-2631-4dc8-9369-00419e8f96f8"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.552Z",
+            "end": "2025-10-19T07:08:24.552Z",
+            "id": "fbe1d145-420a-43b1-aa91-5f47a85d4894",
+            "parentId": "6e3afba0-2631-4dc8-9369-00419e8f96f8"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.517Z",
+            "end": "2025-10-19T07:08:24.526Z",
+            "id": "757ef211-850c-4147-b5d5-c0830fbde521",
+            "parentId": "5605b841-6578-428d-8430-ae15ebd56494",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"FYOY\", 'DAX'[FYOY],\r\n\t\t\t\"FCOLOR\", IGNORE('DAX'[FCOLOR])\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [FYOY], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[FYOY] DESC, 'Product'[Brand]",
+                "RowCount": 9
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "1B2E773D-8995-4859-AB39-189354805F2F",
+            "parentId": "757ef211-850c-4147-b5d5-c0830fbde521"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.527Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "9D56ABE3-D09A-4BEC-B194-48CEA5E36AFA",
+            "parentId": "1B2E773D-8995-4859-AB39-189354805F2F"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.461Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "86b0303857b80622ca10-d1b0af405ba06e7acacc",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "FYOY by Brand",
+                "visualId": "86b0303857b80622ca10",
+                "visualType": "clusteredBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.461Z",
+            "end": "2025-10-19T07:08:24.468Z",
+            "id": "8941452f-19d7-4f91-b9a2-47275dad8a6e",
+            "parentId": "86b0303857b80622ca10-d1b0af405ba06e7acacc"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.468Z",
+            "end": "2025-10-19T07:08:24.547Z",
+            "id": "d5509206-1fc7-4338-acea-4c9ab7d2faa8",
+            "parentId": "86b0303857b80622ca10-d1b0af405ba06e7acacc"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.546Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "6e26d9c0-ac27-4ac4-98ca-9d606d8741de",
+            "parentId": "86b0303857b80622ca10-d1b0af405ba06e7acacc"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.564Z",
+            "end": "2025-10-19T07:08:24.564Z",
+            "id": "28aba579-0e6d-4be2-a59b-538e7ac5be83",
+            "parentId": "6e26d9c0-ac27-4ac4-98ca-9d606d8741de"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.565Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "f116b887-70f1-47be-8dda-60eedc813ec6",
+            "parentId": "6e26d9c0-ac27-4ac4-98ca-9d606d8741de"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.565Z",
+            "end": "2025-10-19T07:08:24.565Z",
+            "id": "2106d8c4-b1d1-45f5-9bc6-fc29c0793e32",
+            "parentId": "6e26d9c0-ac27-4ac4-98ca-9d606d8741de"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.526Z",
+            "id": "d3288305-e1fc-4f4a-826d-24a245fdf262",
+            "parentId": "d5509206-1fc7-4338-acea-4c9ab7d2faa8"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.480Z",
+            "end": "2025-10-19T07:08:24.480Z",
+            "id": "326530e7-44eb-43eb-ab6f-346cdc3606b7",
+            "parentId": "d5509206-1fc7-4338-acea-4c9ab7d2faa8"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.515Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "301b7be9-5757-438e-8576-64e0d11c84a4",
+            "parentId": "d5509206-1fc7-4338-acea-4c9ab7d2faa8"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.546Z",
+            "end": "2025-10-19T07:08:24.546Z",
+            "id": "5c1a9a48-2876-4be8-8350-a73ac9f553a7",
+            "parentId": "d5509206-1fc7-4338-acea-4c9ab7d2faa8"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.517Z",
+            "end": "2025-10-19T07:08:24.525Z",
+            "id": "0e408fad-c325-4cd6-a9b3-5b93fc567953",
+            "parentId": "d3288305-e1fc-4f4a-826d-24a245fdf262",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"FYOY\", 'DAX'[FYOY],\r\n\t\t\t\"Sales_Amount\", IGNORE('DAX'[Sales Amount])\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [FYOY], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[FYOY] DESC, 'Product'[Brand]",
+                "RowCount": 9
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "2C2B5A75-AFEA-4021-BBAD-CAC0503EF096",
+            "parentId": "0e408fad-c325-4cd6-a9b3-5b93fc567953"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.523Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "AD43372F-E4CD-40AC-B7CF-C7E46D71F8C2",
+            "parentId": "2C2B5A75-AFEA-4021-BBAD-CAC0503EF096"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.462Z",
+            "end": "2025-10-19T07:08:24.637Z",
+            "id": "ca1edd3ab4b482de1d07-f5c6d400196a7019886e",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount by Brand",
+                "visualId": "ca1edd3ab4b482de1d07",
+                "visualType": "clusteredBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.462Z",
+            "end": "2025-10-19T07:08:24.468Z",
+            "id": "1d83ebc0-9092-4463-9587-134dfb723ecd",
+            "parentId": "ca1edd3ab4b482de1d07-f5c6d400196a7019886e"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.468Z",
+            "end": "2025-10-19T07:08:24.548Z",
+            "id": "558757f8-f990-4ba6-acaf-66e6b69e3223",
+            "parentId": "ca1edd3ab4b482de1d07-f5c6d400196a7019886e"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.548Z",
+            "end": "2025-10-19T07:08:24.636Z",
+            "id": "fa54d9e9-2180-4382-90da-a0afa78fa393",
+            "parentId": "ca1edd3ab4b482de1d07-f5c6d400196a7019886e"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.565Z",
+            "end": "2025-10-19T07:08:24.566Z",
+            "id": "0ec42e70-7e23-4957-9e15-985b9d8de763",
+            "parentId": "fa54d9e9-2180-4382-90da-a0afa78fa393"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.566Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "b2dfc1c7-3150-428e-9a8d-db4e096c95be",
+            "parentId": "fa54d9e9-2180-4382-90da-a0afa78fa393"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.566Z",
+            "end": "2025-10-19T07:08:24.566Z",
+            "id": "d00dc647-4f25-4e92-803c-9311582dce07",
+            "parentId": "fa54d9e9-2180-4382-90da-a0afa78fa393"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.526Z",
+            "id": "5bb3a44b-afa0-44e2-993c-6bf618309c0a",
+            "parentId": "558757f8-f990-4ba6-acaf-66e6b69e3223"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.481Z",
+            "end": "2025-10-19T07:08:24.481Z",
+            "id": "2dea1f39-f022-4487-ad1a-2567dafda5ef",
+            "parentId": "558757f8-f990-4ba6-acaf-66e6b69e3223"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.515Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "524f6ee4-61f4-45b9-9a82-a2c117297b3e",
+            "parentId": "558757f8-f990-4ba6-acaf-66e6b69e3223"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.547Z",
+            "end": "2025-10-19T07:08:24.547Z",
+            "id": "4bbb9589-a485-46f8-a151-03bc196dad27",
+            "parentId": "558757f8-f990-4ba6-acaf-66e6b69e3223"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.518Z",
+            "end": "2025-10-19T07:08:24.525Z",
+            "id": "dc9b7eb5-04d3-4661-8841-dd228f801b87",
+            "parentId": "5bb3a44b-afa0-44e2-993c-6bf618309c0a",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount],\r\n\t\t\t\"FPY\", IGNORE('DAX'[FPY])\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [Sales_Amount], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[Sales_Amount] DESC, 'Product'[Brand]",
+                "RowCount": 9
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "7A1AC316-BDCE-43F2-BB20-2BD3AE91A68E",
+            "parentId": "dc9b7eb5-04d3-4661-8841-dd228f801b87"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.523Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "0ACA5E84-D2DC-4251-8CEE-D7494325FAE7",
+            "parentId": "7A1AC316-BDCE-43F2-BB20-2BD3AE91A68E"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.462Z",
+            "end": "2025-10-19T07:08:24.637Z",
+            "id": "1eebcfde3a6073a490ea-c1a77c5c04b9702095bd",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount and FMAXX by Brand",
+                "visualId": "1eebcfde3a6073a490ea",
+                "visualType": "hundredPercentStackedBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.462Z",
+            "end": "2025-10-19T07:08:24.468Z",
+            "id": "e802a928-28a1-4cd1-80c4-ac6857b020e2",
+            "parentId": "1eebcfde3a6073a490ea-c1a77c5c04b9702095bd"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.468Z",
+            "end": "2025-10-19T07:08:24.551Z",
+            "id": "1f7c0ce8-4abb-4408-8bf9-773bdf901c4d",
+            "parentId": "1eebcfde3a6073a490ea-c1a77c5c04b9702095bd"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.551Z",
+            "end": "2025-10-19T07:08:24.637Z",
+            "id": "bbc15864-81f6-45f4-94fa-581a7714fe71",
+            "parentId": "1eebcfde3a6073a490ea-c1a77c5c04b9702095bd"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.566Z",
+            "end": "2025-10-19T07:08:24.567Z",
+            "id": "be810a86-cf6d-4fe7-b4bc-513aac9273e7",
+            "parentId": "bbc15864-81f6-45f4-94fa-581a7714fe71"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.567Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "5fab58cc-976a-4a50-aebd-4aba6cb99a16",
+            "parentId": "bbc15864-81f6-45f4-94fa-581a7714fe71"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.567Z",
+            "end": "2025-10-19T07:08:24.567Z",
+            "id": "d0936efc-be40-4ff1-be7e-75199e538202",
+            "parentId": "bbc15864-81f6-45f4-94fa-581a7714fe71"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.526Z",
+            "id": "2c0fd1c8-9110-4987-847b-103808f355cb",
+            "parentId": "1f7c0ce8-4abb-4408-8bf9-773bdf901c4d"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.482Z",
+            "end": "2025-10-19T07:08:24.483Z",
+            "id": "56d83640-4052-4945-9e96-b04236f6cd81",
+            "parentId": "1f7c0ce8-4abb-4408-8bf9-773bdf901c4d"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.515Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "75971bd3-474f-4d40-9a1d-8da9d2e4c4f0",
+            "parentId": "1f7c0ce8-4abb-4408-8bf9-773bdf901c4d"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.551Z",
+            "end": "2025-10-19T07:08:24.551Z",
+            "id": "7da1ee49-4b9c-4ea0-9c79-7ca7c9008383",
+            "parentId": "1f7c0ce8-4abb-4408-8bf9-773bdf901c4d"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.518Z",
+            "end": "2025-10-19T07:08:24.525Z",
+            "id": "e2eb6648-32d3-4026-8005-a183ad0b6683",
+            "parentId": "2c0fd1c8-9110-4987-847b-103808f355cb",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount],\r\n\t\t\t\"FMAXX\", 'DAX'[FMAXX]\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [Sales_Amount], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\tSUMMARIZECOLUMNS(\r\n\t\t__DS0FilterTable,\r\n\t\t__DS0FilterTable2,\r\n\t\t\"FREFLINE2\", IGNORE('DAX'[FREFLINE2]),\r\n\t\t\"FREFLINE3\", IGNORE('DAX'[FREFLINE3]),\r\n\t\t\"FREFLINE4\", IGNORE('DAX'[FREFLINE4]),\r\n\t\t\"FREFLINE5\", IGNORE('DAX'[FREFLINE5]),\r\n\t\t\"FREFLINE1\", IGNORE('DAX'[FREFLINE1])\r\n\t)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[Sales_Amount] DESC, 'Product'[Brand]",
+                "RowCount": 10
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "03049C11-1AFB-49F2-A7DD-A4BBA3884472",
+            "parentId": "e2eb6648-32d3-4026-8005-a183ad0b6683"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.527Z",
+            "end": "2025-10-19T07:08:24.527Z",
+            "id": "161D6244-410F-46CB-B1EA-66076AE3339C",
+            "parentId": "03049C11-1AFB-49F2-A7DD-A4BBA3884472"
+        },
+        {
+            "name": "Visual Container Lifecycle",
+            "start": "2025-10-19T07:08:24.463Z",
+            "end": "2025-10-19T07:08:24.637Z",
+            "id": "f4878c5230a67e1a5031-4e7b44f0ceee9025b223",
+            "metrics": {
+                "status": 1,
+                "visualTitle": "Sales Amount and FMAXX by Brand",
+                "visualId": "f4878c5230a67e1a5031",
+                "visualType": "hundredPercentStackedBarChart",
+                "initialLoad": false
+            }
+        },
+        {
+            "name": "Resolve Parameters",
+            "start": "2025-10-19T07:08:24.463Z",
+            "end": "2025-10-19T07:08:24.468Z",
+            "id": "ceecea8f-b0fc-4458-861a-bdac81833479",
+            "parentId": "f4878c5230a67e1a5031-4e7b44f0ceee9025b223"
+        },
+        {
+            "name": "Query",
+            "start": "2025-10-19T07:08:24.468Z",
+            "end": "2025-10-19T07:08:24.545Z",
+            "id": "d9f19487-7454-4568-a9c0-5aeb4cb51fa5",
+            "parentId": "f4878c5230a67e1a5031-4e7b44f0ceee9025b223"
+        },
+        {
+            "name": "Render",
+            "start": "2025-10-19T07:08:24.545Z",
+            "end": "2025-10-19T07:08:24.637Z",
+            "id": "06e16e6d-20d5-47f8-95a5-4653de12bbcf",
+            "parentId": "f4878c5230a67e1a5031-4e7b44f0ceee9025b223"
+        },
+        {
+            "name": "Data View Transform",
+            "start": "2025-10-19T07:08:24.567Z",
+            "end": "2025-10-19T07:08:24.568Z",
+            "id": "772facb3-fe6c-4c8e-b418-e2ec7696fb53",
+            "parentId": "06e16e6d-20d5-47f8-95a5-4653de12bbcf"
+        },
+        {
+            "name": "Visual Update Async",
+            "start": "2025-10-19T07:08:24.568Z",
+            "end": "2025-10-19T07:08:24.635Z",
+            "id": "61a848c7-f10e-4809-a457-beb4b1ecd187",
+            "parentId": "06e16e6d-20d5-47f8-95a5-4653de12bbcf"
+        },
+        {
+            "name": "Visual Update",
+            "start": "2025-10-19T07:08:24.568Z",
+            "end": "2025-10-19T07:08:24.568Z",
+            "id": "a5bd6140-7a61-4e8a-85ab-336c0cea9650",
+            "parentId": "06e16e6d-20d5-47f8-95a5-4653de12bbcf"
+        },
+        {
+            "name": "Execute Semantic Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.516Z",
+            "end": "2025-10-19T07:08:24.526Z",
+            "id": "0c6a54e7-18c7-4592-a8d5-11d7c41683b4",
+            "parentId": "d9f19487-7454-4568-a9c0-5aeb4cb51fa5"
+        },
+        {
+            "name": "Query Generation",
+            "start": "2025-10-19T07:08:24.483Z",
+            "end": "2025-10-19T07:08:24.484Z",
+            "id": "a57f2a06-63be-4ce7-b810-35d6dfe5e38e",
+            "parentId": "d9f19487-7454-4568-a9c0-5aeb4cb51fa5"
+        },
+        {
+            "name": "Query Pending",
+            "start": "2025-10-19T07:08:24.515Z",
+            "end": "2025-10-19T07:08:24.516Z",
+            "id": "cc7deb3d-d930-44eb-8ae5-ed217df35879",
+            "parentId": "d9f19487-7454-4568-a9c0-5aeb4cb51fa5"
+        },
+        {
+            "name": "Parse Query Result",
+            "start": "2025-10-19T07:08:24.545Z",
+            "end": "2025-10-19T07:08:24.545Z",
+            "id": "0f3aa118-1f98-4ba0-8fb2-ad45c71a9e9b",
+            "parentId": "d9f19487-7454-4568-a9c0-5aeb4cb51fa5"
+        },
+        {
+            "name": "Execute DAX Query",
+            "component": "DSE",
+            "start": "2025-10-19T07:08:24.518Z",
+            "end": "2025-10-19T07:08:24.525Z",
+            "id": "aa43ca89-f61f-4fc1-bd10-b5ed39c74a07",
+            "parentId": "0c6a54e7-18c7-4592-a8d5-11d7c41683b4",
+            "metrics": {
+                "QueryText": "DEFINE\r\n\tVAR __DS0FilterTable = \r\n\t\tTREATAS({2019}, 'Date'[Year])\r\n\r\n\tVAR __DS0FilterTable2 = \r\n\t\tFILTER(\r\n\t\t\tKEEPFILTERS(VALUES('Product'[Brand])),\r\n\t\t\tNOT('Product'[Brand] IN {\"Southridge Video\",\r\n\t\t\t\t\"Tailspin Toys\"})\r\n\t\t)\r\n\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\t'Product'[Brand],\r\n\t\t\t__DS0FilterTable,\r\n\t\t\t__DS0FilterTable2,\r\n\t\t\t\"Sales_Amount\", 'DAX'[Sales Amount],\r\n\t\t\t\"FMAXX\", 'DAX'[FMAXX]\r\n\t\t)\r\n\r\n\tVAR __DS0PrimaryWindowed = \r\n\t\tTOPN(1001, __DS0Core, [Sales_Amount], 0, 'Product'[Brand], 1)\r\n\r\nEVALUATE\r\n\t__DS0PrimaryWindowed\r\n\r\nORDER BY\r\n\t[Sales_Amount] DESC, 'Product'[Brand]",
+                "RowCount": 9
+            }
+        },
+        {
+            "name": "Execute Query",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.520Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "84C6B57D-3323-4AE4-A863-BC25A82F9824",
+            "parentId": "aa43ca89-f61f-4fc1-bd10-b5ed39c74a07"
+        },
+        {
+            "name": "Serialize Rowset",
+            "component": "AS",
+            "start": "2025-10-19T07:08:24.523Z",
+            "end": "2025-10-19T07:08:24.523Z",
+            "id": "5D595F0D-1E78-41AE-BD05-6447647D8A2B",
+            "parentId": "84C6B57D-3323-4AE4-A863-BC25A82F9824"
+        }
+    ],
+    "sessionId": "d0672ad3-2821-486e-8d4f-7b7e1d1abbdf"
+}
